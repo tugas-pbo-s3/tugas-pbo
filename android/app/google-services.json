@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "804242459335",
+    "project_id": "tugas-pbo-fc0db",
+    "storage_bucket": "tugas-pbo-fc0db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804242459335:android:3cec5bf2ed033bc4824ce2",
+        "android_client_info": {
+          "package_name": "com.example.tugas_pbo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG9oqf46Q6M4Ozq450ZvD8Q4-ig2CtQok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
