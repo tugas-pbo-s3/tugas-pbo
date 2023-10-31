@@ -6,7 +6,7 @@ import 'app/_index.dart';
 
 void main() async {
   // Mocks.instance.init();
-  RM.env = Flavor.dev;
+  RM.env = Flavor.test;
   await inits();
   runApp(
     DevicePreview(

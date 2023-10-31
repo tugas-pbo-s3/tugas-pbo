@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "category_id": "ctgrwomen11",
+      "name": "women",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "types": [
+        {
+          "type_id": "type11",
+          "name": "heels",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type22",
+          "name": "flats",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type33",
+          "name": "boots",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type77",
+          "name": "casual",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type88",
+          "name": "sandals",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type66",
+          "name": "sports",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        }
+      ]
+    },
+    {
+      "category_id": "ctgrmen22",
+      "name": "men",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "types": [
+        {
+          "type_id": "type55",
+          "name": "sneakers",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type66",
+          "name": "sports",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type77",
+          "name": "casual",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type88",
+          "name": "sandals",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type99",
+          "name": "loafers",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type100",
+          "name": "oxford",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        }
+      ]
+    },
+    {
+      "category_id": "ctgrkids33",
+      "name": "kids",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "types": [
+        {
+          "type_id": "type44",
+          "name": "school",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type55",
+          "name": "sneakers",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        },
+        {
+          "type_id": "type66",
+          "name": "sports",
+          "created_at": 20230525,
+          "updated_at": 20230526
+        }
+      ]
+    }
+  ]
+}

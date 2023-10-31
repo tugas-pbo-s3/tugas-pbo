@@ -1,15 +1,17 @@
 part of '_index.dart';
 
 abstract class Repo {
-  // static Injected<ConnRepo> get conn => _connRepo;
-  // static Injected<DummyRepo> get dummy => _dummyRepo;
-  // static Injected<ProductRepo> get product => _productRepo;
-  // static Injected<UserxRepo> get userx => _userxRepo;
-  // static Injected<ChatRepo> get chat => _chatRepo;
+  static Injected<AuthRepo> get auth => _authRepo;
+  static Injected<UserRepo> get user => _userRepo;
+  static Injected<RoleRepo> get role => _roleRepo;
+  static Injected<ProductRepo> get product => _productRepo;
+  static Injected<CategoryRepo> get category => _categoryRepo;
+  static Injected<TypeRepo> get type => _typeRepo;
 }
 
-// final _connRepo = RM3.inj(ConnRepo());
-// final _dummyRepo = RM3.inj(DummyRepo());
-// final _productRepo = RM3.inj(ProductRepo());
-// final _userxRepo = RM3.inj(UserxRepo());
-// final _chatRepo = RM3.inj(ChatRepo());
+final _authRepo = RM3.inj(AuthRepo());
+final _userRepo = RM3.inj(UserRepo());
+final _roleRepo = RM3.inj(RoleRepo());
+final _productRepo = RM3.inj(ProductRepo());
+final _categoryRepo = RM3.inj(CategoryRepo());
+final _typeRepo = RM3.inj(TypeRepo());

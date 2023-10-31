@@ -1,39 +1,79 @@
 {
   "data": [
     {
-      "id": 1,
+      "product_id": 1,
       "name": "product1",
       "price": 1000,
       "description": "description1 description1 description1 description1 description1 description1 ",
-      "image_url": "https://placehold.jp/469a28/ffffff/150x150.png?text=product1"
+      "image_url": "https://placehold.jp/469a28/ffffff/150x150.png?text=product1",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "category": {
+        "category_id": "ctgrwomen11",
+        "name": "women",
+        "created_at": 20230525,
+        "updated_at": 20230526
+      }
     },
     {
-      "id": 2,
+      "product_id": 2,
       "name": "product2",
       "price": 2000,
       "description": "description2 description2 description2 description2 description2 description2 ",
-      "image_url": "https://placehold.jp/e78636/ffffff/150x150.png?text=product2"
+      "image_url": "https://placehold.jp/e78636/ffffff/150x150.png?text=product2",
+      "created_at": 20230527,
+      "updated_at": 20230528,
+      "category": {
+        "category_id": "ctgrwomen11",
+        "name": "women",
+        "created_at": 20230525,
+        "updated_at": 20230526
+      }
     },
     {
-      "id": 3,
+      "product_id": 3,
       "name": "product3",
       "price": 3000,
       "description": "description3 description3 description3 description3 description3 description3 ",
-      "image_url": "https://placehold.jp/cf47e1/ffffff/150x150.png?text=product3"
+      "image_url": "https://placehold.jp/cf47e1/ffffff/150x150.png?text=product3",
+      "created_at": 20230529,
+      "updated_at": 20230530,
+      "category": {
+        "category_id": "ctgrmen22",
+        "name": "men",
+        "created_at": 20230525,
+        "updated_at": 20230526
+      }
     },
     {
-      "id": 4,
+      "product_id": 4,
       "name": "product4",
       "price": 4000,
       "description": "description4 description4 description4 description4 description4 description4 ",
-      "image_url": "https://placehold.jp/0b89fe/ffffff/150x150.png?text=product4"
+      "image_url": "https://placehold.jp/0b89fe/ffffff/150x150.png?text=product4",
+      "created_at": 20230601,
+      "updated_at": 20230602,
+      "category": {
+        "category_id": "ctgrkids33",
+        "name": "kids",
+        "created_at": 20230525,
+        "updated_at": 20230526
+      }
     },
     {
-      "id": 5,
+      "product_id": 5,
       "name": "product5",
       "price": 5000,
       "description": "description5 description5 description5 description5 description5 description5 ",
-      "image_url": "https://placehold.jp/1099a2/ffffff/150x150.png?text=product5"
+      "image_url": "https://placehold.jp/1099a2/ffffff/150x150.png?text=product5",
+      "created_at": 20230603,
+      "updated_at": 20230604,
+      "category": {
+        "category_id": "ctgrkids33",
+        "name": "kids",
+        "created_at": 20230525,
+        "updated_at": 20230526
+      }
     }
   ]
 }

@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "role_id": "roleadmin",
+      "name": "admin",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "authorities": [
+        {
+          "id": "authoritiesaa",
+          "name": "Table User",
+          "method": "POST"
+        },
+        {
+          "id": "authoritiesbb",
+          "name": "Table User",
+          "method": "DELETE"
+        },
+        {
+          "id": "authoritiesbb",
+          "name": "Table User",
+          "method": "UPDATE"
+        }
+      ]
+    },
+    {
+      "role_id": "roleuser",
+      "name": "user",
+      "created_at": 20230525,
+      "updated_at": 20230526,
+      "authorities": [
+        {
+          "id": "authoritiescc",
+          "name": "Table Product",
+          "method": "GET"
+        },
+        {
+          "id": "authoritiesdd",
+          "name": "Table Category",
+          "method": "GET"
+        }
+      ]
+    }
+  ]
+}

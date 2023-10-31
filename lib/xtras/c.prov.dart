@@ -1,19 +1,17 @@
 part of '_index.dart';
 
 abstract class Prov {
-  // static Injected<ConnProv> get conn => _connProv;
-  // static Injected<AuthProv> get auth => _authProv;
-  // static Injected<DummyProv> get dummy => _dummyProv;
-  // static Injected<ProductProv> get product => _productProv;
-  // static Injected<UserxProv> get userx => _userxProv;
-  // static Injected<FcmProv> get fcm => _fcmProv;
-  // static Injected<ChatProv> get chat => _chatProv;
+  static Injected<AuthProv> get auth => _authProv;
+  static Injected<UserProv> get user => _userProv;
+  static Injected<RoleProv> get role => _roleProv;
+  static Injected<ProductProv> get product => _productProv;
+  static Injected<CategoryProv> get category => _categoryProv;
+  static Injected<TypeProv> get type => _typeProv;
 }
 
-// final _connProv = RM2.inj(ConnProv());
-// final _authProv = RM2.inj(AuthProv());
-// final _dummyProv = RM2.inj(DummyProv());
-// final _productProv = RM2.inj(ProductProv());
-// final _userxProv = RM2.inj(UserxProv());
-// final _fcmProv = RM2.inj(FcmProv());
-// final _chatProv = RM2.inj(ChatProv());
+final _authProv = RM2.inj(AuthProv());
+final _userProv = RM2.inj(UserProv());
+final _roleProv = RM2.inj(RoleProv());
+final _productProv = RM2.inj(ProductProv());
+final _categoryProv = RM2.inj(CategoryProv());
+final _typeProv = RM2.inj(TypeProv());

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "user_id": "useraa",
+      "username": "user1",
+      "password": "user123",
+      "email": "user1@user.com",
+      "image": "https://placehold.jp/469a28/ffffff/150x150.png?text=user1",
+      "role": {
+        "role_id": "roleadmin",
+        "name": "admin"
+      },
+      "created_at": 20230525,
+      "updated_at": 20230526
+    },
+    {
+      "user_id": "userbb",
+      "username": "user2",
+      "password": "user456",
+      "email": "user2@user.com",
+      "image": "https://placehold.jp/e78636/ffffff/150x150.png?text=user2",
+      "role": {
+        "role_id": "roleuser",
+        "name": "user"
+      },
+      "created_at": 20230525,
+      "updated_at": 20230526
+    },
+    {
+      "user_id": "usercc",
+      "username": "user3",
+      "password": "user789",
+      "email": "user3@user.com",
+      "image": "https://placehold.jp/cf47e1/ffffff/150x150.png?text=user3",
+      "role": {
+        "role_id": "roleuser",
+        "name": "user"
+      },
+      "created_at": 20230525,
+      "updated_at": 20230526
+    },
+    {
+      "user_id": "userdd",
+      "username": "user4",
+      "password": "user246",
+      "email": "user4@user.com",
+      "image": "https://placehold.jp/1099a2/ffffff/150x150.png?text=user4",
+      "role": {
+        "role_id": "roleuser",
+        "name": "user"
+      },
+      "created_at": 20230525,
+      "updated_at": 20230526
+    },
+    {
+      "user_id": "useree",
+      "username": "user5",
+      "password": "user824",
+      "email": "user5@user.com",
+      "image": "https://placehold.jp/0b89fe/ffffff/150x150.png?text=user5",
+      "role": {
+        "role_id": "roleuser",
+        "name": "user"
+      },
+      "created_at": 20230525,
+      "updated_at": 20230526
+    }
+  ]
+}
