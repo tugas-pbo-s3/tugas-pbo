@@ -10,7 +10,7 @@ class Fun {
   }
 
   static Future<void> delayForMock([int? secs]) async {
-    if (RM.env == Flavor.test) {
+    if (RM.env == Flavor.qa) {
       await Future.delayed(Duration.zero);
       debugPrint('run delayForMock with Duration.zero...');
     } else {

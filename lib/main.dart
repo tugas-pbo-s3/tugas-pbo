@@ -5,9 +5,9 @@ import 'package:states_rebuilder/states_rebuilder.dart';
 import 'app/_index.dart';
 
 void main() async {
-  Mocks.instance.init();
-  RM.env = Flavor.test;
+  RM.env = Flavor.qa;
   await inits();
+  Mocks.instance.init();
   runApp(
     DevicePreview(
       enabled: PlatformType.isLinux,
