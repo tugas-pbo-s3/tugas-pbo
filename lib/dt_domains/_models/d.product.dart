@@ -4,26 +4,50 @@ class Product {
   final String productId;
   final String name;
   final int price;
+  final int quantity;
+  final String categoryId;
   final String description;
   final String imageUrl;
   final int createdAt;
   final int updatedAt;
-  final Category category;
+  final Category? category;
   Product({
     this.productId = '',
     this.name = '',
     this.price = 0,
+    this.quantity = 0,
+    this.categoryId = '',
     this.description = '',
     this.imageUrl = '',
     this.createdAt = 0,
     this.updatedAt = 0,
-    required this.category,
+    this.category,
   });
+
+  static Product input({
+    required String name,
+    required int price,
+    required int quantity,
+    required String description,
+    String? imageUrl,
+    required String categoryId,
+  }) {
+    return Product(
+      name: name,
+      price: price,
+      quantity: quantity,
+      description: description,
+      imageUrl: imageUrl ?? '',
+      categoryId: categoryId,
+    );
+  }
 
   Product copyWith({
     String? productId,
     String? name,
     int? price,
+    int? quantity,
+    String? categoryId,
     String? description,
     String? imageUrl,
     int? createdAt,
@@ -34,6 +58,8 @@ class Product {
       productId: productId ?? this.productId,
       name: name ?? this.name,
       price: price ?? this.price,
+      quantity: quantity ?? this.quantity,
+      categoryId: categoryId ?? this.categoryId,
       description: description ?? this.description,
       imageUrl: imageUrl ?? this.imageUrl,
       createdAt: createdAt ?? this.createdAt,
@@ -48,11 +74,28 @@ class Product {
     result.addAll({'product_id': productId});
     result.addAll({'name': name});
     result.addAll({'price': price});
+    result.addAll({'quantity': quantity});
+    result.addAll({'category_id': categoryId});
     result.addAll({'description': description});
     result.addAll({'image_url': imageUrl});
     result.addAll({'created_at': createdAt});
     result.addAll({'updated_at': updatedAt});
-    result.addAll({'category': category.toMap()});
+    if (category != null) {
+      result.addAll({'category': category!.toMap()});
+    }
+    return result;
+  }
+
+  Map<String, dynamic> toMapInput() {
+    final result = <String, dynamic>{};
+
+    // result.addAll({'product_id': productId});
+    result.addAll({'name': name});
+    result.addAll({'price': price});
+    result.addAll({'quantity': quantity});
+    result.addAll({'description': description});
+    result.addAll({'image_url': imageUrl});
+    result.addAll({'category_id': categoryId});
 
     return result;
   }
@@ -62,11 +105,13 @@ class Product {
       productId: map['product_id'] ?? '',
       name: map['name'] ?? '',
       price: map['price']?.toInt() ?? 0,
+      quantity: map['quantity']?.toInt() ?? 0,
+      categoryId: map['category_id'] ?? '',
       description: map['description'] ?? '',
       imageUrl: map['image_url'] ?? '',
       createdAt: map['created_at']?.toInt() ?? 0,
       updatedAt: map['updated_at']?.toInt() ?? 0,
-      category: Category.fromMap(map['category']),
+      category: map['category'] != null ? Category.fromMap(map['category']) : null,
     );
   }
 
@@ -76,7 +121,7 @@ class Product {
 
   @override
   String toString() {
-    return 'Product(productId: $productId, name: $name, price: $price, description: $description, imageUrl: $imageUrl, createdAt: $createdAt, updatedAt: $updatedAt, category: $category)';
+    return 'Product(productId: $productId, name: $name, price: $price, quantity: $quantity, categoryId: $categoryId, description: $description, imageUrl: $imageUrl, createdAt: $createdAt, updatedAt: $updatedAt, category: $category)';
   }
 
   @override
@@ -87,6 +132,8 @@ class Product {
         other.productId == productId &&
         other.name == name &&
         other.price == price &&
+        other.quantity == quantity &&
+        other.categoryId == categoryId &&
         other.description == description &&
         other.imageUrl == imageUrl &&
         other.createdAt == createdAt &&
@@ -99,6 +146,8 @@ class Product {
     return productId.hashCode ^
         name.hashCode ^
         price.hashCode ^
+        quantity.hashCode ^
+        categoryId.hashCode ^
         description.hashCode ^
         imageUrl.hashCode ^
         createdAt.hashCode ^

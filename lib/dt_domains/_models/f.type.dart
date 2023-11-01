@@ -1,24 +1,24 @@
 part of '_index.dart';
 
-class Type {
+class TypeOfShoes {
   final String typeId;
   final String name;
   final int createdAt;
   final int updatedAt;
-  Type({
+  TypeOfShoes({
     this.typeId = '',
     this.name = '',
     this.createdAt = 0,
     this.updatedAt = 0,
   });
 
-  Type copyWith({
+  TypeOfShoes copyWith({
     String? typeId,
     String? name,
     int? createdAt,
     int? updatedAt,
   }) {
-    return Type(
+    return TypeOfShoes(
       typeId: typeId ?? this.typeId,
       name: name ?? this.name,
       createdAt: createdAt ?? this.createdAt,
@@ -37,8 +37,8 @@ class Type {
     return result;
   }
 
-  factory Type.fromMap(Map<String, dynamic> map) {
-    return Type(
+  factory TypeOfShoes.fromMap(Map<String, dynamic> map) {
+    return TypeOfShoes(
       typeId: map['type_id'] ?? '',
       name: map['name'] ?? '',
       createdAt: map['created_at']?.toInt() ?? 0,
@@ -48,7 +48,7 @@ class Type {
 
   String toJson() => json.encode(toMap());
 
-  factory Type.fromJson(String source) => Type.fromMap(json.decode(source));
+  factory TypeOfShoes.fromJson(String source) => TypeOfShoes.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -59,7 +59,7 @@ class Type {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Type &&
+    return other is TypeOfShoes &&
         other.typeId == typeId &&
         other.name == name &&
         other.createdAt == createdAt &&

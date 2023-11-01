@@ -5,7 +5,7 @@ class Category {
   final String name;
   final int createdAt;
   final int updatedAt;
-  final Type type;
+  final TypeOfShoes type;
   Category({
     this.categoryId = '',
     this.name = '',
@@ -19,7 +19,7 @@ class Category {
     String? name,
     int? createdAt,
     int? updatedAt,
-    Type? type,
+    TypeOfShoes? type,
   }) {
     return Category(
       categoryId: categoryId ?? this.categoryId,
@@ -48,7 +48,7 @@ class Category {
       name: map['name'] ?? '',
       createdAt: map['created_at']?.toInt() ?? 0,
       updatedAt: map['updated_at']?.toInt() ?? 0,
-      type: Type.fromMap(map['type']),
+      type: TypeOfShoes.fromMap(map['type']),
     );
   }
 
