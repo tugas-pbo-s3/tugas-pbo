@@ -13,4 +13,5 @@ class Routes {
   static const productInput = '/product_input';
   static const productEdit = '/product_edit';
   static const login = '/login';
+  static const register = '/register';
 }

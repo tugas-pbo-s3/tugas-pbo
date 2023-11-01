@@ -5,12 +5,12 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const PreferredSize(
+    return const Scaffold(
+      appBar: PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: LoginAppbar(),
       ),
-      floatingActionButton: const LoginFab(),
+      floatingActionButton: LoginFab(),
       body: Center(
         child: SizedBox(
           height: 400,
@@ -18,73 +18,26 @@ class LoginView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  hintText: 'email@example.com',
-                  prefixIcon: Icon(Icons.email),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  hintText: 'Input your password email',
-                  prefixIcon: Icon(Icons.lock),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
+              LoginEmail(),
+              SizedBox(height: 10),
+              LoginPassword(),
+              SizedBox(height: 20),
               SizedBox(
                 width: 200,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Submit',
-                  ),
-                ),
+                child: LoginSubmit(),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               SizedBox(
                 width: 200,
-                child: OutlinedButton(
-                  onPressed: () {},
-                  child: const Text('Sign in with Google'),
-                ),
+                child: LoginGoogle(),
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: 2),
               SizedBox(
                 width: 200,
-                child: OutlinedButton(
-                  onPressed: () {},
-                  child: const Text('Sign in Anonymously'),
-                ),
+                child: LoginAnon(),
               ),
-              const SizedBox(height: 20),
-              TextButton(
-                onPressed: () {},
-                child: const Text('Don\'t have an account? Create'),
-              )
+              SizedBox(height: 20),
+              LoginToRegister()
             ],
           ),
         ),
