@@ -6,7 +6,7 @@ class UserX {
   final String password;
   final String email;
   final String image;
-  final Role role;
+  final Role? role;
   final int createdAt;
   final int updatedAt;
   UserX({
@@ -15,7 +15,7 @@ class UserX {
     this.password = '',
     this.email = '',
     this.image = '',
-    required this.role,
+    this.role,
     this.createdAt = 0,
     this.updatedAt = 0,
   });
@@ -50,7 +50,9 @@ class UserX {
     result.addAll({'password': password});
     result.addAll({'email': email});
     result.addAll({'image': image});
-    result.addAll({'role': role.toMap()});
+    if (role != null) {
+      result.addAll({'role': role!.toMap()});
+    }
     result.addAll({'created_at': createdAt});
     result.addAll({'updated_at': updatedAt});
 
@@ -64,7 +66,7 @@ class UserX {
       password: map['password'] ?? '',
       email: map['email'] ?? '',
       image: map['image'] ?? '',
-      role: Role.fromMap(map['role']),
+      role: map['role'] != null ? Role.fromMap(map['role']) : null,
       createdAt: map['created_at']?.toInt() ?? 0,
       updatedAt: map['updated_at']?.toInt() ?? 0,
     );

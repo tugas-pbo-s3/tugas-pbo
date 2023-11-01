@@ -19,3 +19,6 @@ part 'widgets/h.login.to.register.dart';
 
 LoginData get _dt => Data.login.st;
 LoginCtrl get _ct => Ctrl.login;
+// AuthServ get _svAuth => Serv.auth;
+// UserProv get _pv => Prov.user.st;
+// UserServ get _sv => Serv.user;

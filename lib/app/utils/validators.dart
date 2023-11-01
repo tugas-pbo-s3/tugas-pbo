@@ -21,6 +21,22 @@ class Validate {
     return null;
   }
 
+  // static String? isPwdRegistered(String? str) {
+  //   final pwd = Prov.auth.st.rxAuth.st?.user.password;
+  //   if (str == pwd) {
+  //     return "Wrong Password";
+  //   }
+  //   return null;
+  // }
+
+  static String? pwdMatch(String? str) {
+    final pwd = Data.register.st.rxPassword.st.value;
+    if (str != pwd) {
+      return "Password doesn't match";
+    }
+    return null;
+  }
+
   static String? minChars(String? str) {
     const min = 6;
     if (str != null && str.length < min) {

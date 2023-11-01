@@ -7,17 +7,26 @@ class RegisterSubmit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+    return OnFormBuilder(
+      listenTo: _dt.rxForm,
+      builder: () => Center(
+        child: OnFormSubmissionBuilder(
+          listenTo: _dt.rxForm,
+          onSubmitting: () => const CircularProgressIndicator(),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              _ct.submit();
+            },
+            child: const Text(
+              'Submit',
+            ),
+          ),
         ),
-      ),
-      onPressed: () {
-        nav.to(Routes.productList);
-      },
-      child: const Text(
-        'Submit',
       ),
     );
   }

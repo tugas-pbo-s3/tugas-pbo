@@ -7,18 +7,24 @@ class RegisterEmail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
-      decoration: InputDecoration(
-        labelText: 'Email',
-        hintText: 'email@example.com',
-        prefixIcon: Icon(Icons.email),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+    return OnFormBuilder(
+      listenTo: _dt.rxForm,
+      builder: () => TextField(
+        controller: _dt.rxEmail.st.controller,
+        focusNode: _dt.rxEmail.st.focusNode,
+        decoration: InputDecoration(
+          errorText: _dt.rxEmail.st.error,
+          labelText: 'Email',
+          hintText: 'email@example.com',
+          prefixIcon: const Icon(Icons.email),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
         ),
       ),
     );

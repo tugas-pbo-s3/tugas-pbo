@@ -1,17 +1,10 @@
-import 'package:dio/dio.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:states_rebuilder/states_rebuilder.dart';
-
 import '../../app/_index.dart';
-import '../../dt_sources/http/_index.dart';
-import '../../xtras/_index.dart';
-import '../_models/_index.dart';
 
 part 'a.product.prov.dart';
 part 'b.product.serv.dart';
 part 'c.product.repo.dart';
 part 'd.product.repo.mock.dart';
 
-ProductProv get _pv => Prov.product.st;
+// ProductProv get _pv => Prov.product.st;
 // ProductServ get _sv => Serv.product;
 // ProductRepo get _rp => Repo.product.st;
