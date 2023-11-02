@@ -1,9 +1,6 @@
 part of '_index.dart';
 
 abstract class Data {
-  static Injected<CobaSatuData> get cobaSatu => _cobaSatuData;
-  static Injected<CobaDuaData> get cobaDua => _cobaDuaData;
-  static Injected<CobaTigaData> get cobaTiga => _cobaTigaData;
   static Injected<ProductListData> get productList => _productListData;
   static Injected<ProductDetailData> get productDetail => _productDetailData;
   static Injected<ProductInputData> get productInput => _productInputData;
@@ -11,11 +8,14 @@ abstract class Data {
   static Injected<LoginData> get login => _loginData;
   static Injected<RegisterData> get register => _registerData;
   static Injected<HomeData> get home => _homeData;
+  static Injected<ManData> get man => _manData;
+  static Injected<WomanData> get woman => _womanData;
+  static Injected<KidsData> get kids => _kidsData;
+  static Injected<AllData> get all => _allData;
+  static Injected<CartData> get cart => _cartData;
+  static Injected<ProfileData> get profile => _profileData;
 }
 
-final _cobaSatuData = RM1.inj(CobaSatuData(), Ctrl.cobaSatu.init);
-final _cobaDuaData = RM1.inj(CobaDuaData(), Ctrl.cobaDua.init);
-final _cobaTigaData = RM1.inj(CobaTigaData(), Ctrl.cobaTiga.init);
 final _productListData = RM1.inj(ProductListData(), Ctrl.productList.init);
 final _productDetailData = RM1.inj(ProductDetailData(), Ctrl.productDetail.init);
 final _productInputData = RM1.inj(ProductInputData(), Ctrl.productInput.init);
@@ -23,3 +23,9 @@ final _productEditData = RM1.inj(ProductEditData(), Ctrl.productEdit.init);
 final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
 final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);
 final _homeData = RM1.inj(HomeData(), Ctrl.home.init);
+final _manData = RM1.inj(ManData(), Ctrl.man.init);
+final _womanData = RM1.inj(WomanData(), Ctrl.woman.init);
+final _kidsData = RM1.inj(KidsData(), Ctrl.kids.init);
+final _allData = RM1.inj(AllData(), Ctrl.all.init);
+final _cartData = RM1.inj(CartData(), Ctrl.cart.init);
+final _profileData = RM1.inj(ProfileData(), Ctrl.profile.init);

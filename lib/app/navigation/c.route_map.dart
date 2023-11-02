@@ -6,9 +6,7 @@ class RouteMap {
   static final data = {
     // Routes.root: (RouteData data) => const HomeView(),
     //* master -- ----- ----- ----- ----- -----
-    Routes.cobaSatu: (RouteData data) => const CobaSatuView(),
-    Routes.cobaDua: (RouteData data) => const CobaDuaView(),
-    Routes.cobaTiga: (RouteData data) => const CobaTigaView(),
+
     Routes.productList: (RouteData data) => const ProductListView(),
     Routes.productDetail: (RouteData data) => const ProductDetailView(),
     Routes.productInput: (RouteData data) => const ProductInputView(),
@@ -16,5 +14,11 @@ class RouteMap {
     Routes.login: (RouteData data) => const LoginView(),
     Routes.register: (RouteData data) => const RegisterView(),
     Routes.home: (RouteData data) => const HomeView(),
+    Routes.profile: (RouteData data) => const ProfileView(),
+    Routes.cart: (RouteData data) => const CartView(),
+    Routes.all: (RouteData data) => const AllView(),
+    Routes.woman: (RouteData data) => const WomanView(),
+    Routes.man: (RouteData data) => const ManView(),
+    Routes.kids: (RouteData data) => const KidsView(),
   };
 }

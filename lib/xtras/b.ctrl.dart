@@ -1,9 +1,6 @@
 part of '_index.dart';
 
 abstract class Ctrl {
-  static CobaSatuCtrl get cobaSatu => CobaSatuCtrl();
-  static CobaDuaCtrl get cobaDua => CobaDuaCtrl();
-  static CobaTigaCtrl get cobaTiga => CobaTigaCtrl();
   static ProductListCtrl get productList => ProductListCtrl();
   static ProductDetailCtrl get productDetail => ProductDetailCtrl();
   static ProductInputCtrl get productInput => ProductInputCtrl();
@@ -11,4 +8,10 @@ abstract class Ctrl {
   static LoginCtrl get login => LoginCtrl();
   static RegisterCtrl get register => RegisterCtrl();
   static HomeCtrl get home => HomeCtrl();
+  static ManCtrl get man => ManCtrl();
+  static WomanCtrl get woman => WomanCtrl();
+  static KidsCtrl get kids => KidsCtrl();
+  static AllCtrl get all => AllCtrl();
+  static CartCtrl get cart => CartCtrl();
+  static ProfileCtrl get profile => ProfileCtrl();
 }

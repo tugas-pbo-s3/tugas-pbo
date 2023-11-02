@@ -1,7 +1,8 @@
-export 'a.coba_satu/_index.dart';
-export 'b.coba_dua/_index.dart';
-export 'c.coba_tiga/_index.dart';
-export 'products/_index.dart';
-export 'login/_index.dart';
-export 'register/_index.dart';
-export 'home/_index.dart';
+export 'f.products/_index.dart';
+export 'a.login/_index.dart';
+export 'b.register/_index.dart';
+export 'c.home/_index.dart';
+export 'g.categories/_index.dart';
+
+export 'e.cart/_index.dart';
+export 'd.profile/_index.dart';
