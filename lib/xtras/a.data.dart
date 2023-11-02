@@ -10,6 +10,7 @@ abstract class Data {
   static Injected<ProductEditData> get productEdit => _productEditData;
   static Injected<LoginData> get login => _loginData;
   static Injected<RegisterData> get register => _registerData;
+  static Injected<HomeData> get home => _homeData;
 }
 
 final _cobaSatuData = RM1.inj(CobaSatuData(), Ctrl.cobaSatu.init);
@@ -21,3 +22,4 @@ final _productInputData = RM1.inj(ProductInputData(), Ctrl.productInput.init);
 final _productEditData = RM1.inj(ProductEditData(), Ctrl.productEdit.init);
 final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
 final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);
+final _homeData = RM1.inj(HomeData(), Ctrl.home.init);

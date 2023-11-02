@@ -14,4 +14,5 @@ class Routes {
   static const productEdit = '/product_edit';
   static const login = '/login';
   static const register = '/register';
+  static const home = '/home';
 }

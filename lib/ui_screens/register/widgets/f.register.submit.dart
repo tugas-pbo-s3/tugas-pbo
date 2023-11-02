@@ -20,7 +20,8 @@ class RegisterSubmit extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              _ct.submit();
+              // _ct.submit();
+              nav.to(Routes.productList);
             },
             child: const Text(
               'Submit',
