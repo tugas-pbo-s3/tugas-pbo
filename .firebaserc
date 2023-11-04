@@ -8,13 +8,7 @@
         "hosting": {
           "first": [
             "tugas-pbo-fc0db"
-          ]
-        }
-      }
-    },
-    {
-      "pegashoes": {
-        "hosting": {
+          ],
           "second": [
             "pegashoes"
           ]

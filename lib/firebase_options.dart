@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '804242459335',
     projectId: 'tugas-pbo-fc0db',
     storageBucket: 'tugas-pbo-fc0db.appspot.com',
+    iosClientId: '804242459335-osjjoel5htbl60froqchmg03iks714nt.apps.googleusercontent.com',
     iosBundleId: 'com.example.tugasPbo',
   );
 
@@ -76,6 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '804242459335',
     projectId: 'tugas-pbo-fc0db',
     storageBucket: 'tugas-pbo-fc0db.appspot.com',
+    iosClientId: '804242459335-6oor3ehbmlt3jahe0qg5dh1dpc8soiso.apps.googleusercontent.com',
     iosBundleId: 'com.example.tugasPbo.RunnerTests',
   );
 }
