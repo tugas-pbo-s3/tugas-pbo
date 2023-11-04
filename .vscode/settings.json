@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "files.exclude": {
     "*.dart_tool": true,
     "*.dart_tool.*": true,
@@ -60,4 +61,7 @@
     "*windows": true,
     "*windows.*": true
   }
+=======
+  "files.exclude": {}
+>>>>>>> 9c295c7 ([UI][add] navigation)
 }

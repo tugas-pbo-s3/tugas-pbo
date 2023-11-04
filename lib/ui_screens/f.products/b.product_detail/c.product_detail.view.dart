@@ -11,16 +11,7 @@ class ProductDetailView extends StatelessWidget {
         child: ProductDetailAppbar(),
       ),
       floatingActionButton: ProductDetailFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ProductDetailCharlie(),
-            ProductDetailDelta(),
-            ProductDetailEcho(),
-          ],
-        ),
-      ),
+      body: Center(),
     );
   }
 }

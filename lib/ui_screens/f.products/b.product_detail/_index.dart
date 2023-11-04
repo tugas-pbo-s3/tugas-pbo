@@ -16,4 +16,4 @@ part 'widgets/d.product_detail.delta.dart';
 part 'widgets/e.product_detail.echo.dart';
 
 ProductDetailData get _dt => Data.productDetail.st;
-ProductDetailCtrl get _ct => Ctrl.productDetail;
+// ProductDetailCtrl get _ct => Ctrl.productDetail;

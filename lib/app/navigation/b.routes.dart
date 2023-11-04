@@ -21,4 +21,5 @@ class Routes {
   static const woman = '/woman';
   static const man = '/man';
   static const kids = '/kids';
+  static const search = '/search';
 }

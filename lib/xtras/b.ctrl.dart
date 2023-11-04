@@ -14,4 +14,5 @@ abstract class Ctrl {
   static AllCtrl get all => AllCtrl();
   static CartCtrl get cart => CartCtrl();
   static ProfileCtrl get profile => ProfileCtrl();
+  static SearchCtrl get search => SearchCtrl();
 }

@@ -15,9 +15,7 @@ class WomanView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            WomanCharlie(),
-            WomanDelta(),
-            WomanEcho(),
+            Text('woman'),
           ],
         ),
       ),

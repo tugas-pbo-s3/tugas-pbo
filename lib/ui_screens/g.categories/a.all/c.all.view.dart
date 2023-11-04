@@ -6,13 +6,18 @@ class AllView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Wrap(
         children: [
           ...List.generate(
             13,
             (index) => Card(
-              child: ListTile(
-                title: Text('product $index'),
+              child: InkWell(
+                onTap: () => nav.to(Routes.productDetail),
+                child: SizedBox(
+                  height: 200,
+                  width: 200,
+                  child: Center(child: Text('product $index')),
+                ),
               ),
             ),
           ),

@@ -15,9 +15,7 @@ class KidsView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            KidsCharlie(),
-            KidsDelta(),
-            KidsEcho(),
+            Text('kids'),
           ],
         ),
       ),

@@ -33,6 +33,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.13.0"
+  animator:
+    dependency: "direct main"
+    description:
+      name: animator
+      sha256: b443e888b72b77a96d1e57a2190e42a0d46948e942fcfd7aed9c47dde2f446c6
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.0"
   antlr4:
     dependency: transitive
     description:

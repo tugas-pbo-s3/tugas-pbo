@@ -26,7 +26,9 @@ class ProductListView extends StatelessWidget {
                     leadingWidth: width,
                     actions: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          nav.to(Routes.search);
+                        },
                         icon: const Icon(Icons.search),
                       ),
                       IconButton(
@@ -35,12 +37,8 @@ class ProductListView extends StatelessWidget {
                         },
                         icon: const Icon(Icons.shopping_cart),
                       ),
-                      IconButton(
-                        onPressed: () {
-                          nav.to(Routes.profile);
-                        },
-                        icon: const Icon(Icons.person),
-                      ),
+                      TextButton(onPressed: () {}, child: const Text("Login")),
+                      TextButton(onPressed: () {}, child: const Text("Register")),
                       //   PopupMenuButton(
                       //     position: PopupMenuPosition.under,
                       //     child: const Center(child: Text('Women')),

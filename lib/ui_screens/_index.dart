@@ -6,3 +6,4 @@ export 'g.categories/_index.dart';
 
 export 'e.cart/_index.dart';
 export 'd.profile/_index.dart';
+export 'search/_index.dart';

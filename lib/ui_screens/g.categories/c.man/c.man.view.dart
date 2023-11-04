@@ -15,9 +15,7 @@ class ManView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ManCharlie(),
-            ManDelta(),
-            ManEcho(),
+            Text('man'),
           ],
         ),
       ),
