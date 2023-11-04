@@ -3,21 +3,20 @@ part of '_index.dart';
 class Category {
   final String categoryId;
   final String name;
-  final int createdAt;
-  final int updatedAt;
+  final String createdAt;
+  final String updatedAt;
   Category({
     this.categoryId = '',
     this.name = '',
-    this.createdAt = 0,
-    this.updatedAt = 0,
+    this.createdAt = '',
+    this.updatedAt = '',
   });
 
   Category copyWith({
     String? categoryId,
     String? name,
-    int? createdAt,
-    int? updatedAt,
-    TypeOfShoes? type,
+    String? createdAt,
+    String? updatedAt,
   }) {
     return Category(
       categoryId: categoryId ?? this.categoryId,
@@ -42,8 +41,8 @@ class Category {
     return Category(
       categoryId: map['category_id'] ?? '',
       name: map['name'] ?? '',
-      createdAt: map['created_at']?.toInt() ?? 0,
-      updatedAt: map['updated_at']?.toInt() ?? 0,
+      createdAt: map['created_at'] ?? '',
+      updatedAt: map['updated_at'] ?? '',
     );
   }
 

@@ -17,7 +17,7 @@ class Mocks {
   injectMocks() {
     Repo.user.injectMock(() => UserRepoMock());
     Repo.role.injectMock(() => RoleRepoMock());
-    Repo.product.injectMock(() => ProductRepoMock());
+    // Repo.product.injectMock(() => ProductRepoMock());
     Repo.category.injectMock(() => CategoryRepoMock());
     Repo.type.injectMock(() => TypeRepoMock());
     Repo.auth.injectMock(() => AuthRepoMock());

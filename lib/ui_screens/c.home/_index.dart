@@ -1,10 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
-import 'package:tugas_pbo/ui_screens/d.profile/_index.dart';
-import 'package:tugas_pbo/ui_screens/e.cart/_index.dart';
-import 'package:tugas_pbo/ui_screens/f.products/a.product_list/_index.dart';
+import 'package:tugas_pbo/ui_screens/_index.dart';
 
 import '../../app/_index.dart';
 import '../../xtras/_index.dart';
@@ -14,7 +10,7 @@ part 'b.home.ctrl.dart';
 part 'c.home.view.dart';
 part 'widgets/a.home.appbar.dart';
 part 'widgets/b.home.fab.dart';
-part 'widgets/c.home.charlie.dart';
+part 'widgets/c.home.phone.dart';
 part 'widgets/d.home.delta.dart';
 part 'widgets/e.home.echo.dart';
 

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class HomeCharlie extends StatelessWidget {
-  const HomeCharlie({Key? key}) : super(key: key);
+class AdminProductDetailCharlie extends StatelessWidget {
+  const AdminProductDetailCharlie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

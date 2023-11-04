@@ -7,6 +7,10 @@ class RouteMap {
     // Routes.root: (RouteData data) => const HomeView(),
     //* master -- ----- ----- ----- ----- -----
 
+    Routes.adminProductList: (RouteData data) => const AdminProductListView(),
+    Routes.adminProductDetail: (RouteData data) => const AdminProductDetailView(),
+    Routes.adminProductInput: (RouteData data) => const AdminProductInputView(),
+    Routes.adminProductEdit: (RouteData data) => const AdminProductEditView(),
     Routes.productList: (RouteData data) => const ProductListView(),
     Routes.productDetail: (RouteData data) => const ProductDetailView(),
     Routes.productInput: (RouteData data) => const ProductInputView(),

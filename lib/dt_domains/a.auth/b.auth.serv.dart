@@ -11,7 +11,7 @@ class AuthServ {
   responseAuthState(User? user) async {
     if (nav.routeData.location == '/login' || nav.routeData.location == '/register') {
       if (user != null) {
-        nav.toReplacement(Routes.productList);
+        nav.toReplacement(Routes.home);
       }
     } else {
       if (user == null) {

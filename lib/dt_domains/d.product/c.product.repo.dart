@@ -1,19 +1,21 @@
 part of '_index.dart';
 
 class ProductRepo {
-  // Future<List<Product>?> readProducts() async {
-  //   try {
-  //     List<Product> products = [];
-  //     final result = await x1HttpDio.get(ReqX(path: '/products'));
-  //     for (var i in result.data['data']) {
-  //       products.add(Product.fromMap(i));
-  //     }
-  //     return products;
-  //   } catch (e) {
-  //     logx.e('this is from products');
-  //     rethrow;
-  //   }
-  // }
+  Future<List<WomenShoes>> readProducts(String lastCreateTime) async {
+    final result = await x1FbFirestore.readCollInDoc(
+      colId1: Prov.product.st.colId,
+      docId: 'w-shoes',
+      colId2: 'women-shoes',
+      limit: Prov.product.st.limit,
+      lastCreateTime: lastCreateTime,
+    );
+
+    List<WomenShoes> products = [];
+    for (var i in result.docs) {
+      products.add(WomenShoes.fromMap(i.data()));
+    }
+    return products;
+  }
 
   // Future<Product> readProduct(String id) async {
   //   try {

@@ -1,6 +1,6 @@
 part of '_index.dart';
 
-class ProductRepoMock implements ProductRepo {
+class ProductRepoMock {
   // @override
   // Future createProduct(Product product, XFile? file) {
   //   throw UnimplementedError();

@@ -8,6 +8,10 @@ class Routes {
   static const cobaSatu = '/coba_satu';
   static const cobaDua = '/coba_dua';
   static const cobaTiga = '/coba_tiga';
+  static const adminProductList = '/admin_product_list';
+  static const adminProductDetail = '/admin_product_detail';
+  static const adminProductInput = '/admin_product_input';
+  static const adminProductEdit = '/admin_product_edit';
   static const productList = '/product_list';
   static const productDetail = '/product_detail';
   static const productInput = '/product_input';

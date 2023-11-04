@@ -23,6 +23,23 @@ class FbFirestore {
   // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
   //* read multiple items
+  // Future<dynamic> readCollectionNasted({
+  //   required String colId,
+  //   required int limit,
+  //   required String lastCreateTime,
+  // }) async {
+  //   try {
+  //     return Future.value(
+  //       instance
+  //           .collection(colId)
+  //           .limit(limit)
+  //           .orderBy('created_at', descending: true)
+  //           .startAfter([lastCreateTime]).get(),
+  //     );
+  //   } catch (e) {
+  //     logxx.e(FbFirestore, 'error on read. ${e.toString()}');
+  //   }
+  // }
   Future<dynamic> readCollection({
     required String colId,
     required int limit,
@@ -58,6 +75,24 @@ class FbFirestore {
   // }
 
   //* read single item
+  Future<QuerySnapshot<Map<String, dynamic>>> readCollInDoc({
+    required String colId1,
+    required String docId,
+    required String colId2,
+    required String lastCreateTime,
+    required int limit,
+  }) async {
+    try {
+      return Future.value(instance.collection(colId1).doc(docId).collection(colId2).get()
+          // .limit(limit)
+          // .orderBy('created_at', descending: true)
+          // .startAfter([lastCreateTime]).get(),
+          );
+    } catch (e) {
+      return Fun.handleException(e);
+    }
+  }
+
   Future<dynamic> readDocument({
     required String colId,
     required String docId,

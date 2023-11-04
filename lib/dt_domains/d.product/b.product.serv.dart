@@ -3,6 +3,32 @@ part of '_index.dart';
 class ProductServ {
   init() => logxx.i(ProductServ, '.....');
 
+  readProducts() {
+    _pv.rxLoadMore.stateAsync = Repo.product.st.readProducts(
+      _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
+    );
+  }
+
+  addToList(List<WomenShoes> moreProduct) {
+    _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];
+    if (moreProduct.length < _pv.limit) {
+      _pv.rxIsEnd.st = true;
+    }
+  }
+
+  setSelectedId(String id) {
+    _pv.rxSelectedId.refresh();
+    _pv.rxSelectedId.setState((s) => id);
+  }
+
+  initProducts() {
+    _pv.rxIsEnd.refresh();
+    _pv.rxProductList.refresh();
+    _pv.rxSelectedId.refresh();
+
+    readProducts();
+  }
+
   // setSelectedId(String id) {
   //   _pv.rxSelectedId.refresh();
   //   _pv.rxSelectedId.setState((s) => id);

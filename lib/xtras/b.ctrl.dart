@@ -1,6 +1,10 @@
 part of '_index.dart';
 
 abstract class Ctrl {
+  static AdminProductListCtrl get adminProductList => AdminProductListCtrl();
+  static AdminProductDetailCtrl get adminProductDetail => AdminProductDetailCtrl();
+  static AdminProductInputCtrl get adminProductInput => AdminProductInputCtrl();
+  static AdminProductEditCtrl get adminProductEdit => AdminProductEditCtrl();
   static ProductListCtrl get productList => ProductListCtrl();
   static ProductDetailCtrl get productDetail => ProductDetailCtrl();
   static ProductInputCtrl get productInput => ProductInputCtrl();

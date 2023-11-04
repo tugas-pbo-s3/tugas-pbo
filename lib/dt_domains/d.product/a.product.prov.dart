@@ -1,41 +1,40 @@
 part of '_index.dart';
 
 class ProductProv {
-  // final rxProductList = RM.inject<List<Product>>(() => []);
+  final colId = 'shoes';
+  final limit = 3;
+  final rxIsEnd = false.inj();
 
-  // final rxSelectedId = RM.inject<String>(() => '');
+  final rxIndex = RM.inject<int>(
+    () => 0,
+    persist: () => PersistState(
+      key: 'rxIndex',
+      throttleDelay: 500,
+      shouldRecreateTheState: false,
+    ),
+  );
 
-  // final limit = 4;
+  final rxProductList = RM.inject<List<WomenShoes>>(() => []);
 
-  // final rxImageUrl = RM.inject<String?>(() => null);
-
-  // final rxPickedFile = RM.inject<XFile?>(() => null);
-
-  // final rxProductDetail = RM.injectFuture<Product?>(
+  // final rxProductFuture = RM.injectFuture<Product?>(
   //   () => Future.value(null),
   //   sideEffects: SideEffects(
-  //     initState: () => Serv.product.initProductDetail(),
+  //     initState: () => Serv.product.readProduct(),
   //   ),
   // );
 
-  // final rxProductLoader = RM.injectFuture<List<Product>?>(
-  //   () => Future.value([]),
-  //   sideEffects: SideEffects(
-  //     initState: () => Serv.product.initProductsLoader(),
-  //     onSetState: (snap) {
-  //       snap.onAll(
-  //         onIdle: () => logx.s('from snap rxProductLoader: onIdle ...'),
-  //         onWaiting: () => logx.s('from snap rxProductLoader: onWaiting ...'),
-  //         onError: (_, __) => logx.s('from snap rxProductLoader: onError ...'),
-  //         onData: (data) {
-  //           logx.s('from snap rxProductLoader: onData ...');
-  //           final moreProducts = data;
-  //           if (moreProducts != null) {
-  //             Serv.product.addToList(moreProducts);
-  //           }
-  //         },
-  //       );
-  //     },
-  //   ),
-  // );
+  final rxSelectedId = RM.inject<String>(() => '');
+
+  final rxLoadMore = RM.injectFuture<List<WomenShoes>>(
+    () => Future.value([]),
+    sideEffects: SideEffects(
+      initState: () => Serv.product.initProducts(),
+      onSetState: (snap) {
+        if (snap.hasData) {
+          final moreProduct = snap.state.whereType<WomenShoes>().toList();
+          Serv.product.addToList(moreProduct);
+        }
+      },
+    ),
+  );
 }

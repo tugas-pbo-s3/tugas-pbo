@@ -1,6 +1,10 @@
 part of '_index.dart';
 
 abstract class Data {
+  static Injected<AdminProductListData> get adminProductList => _adminProductListData;
+  static Injected<AdminProductDetailData> get adminProductDetail => _adminProductDetailData;
+  static Injected<AdminProductInputData> get adminProductInput => _adminProductInputData;
+  static Injected<AdminProductEditData> get adminProductEdit => _adminProductEditData;
   static Injected<ProductListData> get productList => _productListData;
   static Injected<ProductDetailData> get productDetail => _productDetailData;
   static Injected<ProductInputData> get productInput => _productInputData;
@@ -17,6 +21,10 @@ abstract class Data {
   static Injected<SearchData> get search => _searchData;
 }
 
+final _adminProductListData = RM1.inj(AdminProductListData(), Ctrl.adminProductList.init);
+final _adminProductDetailData = RM1.inj(AdminProductDetailData(), Ctrl.adminProductDetail.init);
+final _adminProductInputData = RM1.inj(AdminProductInputData(), Ctrl.adminProductInput.init);
+final _adminProductEditData = RM1.inj(AdminProductEditData(), Ctrl.adminProductEdit.init);
 final _productListData = RM1.inj(ProductListData(), Ctrl.productList.init);
 final _productDetailData = RM1.inj(ProductDetailData(), Ctrl.productDetail.init);
 final _productInputData = RM1.inj(ProductInputData(), Ctrl.productInput.init);

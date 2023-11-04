@@ -6,7 +6,7 @@ abstract class Product {
   int get price;
   int get quantity;
   String get description;
-  String? get imageUrl;
+  List<String>? get imageUrl;
   String get createdAt;
   String? get updatedAt;
 }

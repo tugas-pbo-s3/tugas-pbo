@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
+
 part 'a.auth.dart';
 part 'b.user.dart';
 part 'c.role.dart';
