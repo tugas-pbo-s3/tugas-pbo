@@ -9,23 +9,27 @@ class RegisterRetype extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnFormBuilder(
       listenTo: _dt.rxForm,
-      builder: () => TextField(
-        controller: _dt.rxRetypePassword.st.controller,
-        focusNode: _dt.rxRetypePassword.st.focusNode,
-        decoration: InputDecoration(
-          errorText: _dt.rxRetypePassword.st.error,
-          labelText: 'Retype Password',
-          hintText: 'Retype your password',
-          prefixIcon: const Icon(Icons.lock),
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+      builder: () => InputTextField(
+        textEditingController: _dt.rxRetypePassword.controller,
+        focusNode: _dt.rxRetypePassword.focusNode,
+        keyboardType: TextInputType.visiblePassword,
+        isObscure: _dt.rxIsObscureRetypePassword.st,
+        textInputAction: TextInputAction.done,
+        onEditingComplete: () => _dt.rxRetypePassword.focusNode.unfocus(),
+        errorText: _dt.rxRetypePassword.error,
+        suffixIcon: OnReactive(
+          () => IconButton(
+            onPressed: () {
+              _ct.obscureRetypePassword();
+            },
+            icon: _dt.rxIsObscureRetypePassword.st == true
+                ? const Icon(Icons.visibility)
+                : const Icon(Icons.visibility_off),
           ),
         ),
+        labelText: 'Retype Password',
+        hintText: 'Retype your password',
+        prefixIcon: const Icon(Icons.lock),
       ),
     );
   }

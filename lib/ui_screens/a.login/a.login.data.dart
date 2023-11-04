@@ -7,7 +7,7 @@ class LoginData {
 
   final rxUser = Prov.auth.st.rxUser;
 
-  final focusScopeNode = FocusScopeNode();
+  // final focusScopeNode = FocusScopeNode();
 
   final rxIsObscurePassword = true.inj();
 

@@ -15,7 +15,7 @@ class LoginPassword extends StatelessWidget {
         keyboardType: TextInputType.visiblePassword,
         isObscure: _dt.rxIsObscurePassword.st,
         textInputAction: TextInputAction.done,
-        onEditingComplete: () => _dt.focusScopeNode.unfocus(),
+        onEditingComplete: () => _dt.rxPassword.focusNode.unfocus(),
         errorText: _dt.rxPassword.error,
         suffixIcon: OnReactive(
           () => IconButton(

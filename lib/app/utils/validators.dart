@@ -30,7 +30,7 @@ class Validate {
   // }
 
   static String? pwdMatch(String? str) {
-    final pwd = Data.register.st.rxPassword.st.value;
+    final pwd = Data.register.st.rxPassword.value;
     if (str != pwd) {
       return "Password doesn't match";
     }

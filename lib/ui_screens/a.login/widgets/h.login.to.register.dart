@@ -12,7 +12,7 @@ class LoginToRegister extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            nav.to(Routes.register);
+            nav.toReplacement(Routes.register);
           },
           child: const Text('Don\'t have an account? Register'),
         ),

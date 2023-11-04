@@ -12,9 +12,9 @@ class LoginView extends StatelessWidget {
       ),
       floatingActionButton: const LoginFab(),
       body: Center(
-        child: SizedBox(
+        child: Container(
           // height: 400,
-          width: 400,
+          constraints: const BoxConstraints(maxWidth: 400),
           child: OnFormBuilder(
             listenTo: _dt.rxForm,
             builder: () => const Padding(

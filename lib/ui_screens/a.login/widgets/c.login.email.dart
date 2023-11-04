@@ -13,7 +13,7 @@ class LoginEmail extends StatelessWidget {
         textEditingController: _dt.rxEmail.controller,
         focusNode: _dt.rxEmail.focusNode,
         keyboardType: TextInputType.emailAddress,
-        onEditingComplete: () => _dt.focusScopeNode.nextFocus(),
+        onEditingComplete: () => _dt.rxPassword.focusNode.requestFocus(),
         errorText: _dt.rxEmail.error,
         labelText: 'Email',
         hintText: 'email@example.com',

@@ -5,45 +5,44 @@ class RegisterData {
 
   final rxInt = 0.inj();
 
+  final rxUser = Prov.auth.st.rxUser;
+
+  // final focusScopeNode = FocusScopeNode();
+
+  final rxIsObscurePassword = true.inj();
+
+  final rxIsObscureRetypePassword = true.inj();
+
   final rxForm = RM.injectForm(
+    submit: () async => Ctrl.register.createUserWithEmailAndPassword(),
     autovalidateMode: AutovalidateMode.onUserInteraction,
-    // submit: () async => await _ct.signIn(),
   );
 
-  final rxIsObscuredPwd = true.inj();
-
-  final rxEmail = RM.inject(
-    () => RM.injectTextEditing(
-      text: 'pegashoes@gmail.com',
-      validators: [
-        Validate.isNotEmpty,
-        Validate.isEmail,
-      ],
-    ),
+  final rxEmail = RM.injectTextEditing(
+    validators: [
+      Validate.isNotEmpty,
+      Validate.isEmail,
+    ],
   );
 
-  final rxPassword = RM.inject(
-    () => RM.injectTextEditing(
-      text: 'pegashoes123',
-      validators: [
-        Validate.isNotEmpty,
-        Validate.alphaNumeric,
-        Validate.spaceNotAllowed,
-        Validate.minChars,
-        // Validate.isPwdRegistered,
-      ],
-    ),
+  final rxPassword = RM.injectTextEditing(
+    validators: [
+      Validate.isNotEmpty,
+      Validate.alphaNumeric,
+      Validate.spaceNotAllowed,
+      Validate.minChars,
+      Validate.pwdContain,
+    ],
   );
-  final rxRetypePassword = RM.inject(
-    () => RM.injectTextEditing(
-      // text: 'inipassword',
-      validators: [
-        Validate.isNotEmpty,
-        Validate.alphaNumeric,
-        Validate.spaceNotAllowed,
-        Validate.minChars,
-        Validate.pwdMatch
-      ],
-    ),
+
+  final rxRetypePassword = RM.injectTextEditing(
+    validators: [
+      Validate.isNotEmpty,
+      // Validate.alphaNumeric,
+      // Validate.spaceNotAllowed,
+      // Validate.minChars,
+      // Validate.pwdContain,
+      Validate.pwdMatch,
+    ],
   );
 }

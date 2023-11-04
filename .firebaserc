@@ -2,19 +2,17 @@
   "projects": {
     "default": "tugas-pbo-fc0db"
   },
-  "targets": [
-    {
-      "tugas-pbo-fc0db": {
-        "hosting": {
-          "first": [
-            "tugas-pbo-fc0db"
-          ],
-          "second": [
-            "pegashoes"
-          ]
-        }
+  "targets": {
+    "tugas-pbo-fc0db": {
+      "hosting": {
+        "satu": [
+          "tugas-pbo-fc0db"
+        ],
+        "dua": [
+          "pegashoes"
+        ]
       }
     }
-  ],
+  },
   "etags": {}
 }

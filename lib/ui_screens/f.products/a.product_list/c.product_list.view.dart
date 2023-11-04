@@ -37,7 +37,11 @@ class ProductListView extends StatelessWidget {
                         },
                         icon: const Icon(Icons.shopping_cart),
                       ),
-                      TextButton(onPressed: () {}, child: const Text("Login")),
+                      OutlinedButton(
+                          onPressed: () {
+                            _ct.signOut();
+                          },
+                          child: const Text("Logout")),
                       TextButton(onPressed: () {}, child: const Text("Register")),
                       //   PopupMenuButton(
                       //     position: PopupMenuPosition.under,

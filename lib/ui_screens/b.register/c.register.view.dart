@@ -10,25 +10,27 @@ class RegisterView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: RegisterAppbar(),
       ),
-      // floatingActionButton: const RegisterFab(),
       body: OnFormBuilder(
         listenTo: _dt.rxForm,
-        builder: () => const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              RegisterEmail(),
-              SizedBox(height: 10),
-              RegisterPassword(),
-              SizedBox(height: 10),
-              RegisterRetype(),
-              SizedBox(height: 20),
-              SizedBox(
-                width: 200,
-                child: RegisterSubmit(),
-              ),
-              RegisterToLogin()
-            ],
+        builder: () => Center(
+          child: Container(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RegisterEmail(),
+                SizedBox(height: 10),
+                RegisterPassword(),
+                SizedBox(height: 10),
+                RegisterRetype(),
+                SizedBox(height: 20),
+                SizedBox(
+                  width: 200,
+                  child: RegisterSubmit(),
+                ),
+                RegisterToLogin()
+              ],
+            ),
           ),
         ),
       ),

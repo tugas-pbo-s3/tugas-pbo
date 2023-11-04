@@ -10,12 +10,11 @@ class RegisterToLogin extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Do you already have an account?'),
         TextButton(
           onPressed: () {
-            nav.to(Routes.login);
+            nav.toReplacement(Routes.login);
           },
-          child: const Text('Login'),
+          child: const Text('Do you already have an account? Login'),
         ),
       ],
     );

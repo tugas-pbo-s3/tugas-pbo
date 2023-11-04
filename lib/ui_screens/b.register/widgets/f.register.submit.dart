@@ -15,17 +15,11 @@ class RegisterSubmit extends StatelessWidget {
           onSubmitting: () => const CircularProgressIndicator(),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              fixedSize: const Size.fromWidth(200),
             ),
-            onPressed: () {
-              // _ct.submit();
-              nav.to(Routes.productList);
-            },
-            child: const Text(
-              'Submit',
-            ),
+            onPressed: _dt.rxForm.isDirty && _dt.rxForm.isValid ? () => _ct.submit() : null,
+            child: const Text('Submit'),
           ),
         ),
       ),
