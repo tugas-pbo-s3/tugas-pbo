@@ -31,6 +31,13 @@ class Fun {
       str = e.message;
     } on FormatException catch (e) {
       str = e.message;
+    } on FirebaseException catch (e) {
+      logx.e(e.code);
+      if (e.code == 'invalid-login-credentials') {
+        str = 'email address not registered. Try to register';
+      } else {
+        str = e.message ?? e.code;
+      }
     } on Exception {
       str = 'Unknown exception: ${obj.toString()}';
     } on Object {

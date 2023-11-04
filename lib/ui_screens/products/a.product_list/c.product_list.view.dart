@@ -5,19 +5,31 @@ class ProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProductListAppbar(),
       ),
-      floatingActionButton: ProductListFab(),
+      floatingActionButton: const ProductListFab(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ProductListCharlie(),
-            ProductListDelta(),
-            ProductListEcho(),
+            const ProductListCharlie(),
+            const ProductListDelta(),
+            const ProductListEcho(),
+            ElevatedButton(
+              onPressed: () {
+                _ct.signOut();
+              },
+              child: const Text('Sign out'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                _ct.delete();
+              },
+              child: const Text('Delete Account'),
+            )
           ],
         ),
       ),

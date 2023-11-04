@@ -12,7 +12,12 @@
           "package_name": "com.example.tugas_pbo"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "804242459335-nar18h5sslq6m28alfgjv9074fvqd0l3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDG9oqf46Q6M4Ozq450ZvD8Q4-ig2CtQok"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804242459335-nar18h5sslq6m28alfgjv9074fvqd0l3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "804242459335-6oor3ehbmlt3jahe0qg5dh1dpc8soiso.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tugasPbo.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

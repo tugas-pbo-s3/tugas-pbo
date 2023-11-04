@@ -5,13 +5,11 @@ class Category {
   final String name;
   final int createdAt;
   final int updatedAt;
-  final TypeOfShoes type;
   Category({
     this.categoryId = '',
     this.name = '',
     this.createdAt = 0,
     this.updatedAt = 0,
-    required this.type,
   });
 
   Category copyWith({
@@ -26,7 +24,6 @@ class Category {
       name: name ?? this.name,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
-      type: type ?? this.type,
     );
   }
 
@@ -37,7 +34,6 @@ class Category {
     result.addAll({'name': name});
     result.addAll({'created_at': createdAt});
     result.addAll({'updated_at': updatedAt});
-    result.addAll({'type': type.toMap()});
 
     return result;
   }
@@ -48,7 +44,6 @@ class Category {
       name: map['name'] ?? '',
       createdAt: map['created_at']?.toInt() ?? 0,
       updatedAt: map['updated_at']?.toInt() ?? 0,
-      type: TypeOfShoes.fromMap(map['type']),
     );
   }
 
@@ -58,7 +53,7 @@ class Category {
 
   @override
   String toString() {
-    return 'Category(categoryId: $categoryId, name: $name, createdAt: $createdAt, updatedAt: $updatedAt, type: $type)';
+    return 'Category(categoryId: $categoryId, name: $name, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -69,12 +64,11 @@ class Category {
         other.categoryId == categoryId &&
         other.name == name &&
         other.createdAt == createdAt &&
-        other.updatedAt == updatedAt &&
-        other.type == type;
+        other.updatedAt == updatedAt;
   }
 
   @override
   int get hashCode {
-    return categoryId.hashCode ^ name.hashCode ^ createdAt.hashCode ^ updatedAt.hashCode ^ type.hashCode;
+    return categoryId.hashCode ^ name.hashCode ^ createdAt.hashCode ^ updatedAt.hashCode;
   }
 }

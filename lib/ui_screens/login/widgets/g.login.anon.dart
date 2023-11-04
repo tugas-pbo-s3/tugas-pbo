@@ -8,7 +8,9 @@ class LoginAnon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      onPressed: () {},
+      onPressed: () {
+        _ct.signInAnonymously();
+      },
       child: const Text('Sign in Anonymously'),
     );
   }

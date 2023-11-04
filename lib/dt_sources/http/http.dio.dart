@@ -19,13 +19,13 @@ class HttpDio {
   late Dio dio;
 
   void init() {
-    final auth = Prov.auth.st.rxAuth.st;
+    // final auth = Prov.auth.st.rxUser.st;
     dio = Dio();
 
     dio.options = BaseOptions(
       baseUrl: config.st.apiHost,
-      // headers: config.st.authToken == '' ? null : {'Authorization': 'Bearer ${config.st.authToken}'},
-      headers: auth == null ? null : {'Authorization': 'Bearer ${auth.token}'},
+      headers: config.st.authToken == '' ? null : {'Authorization': 'Bearer ${config.st.authToken}'},
+      // headers: auth == null ? null : {'Authorization': 'Bearer ${auth.token}'},
     );
     dio.interceptors.add(DioLogInterceptor());
     logxx.wtf(HttpDio, 'success init for dio and add interceptors.');

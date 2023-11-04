@@ -1,6 +1,6 @@
 part of '_index.dart';
 
-class User {
+class UserX {
   final String userId;
   final String username;
   final String password;
@@ -9,7 +9,7 @@ class User {
   final Role role;
   final int createdAt;
   final int updatedAt;
-  User({
+  UserX({
     this.userId = '',
     this.username = '',
     this.password = '',
@@ -20,7 +20,7 @@ class User {
     this.updatedAt = 0,
   });
 
-  User copyWith({
+  UserX copyWith({
     String? userId,
     String? username,
     String? password,
@@ -30,7 +30,7 @@ class User {
     int? createdAt,
     int? updatedAt,
   }) {
-    return User(
+    return UserX(
       userId: userId ?? this.userId,
       username: username ?? this.username,
       password: password ?? this.password,
@@ -57,8 +57,8 @@ class User {
     return result;
   }
 
-  factory User.fromMap(Map<String, dynamic> map) {
-    return User(
+  factory UserX.fromMap(Map<String, dynamic> map) {
+    return UserX(
       userId: map['user_id'] ?? '',
       username: map['username'] ?? '',
       password: map['password'] ?? '',
@@ -72,7 +72,7 @@ class User {
 
   String toJson() => json.encode(toMap());
 
-  factory User.fromJson(String source) => User.fromMap(json.decode(source));
+  factory UserX.fromJson(String source) => UserX.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -83,7 +83,7 @@ class User {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is User &&
+    return other is UserX &&
         other.userId == userId &&
         other.username == username &&
         other.password == password &&

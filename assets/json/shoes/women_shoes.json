@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "product_id": "product111",
+      "name": "product 1",
+      "price": 2000,
+      "quantity": 20,
+      "created_at": "2023-11-03",
+      "updated_at": "2023-11-04",
+      "color": "blue",
+      "size": 35,
+      "merk": "adidud",
+      "category": {
+        "category_id": "category222",
+        "name": "sport",
+        "created_at": "2023-11-03",
+        "updated_at": "2023-11-04"
+      }
+    },
+    {
+      "product_id": "product222",
+      "name": "product 2",
+      "price": 3000,
+      "quantity": 30,
+      "created_at": "2023-11-03",
+      "updated_at": "2023-11-04",
+      "color": "black",
+      "size": 40,
+      "merk": "ardila",
+      "category": {
+        "category_id": "category111",
+        "name": "heels",
+        "created_at": "2023-11-03",
+        "updated_at": "2023-11-04"
+      }
+    },
+    {
+      "product_id": "product333",
+      "name": "product 3",
+      "price": 4000,
+      "quantity": 40,
+      "created_at": "2023-11-03",
+      "updated_at": "2023-11-04",
+      "color": "white",
+      "size": 33,
+      "merk": "nikea",
+      "category": {
+        "category_id": "category444",
+        "name": "casual",
+        "created_at": "2023-11-03",
+        "updated_at": "2023-11-04"
+      }
+    },
+    {
+      "product_id": "product444",
+      "name": "product 4",
+      "price": 5000,
+      "quantity": 50,
+      "created_at": "2023-11-03",
+      "updated_at": "2023-11-04",
+      "color": "grey",
+      "size": 32,
+      "merk": "trendi",
+      "category": {
+        "category_id": "category111",
+        "name": "heels",
+        "created_at": "2023-11-03",
+        "updated_at": "2023-11-04"
+      }
+    },
+    {
+      "product_id": "product555",
+      "name": "product 5",
+      "price": 6000,
+      "quantity": 60,
+      "created_at": "2023-11-03",
+      "updated_at": "2023-11-04",
+      "color": "orange",
+      "size": 35,
+      "merk": "nilo",
+      "category": {
+        "category_id": "category222",
+        "name": "sport",
+        "created_at": "2023-11-03",
+        "updated_at": "2023-11-04"
+      }
+    }
+  ]
+}

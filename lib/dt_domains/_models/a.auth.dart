@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class Auth {
-  final User user;
+  final UserX user;
   final String token;
   Auth({
     required this.user,
@@ -9,7 +9,7 @@ class Auth {
   });
 
   Auth copyWith({
-    User? user,
+    UserX? user,
     String? token,
   }) {
     return Auth(
@@ -29,7 +29,7 @@ class Auth {
 
   factory Auth.fromMap(Map<String, dynamic> map) {
     return Auth(
-      user: User.fromMap(map['user']),
+      user: UserX.fromMap(map['user']),
       token: map['token'] ?? '',
     );
   }
