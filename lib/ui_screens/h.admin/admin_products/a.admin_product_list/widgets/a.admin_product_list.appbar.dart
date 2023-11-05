@@ -7,6 +7,14 @@ class AdminProductListAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: OnReactive(() => Text(_dt.rxTitle.st)),
+      actions: [
+        OutlinedButton(
+          onPressed: () {
+            _ct.signOut();
+          },
+          child: const Text('Sign out'),
+        ),
+      ],
     );
   }
 }
