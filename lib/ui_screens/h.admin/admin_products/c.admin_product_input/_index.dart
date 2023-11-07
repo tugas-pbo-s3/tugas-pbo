@@ -1,19 +1,23 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
+import 'package:tugas_pbo/ui_widgets/space/_index.dart';
 import 'package:tugas_pbo/xtras/_index.dart';
 
 import '../../../../app/_index.dart';
+import '../../../../dt_domains/_index.dart';
 
 part 'a.admin_product_input.data.dart';
 part 'b.admin_product_input.ctrl.dart';
 part 'c.admin_product_input.view.dart';
 part 'widgets/a.admin_product_input.appbar.dart';
 part 'widgets/b.admin_product_input.fab.dart';
-part 'widgets/c.admin_product_input.charlie.dart';
-part 'widgets/d.admin_product_input.delta.dart';
-part 'widgets/e.admin_product_input.echo.dart';
+part 'widgets/c.admin_product_input.name.dart';
+part 'widgets/d.admin_product_input.price.dart';
+part 'widgets/e.admin_product_input.description.dart';
+part 'widgets/f.admin_product_input.quantity.dart';
+part 'widgets/g.admin_product_input.merk.dart';
+part 'widgets/h.admin_product_input.category.dart';
+part 'widgets/i.admin_product_input.size.dart';
 
 AdminProductInputData get _dt => Data.adminProductInput.st;
 AdminProductInputCtrl get _ct => Ctrl.adminProductInput;

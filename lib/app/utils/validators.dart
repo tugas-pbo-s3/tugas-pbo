@@ -7,6 +7,13 @@ class Validate {
     return sanitizers.trim(str);
   }
 
+  static String? isNotZero(String? str) {
+    if (str != null && str == '0') {
+      return "zero is not allowed";
+    }
+    return null;
+  }
+
   static String? isChecked(bool value) {
     if (!value) {
       return 'You must check the checkbox';
@@ -38,7 +45,7 @@ class Validate {
   }
 
   static String? minChars(String? str) {
-    const min = 6;
+    const min = 3;
     if (str != null && str.length < min) {
       return 'min $min characters';
     }

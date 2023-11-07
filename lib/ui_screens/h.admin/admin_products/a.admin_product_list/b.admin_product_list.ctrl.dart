@@ -18,6 +18,6 @@ class AdminProductListCtrl {
 
   select(String id) {
     Serv.product.setSelectedId(id);
-    nav.to(Routes.productDetail);
+    nav.to(Routes.adminProductDetail);
   }
 }

@@ -16,13 +16,6 @@ class ProductProv {
 
   final rxProductList = RM.inject<List<WomenShoes>>(() => []);
 
-  // final rxProductFuture = RM.injectFuture<Product?>(
-  //   () => Future.value(null),
-  //   sideEffects: SideEffects(
-  //     initState: () => Serv.product.readProduct(),
-  //   ),
-  // );
-
   final rxSelectedId = RM.inject<String>(() => '');
 
   final rxLoadMore = RM.injectFuture<List<WomenShoes>>(

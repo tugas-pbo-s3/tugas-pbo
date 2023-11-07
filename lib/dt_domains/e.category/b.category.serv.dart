@@ -2,77 +2,86 @@ part of '_index.dart';
 
 class CategoryServ {
   init() => logxx.i(CategoryServ, 'CategoryServ init ...');
-  CategoryProv get pv => Prov.category.st;
+  refreshCategories() {
+    _pv.rxIsEnd.st = false;
+    _pv.rxCategoryList.st = [];
+    _pv.rxSelectedId.st = '';
+    readCategories();
+  }
+
+  readCategories() {
+    _pv.rxLoadMore.stateAsync = Repo.category.st.readCategories(
+      Prov.category.st.rxCategoryList.st.isEmpty
+          ? '9999-99-99 99:99:99.999'
+          : Prov.category.st.rxCategoryList.st.last.createdAt,
+    );
+  }
+
+  readCategory() {
+    _pv.rxCategoryFuture.stateAsync = Repo.category.st.readCategory();
+  }
 
   setSelectedId(String id) {
-    pv.rxSelectedId.refresh();
-    pv.rxSelectedId.setState((s) => id);
+    _pv.rxSelectedId.refresh();
+    _pv.rxSelectedId.setState((s) => id);
   }
 
-  addToList(List<Category> moreCategories) {
-    pv.rxCategoryList.setState((s) => [...s, ...moreCategories]);
+  initCategories() {
+    _pv.rxCategoryList.refresh();
+    _pv.rxSelectedId.refresh();
+
+    readCategories();
   }
 
-  Future<void> createCategory(Category category) async {
-    try {
-      await Repo.category.st.createCategory(category);
-    } catch (e) {
-      rethrow;
+  addToList(List<Category> moreCategory) {
+    _pv.rxCategoryList.st = [..._pv.rxCategoryList.st, ...moreCategory];
+    if (moreCategory.length < _pv.limit) {
+      _pv.rxIsEnd.st = true;
     }
   }
 
-  // --- read category ---
+  // ---- ---- delete ---- ----
 
-  void initCategoryDetail() {
-    pv.rxCategoryDetail.stateAsync = handleCategoryDetail();
-  }
-
-  Future<Category> handleCategoryDetail() async {
-    try {
-      final category = await readCategoryDetail();
-      return category;
-    } catch (e) {
-      return Fun.handleDummyException(e);
+  Future<void> deleteAllCategoryDataAndImage() async {
+    for (var element in _pv.rxCategoryList.st) {
+      _pv.rxSelectedId.st = element.categoryId;
+      await deleteCategory(_pv.rxSelectedId.st);
     }
+    _pv.rxIndex.setState((s) => 0);
+    _pv.rxCategoryList.setState((s) => s.clear());
   }
 
-  Future<Category> readCategoryDetail() async {
-    try {
-      final category = await Repo.category.st.readCategory(pv.rxSelectedId.st);
-      return category;
-    } catch (e) {
-      rethrow;
-    }
+  deleteOneOfCategory() {
+    _pv.rxCategoryList.st = [..._pv.rxCategoryList.st]
+      ..removeWhere((element) => element.categoryId == _pv.rxSelectedId.st);
   }
 
-  // --- read categories ---
-
-  Future<dynamic> initCategoryLoader() async {
-    await pv.rxCategoryList.refresh();
-    pv.rxCategoryLoader.stateAsync = pv.rxCategoryLoader.setState((s) => handleCategoryLoader());
+  Future<void> deleteAllCategory() {
+    return Repo.category.st.deleteAllCategories();
   }
 
-  Future<dynamic> nextCategoryLoader() async {
-    pv.rxCategoryLoader.stateAsync = pv.rxCategoryLoader.setState((s) => handleCategoryLoader());
+  Future<void> deleteCategory(String selectedId) {
+    return Repo.category.st.deleteCategory(selectedId);
   }
 
-  Future<dynamic> handleCategoryLoader() async {
-    try {
-      final initRxLoadMore = await readCategoryLoader();
-      pv.rxCategoryLoader.setToHasData(initRxLoadMore);
-    } catch (e) {
-      pv.rxCategoryLoader.setToHasError(e);
-      return Fun.handleException(e);
-    }
+  // ---- ---- create ---- ----
+
+  Future<void> createCategory(Category category) {
+    return Repo.category.st.createCategory(category);
   }
 
-  Future<dynamic> readCategoryLoader() async {
-    try {
-      // await createSeederCategories();
-      final categories = await Repo.category.st.readCategories();
-      return categories;
-    } catch (e) {
-      rethrow;
-    }
+  // ---- ---- update ---- ----
+
+  Future<void> updateCategory(Category category) {
+    return Repo.category.st.updateCategory(category);
+  }
+
+  updateOneOfCategoryList(Category p) {
+    _pv.rxCategoryList.setState(
+      (s) {
+        final index = s.indexWhere((element) => element.categoryId == _pv.rxSelectedId.st);
+        return s[index] = p;
+      },
+    );
   }
 }

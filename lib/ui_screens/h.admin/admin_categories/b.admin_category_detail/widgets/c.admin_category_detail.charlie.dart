@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminProductInputCharlie extends StatelessWidget {
-  const AdminProductInputCharlie({Key? key}) : super(key: key);
+class AdminCategoryDetailCharlie extends StatelessWidget {
+  const AdminCategoryDetailCharlie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

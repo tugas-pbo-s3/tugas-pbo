@@ -10,7 +10,7 @@ part 'b.admin_product_list.ctrl.dart';
 part 'c.admin_product_list.view.dart';
 part 'widgets/a.admin_product_list.appbar.dart';
 part 'widgets/b.admin_product_list.fab.dart';
-part 'widgets/c.admin_product_list.charlie.dart';
+part 'widgets/c.admin_product_list.card.dart';
 part 'widgets/d.admin_product_list.delta.dart';
 part 'widgets/e.admin_product_list.echo.dart';
 

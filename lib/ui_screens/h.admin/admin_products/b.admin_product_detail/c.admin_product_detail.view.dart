@@ -5,22 +5,39 @@ class AdminProductDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: AdminProductDetailAppbar(),
       ),
-      floatingActionButton: AdminProductDetailFab(),
+      floatingActionButton: const AdminProductDetailFab(),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            AdminProductDetailCharlie(),
-            AdminProductDetailDelta(),
-            AdminProductDetailEcho(),
-          ],
-        ),
-      ),
+          child: OnBuilder<WomenShoes?>.all(
+              listenTo: _dt.rxProduct,
+              onWaiting: () => const CircularProgressIndicator(),
+              onError: (e, s) => Text('Error: $e'),
+              onData: (data) => Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('${data?.productId}'),
+                      Text('${data?.name}'),
+                      Text('${data?.description}'),
+                      Text('${data?.price}'),
+                      Text('${data?.quantity}'),
+                      Text('${data?.merk}'),
+                      ...List.generate(
+                        data!.colors.length,
+                        (index) => Text(data.colors[index]),
+                      ),
+                      ...List.generate(
+                        data.sizes.length,
+                        (index) => Text('${data.sizes[index]}'),
+                      ),
+                      Text(data.category.name),
+                      Text(data.createdAt),
+                      Text('${data.updatedAt}'),
+                    ],
+                  ))),
     );
   }
 }

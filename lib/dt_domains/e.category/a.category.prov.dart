@@ -1,35 +1,42 @@
 part of '_index.dart';
 
 class CategoryProv {
-  final rxSelectedId = RM.inject<String>(() => '');
+  final colId = 'category';
 
-  final rxCategoryList = RM.inject<List<Category>>(() => []);
+  final limit = 3;
 
-  final rxCategoryLoader = RM.injectFuture<List<Category>?>(
-    () => Future.value([]),
-    sideEffects: SideEffects(
-      initState: () => Serv.category.initCategoryLoader(),
-      onSetState: (snap) {
-        snap.onAll(
-          onIdle: () => logx.s('from snap rxCategoryLoader: onIdle ...'),
-          onWaiting: () => logx.s('from snap rxCategoryLoader: onWaiting ...'),
-          onError: (_, __) => logx.s('from snap rxCategoryLoader: onError ...'),
-          onData: (data) {
-            logx.s('from snap rxCategoryLoader: onData ...');
-            final moreCategories = data;
-            if (moreCategories != null) {
-              Serv.category.addToList(moreCategories);
-            }
-          },
-        );
-      },
+  final rxIsEnd = false.inj();
+
+  final rxIndex = RM.inject<int>(
+    () => 0,
+    persist: () => PersistState(
+      key: 'rxIndex',
+      throttleDelay: 500,
+      shouldRecreateTheState: false,
     ),
   );
 
-  final rxCategoryDetail = RM.injectFuture<Category?>(
+  final rxCategoryList = RM.inject<List<Category>>(() => []);
+
+  final rxCategoryFuture = RM.injectFuture<Category?>(
     () => Future.value(null),
     sideEffects: SideEffects(
-      initState: () => Serv.category.initCategoryDetail(),
+      initState: () => Serv.category.readCategory(),
+    ),
+  );
+
+  final rxSelectedId = RM.inject<String>(() => '');
+
+  final rxLoadMore = RM.injectFuture<List<Category>>(
+    () => Future.value([]),
+    sideEffects: SideEffects(
+      initState: () => Serv.category.initCategories(),
+      onSetState: (snap) {
+        if (snap.hasData) {
+          final moreCategory = snap.state.whereType<Category>().toList();
+          Serv.category.addToList(moreCategory);
+        }
+      },
     ),
   );
 }

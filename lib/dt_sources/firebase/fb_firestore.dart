@@ -42,37 +42,29 @@ class FbFirestore {
   // }
   Future<dynamic> readCollection({
     required String colId,
-    required int limit,
+    required int? limit,
     required String lastCreateTime,
   }) async {
     try {
-      return Future.value(
-        instance
-            .collection(colId)
-            .limit(limit)
-            .orderBy('created_at', descending: true)
-            .startAfter([lastCreateTime]).get(),
-      );
+      if (limit == null) {
+        return Future.value(
+          instance.collection(colId).orderBy('created_at', descending: true).startAfter([lastCreateTime]).get(),
+        );
+      } else {
+        return Future.value(
+          instance
+              .collection(colId)
+              .limit(limit)
+              .orderBy('created_at', descending: true)
+              .startAfter([lastCreateTime]).get(),
+        );
+      }
     } catch (e) {
       logxx.e(FbFirestore, 'error on read. ${e.toString()}');
     }
   }
 
   //!  this syntax have a warning
-  // Future<QuerySnapshot<Map<String, dynamic>>> readCollection({
-  //   required String colId,
-  //   required int limit,
-  //   required String lastCreateTime,
-  // }) async {
-  //   return Future.value(instance
-  //           .collection(colId)
-  //           .limit(limit)
-  //           .orderBy('created_at', descending: true)
-  //           .startAfter([lastCreateTime]).get())
-  //       .catchError((e) {
-  //     logxx.e(FbFirestore, 'error on read. ${e.toString()}');
-  //   });
-  // }
 
   //* read single item
   Future<QuerySnapshot<Map<String, dynamic>>> readCollInDoc({
@@ -83,11 +75,15 @@ class FbFirestore {
     required int limit,
   }) async {
     try {
-      return Future.value(instance.collection(colId1).doc(docId).collection(colId2).get()
-          // .limit(limit)
-          // .orderBy('created_at', descending: true)
-          // .startAfter([lastCreateTime]).get(),
-          );
+      return Future.value(
+        instance
+            .collection(colId1)
+            .doc(docId)
+            .collection(colId2)
+            .limit(limit)
+            .orderBy('created_at', descending: true)
+            .startAfter([lastCreateTime]).get(),
+      );
     } catch (e) {
       return Fun.handleException(e);
     }
@@ -104,16 +100,14 @@ class FbFirestore {
     }
   }
 
-  // *Neww
-
-  Future<dynamic> readDocumentTwoId({
+  Future<dynamic> readDocument2({
     required String colId1,
-    required String docId,
+    required String docId1,
     required String colId2,
     required String docId2,
   }) async {
     try {
-      return Future.value(instance.collection(colId1).doc(docId).collection(colId2).doc(docId2).get());
+      return Future.value(instance.collection(colId1).doc(docId1).collection(colId2).doc(docId2).get());
     } catch (e) {
       logxx.e(FbFirestore, 'error on read. ${e.toString()}');
     }
@@ -145,6 +139,20 @@ class FbFirestore {
     }
   }
 
+  Future<void> createDocument2({
+    required String colId1,
+    required String docId1,
+    required String colId2,
+    required String docId2,
+    required Map<String, dynamic> data,
+  }) async {
+    try {
+      await instance.collection(colId1).doc(docId1).collection(colId2).doc(docId2).set(data);
+    } catch (e) {
+      logxx.e(FbFirestore, 'error on create. ${e.toString()}');
+    }
+  }
+
   //* update single item (error if not exist)
   Future<void> updateDocument({
     required String colId,
@@ -153,6 +161,20 @@ class FbFirestore {
   }) async {
     try {
       await instance.collection(colId).doc(docId).update(data);
+    } catch (e) {
+      logxx.e(FbFirestore, 'error on update. ${e.toString()}');
+    }
+  }
+
+  Future<void> updateDocument2({
+    required String colId1,
+    required String docId1,
+    required String colId2,
+    required String docId2,
+    required Map<String, dynamic> data,
+  }) async {
+    try {
+      await instance.collection(colId1).doc(docId1).collection(colId2).doc(docId2).update(data);
     } catch (e) {
       logxx.e(FbFirestore, 'error on update. ${e.toString()}');
     }

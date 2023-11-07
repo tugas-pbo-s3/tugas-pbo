@@ -19,9 +19,9 @@ class WomenRepo {
 
   // * repo read detail
   Future<WomenShoes> readProduct() async {
-    final result = await x1FbFirestore.readDocumentTwoId(
+    final result = await x1FbFirestore.readDocument2(
       colId1: _pv.colId,
-      docId: 'w-shoes',
+      docId1: 'w-shoes',
       colId2: 'women-shoes',
       docId2: _pv.rxSelectedId.st,
     );
