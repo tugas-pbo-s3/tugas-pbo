@@ -15,9 +15,10 @@ class ProfileView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ProfileCharlie(),
-            ProfileDelta(),
-            ProfileEcho(),
+            ProfilePhoto(),
+            ProfileUsername(),
+            ProfileEmail(),
+            ProfileLogout(),
           ],
         ),
       ),
