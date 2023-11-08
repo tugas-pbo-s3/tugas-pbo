@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 final nav = RM.injectNavigator(
-  initialLocation: Routes.profile,
+  initialLocation: Routes.home,
   // initialLocation: Prov.auth.st.rxUser.st == null ? Routes.login : Routes.home,
   routes: RouteMap.data,
   onNavigate: (data) => OnNavigate.action(data),

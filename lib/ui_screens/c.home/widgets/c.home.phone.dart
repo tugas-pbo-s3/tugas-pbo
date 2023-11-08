@@ -6,29 +6,36 @@ class HomePhone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.amber,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _dt.rxCurrentIndex.st,
-        onTap: (i) {
-          _dt.rxCurrentIndex.setState((s) => i);
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_sharp),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'profile',
-          ),
-        ],
+      bottomNavigationBar: OnBuilder(
+        listenTo: _dt.rxCurrentIndex,
+        builder: () => BottomNavigationBar(
+          fixedColor: Colors.amber,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _dt.rxCurrentIndex.st,
+          onTap: (i) {
+            _dt.rxCurrentIndex.setState((s) => i);
+            logx.e(i.toString());
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_sharp),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'profile',
+            ),
+          ],
+        ),
       ),
-      body: _dt.listPage[_dt.rxCurrentIndex.st],
+      body: OnBuilder(
+        listenTo: _dt.rxCurrentIndex,
+        builder: () => _dt.listPage[_dt.rxCurrentIndex.st],
+      ),
     );
   }
 }

@@ -5,13 +5,21 @@ class ProductDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    final height = MediaQuery.of(context).size.height;
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProductDetailAppbar(),
       ),
-      floatingActionButton: ProductDetailFab(),
-      body: Center(),
+      // floatingActionButton: const ProductDetailFab(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          DetailPhoto(height: height),
+          const SizedBoxH(10),
+          const DetailDesc(),
+        ],
+      ),
     );
   }
 }
