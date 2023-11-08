@@ -13,7 +13,7 @@ class AdminProductListCtrl {
   //   Serv.product.refreshProducts();
   // }
   Future<void> loadMore() async {
-    Serv.product.readProducts();
+    Serv.product.readAllProducts();
   }
 
   select(String id) {

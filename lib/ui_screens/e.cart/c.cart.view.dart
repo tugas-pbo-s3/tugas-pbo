@@ -14,11 +14,30 @@ class CartView extends StatelessWidget {
       body: Center(
         child: ListView(
           children: [
+            Checkbox(
+              activeColor: const Color(0xFFFD725A),
+              value: true,
+              onChanged: (value) {},
+            ),
             ...List.generate(
               5,
               (index) => Card(
                 child: ListTile(
-                  leading: Image.asset('assets/images/pegaShoes500.png'),
+                  leading: SizedBox(
+                    width: 120,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          child: Checkbox(
+                            activeColor: const Color(0xFFFD725A),
+                            value: true,
+                            onChanged: (value) {},
+                          ),
+                        ),
+                        Image.asset('assets/images/pegaShoes500.png'),
+                      ],
+                    ),
+                  ),
                   title: Text('Product $index'),
                   subtitle: const Text('RP 1000'),
                   trailing: SizedBox(

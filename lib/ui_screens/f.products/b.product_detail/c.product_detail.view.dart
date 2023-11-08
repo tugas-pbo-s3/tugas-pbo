@@ -7,19 +7,21 @@ class ProductDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(56),
-        child: ProductDetailAppbar(),
-      ),
-      // floatingActionButton: const ProductDetailFab(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          DetailPhoto(height: height),
-          const SizedBoxH(10),
-          const DetailDesc(),
-        ],
-      ),
-    );
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(56),
+          child: ProductDetailAppbar(),
+        ),
+        // floatingActionButton: const ProductDetailFab(),
+        body: OnBuilder(
+          listenTo: _dt.rxProductFuture,
+          builder: () => Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              DetailPhoto(height: height),
+              const SizedBoxH(10),
+              const DetailDesc(),
+            ],
+          ),
+        ));
   }
 }

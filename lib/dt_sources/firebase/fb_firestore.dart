@@ -104,6 +104,21 @@ class FbFirestore {
     }
   }
 
+  // *Neww
+
+  Future<dynamic> readDocumentTwoId({
+    required String colId1,
+    required String docId,
+    required String colId2,
+    required String docId2,
+  }) async {
+    try {
+      return Future.value(instance.collection(colId1).doc(docId).collection(colId2).doc(docId2).get());
+    } catch (e) {
+      logxx.e(FbFirestore, 'error on read. ${e.toString()}');
+    }
+  }
+
   //! this syntax have a warning
   // Future<DocumentSnapshot<Map<String, dynamic>>> readDocument({
   //   required String colId,

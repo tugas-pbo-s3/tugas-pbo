@@ -3,8 +3,8 @@ part of '_index.dart';
 class ProductServ {
   init() => logxx.i(ProductServ, '.....');
 
-  readProducts() {
-    _pv.rxLoadMore.stateAsync = Repo.product.st.readProducts(
+  readAllProducts() {
+    _pv.rxLoadMore.stateAsync = Repo.product.st.readAllProducts(
       _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
     );
   }
@@ -26,7 +26,12 @@ class ProductServ {
     _pv.rxProductList.refresh();
     _pv.rxSelectedId.refresh();
 
-    readProducts();
+    readAllProducts();
+  }
+
+  // * serv read detail
+  readProduct() {
+    _pv.rxProductFuture.stateAsync = _rp.readProduct();
   }
 
   // setSelectedId(String id) {
