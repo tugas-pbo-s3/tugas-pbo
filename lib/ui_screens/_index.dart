@@ -8,5 +8,3 @@ export 'e.cart/_index.dart';
 export 'd.profile/_index.dart';
 export 'search/_index.dart';
 export 'h.admin/_index.dart';
-
-export 'women_detail/_index.dart';

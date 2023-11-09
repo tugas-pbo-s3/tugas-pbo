@@ -26,5 +26,6 @@ class RouteMap {
     Routes.kids: (RouteData data) => const KidsView(),
     Routes.search: (RouteData data) => const SearchView(),
     Routes.womenDetail: (RouteData data) => const WomenDetailView(),
+    Routes.manDetail: (RouteData data) => const ManDetailView(),
   };
 }

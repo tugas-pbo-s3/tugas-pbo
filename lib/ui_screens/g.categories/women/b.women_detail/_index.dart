@@ -5,8 +5,8 @@ import 'package:tugas_pbo/dt_domains/_models/_index.dart';
 import 'package:tugas_pbo/dt_domains/women/_index.dart';
 import 'package:tugas_pbo/ui_widgets/space/_index.dart';
 
-import '../../app/_index.dart';
-import '../../xtras/_index.dart';
+import '../../../../app/_index.dart';
+import '../../../../xtras/_index.dart';
 
 part 'a.women_detail.data.dart';
 part 'b.women_detail.ctrl.dart';

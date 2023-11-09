@@ -27,4 +27,5 @@ class Routes {
   static const kids = '/kids';
   static const search = '/search';
   static const womenDetail = '/women_detail';
+  static const manDetail = '/man_detail';
 }

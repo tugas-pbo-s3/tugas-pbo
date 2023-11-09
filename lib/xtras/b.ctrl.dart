@@ -12,7 +12,7 @@ abstract class Ctrl {
   static LoginCtrl get login => LoginCtrl();
   static RegisterCtrl get register => RegisterCtrl();
   static HomeCtrl get home => HomeCtrl();
-  static ManCtrl get man => ManCtrl();
+  static MenCtrl get man => MenCtrl();
   static WomenCtrl get woman => WomenCtrl();
   static KidsCtrl get kids => KidsCtrl();
   static AllCtrl get all => AllCtrl();
@@ -20,4 +20,5 @@ abstract class Ctrl {
   static ProfileCtrl get profile => ProfileCtrl();
   static SearchCtrl get search => SearchCtrl();
   static WomenDetailCtrl get womenDetail => WomenDetailCtrl();
+  static ManDetailCtrl get manDetail => ManDetailCtrl();
 }

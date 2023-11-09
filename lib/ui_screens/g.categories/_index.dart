@@ -1,4 +1,4 @@
-export 'a.all/_index.dart';
-export 'b.women/_index.dart';
-export 'c.man/_index.dart';
+export 'all/_index.dart';
+export 'women/_index.dart';
+export 'men/_index.dart';
 export 'd.kids/_index.dart';

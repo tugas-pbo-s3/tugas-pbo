@@ -1,7 +1,7 @@
 part of '_index.dart';
 
-class ManCtrl {
-  init() => logxx.i(ManCtrl, '...');
+class ManDetailCtrl {
+  init() => logxx.i(ManDetailCtrl, '...');
 
   action() => _dt.rxInt.setState((s) => s + 1);
 }
