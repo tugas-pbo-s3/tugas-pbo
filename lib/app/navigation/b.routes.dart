@@ -22,8 +22,9 @@ class Routes {
   static const profile = '/profile';
   static const cart = '/cart';
   static const all = '/all';
-  static const woman = '/woman';
+  static const women = '/women';
   static const man = '/man';
   static const kids = '/kids';
   static const search = '/search';
+  static const womenDetail = '/women_detail';
 }

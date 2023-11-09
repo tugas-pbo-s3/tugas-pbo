@@ -7,6 +7,7 @@ abstract class Prov {
   static Injected<ProductProv> get product => _productProv;
   static Injected<CategoryProv> get category => _categoryProv;
   static Injected<TypeProv> get type => _typeProv;
+  static Injected<WomenProv> get women => _womenProv;
 }
 
 final _authProv = RM2.inj(AuthProv());
@@ -15,3 +16,4 @@ final _roleProv = RM2.inj(RoleProv());
 final _productProv = RM2.inj(ProductProv());
 final _categoryProv = RM2.inj(CategoryProv());
 final _typeProv = RM2.inj(TypeProv());
+final _womenProv = RM2.inj(WomenProv());

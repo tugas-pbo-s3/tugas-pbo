@@ -1,7 +1,7 @@
 part of '_index.dart';
 
-class WomanCtrl {
-  init() => logxx.i(WomanCtrl, '...');
+class WomenCtrl {
+  init() => logxx.i(WomenCtrl, '...');
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
@@ -15,6 +15,6 @@ class WomanCtrl {
 
   selectProduct(String id) {
     _sv.setSelectedId(id);
-    nav.to(Routes.productDetail);
+    nav.to(Routes.womenDetail);
   }
 }

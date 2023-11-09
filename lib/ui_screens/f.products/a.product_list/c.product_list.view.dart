@@ -68,7 +68,7 @@ class ProductListView extends StatelessWidget {
                       child: TabBarView(
                         children: [
                           AllView(),
-                          WomanView(),
+                          WomenView(),
                           ManView(),
                           KidsView(),
                         ],
@@ -118,7 +118,7 @@ class ProductListView extends StatelessWidget {
                       child: TabBarView(
                         children: <Widget>[
                           AllView(),
-                          WomanView(),
+                          WomenView(),
                           ManView(),
                           KidsView(),
                         ],

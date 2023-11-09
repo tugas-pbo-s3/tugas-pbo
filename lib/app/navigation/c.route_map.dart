@@ -21,9 +21,10 @@ class RouteMap {
     Routes.profile: (RouteData data) => const ProfileView(),
     Routes.cart: (RouteData data) => const CartView(),
     Routes.all: (RouteData data) => const AllView(),
-    Routes.woman: (RouteData data) => const WomanView(),
+    Routes.women: (RouteData data) => const WomenView(),
     Routes.man: (RouteData data) => const ManView(),
     Routes.kids: (RouteData data) => const KidsView(),
     Routes.search: (RouteData data) => const SearchView(),
+    Routes.womenDetail: (RouteData data) => const WomenDetailView(),
   };
 }

@@ -13,10 +13,11 @@ abstract class Ctrl {
   static RegisterCtrl get register => RegisterCtrl();
   static HomeCtrl get home => HomeCtrl();
   static ManCtrl get man => ManCtrl();
-  static WomanCtrl get woman => WomanCtrl();
+  static WomenCtrl get woman => WomenCtrl();
   static KidsCtrl get kids => KidsCtrl();
   static AllCtrl get all => AllCtrl();
   static CartCtrl get cart => CartCtrl();
   static ProfileCtrl get profile => ProfileCtrl();
   static SearchCtrl get search => SearchCtrl();
+  static WomenDetailCtrl get womenDetail => WomenDetailCtrl();
 }

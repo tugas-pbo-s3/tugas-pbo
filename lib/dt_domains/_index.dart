@@ -5,3 +5,4 @@ export 'c.role/_index.dart';
 export 'd.product/_index.dart';
 export 'e.category/_index.dart';
 export 'f.type/_index.dart';
+export 'women/_index.dart';

@@ -1,7 +1,7 @@
 part of '_index.dart';
 
-class WomanView extends StatelessWidget {
-  const WomanView({Key? key}) : super(key: key);
+class WomenView extends StatelessWidget {
+  const WomenView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,14 @@ class WomanView extends StatelessWidget {
                     height: 200,
                     width: 200,
                     child: Center(
-                        child: Column(
-                      children: [
-                        Image.asset('assets/images/pegaShoes500.png', height: 150),
-                        Text(_dt.rxProductList.st[index].name),
-                        Text('Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}'),
-                      ],
-                    )),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/pegaShoes500.png', height: 150),
+                          Text(_dt.rxProductList.st[index].name),
+                          Text('Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}'),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),

@@ -1,8 +1,8 @@
 part of '../_index.dart';
 
 // ignore: must_be_immutable
-class DetailBottomsheet extends StatelessWidget {
-  DetailBottomsheet({super.key});
+class WomenDetailBottomsheet extends StatelessWidget {
+  WomenDetailBottomsheet({super.key});
 
   // List sizes = [
   //   '37',
