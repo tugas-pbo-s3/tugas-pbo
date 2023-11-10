@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 part 'a.auth.dart';
 part 'b.user.dart';
@@ -12,3 +13,5 @@ part 'shoes.dart';
 part 'kids_shoes.dart';
 part 'men_shoes.dart';
 part 'women_shoes.dart';
+part 'shoes_size.dart';
+part 'shoes_colors.dart';

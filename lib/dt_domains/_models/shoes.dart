@@ -29,7 +29,7 @@ class Shoes implements Product {
   String? updatedAt;
 
   @override
-  List<String>? imageUrl;
+  Map<String, String>? imageUrl;
 
   Shoes({
     required this.colors,
@@ -56,7 +56,7 @@ class Shoes implements Product {
     int? quantity,
     String? createdAt,
     String? updatedAt,
-    List<String>? imageUrl,
+    Map<String, String>? imageUrl,
   }) {
     return Shoes(
       colors: colors ?? this.colors,
@@ -69,7 +69,6 @@ class Shoes implements Product {
       quantity: quantity ?? this.quantity,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
-      imageUrl: imageUrl ?? this.imageUrl,
     );
   }
 
@@ -107,7 +106,7 @@ class Shoes implements Product {
       quantity: map['quantity']?.toInt() ?? 0,
       createdAt: map['created_at'] ?? '',
       updatedAt: map['updated_at'],
-      imageUrl: List<String>.from(map['image_url']),
+      imageUrl: Map<String, String>.from(map['images'] ?? const {}),
     );
   }
 
@@ -135,7 +134,7 @@ class Shoes implements Product {
         other.quantity == quantity &&
         other.createdAt == createdAt &&
         other.updatedAt == updatedAt &&
-        listEquals(other.imageUrl, imageUrl);
+        mapEquals(other.imageUrl, imageUrl);
   }
 
   @override

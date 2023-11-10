@@ -25,6 +25,7 @@ class AdminProductDetailView extends StatelessWidget {
                       Text('${data?.price}'),
                       Text('${data?.quantity}'),
                       Text('${data?.merk}'),
+                      Image.network('${data?.imageUrl?[0]}'),
                       ...List.generate(
                         data!.colors.length,
                         (index) => Text(data.colors[index]),

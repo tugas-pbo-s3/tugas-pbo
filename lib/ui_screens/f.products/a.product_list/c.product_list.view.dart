@@ -38,10 +38,24 @@ class ProductListView extends StatelessWidget {
                         icon: const Icon(Icons.shopping_cart),
                       ),
                       OutlinedButton(
-                          onPressed: () {
-                            _ct.signOut();
-                          },
-                          child: const Text("Logout")),
+                        onPressed: () {
+                          _ct.signOut();
+                        },
+                        child: const Text("Logout"),
+                      ),
+                      // TextButton(onPressed: () {}, child: const Text("Register")),
+                      //   PopupMenuButton(
+                      //     position: PopupMenuPosition.under,
+                      //     child: const Center(child: Text('Women')),
+                      //     itemBuilder: (context) {
+                      //       return const [
+                      //         PopupMenuItem(
+                      //           child: Text('text'),
+                      //         ),
+                      //       ];
+                      //     },
+                      //   ),
+                      //   const SizedBoxW(20),
                     ],
                     backgroundColor: Colors.amber,
                     pinned: true,

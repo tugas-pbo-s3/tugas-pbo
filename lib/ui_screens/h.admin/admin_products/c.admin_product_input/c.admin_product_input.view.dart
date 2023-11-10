@@ -1,6 +1,6 @@
 part of '_index.dart';
 
-class AdminProductInputView extends StatelessWidget {
+class AdminProductInputView extends ReactiveStatelessWidget {
   const AdminProductInputView({Key? key}) : super(key: key);
 
   @override
@@ -42,11 +42,18 @@ class AdminProductInputView extends StatelessWidget {
                           const SizedBoxH(10),
                           const AdminProductInputSize(),
                           const SizedBoxH(10),
+                          const AdminProductInputColor(),
+                          const SizedBoxH(10),
+                          const AdminProductInputImages(),
+                          const SizedBoxH(10),
+                          const AdminProductInputImagePreview(),
+                          const SizedBoxH(10),
+                          const AdminProductInputSubmit(),
                           ElevatedButton(
                             onPressed: () {
-                              logx.wtf(_dt.rxListOfSelectedItem.st.toString());
+                              logx.e(_dt.rxImages.st.toString());
                             },
-                            child: const Text('Submit'),
+                            child: const Text('coba aja'),
                           ),
                         ],
                       );

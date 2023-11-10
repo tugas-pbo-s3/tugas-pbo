@@ -3,7 +3,6 @@ import 'package:tugas_pbo/ui_screens/g.categories/women/a.women/_index.dart';
 import 'package:tugas_pbo/ui_screens/g.categories/women/b.women_detail/_index.dart';
 
 import '../../ui_screens/_index.dart';
-import '../../xtras/_index.dart';
 import '../_index.dart';
 
 part 'a.inject.dart';

@@ -27,13 +27,20 @@ class ProductRepo {
     return WomenShoes.fromMap(docSnapshot.data() ?? {});
   }
 
-  Future<void> createProduct(WomenShoes product) async {
+  Future<void> createProduct(WomenShoes womenShoes) async {
+    WomenShoes wShoes = womenShoes;
+
+    if (womenShoes.imageUrl!.isNotEmpty) {
+      womenShoes.imageUrl?.forEach((key, value) {});
+      final imageWithUrl = await x1FbStorage.st.uploadFiles(womenShoes.imageUrl!);
+      wShoes = womenShoes.copyWith(imageUrl: imageWithUrl);
+    }
     await x1FbFirestore.createDocument2(
       colId1: _pv.colId,
       docId1: 'w-shoes',
       colId2: 'women-shoes',
-      docId2: product.productId,
-      data: product.toMap(),
+      docId2: womenShoes.productId,
+      data: wShoes.toMap(),
     );
   }
 }

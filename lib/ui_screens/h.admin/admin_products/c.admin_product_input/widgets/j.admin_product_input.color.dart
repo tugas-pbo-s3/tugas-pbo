@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminProductInputSize extends ReactiveStatelessWidget {
-  const AdminProductInputSize({super.key});
+class AdminProductInputColor extends StatelessWidget {
+  const AdminProductInputColor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +10,12 @@ class AdminProductInputSize extends ReactiveStatelessWidget {
         margin: const EdgeInsets.only(top: 10.0),
         decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
         child: OnReactive(
-          () => MultiSelectChipField(
-            items: _dt.itemSizes,
+          () => MultiSelectChipField<ShoesColors?>(
+            scroll: true,
+            items: _dt.itemColors,
+            scrollBar: HorizontalScrollBar(),
             initialValue: const [],
-            title: const Text("Size"),
+            title: const Text("Colors"),
             headerColor: Colors.transparent,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),
@@ -21,22 +23,17 @@ class AdminProductInputSize extends ReactiveStatelessWidget {
             ),
             chipColor: Colors.transparent,
             selectedChipColor: Theme.of(context).colorScheme.primary,
+            // selectedChipColor: _dt.rxCustomSelectedColor.st,
             textStyle: const TextStyle(color: Colors.white),
             selectedTextStyle: const TextStyle(color: Colors.white),
             onTap: (values) {
               // _ct.getSelectedSizes(values);
-              _ct.setSizesValues(values);
-              _ct.addToListSizes();
-
-              for (var i in values) {
-                logx.w(i.size.toString());
-              }
-              logx.e('----------');
-              for (var p in _dt.rxSelectedSizes.st) {
-                logx.wtf(p.size.toString());
-              }
-              logx.i(_dt.rxSelectedSizes.st.length.toString());
+              _ct.setColorsValues(values);
+              _ct.addToListColors();
             },
+            // colorator: (v) {
+            //   return _ct.setCustomSelectedColor(v!.color);
+            // },
           ),
         ),
       ),

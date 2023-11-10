@@ -54,7 +54,7 @@ class WomenShoes extends Shoes {
       quantity: map['quantity']?.toInt() ?? 0,
       createdAt: map['created_at'] ?? '',
       updatedAt: map['updated_at'],
-      imageUrl: List<String>.from(map['image_url']),
+      imageUrl: Map<String, String>.from(map['images'] ?? const {}),
     );
   }
 
@@ -75,7 +75,7 @@ class WomenShoes extends Shoes {
     int? quantity,
     String? createdAt,
     String? updatedAt,
-    List<String>? imageUrl,
+    Map<String, String>? imageUrl,
     Category? category,
   }) {
     return WomenShoes(
@@ -96,7 +96,7 @@ class WomenShoes extends Shoes {
 
   @override
   String toString() =>
-      'WomenShoes(category: $category, colors: $colors, sizes: $sizes, merk: $merk, productId: $productId, name: $name, description: $description, price: $price, quantity: $quantity, createdAt: $createdAt, updatedAt: $updatedAt, imageUrl: $imageUrl)';
+      'WomenShoes(category: $category, colors: $colors, sizes: $sizes, merk: $merk, productId: $productId, name: $name, description: $description, price: $price, quantity: $quantity, createdAt: $createdAt, updatedAt: $updatedAt, imageUrl: $imageUrl,)';
 
   @override
   bool operator ==(Object other) {
@@ -114,7 +114,7 @@ class WomenShoes extends Shoes {
         other.quantity == quantity &&
         other.createdAt == createdAt &&
         other.updatedAt == updatedAt &&
-        listEquals(other.imageUrl, imageUrl);
+        mapEquals(other.imageUrl, imageUrl);
   }
 
   @override

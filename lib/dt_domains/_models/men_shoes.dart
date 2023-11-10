@@ -54,7 +54,7 @@ class MenShoes extends Shoes {
       quantity: map['quantity']?.toInt() ?? 0,
       createdAt: map['created_at'] ?? '',
       updatedAt: map['updated_at'],
-      imageUrl: List<String>.from(map['image_url']),
+      imageUrl: Map<String, String>.from(map['images'] ?? const {}),
     );
   }
 
@@ -75,8 +75,8 @@ class MenShoes extends Shoes {
     int? quantity,
     String? createdAt,
     String? updatedAt,
-    List<String>? imageUrl,
-    Category? category,
+    Map<String, String>? imageUrl,
+    Category? categories,
   }) {
     return MenShoes(
       colors: colors ?? this.colors,
@@ -90,7 +90,7 @@ class MenShoes extends Shoes {
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       imageUrl: imageUrl ?? this.imageUrl,
-      category: category ?? this.category,
+      category: category,
     );
   }
 
@@ -114,7 +114,7 @@ class MenShoes extends Shoes {
         other.quantity == quantity &&
         other.createdAt == createdAt &&
         other.updatedAt == updatedAt &&
-        listEquals(other.imageUrl, imageUrl);
+        mapEquals(other.imageUrl, imageUrl);
   }
 
   @override
