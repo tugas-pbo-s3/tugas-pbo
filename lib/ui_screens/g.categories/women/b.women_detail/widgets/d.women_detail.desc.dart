@@ -61,7 +61,7 @@ class WomenDetailDesc extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {
-                      nav.to(Routes.cart);
+                      _ct.addToCart();
                     },
                     icon: const Icon(Icons.shopping_cart)),
                 ElevatedButton(

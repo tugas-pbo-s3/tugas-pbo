@@ -14,6 +14,8 @@ class WomenDetailBottomsheet extends StatelessWidget {
     Colors.grey.shade700,
   ];
 
+  final totalPayment = _dt.rxAngka.st * _dt.rxProductFuture.st!.price;
+
   @override
   Widget build(BuildContext context) {
     return OnBuilder.all(
@@ -134,10 +136,10 @@ class WomenDetailBottomsheet extends StatelessWidget {
               ],
             ),
             const SizedBoxH(4),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Total Payment:',
                   style: TextStyle(
                     color: Color(0xFFFD725A),
@@ -145,12 +147,14 @@ class WomenDetailBottomsheet extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                Text(
-                  'Rp.300.000',
-                  style: TextStyle(
-                    color: Color(0xFFFD725A),
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
+                OnReactive(
+                  () => Text(
+                    'Rp ${Fun.formatRupiah.format(totalPayment)}',
+                    style: const TextStyle(
+                      color: Color(0xFFFD725A),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],

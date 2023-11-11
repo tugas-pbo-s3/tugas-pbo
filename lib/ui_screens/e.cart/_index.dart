@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
+import 'package:tugas_pbo/dt_domains/women/_index.dart';
 
 import '../../app/_index.dart';
 import '../../xtras/_index.dart';
@@ -17,3 +18,6 @@ part 'widgets/e.cart.echo.dart';
 
 CartData get _dt => Data.cart.st;
 CartCtrl get _ct => Ctrl.cart;
+
+WomenProv get _pv => Prov.women.st;
+// WomenServ get _sv => Serv.women;

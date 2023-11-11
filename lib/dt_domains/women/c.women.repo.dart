@@ -32,4 +32,11 @@ class WomenRepo {
     logx.wtf(productResult.toString());
     return productResult;
   }
+
+  Future<List<WomenShoes>> addToCart(WomenShoes product) async {
+    await Future.delayed(1.seconds);
+    List<WomenShoes> products = [];
+    _pv.rxCartList.st = [..._pv.rxCartList.st]..insert(0, product);
+    return products;
+  }
 }

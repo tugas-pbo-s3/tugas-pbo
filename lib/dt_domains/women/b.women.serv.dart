@@ -10,6 +10,10 @@ class WomenServ {
     logx.e('iniwomenn');
   }
 
+  addToCart(WomenShoes product) {
+    _rp.addToCart(product);
+  }
+
   addToList(List<WomenShoes> moreProduct) {
     _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];
     if (moreProduct.length < _pv.limit) {

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:tugas_pbo/dt_domains/_models/_index.dart';
@@ -20,3 +19,4 @@ part 'widgets/e.women_detail.bottomsheet.dart';
 WomenDetailData get _dt => Data.womenDetail.st;
 WomenDetailCtrl get _ct => Ctrl.womenDetail;
 WomenProv get _pv => Prov.women.st;
+WomenServ get _sv => Serv.women;
