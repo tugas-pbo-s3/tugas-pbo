@@ -54,7 +54,7 @@ class KidsShoes extends Shoes {
       quantity: map['quantity']?.toInt() ?? 0,
       createdAt: map['created_at'] ?? '',
       updatedAt: map['updated_at'],
-      imageUrl: Map<String, String>.from(map['images'] ?? const {}),
+      imageUrl: Map<String, String>.from(map['image_url'] ?? const {}),
     );
   }
 

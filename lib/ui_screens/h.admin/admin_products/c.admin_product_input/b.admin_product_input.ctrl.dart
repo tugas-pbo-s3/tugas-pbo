@@ -70,6 +70,10 @@ class AdminProductInputCtrl {
   //   _dt.rxProduct.st = newProduct;
   // }
 
+  uploadImages() async {
+    await Serv.product.uploadImages(_dt.rxImages.st);
+  }
+
   Future<void> pickImages() async {
     List<String> pathImages = [];
     Map<String, String> mapImages = {};
@@ -118,19 +122,19 @@ class AdminProductInputCtrl {
       colors: _dt.rxShoesColors.st,
       sizes: _dt.rxShoesSizes.st,
       merk: _dt.rxMerk.value,
-      // imageUrl: _dt.rxImages.st,
+      imageUrl: _dt.rxImages.st,
     );
     // _dt.rxProduct.setState((s) => product);
 
-    WomenShoes productx = product;
-    if (product.imageUrl != {}) {
-      product.imageUrl?.forEach((key, value) {});
-      // final imageWithUrl = await x1FbStorage.st.uploadFiles(product.images);
-      productx = product.copyWith(imageUrl: product.imageUrl);
-    }
-    await Serv.product.createProduct(productx);
+    // WomenShoes productx = product;
+    // if (product.imageUrl != {}) {
+    //   product.imageUrl?.forEach((key, value) {});
+    //   // final imageWithUrl = await x1FbStorage.st.uploadFiles(product.images);
+    //   productx = product.copyWith(imageUrl: product.imageUrl);
+    // }
+    await Serv.product.createProduct(product);
 
-    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, productx);
+    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
 
     await Future.delayed(400.milliseconds);
     RM.navigate.forceBack();

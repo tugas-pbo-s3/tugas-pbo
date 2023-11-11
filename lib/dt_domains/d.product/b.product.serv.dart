@@ -37,4 +37,8 @@ class ProductServ {
   Future<void> createProduct(WomenShoes product) {
     return Repo.product.st.createProduct(product);
   }
+
+  Future<void> uploadImages(Map<String, String> images) {
+    return Repo.product.st.uploadImages(images);
+  }
 }

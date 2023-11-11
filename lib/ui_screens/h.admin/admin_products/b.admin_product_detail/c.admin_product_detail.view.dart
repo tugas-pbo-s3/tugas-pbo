@@ -12,33 +12,50 @@ class AdminProductDetailView extends StatelessWidget {
       ),
       floatingActionButton: const AdminProductDetailFab(),
       body: Center(
-          child: OnBuilder<WomenShoes?>.all(
-              listenTo: _dt.rxProduct,
-              onWaiting: () => const CircularProgressIndicator(),
-              onError: (e, s) => Text('Error: $e'),
-              onData: (data) => Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('${data?.productId}'),
-                      Text('${data?.name}'),
-                      Text('${data?.description}'),
-                      Text('${data?.price}'),
-                      Text('${data?.quantity}'),
-                      Text('${data?.merk}'),
-                      Image.network('${data?.imageUrl?[0]}'),
-                      ...List.generate(
-                        data!.colors.length,
-                        (index) => Text(data.colors[index]),
-                      ),
-                      ...List.generate(
-                        data.sizes.length,
-                        (index) => Text('${data.sizes[index]}'),
-                      ),
-                      Text(data.category.name),
-                      Text(data.createdAt),
-                      Text('${data.updatedAt}'),
-                    ],
-                  ))),
+        child: OnBuilder<WomenShoes?>.all(
+          listenTo: _dt.rxProduct,
+          onWaiting: () => const CircularProgressIndicator(),
+          onError: (e, s) => Text('Error: $e'),
+          onData: (data) {
+            // final image = data?.imageUrl!;
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('${data?.productId}'),
+                Text('${data?.name}'),
+                Text('${data?.description}'),
+                Text('${data?.price}'),
+                Text('${data?.quantity}'),
+                Text('${data?.merk}'),
+                // Image.network('${data?.imageUrl?[0]}'),
+                ...List.generate(
+                  data!.colors.length,
+                  (index) => Text(data.colors[index]),
+                ),
+                ...List.generate(
+                  data.sizes.length,
+                  (index) => Text('${data.sizes[index]}'),
+                ),
+                Text(data.category.name),
+                Text(data.createdAt),
+                Text('${data.updatedAt}'),
+                // if (image!.isNotEmpty)
+                // Text('wkwkwk'),
+                for (var i in data.imageUrl!.values)
+                  SizedBox(
+                    width: 60,
+                    height: 60,
+                    child: Image.network(
+                      i,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                // Text('heheheheh'),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }

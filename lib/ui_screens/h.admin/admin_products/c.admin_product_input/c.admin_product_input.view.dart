@@ -51,7 +51,8 @@ class AdminProductInputView extends ReactiveStatelessWidget {
                           const AdminProductInputSubmit(),
                           ElevatedButton(
                             onPressed: () {
-                              logx.e(_dt.rxImages.st.toString());
+                              // logx.e(_dt.rxImages.st.toString());
+                              _ct.uploadImages();
                             },
                             child: const Text('coba aja'),
                           ),

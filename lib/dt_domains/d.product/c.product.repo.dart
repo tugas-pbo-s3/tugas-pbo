@@ -27,10 +27,15 @@ class ProductRepo {
     return WomenShoes.fromMap(docSnapshot.data() ?? {});
   }
 
+  Future<void> uploadImages(Map<String, String> images) async {
+    final imageStorage = await x1FbStorage.st.uploadFiles(images);
+    logx.e('ini image dari storage: $imageStorage');
+  }
+
   Future<void> createProduct(WomenShoes womenShoes) async {
     WomenShoes wShoes = womenShoes;
 
-    if (womenShoes.imageUrl!.isNotEmpty) {
+    if (womenShoes.imageUrl != {}) {
       womenShoes.imageUrl?.forEach((key, value) {});
       final imageWithUrl = await x1FbStorage.st.uploadFiles(womenShoes.imageUrl!);
       wShoes = womenShoes.copyWith(imageUrl: imageWithUrl);

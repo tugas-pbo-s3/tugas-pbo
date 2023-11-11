@@ -64,8 +64,12 @@ class AdminProductInputImagePreview extends StatelessWidget {
                             width: 60,
                             height: 60,
                             padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                            child: Image.network(
-                              path,
+                            // child: Image.network(
+                            //   path,
+                            //   fit: BoxFit.cover,
+                            // ),
+                            child: Image.file(
+                              File(path),
                               fit: BoxFit.cover,
                             ),
                           ),
