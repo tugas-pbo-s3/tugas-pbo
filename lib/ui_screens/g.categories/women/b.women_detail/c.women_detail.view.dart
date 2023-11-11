@@ -5,7 +5,7 @@ class WomenDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
+    // final height = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(56),
@@ -14,12 +14,12 @@ class WomenDetailView extends StatelessWidget {
         // floatingActionButton: const ProductDetailFab(),
         body: OnBuilder(
           listenTo: _dt.rxProductFuture,
-          builder: () => Column(
+          builder: () => const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              WomenDetailPhoto(height: height),
-              const SizedBoxH(10),
-              const WomenDetailDesc(),
+              // WomenDetailPhoto(height: height),
+              SizedBoxH(10),
+              WomenDetailDesc(),
             ],
           ),
         ));

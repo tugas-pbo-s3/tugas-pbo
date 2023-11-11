@@ -12,22 +12,16 @@ class WomenDetailPhoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBuilder.all(
+    return OnBuilder<WomenShoes?>.all(
       listenTo: _dt.rxProductFuture,
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,
       onData: (data) => Container(
         alignment: Alignment.topCenter,
         height: height / 2,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(
-            image: NetworkImage('${data?.imageUrl?[0]}'),
-            // image: NetworkImage(data.i),
-            // image: AssetImage('assets/images/pegaShoes1000.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
+        decoration: const BoxDecoration(
+            color: Colors.white, image: DecorationImage(image: AssetImage('assets/images/g-logo.png'))),
+        child: Text(data!.name),
         // child: Padding(
         //   padding: const EdgeInsets.all(20),
         //   child: Row(

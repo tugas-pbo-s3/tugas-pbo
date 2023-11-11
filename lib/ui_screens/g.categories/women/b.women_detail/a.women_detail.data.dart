@@ -10,4 +10,8 @@ class WomenDetailData {
   final rxProductList = _pv.rxProductList;
 
   final rxSelectedId = _pv.rxSelectedId;
+
+  final rxAngka = RM.inject(
+    () => 0,
+  );
 }

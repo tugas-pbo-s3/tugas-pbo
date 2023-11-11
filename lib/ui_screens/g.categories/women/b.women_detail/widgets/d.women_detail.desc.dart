@@ -9,19 +9,8 @@ class WomenDetailDesc extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnBuilder<WomenShoes?>.all(
       listenTo: _dt.rxProductFuture,
-      onWaiting: () => const CircularProgressIndicator(),
+      onWaiting: () => const Center(child: CircularProgressIndicator()),
       onError: (error, refreshError) => error,
-      // onData: (data) => Column(
-      //   mainAxisAlignment: MainAxisAlignment.center,
-      //   children: [
-      //     Text('${data?.productId}'),
-      //     Text('${data?.name}'),
-      //     Text('${data?.price}'),
-      //     Text('${data?.quantity}'),
-      //     Text('${data?.createdAt}'),
-      //     Text('${data?.updatedAt}'),
-      //   ],
-      // ),
       onData: (data) => Padding(
         padding: const EdgeInsets.only(top: 8, left: 15, right: 15),
         child: Column(

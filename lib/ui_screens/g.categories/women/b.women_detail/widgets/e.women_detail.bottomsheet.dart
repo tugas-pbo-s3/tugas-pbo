@@ -4,20 +4,14 @@ part of '../_index.dart';
 class WomenDetailBottomsheet extends StatelessWidget {
   WomenDetailBottomsheet({super.key});
 
-  // List sizes = [
-  //   '37',
-  //   '38',
-  //   '39',
-  //   '40',
-  // ];
-
   final sizes = _dt.rxProductFuture.st!.sizes;
 
-  List<Color?> colors = [
-    Colors.blue,
-    Colors.green,
-    Colors.yellow,
-    Colors.red,
+  final colors = _dt.rxProductFuture.st!.colors;
+
+  List<Color?> colorsState = [
+    Colors.white,
+    Colors.black,
+    Colors.grey.shade700,
   ];
 
   @override
@@ -61,14 +55,15 @@ class WomenDetailBottomsheet extends StatelessWidget {
                 ...List.generate(
                   sizes.length,
                   (index) => Container(
-                      margin: const EdgeInsets.all(2),
-                      child: TextButton(
-                        style: const ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(Colors.pink),
-                        ),
-                        onPressed: () {},
-                        child: Text(sizes[index].toString()),
-                      )),
+                    margin: const EdgeInsets.all(2),
+                    child: TextButton(
+                      style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.pink),
+                      ),
+                      onPressed: () {},
+                      child: Text(sizes[index].toString()),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -86,13 +81,14 @@ class WomenDetailBottomsheet extends StatelessWidget {
                 ...List.generate(
                   colors.length,
                   (index) => Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 8),
-                    padding: const EdgeInsets.all(13),
-                    decoration: BoxDecoration(
-                      color: colors[index],
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
+                      margin: const EdgeInsets.all(2),
+                      child: TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(colorsState[index]),
+                        ),
+                        onPressed: () {},
+                        child: Text(colors[index].toString()),
+                      )),
                 ),
               ],
             ),
@@ -111,28 +107,29 @@ class WomenDetailBottomsheet extends StatelessWidget {
                   icon: const Icon(
                     Icons.remove,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    _dt.rxAngka.st--;
+                    logx.i('kurang');
+                  },
                   color: Colors.redAccent,
                 ),
                 const SizedBoxH(5),
-                const Text(
-                  '0',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400,
+                OnReactive(
+                  () => Text(
+                    _dt.rxAngka.st.toString(),
+                    textScaleFactor: 1.5,
                   ),
                 ),
                 const SizedBoxH(5),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                IconButton(
+                  icon: const Icon(
+                    Icons.add,
                   ),
-                  child: const Icon(
-                    CupertinoIcons.plus,
-                    size: 18,
-                    color: Colors.redAccent,
-                  ),
+                  onPressed: () {
+                    _dt.rxAngka.st++;
+                    logx.i('tambah');
+                  },
+                  color: Colors.redAccent,
                 ),
               ],
             ),
