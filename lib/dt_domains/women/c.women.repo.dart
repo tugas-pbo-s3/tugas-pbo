@@ -33,10 +33,10 @@ class WomenRepo {
     return productResult;
   }
 
-  Future<List<WomenShoes>> addToCart(WomenShoes product) async {
-    await Future.delayed(1.seconds);
-    List<WomenShoes> products = [];
-    _pv.rxCartList.st = [..._pv.rxCartList.st]..insert(0, product);
-    return products;
-  }
+  // Future<List<WomenShoes>> addToCart(WomenShoes product) async {
+  //   await Future.delayed(1.seconds);
+  //   List<WomenShoes> products = [];
+  //   _pv.rxCart.st = [..._pv.rxCart.st]..insert(0, product);
+  //   return products;
+  // }
 }

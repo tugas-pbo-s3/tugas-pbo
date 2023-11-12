@@ -12,6 +12,6 @@ class WomenDetailData {
   final rxSelectedId = _pv.rxSelectedId;
 
   final rxAngka = RM.inject(
-    () => 0,
+    () => 1,
   );
 }

@@ -19,8 +19,13 @@ class WomenDetailCtrl {
       merk: Prov.women.st.rxProductFuture.st!.merk,
       description: Prov.women.st.rxProductFuture.st!.description,
     );
-    _sv.addToCart(product);
+
+    _sv.addToCart(product, totalItems: _dt.rxAngka.st);
     nav.back();
     logx.i('addtocart');
   }
+
+  //   addToCart(WomenShoes shoes, {int totalItems = 1}) {
+  //   _svProduct.addToCart(shoes, totalItems);
+  // }
 }

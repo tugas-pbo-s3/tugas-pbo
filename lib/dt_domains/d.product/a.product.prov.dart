@@ -14,6 +14,18 @@ class ProductProv {
     ),
   );
 
+  final rxCart = RM.inject<Cart>(
+    () => Cart(),
+    autoDisposeWhenNotUsed: false,
+    persist: () => PersistState(
+      key: 'rxCartList',
+      throttleDelay: 500,
+      shouldRecreateTheState: false,
+      toJson: (s) => s.toJson(),
+      fromJson: (json) => Cart.fromJson(json),
+    ),
+  );
+
   final rxProductList = RM.inject<List<WomenShoes>>(() => []);
 
   final rxSelectedId = RM.inject<String>(() => '');

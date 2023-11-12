@@ -5,11 +5,6 @@ class WomenProv {
   final limit = 3;
   final rxIsEnd = false.inj();
 
-  final rxCartList = RM.inject<List<WomenShoes>>(
-    () => [],
-    autoDisposeWhenNotUsed: false,
-  );
-
   final rxIndex = RM.inject<int>(
     () => 0,
     persist: () => PersistState(

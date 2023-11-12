@@ -162,6 +162,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
             const SizedBox(height: 30),
             InkWell(
               onTap: () {
+                _ct.addToCart();
                 // Navigator.push(
                 //     context,
                 //     MaterialPageRoute(

@@ -1,9 +1,9 @@
 part of '_index.dart';
 
 class KidsShoes extends Shoes {
-  final Category categories;
+  final Category category;
   KidsShoes({
-    required this.categories,
+    required this.category,
     required super.productId,
     required super.name,
     required super.description,
@@ -21,7 +21,7 @@ class KidsShoes extends Shoes {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    result.addAll({'categories': categories.toMap()});
+    result.addAll({'category': category.toMap()});
     result.addAll({'colors': colors});
     result.addAll({'sizes': sizes});
     result.addAll({'merk': merk});
@@ -43,7 +43,7 @@ class KidsShoes extends Shoes {
 
   factory KidsShoes.fromMap(Map<String, dynamic> map) {
     return KidsShoes(
-      categories: Category.fromMap(map['categories']),
+      category: Category.fromMap(map['category']),
       colors: List<String>.from(map['colors'] ?? const []),
       sizes: List<int>.from(map['sizes'] ?? const []),
       merk: map['merk'] ?? '',
@@ -76,7 +76,7 @@ class KidsShoes extends Shoes {
     String? createdAt,
     String? updatedAt,
     Map<String, String>? imageUrl,
-    Category? categories,
+    Category? category,
   }) {
     return KidsShoes(
       colors: colors ?? this.colors,
@@ -90,20 +90,20 @@ class KidsShoes extends Shoes {
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       imageUrl: imageUrl ?? this.imageUrl,
-      categories: categories ?? this.categories,
+      category: category ?? this.category,
     );
   }
 
   @override
   String toString() =>
-      'KidsShoes(categories: $categories, colors: $colors, sizes: $sizes, merk: $merk, productId: $productId, name: $name, description: $description, price: $price, quantity: $quantity, createdAt: $createdAt, updatedAt: $updatedAt, imageUrl: $imageUrl)';
+      'KidsShoes(category: $category, colors: $colors, sizes: $sizes, merk: $merk, productId: $productId, name: $name, description: $description, price: $price, quantity: $quantity, createdAt: $createdAt, updatedAt: $updatedAt, imageUrl: $imageUrl)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
     return other is KidsShoes &&
-        other.categories == categories &&
+        other.category == category &&
         listEquals(other.colors, colors) &&
         listEquals(other.sizes, sizes) &&
         other.merk == merk &&
@@ -119,7 +119,7 @@ class KidsShoes extends Shoes {
 
   @override
   int get hashCode {
-    return categories.hashCode ^
+    return category.hashCode ^
         colors.hashCode ^
         sizes.hashCode ^
         merk.hashCode ^

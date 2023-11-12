@@ -12,27 +12,28 @@ class CartView extends StatelessWidget {
       ),
       // floatingActionButton: const CartFab(),
 
-      body: _dt.rxCartList.st.isEmpty
+      body: _dt.rxCart.st.listShoes.isEmpty
           ? const Center(child: Text('cart is empty '))
           : OnBuilder.all(
-              listenTo: _dt.rxCartList,
+              listenTo: _dt.rxCart,
               onWaiting: () => const Center(child: CircularProgressIndicator()),
               onError: (error, refreshError) => Text(error),
               onData: (data) => ListView(
                 children: [
                   ...List.generate(
-                    _dt.rxCartList.st.length,
+                    _dt.rxCart.st.listShoes.length,
                     (index) => OnReactive(
                       () => Card(
                         child: ListTile(
-                          leading: const SizedBox(
+                          leading: SizedBox(
                             height: 50,
                             width: 50,
                             // child: Image.network(_dt.rxCartList.st[index].imageUrl),
+                            child: Text(_dt.rxCart.st.listTotalItems[index].toString()),
                           ),
-                          title: Text(_dt.rxCartList.st[index].name),
-                          subtitle: Text('Rp ${Fun.formatRupiah.format(_dt.rxCartList.st[index].price)}'),
-                          trailing: Text('${_dt.rxCartList.st[index].quantity}'),
+                          title: Text(_dt.rxCart.st.listShoes[index].name),
+                          subtitle: Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listShoes[index].price)}'),
+                          trailing: Text('${_dt.rxCart.st.listShoes[index].quantity}'),
                           onTap: () {},
                           // selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
                         ),
