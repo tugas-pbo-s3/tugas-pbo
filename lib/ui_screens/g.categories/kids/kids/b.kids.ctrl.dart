@@ -15,6 +15,6 @@ class KidsCtrl {
 
   selectProduct(String id) {
     _sv.setSelectedId(id);
-    nav.to(Routes.manDetail);
+    nav.to(Routes.kidsDetail);
   }
 }

@@ -28,4 +28,5 @@ abstract class Ctrl {
   static SearchCtrl get search => SearchCtrl();
   static WomenDetailCtrl get womenDetail => WomenDetailCtrl();
   static ManDetailCtrl get manDetail => ManDetailCtrl();
+  static KidsDetailCtrl get kidsDetail => KidsDetailCtrl();
 }

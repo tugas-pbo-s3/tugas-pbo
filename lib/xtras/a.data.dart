@@ -29,6 +29,8 @@ abstract class Data {
   static Injected<SearchData> get search => _searchData;
   static Injected<WomenDetailData> get womenDetail => _womenDetailData;
   static Injected<ManDetailData> get manDetail => _manDetailData;
+
+  static Injected<KidsDetailData> get kidsDetail => _kidsDetailData;
 }
 
 final _adminProductListData = RM1.inj(AdminProductListData(), Ctrl.adminProductList.init);
@@ -59,3 +61,4 @@ final _profileData = RM1.inj(ProfileData(), Ctrl.profile.init);
 final _searchData = RM1.inj(SearchData(), Ctrl.search.init);
 final _womenDetailData = RM1.inj(WomenDetailData(), Ctrl.womenDetail.init);
 final _manDetailData = RM1.inj(ManDetailData(), Ctrl.manDetail.init);
+final _kidsDetailData = RM1.inj(KidsDetailData(), Ctrl.kidsDetail.init);

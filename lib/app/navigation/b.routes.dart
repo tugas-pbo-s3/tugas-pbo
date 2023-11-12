@@ -39,4 +39,5 @@ class Routes {
   static const search = '/search';
   static const womenDetail = '/women_detail';
   static const manDetail = '/man_detail';
+  static const kidsDetail = '/kids_detail';
 }
