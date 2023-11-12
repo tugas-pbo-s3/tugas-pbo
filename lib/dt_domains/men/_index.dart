@@ -12,3 +12,5 @@ part 'd.men.repo.mock.dart';
 MenProv get _pv => Prov.man.st;
 MenServ get _sv => Serv.man;
 MenRepo get _rp => Repo.man.st;
+
+ProductServ get _svProduct => Serv.product;

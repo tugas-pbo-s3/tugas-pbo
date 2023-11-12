@@ -7,21 +7,22 @@ class WomenDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     // final height = MediaQuery.of(context).size.height;
     return Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(56),
-          child: WomenDetailAppbar(),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(56),
+        child: WomenDetailAppbar(),
+      ),
+      // floatingActionButton: const ProductDetailFab(),
+      body: OnBuilder(
+        listenTo: _dt.rxProductFuture,
+        builder: () => const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // WomenDetailPhoto(height: height),
+            SizedBoxH(10),
+            WomenDetailDesc(),
+          ],
         ),
-        // floatingActionButton: const ProductDetailFab(),
-        body: OnBuilder(
-          listenTo: _dt.rxProductFuture,
-          builder: () => const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // WomenDetailPhoto(height: height),
-              SizedBoxH(10),
-              WomenDetailDesc(),
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }

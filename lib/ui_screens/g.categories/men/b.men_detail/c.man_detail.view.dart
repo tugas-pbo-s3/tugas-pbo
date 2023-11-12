@@ -5,19 +5,20 @@ class ManDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ManDetailAppbar(),
       ),
-      floatingActionButton: ManDetailFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      // floatingActionButton: const ManDetailFab(),
+      body: OnBuilder(
+        listenTo: _dt.rxProductFuture,
+        builder: () => const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ManDetailCharlie(),
-            ManDetailDelta(),
-            ManDetailEcho(),
+            // MenDetailPhoto(height: 10),
+            SizedBoxH(10),
+            MenDetailDesc(),
           ],
         ),
       ),

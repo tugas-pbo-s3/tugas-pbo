@@ -1,13 +1,13 @@
 part of '../_index.dart';
 
-class WomenDetailDesc extends StatelessWidget {
-  const WomenDetailDesc({
+class MenDetailDesc extends StatelessWidget {
+  const MenDetailDesc({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return OnBuilder<WomenShoes?>.all(
+    return OnBuilder<MenShoes?>.all(
       listenTo: _dt.rxProductFuture,
       onWaiting: () => const Center(child: CircularProgressIndicator()),
       onError: (error, refreshError) => error,
@@ -65,7 +65,7 @@ class WomenDetailDesc extends StatelessWidget {
                       backgroundColor: Colors.transparent,
                       context: context,
                       builder: (context) {
-                        return WomenDetailBottomsheet();
+                        return MenDetailBottomSheet();
                       },
                     );
                   },

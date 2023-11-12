@@ -5,13 +5,13 @@ class ManDetailData {
 
   final rxInt = 0.inj();
 
-  //  final rxProductFuture = _pv.rxProductFuture;
+  final rxProductFuture = _pv.rxProductFuture;
 
-  // final rxProductList = _pv.rxProductList;
+  final rxProductList = _pv.rxProductList;
 
-  // final rxSelectedId = _pv.rxSelectedId;
+  final rxSelectedId = _pv.rxSelectedId;
 
   final rxAngka = RM.inject(
-    () => 0,
+    () => 1,
   );
 }

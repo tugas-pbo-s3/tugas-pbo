@@ -9,4 +9,5 @@ abstract class Serv {
   static TypeServ get type => TypeServ();
   static WomenServ get women => WomenServ();
   static MenServ get man => MenServ();
+  static CartServ get cart => CartServ();
 }

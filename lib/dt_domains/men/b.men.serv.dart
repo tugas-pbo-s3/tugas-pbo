@@ -17,6 +17,11 @@ class MenServ {
     }
   }
 
+  addToCart(MenShoes shoes, {int totalItems = 1}) {
+    _svProduct.addToCart(shoes, totalItems);
+    // _svCart.addToCart(shoes, totalItems);
+  }
+
   setSelectedId(String id) {
     _pv.rxSelectedId.refresh();
     _pv.rxSelectedId.setState((s) => id);
