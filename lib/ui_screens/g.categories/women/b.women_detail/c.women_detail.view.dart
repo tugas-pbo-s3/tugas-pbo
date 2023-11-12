@@ -14,12 +14,12 @@ class WomenDetailView extends StatelessWidget {
       // floatingActionButton: const ProductDetailFab(),
       body: OnBuilder(
         listenTo: _dt.rxProductFuture,
-        builder: () => const Column(
+        builder: () => Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // WomenDetailPhoto(height: height),
-            SizedBoxH(10),
-            WomenDetailDesc(),
+            WomenDetailPhoto(),
+            const SizedBoxH(10),
+            const WomenDetailDesc(),
           ],
         ),
       ),

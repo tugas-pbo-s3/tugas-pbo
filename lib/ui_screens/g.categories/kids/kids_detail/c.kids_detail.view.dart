@@ -17,7 +17,7 @@ class KidsDetailView extends StatelessWidget {
         builder: () => const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // WomenDetailPhoto(height: height),
+            // KidsDetailPhoto(),
             SizedBoxH(10),
             KidsDetailDesc(),
           ],

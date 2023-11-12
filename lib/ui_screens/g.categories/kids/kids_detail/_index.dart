@@ -13,7 +13,7 @@ part 'widgets/a.kids_detail.appbar.dart';
 part 'widgets/b.kids_detail.fab.dart';
 part 'widgets/c.kids_detail.photo.dart';
 part 'widgets/d.kids_detail.desc.dart';
-part 'widgets/e.kids_detail.echo.dart';
+part 'widgets/e.kids_detail.bottomsheet.dart';
 
 KidsDetailData get _dt => Data.kidsDetail.st;
 KidsDetailCtrl get _ct => Ctrl.kidsDetail;
