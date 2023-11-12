@@ -1,4 +1,5 @@
 import 'package:states_rebuilder/states_rebuilder.dart';
+import 'package:tugas_pbo/ui_screens/g.categories/kids/kids/_index.dart';
 import 'package:tugas_pbo/ui_screens/g.categories/women/a.women/_index.dart';
 import 'package:tugas_pbo/ui_screens/g.categories/women/b.women_detail/_index.dart';
 

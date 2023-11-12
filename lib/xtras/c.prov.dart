@@ -10,6 +10,7 @@ abstract class Prov {
   static Injected<WomenProv> get women => _womenProv;
   static Injected<MenProv> get man => _manProv;
   static Injected<CartProv> get cart => _cartProv;
+  static Injected<KidsProv> get kids => _kidsProv;
 }
 
 final _authProv = RM2.inj(AuthProv());
@@ -21,3 +22,4 @@ final _typeProv = RM2.inj(TypeProv());
 final _womenProv = RM2.inj(WomenProv());
 final _manProv = RM2.inj(MenProv());
 final _cartProv = RM2.inj(CartProv());
+final _kidsProv = RM2.inj(KidsProv());

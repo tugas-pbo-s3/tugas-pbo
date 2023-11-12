@@ -10,6 +10,7 @@ abstract class Repo {
   static Injected<WomenRepo> get women => _womenRepo;
   static Injected<MenRepo> get man => _manRepo;
   static Injected<CartRepo> get cart => _cartRepo;
+  static Injected<KidsRepo> get kids => _kidsRepo;
 }
 
 final _authRepo = RM3.inj(AuthRepo());
@@ -21,3 +22,4 @@ final _typeRepo = RM3.inj(TypeRepo());
 final _womenRepo = RM3.inj(WomenRepo());
 final _manRepo = RM3.inj(MenRepo());
 final _cartRepo = RM3.inj(CartRepo());
+final _kidsRepo = RM3.inj(KidsRepo());

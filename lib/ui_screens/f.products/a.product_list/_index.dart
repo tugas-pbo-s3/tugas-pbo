@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:tugas_pbo/ui_screens/_index.dart';
+import 'package:tugas_pbo/ui_screens/g.categories/kids/kids/_index.dart';
 import 'package:tugas_pbo/ui_screens/g.categories/women/a.women/_index.dart';
 
 import '../../../app/_index.dart';
