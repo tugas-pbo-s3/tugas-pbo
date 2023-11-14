@@ -70,7 +70,7 @@ class MenDetailDesc extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Add to cart",
+                    "Select option",
                   ),
                 ),
               ],

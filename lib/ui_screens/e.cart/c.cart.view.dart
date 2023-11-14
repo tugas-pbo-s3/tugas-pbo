@@ -12,7 +12,7 @@ class CartView extends StatelessWidget {
       ),
       // floatingActionButton: const CartFab(),
 
-      body: _dt.rxCart.st.listShoes.isEmpty
+      body: _dt.rxCart.st.listCartedShoes.isEmpty
           ? const Center(child: Text('cart is empty '))
           : OnBuilder.all(
               listenTo: _dt.rxCart,
@@ -21,7 +21,7 @@ class CartView extends StatelessWidget {
               onData: (data) => ListView(
                 children: [
                   ...List.generate(
-                    _dt.rxCart.st.listShoes.length,
+                    _dt.rxCart.st.listCartedShoes.length,
                     (index) => OnReactive(
                       () => Card(
                         child: ListTile(
@@ -29,11 +29,17 @@ class CartView extends StatelessWidget {
                             height: 50,
                             width: 50,
                             // child: Image.network(_dt.rxCartList.st[index].imageUrl),
-                            child: Center(child: Text(_dt.rxCart.st.listTotalItems[index].toString())),
+                            child: Center(child: Text(_dt.rxCart.st.listCartedShoes[index].qty.toString())),
                           ),
-                          title: Text(_dt.rxCart.st.listShoes[index].name),
-                          subtitle: Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listShoes[index].price)}'),
-                          trailing: Text('${_dt.rxCart.st.listShoes[index].quantity}'),
+                          title: Text(_dt.rxCart.st.listCartedShoes[index].shoes.name),
+                          subtitle: Row(
+                            children: [
+                              Text(_dt.rxCart.st.listCartedShoes[index].size.toString()),
+                              Text(_dt.rxCart.st.listCartedShoes[index].color),
+                            ],
+                          ),
+                          trailing:
+                              Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listCartedShoes[index].shoes.price)}'),
                           onTap: () {},
                           // selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
                         ),

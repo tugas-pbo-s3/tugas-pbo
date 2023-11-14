@@ -17,9 +17,12 @@ class KidsServ {
     }
   }
 
-  addToCart(KidsShoes shoes, {int totalItems = 1}) {
-    _svProduct.addToCart(shoes, totalItems);
-    // _svCart.addToCart(shoes, totalItems);
+  // addToCart(KidsShoes shoes, {int totalItems = 1}) {
+  //   // _svProduct.addToCart(shoes, totalItems);
+  //   _svCart.addToCart(shoes, totalItems);
+  // }
+  addToCart(CartedShoes cartedShoes) {
+    _svCart.addToCart(cartedShoes);
   }
 
   setSelectedId(String id) {

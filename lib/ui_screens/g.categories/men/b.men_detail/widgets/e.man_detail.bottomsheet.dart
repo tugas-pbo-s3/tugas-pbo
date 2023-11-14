@@ -179,7 +179,7 @@ class MenDetailBottomSheet extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Text(
-                  'Checkout',
+                  'Add to cart',
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w600,

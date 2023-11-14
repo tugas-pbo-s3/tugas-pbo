@@ -10,19 +10,100 @@ class WomenDetailCtrl {
       name: _dt.rxProductFuture.st!.name,
       price: _dt.rxProductFuture.st!.price,
       quantity: _dt.rxProductFuture.st!.quantity,
-      productId: Prov.women.st.rxProductFuture.st!.productId,
-      imageUrl: Prov.women.st.rxProductFuture.st!.imageUrl,
-      createdAt: Prov.women.st.rxProductFuture.st!.createdAt,
-      category: Prov.women.st.rxProductFuture.st!.category,
-      colors: Prov.women.st.rxProductFuture.st!.colors,
-      sizes: Prov.women.st.rxProductFuture.st!.sizes,
-      merk: Prov.women.st.rxProductFuture.st!.merk,
-      description: Prov.women.st.rxProductFuture.st!.description,
+      productId: _pv.rxProductFuture.st!.productId,
+      imageUrl: _pv.rxProductFuture.st!.imageUrl,
+      createdAt: _pv.rxProductFuture.st!.createdAt,
+      category: _pv.rxProductFuture.st!.category,
+      colors: _pv.rxProductFuture.st!.colors,
+      sizes: _pv.rxProductFuture.st!.sizes,
+      merk: _pv.rxProductFuture.st!.merk,
+      description: _pv.rxProductFuture.st!.description,
     );
 
-    _sv.addToCart(product, totalItems: _dt.rxAngka.st);
+    // _sv.addToCart(product, totalItems: _dt.rxAngka.st);
+    if (cekCartindex() < 0) {
+      _sv.addToCart(
+        CartedShoes(
+          shoes: product,
+          qty: _dt.rxQty.st,
+          size: _dt.rxSize.st,
+          color: _dt.rxColor.st,
+        ),
+      );
+    } else {
+      _sv.updateToCart(
+        CartedShoes(
+          shoes: product,
+          qty: _dt.rxQty.st,
+          size: _dt.rxSize.st,
+          color: _dt.rxColor.st,
+        ),
+        cekCartindex(),
+      );
+    }
+
     nav.back();
     logx.i('addtocart');
+  }
+
+  void selectOption() {
+    logx.i(_dt.rxSize.st.toString());
+    logx.i(_dt.rxColor.st);
+    setQty();
+    logx.i(_dt.rxQty.st.toString());
+  }
+
+  void selectSize(int size) {
+    _dt.rxSize.st = size;
+    logx.i(_dt.rxSize.st.toString());
+    // cekDuplikat();
+
+    final index = cekCartindex();
+    if (index > -1) {
+      logx.i('ada euyyy');
+      // final index = _dt.rxCart.st.listCartedShoes.indexOf(prodX);
+      final item = _dt.rxCart.st.listCartedShoes[index];
+      _dt.rxQty.st = item.qty;
+    } else {
+      _dt.rxQty.refresh();
+    }
+
+    logx.i(_dt.rxQty.st.toString());
+  }
+
+  void selectColor(String color) {
+    _dt.rxColor.st = color;
+    logx.i(_dt.rxColor.st);
+    setQty();
+    logx.i(_dt.rxQty.st.toString());
+  }
+
+  void setQty() {
+    final index = cekCartindex();
+    if (index > -1) {
+      logx.i('ada euyyy');
+      // final index = _dt.rxCart.st.listCartedShoes.indexOf(prodX);
+      final item = _dt.rxCart.st.listCartedShoes[index];
+      _dt.rxQty.st = item.qty;
+    } else {
+      _dt.rxQty.refresh();
+    }
+  }
+
+  int cekCartindex() {
+    final prodX = CartedShoes(
+      shoes: _dt.rxProductFuture.st!,
+      color: _dt.rxColor.st,
+      size: _dt.rxSize.st,
+    );
+    logx.i('cek cart index');
+    final index = _dt.rxCart.st.listCartedShoes.indexWhere((el) {
+      final x = el.shoes.productId == prodX.shoes.productId;
+      final y = el.color == prodX.color;
+      final z = el.size == prodX.size;
+      return x && y && z;
+    });
+    return index;
   }
 
   //   addToCart(WomenShoes shoes, {int totalItems = 1}) {

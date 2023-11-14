@@ -19,7 +19,8 @@ class KidsDetailCtrl {
       description: _pv.rxProductFuture.st!.description,
     );
 
-    _sv.addToCart(product, totalItems: _dt.rxAngka.st);
+    // _sv.addToCart(product, totalItems: _dt.rxAngka.st);
+    _sv.addToCart(CartedShoes(shoes: product, qty: 1, size: product.sizes.first, color: product.colors.first));
     nav.back();
     logx.i('addtocart');
   }

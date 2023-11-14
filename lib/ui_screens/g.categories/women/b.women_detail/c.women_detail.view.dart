@@ -7,7 +7,7 @@ class WomenDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
-    final height = MediaQuery.of(context).size.height;
+    // final height = MediaQuery.of(context).size.height;
 
     List<Color?> colorsState = [
       Colors.white,
@@ -29,13 +29,13 @@ class WomenDetailView extends StatelessWidget {
 
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
-          final totalPayment = _dt.rxAngka.st * _dt.rxProductFuture.st!.price;
+          final totalPayment = _dt.rxQty.st * _dt.rxProductFuture.st!.price;
 
           return width < 600
               ? const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    WomenDetailPhoto(),
+                    // WomenDetailPhoto(),
                     SizedBoxH(10),
                     WomenDetailDesc(),
                   ],
@@ -46,17 +46,17 @@ class WomenDetailView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        alignment: Alignment.topCenter,
-                        width: width / 3.0,
-                        height: height / 1.6,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(data?.imageUrl?.values.first ?? ''),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
+                      // Container(
+                      //   alignment: Alignment.topCenter,
+                      //   width: width / 3.0,
+                      //   height: height / 1.6,
+                      //   decoration: BoxDecoration(
+                      //     image: DecorationImage(
+                      //       image: NetworkImage(data?.imageUrl?.values.first ?? ''),
+                      //       fit: BoxFit.cover,
+                      //     ),
+                      //   ),
+                      // ),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                         child: Column(
@@ -164,7 +164,7 @@ class WomenDetailView extends StatelessWidget {
                                     Icons.remove,
                                   ),
                                   onPressed: () {
-                                    _dt.rxAngka.st--;
+                                    _dt.rxQty.st--;
                                     logx.i('kurang');
                                   },
                                   color: Colors.redAccent,
@@ -172,7 +172,7 @@ class WomenDetailView extends StatelessWidget {
                                 const SizedBoxH(5),
                                 OnReactive(
                                   () => Text(
-                                    _dt.rxAngka.st.toString(),
+                                    _dt.rxQty.st.toString(),
                                     textScaleFactor: 1.5,
                                   ),
                                 ),
@@ -182,7 +182,7 @@ class WomenDetailView extends StatelessWidget {
                                     Icons.add,
                                   ),
                                   onPressed: () {
-                                    _dt.rxAngka.st++;
+                                    _dt.rxQty.st++;
                                     logx.i('tambah');
                                   },
                                   color: Colors.redAccent,

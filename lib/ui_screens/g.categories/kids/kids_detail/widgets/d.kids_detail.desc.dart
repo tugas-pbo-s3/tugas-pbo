@@ -70,7 +70,7 @@ class KidsDetailDesc extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Add to cart",
+                    "Select option",
                   ),
                 ),
               ],

@@ -14,7 +14,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
     Colors.grey.shade700,
   ];
 
-  final totalPayment = _dt.rxAngka.st * _dt.rxProductFuture.st!.price;
+  final totalPayment = _dt.rxQty.st * _dt.rxProductFuture.st!.price;
 
   @override
   Widget build(BuildContext context) {
@@ -44,55 +44,83 @@ class WomenDetailBottomsheet extends StatelessWidget {
               ),
             ),
             const SizedBoxH(10),
-            Row(
-              children: [
-                const Text(
-                  'Size: ',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                const SizedBoxW(30),
-                ...List.generate(
-                  sizes.length,
-                  (index) => Container(
-                    margin: const EdgeInsets.all(2),
-                    child: TextButton(
-                      style: const ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Colors.pink),
-                      ),
-                      onPressed: () {},
-                      child: Text(sizes[index].toString()),
+            OnReactive(
+              () => Row(
+                children: [
+                  const Text(
+                    'Size: ',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
-                ),
-              ],
+                  const SizedBoxW(30),
+                  ...List.generate(
+                    sizes.length,
+                    (index) => Container(
+                      margin: const EdgeInsets.all(2),
+                      // child: TextButton(
+                      //   style: const ButtonStyle(
+                      //     backgroundColor: MaterialStatePropertyAll(Colors.pink),
+                      //   ),
+                      //   onPressed: () {
+                      //     _ct.selectSize(sizes[index]);
+                      //   },
+                      //   child: Text(sizes[index].toString()),
+                      // ),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: _dt.rxSize.st == sizes[index] ? Colors.pink : null,
+                        ),
+                        onPressed: () {
+                          _ct.selectSize(sizes[index]);
+                        },
+                        child: Text(sizes[index].toString()),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             const SizedBoxH(10),
-            Row(
-              children: [
-                const Text(
-                  'Color:',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500,
+            OnReactive(
+              () => Row(
+                children: [
+                  const Text(
+                    'Color:',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                const SizedBoxW(30),
-                ...List.generate(
-                  colors.length,
-                  (index) => Container(
+                  const SizedBoxW(30),
+                  ...List.generate(
+                    colors.length,
+                    (index) => Container(
                       margin: const EdgeInsets.all(2),
-                      child: TextButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(colorsState[index]),
+                      // child: TextButton(
+                      //   style: ButtonStyle(
+                      //     backgroundColor: MaterialStatePropertyAll(colorsState[index]),
+                      //   ),
+                      //   onPressed: () {
+                      //     _ct.selectColor(colors[index]);
+                      //   },
+                      //   child: Text(colors[index].toString()),
+                      // ),
+
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: _dt.rxColor.st == colors[index] ? Colors.pink : null,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _ct.selectColor(colors[index]);
+                        },
                         child: Text(colors[index].toString()),
-                      )),
-                ),
-              ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             const SizedBoxH(10),
             Row(
@@ -110,7 +138,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                     Icons.remove,
                   ),
                   onPressed: () {
-                    _dt.rxAngka.st--;
+                    _dt.rxQty.st--;
                     logx.i('kurang');
                   },
                   color: Colors.redAccent,
@@ -118,7 +146,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                 const SizedBoxH(5),
                 OnReactive(
                   () => Text(
-                    _dt.rxAngka.st.toString(),
+                    _dt.rxQty.st.toString(),
                     textScaleFactor: 1.5,
                   ),
                 ),
@@ -128,7 +156,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                     Icons.add,
                   ),
                   onPressed: () {
-                    _dt.rxAngka.st++;
+                    _dt.rxQty.st++;
                     logx.i('tambah');
                   },
                   color: Colors.redAccent,
@@ -179,7 +207,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Text(
-                  'Checkout',
+                  'Add to cart',
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w600,

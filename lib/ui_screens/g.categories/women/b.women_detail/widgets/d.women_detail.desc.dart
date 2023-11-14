@@ -61,6 +61,7 @@ class WomenDetailDesc extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
+                    _ct.selectOption();
                     showModalBottomSheet(
                       backgroundColor: Colors.transparent,
                       context: context,
@@ -70,7 +71,7 @@ class WomenDetailDesc extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Add to cart",
+                    "Select Option",
                   ),
                 ),
               ],

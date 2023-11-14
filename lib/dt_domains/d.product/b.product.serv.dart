@@ -42,8 +42,7 @@ class ProductServ {
     return Repo.product.st.uploadImages(images);
   }
 
-  addToCart(Shoes items, int totalItems) {
-    _pv.rxCart.st.listShoes = [..._pv.rxCart.st.listShoes]..insert(0, items);
-    _pv.rxCart.st.listTotalItems = [..._pv.rxCart.st.listTotalItems]..insert(0, totalItems);
+  addToCart(CartedShoes cartedItems) {
+    _pv.rxCart.st.listCartedShoes = [..._pv.rxCart.st.listCartedShoes]..insert(0, cartedItems);
   }
 }

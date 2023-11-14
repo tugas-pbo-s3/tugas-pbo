@@ -7,7 +7,7 @@ class ManDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
-    final height = MediaQuery.of(context).size.height;
+    // final height = MediaQuery.of(context).size.height;
 
     List<Color?> colorsState = [
       Colors.white,
@@ -36,7 +36,7 @@ class ManDetailView extends StatelessWidget {
               ? const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MenDetailPhoto(),
+                    // MenDetailPhoto(),
                     SizedBoxH(10),
                     MenDetailDesc(),
                   ],
@@ -47,17 +47,17 @@ class ManDetailView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        alignment: Alignment.topCenter,
-                        width: width / 3.0,
-                        height: height / 1.6,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/pegaShoes500.png"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
+                      // Container(
+                      //   alignment: Alignment.topCenter,
+                      //   width: width / 3.0,
+                      //   height: height / 1.6,
+                      //   decoration: const BoxDecoration(
+                      //     image: DecorationImage(
+                      //       image: AssetImage("assets/images/pegaShoes500.png"),
+                      //       fit: BoxFit.cover,
+                      //     ),
+                      //   ),
+                      // ),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                         child: Column(

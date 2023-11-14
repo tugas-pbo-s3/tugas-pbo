@@ -20,5 +20,6 @@ CartData get _dt => Data.cart.st;
 CartCtrl get _ct => Ctrl.cart;
 
 WomenProv get _pv => Prov.women.st;
-ProductProv get _pvProduct => Prov.product.st;
+// ProductProv get _pvProduct => Prov.product.st;
+CartProv get _pvCart => Prov.cart.st;
 // WomenServ get _sv => Serv.women;

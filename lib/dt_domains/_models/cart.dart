@@ -1,36 +1,30 @@
 part of '_index.dart';
 
 class Cart {
-  List<Shoes> listShoes;
-  List<int> listTotalItems;
+  List<CartedShoes> listCartedShoes;
   Cart({
-    this.listShoes = const [],
-    this.listTotalItems = const [],
+    this.listCartedShoes = const [],
   });
 
   Cart copyWith({
-    List<Shoes>? listShoes,
-    List<int>? listTotalItems,
+    List<CartedShoes>? listCartedShoes,
   }) {
     return Cart(
-      listShoes: listShoes ?? this.listShoes,
-      listTotalItems: listTotalItems ?? this.listTotalItems,
+      listCartedShoes: listCartedShoes ?? this.listCartedShoes,
     );
   }
 
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    result.addAll({'list_shoes': listShoes.map((x) => x.toMap()).toList()});
-    result.addAll({'list_total_items': listTotalItems});
+    result.addAll({'list_carted_shoes': listCartedShoes.map((x) => x.toMap()).toList()});
 
     return result;
   }
 
   factory Cart.fromMap(Map<String, dynamic> map) {
     return Cart(
-      listShoes: List<Shoes>.from(map['list_shoes']?.map((x) => Shoes.fromMap(x)) ?? const []),
-      listTotalItems: List<int>.from(map['list_total_items'] ?? const []),
+      listCartedShoes: List<CartedShoes>.from(map['list_carted_shoes']?.map((x) => CartedShoes.fromMap(x)) ?? const []),
     );
   }
 
@@ -39,15 +33,15 @@ class Cart {
   factory Cart.fromJson(String source) => Cart.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Cart(listShoes: $listShoes, listTotalItems: $listTotalItems)';
+  String toString() => 'Cart(listCartedShoes: $listCartedShoes)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Cart && listEquals(other.listShoes, listShoes) && listEquals(other.listTotalItems, listTotalItems);
+    return other is Cart && listEquals(other.listCartedShoes, listCartedShoes);
   }
 
   @override
-  int get hashCode => listShoes.hashCode ^ listTotalItems.hashCode;
+  int get hashCode => listCartedShoes.hashCode;
 }

@@ -32,7 +32,6 @@ class WomenProv {
   );
 
   // * prov detail
-
   final rxProductFuture = RM.injectFuture<WomenShoes?>(
     () => Future.value(null),
     sideEffects: SideEffects(

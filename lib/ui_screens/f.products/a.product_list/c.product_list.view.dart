@@ -9,7 +9,7 @@ class ProductListView extends StatelessWidget {
     return Scaffold(
       body: width > 500
           ? DefaultTabController(
-              length: 4,
+              length: 3,
               child: CustomScrollView(
                 slivers: [
                   SliverAppBar(
@@ -68,7 +68,6 @@ class ProductListView extends StatelessWidget {
                         labelColor: Colors.deepPurple.shade700,
                         indicatorColor: Colors.deepPurple.shade700,
                         tabs: const <Widget>[
-                          Tab(text: 'All'),
                           Tab(text: 'Woman'),
                           Tab(text: 'Man'),
                           Tab(text: 'Kids'),
@@ -81,7 +80,6 @@ class ProductListView extends StatelessWidget {
                       height: 1000,
                       child: TabBarView(
                         children: [
-                          AllView(),
                           WomenView(),
                           ManView(),
                           KidsView(),
@@ -93,7 +91,7 @@ class ProductListView extends StatelessWidget {
               ),
             )
           : DefaultTabController(
-              length: 4,
+              length: 3,
               child: CustomScrollView(
                 slivers: [
                   SliverAppBar(
@@ -118,7 +116,6 @@ class ProductListView extends StatelessWidget {
                         labelColor: Colors.deepPurple.shade700,
                         indicatorColor: Colors.deepPurple.shade700,
                         tabs: const <Widget>[
-                          Tab(text: 'All'),
                           Tab(text: 'Woman'),
                           Tab(text: 'Man'),
                           Tab(text: 'Kids'),
@@ -131,7 +128,6 @@ class ProductListView extends StatelessWidget {
                       height: 1000,
                       child: TabBarView(
                         children: <Widget>[
-                          AllView(),
                           WomenView(),
                           ManView(),
                           KidsView(),
