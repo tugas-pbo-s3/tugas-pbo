@@ -29,7 +29,7 @@ class CartView extends StatelessWidget {
                             height: 50,
                             width: 50,
                             // child: Image.network(_dt.rxCartList.st[index].imageUrl),
-                            child: Text(_dt.rxCart.st.listTotalItems[index].toString()),
+                            child: Center(child: Text(_dt.rxCart.st.listTotalItems[index].toString())),
                           ),
                           title: Text(_dt.rxCart.st.listShoes[index].name),
                           subtitle: Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listShoes[index].price)}'),

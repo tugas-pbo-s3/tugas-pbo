@@ -1,17 +1,15 @@
 part of '../_index.dart';
 
 class WomenDetailPhoto extends StatelessWidget {
-  WomenDetailPhoto({
+  const WomenDetailPhoto({
     super.key,
   });
-
-  final images = _dt.rxProductFuture.st!.imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return OnBuilder<WomenShoes?>.all(
       listenTo: _dt.rxProductFuture,
-      onWaiting: () => const CircularProgressIndicator(),
+      onWaiting: () => const Text(''),
       onError: (error, refreshError) => error,
       // onData: (data) => Column(
       //       children: [
@@ -32,9 +30,8 @@ class WomenDetailPhoto extends StatelessWidget {
         height: 200,
         decoration: BoxDecoration(
           color: Colors.white,
-          image: DecorationImage(image: NetworkImage(data!.imageUrl!.values.first)),
+          image: DecorationImage(image: NetworkImage(data?.imageUrl?.values.first ?? '')),
         ),
-        child: Text(data.name),
       ),
     );
   }
