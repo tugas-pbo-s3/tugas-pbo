@@ -1,13 +1,20 @@
 part of '../_index.dart';
 
 class ProfileEmail extends StatelessWidget {
-  const ProfileEmail({super.key});
+  const ProfileEmail({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const ListTile(
-      title: Text('Email'),
-      leading: Icon(Icons.email),
+    return OnBuilder.all(
+      listenTo: _dt.rxUser,
+      onWaiting: () => const Center(child: CircularProgressIndicator()),
+      onError: (error, refreshError) => error,
+      onData: (data) => ListTile(
+        title: Text(data?.email ?? 'nullname'),
+        leading: const Icon(Icons.email),
+      ),
     );
   }
 }

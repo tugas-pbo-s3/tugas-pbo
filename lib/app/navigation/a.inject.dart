@@ -1,9 +1,9 @@
 part of '_index.dart';
 
 final nav = RM.injectNavigator(
-  initialLocation: Routes.home,
+  // initialLocation: Routes.home,
   // initialLocation: Routes.women,
-  // initialLocation: Prov.auth.st.rxUser.st == null ? Routes.login : Routes.home,
+  initialLocation: Prov.auth.st.rxUser.st == null ? Routes.login : Routes.home,
   // initialLocation: Routes.adminProductList,
   // initialLocation: Routes.adminCategoryList,
   routes: RouteMap.data,

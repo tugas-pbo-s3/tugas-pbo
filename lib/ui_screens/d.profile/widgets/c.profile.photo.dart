@@ -7,34 +7,39 @@ class ProfilePhoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 115,
-      width: 115,
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          const CircleAvatar(
-            backgroundColor: Color(0xFFF5F6F9),
-            backgroundImage: AssetImage("assets//images/pegaShoes500.png"),
-          ),
-          Positioned(
-            right: 0,
-            bottom: 0,
-            child: SizedBox(
-              height: 46,
-              width: 46,
-              child: CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.black54,
-                child: IconButton(
-                  color: const Color(0xFFF5F6F9),
-                  onPressed: () {},
-                  icon: const Icon(Icons.camera_enhance),
-                ),
-              ),
+    return OnBuilder.all(
+      listenTo: _dt.rxUser,
+      onWaiting: () => const CircularProgressIndicator(),
+      onError: (error, refreshError) => error,
+      onData: (data) => SizedBox(
+        height: 115,
+        width: 115,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            CircleAvatar(
+              backgroundColor: const Color(0xFFF5F6F9),
+              backgroundImage: data?.photoURL == null ? NetworkImage('${data?.photoURL}') : null,
             ),
-          ),
-        ],
+            // Positioned(
+            //   right: 0,
+            //   bottom: 0,
+            //   child: SizedBox(
+            //     height: 46,
+            //     width: 46,
+            //     child: CircleAvatar(
+            //       radius: 30,
+            //       backgroundColor: Colors.black54,
+            //       child: IconButton(
+            //         color: const Color(0xFFF5F6F9),
+            //         onPressed: () {},
+            //         icon: const Icon(Icons.camera_enhance),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+          ],
+        ),
       ),
     );
   }

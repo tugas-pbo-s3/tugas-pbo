@@ -10,10 +10,8 @@ class WomenServ {
     logx.e('iniwomenn');
   }
 
-  // addToCart(WomenShoes shoes, {int totalItems = 1}) {
-  //   _svProduct.addToCart(shoes, totalItems);
-  //   // _svCart.addToCart(shoes, totalItems);
-  // }
+// * cart
+
   addToCart(CartedShoes cartedShoes) {
     _svCart.addToCart(cartedShoes);
   }
@@ -21,6 +19,7 @@ class WomenServ {
   updateToCart(CartedShoes cartedShoes, int index) {
     _svCart.updateToCart(cartedShoes, index);
   }
+// *--------------------------
 
   addToList(List<WomenShoes> moreProduct) {
     _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];

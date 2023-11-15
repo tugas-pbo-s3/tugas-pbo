@@ -10,7 +10,7 @@ class ProfileView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: ProfileAppbar(),
       ),
-      floatingActionButton: ProfileFab(),
+      // floatingActionButton: ProfileFab(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -20,8 +20,6 @@ class WomenDetailCtrl {
       description: _pv.rxProductFuture.st!.description,
     );
 
-    // _sv.addToCart(product, totalItems: _dt.rxAngka.st);
-
     if (cekCartindex() < 0) {
       _sv.addToCart(
         CartedShoes(
@@ -57,12 +55,10 @@ class WomenDetailCtrl {
   void selectSize(int size) {
     _dt.rxSize.st = size;
     logx.i(_dt.rxSize.st.toString());
-    // cekDuplikat();
 
     final index = cekCartindex();
     if (index > -1) {
       logx.i('ada euyyy');
-      // final index = _dt.rxCart.st.listCartedShoes.indexOf(prodX);
       final item = _dt.rxCart.st.listCartedShoes[index];
       _dt.rxQty.st = item.qty;
     } else {
@@ -77,18 +73,11 @@ class WomenDetailCtrl {
     logx.i(_dt.rxColor.st);
     logx.i(_dt.rxQty.st.toString());
   }
-  // void selectColor(String color) {
-  //   _dt.rxColor.st = color;
-  //   logx.i(_dt.rxColor.st);
-  //   setQty();
-  //   logx.i(_dt.rxQty.st.toString());
-  // }
 
   void setQty() {
     final index = cekCartindex();
     if (index > -1) {
       logx.i('ada euyyy');
-      // final index = _dt.rxCart.st.listCartedShoes.indexOf(prodX);
       final item = _dt.rxCart.st.listCartedShoes[index];
       _dt.rxQty.st = item.qty;
     } else {
@@ -111,8 +100,4 @@ class WomenDetailCtrl {
     });
     return index;
   }
-
-  //   addToCart(WomenShoes shoes, {int totalItems = 1}) {
-  //   _svProduct.addToCart(shoes, totalItems);
-  // }
 }

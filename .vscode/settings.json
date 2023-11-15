@@ -22,7 +22,6 @@
     "*.vscode.*": true,
     "*analysis_options": true,
     "*analysis_options.*": true,
-    "*assets": true,
     "*assets.*": true,
     "*build": true,
     "*build.*": true,
