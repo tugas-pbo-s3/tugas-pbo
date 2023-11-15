@@ -21,6 +21,7 @@ class WomenDetailCtrl {
     );
 
     // _sv.addToCart(product, totalItems: _dt.rxAngka.st);
+
     if (cekCartindex() < 0) {
       _sv.addToCart(
         CartedShoes(
@@ -74,9 +75,14 @@ class WomenDetailCtrl {
   void selectColor(String color) {
     _dt.rxColor.st = color;
     logx.i(_dt.rxColor.st);
-    setQty();
     logx.i(_dt.rxQty.st.toString());
   }
+  // void selectColor(String color) {
+  //   _dt.rxColor.st = color;
+  //   logx.i(_dt.rxColor.st);
+  //   setQty();
+  //   logx.i(_dt.rxQty.st.toString());
+  // }
 
   void setQty() {
     final index = cekCartindex();

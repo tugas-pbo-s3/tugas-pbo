@@ -3,7 +3,7 @@
 part of '_index.dart';
 
 class ConfigTest implements IConfig {
-  IPersistStore get store => StoreFake();
+  IPersistStore get store => StoreSharedPreferences();
   String get apiHost => 'test.com';
   String get appName => 'TEST_PegaShoes';
   String get authToken => 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';

@@ -42,7 +42,7 @@ class ProductServ {
     return Repo.product.st.uploadImages(images);
   }
 
-  addToCart(CartedShoes cartedItems) {
-    _pv.rxCart.st.listCartedShoes = [..._pv.rxCart.st.listCartedShoes]..insert(0, cartedItems);
-  }
+  // addToCart(CartedShoes cartedItems) {
+  //   _pv.rxCart.st.listCartedShoes = [..._pv.rxCart.st.listCartedShoes]..insert(0, cartedItems);
+  // }
 }

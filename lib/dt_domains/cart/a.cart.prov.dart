@@ -5,7 +5,7 @@ class CartProv {
     () => Cart(),
     autoDisposeWhenNotUsed: false,
     persist: () => PersistState(
-      key: 'rxCartList',
+      key: 'rxCart',
       throttleDelay: 500,
       shouldRecreateTheState: false,
       toJson: (s) => s.toJson(),

@@ -37,7 +37,7 @@ class WomenDetailView extends StatelessWidget {
                   children: [
                     // WomenDetailPhoto(),
                     SizedBoxH(10),
-                    WomenDetailDesc(),
+                    WomenDetailDescPhone(),
                   ],
                 )
               : SingleChildScrollView(
@@ -46,149 +46,19 @@ class WomenDetailView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Container(
-                      //   alignment: Alignment.topCenter,
-                      //   width: width / 3.0,
-                      //   height: height / 1.6,
-                      //   decoration: BoxDecoration(
-                      //     image: DecorationImage(
-                      //       image: NetworkImage(data?.imageUrl?.values.first ?? ''),
-                      //       fit: BoxFit.cover,
-                      //     ),
-                      //   ),
-                      // ),
+                      //  WomenDetailPhoto(),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              data!.name,
-                              style: const TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Rp ${Fun.formatRupiah.format(data.price)}',
-                              style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.red.withOpacity(0.7),
-                              ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              'merk: ${data.merk}',
-                              style: const TextStyle(
-                                color: Colors.black54,
-                                fontSize: 16,
-                              ),
-                            ),
-                            const SizedBox(height: 15),
-                            SizedBox(
-                              width: 500,
-                              height: 80,
-                              child: Text(
-                                'merk: ${data.description}',
-                                style: const TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                ),
-                              ),
-                            ),
+                            const WomenDetailDesWeb(),
                             const SizedBox(height: 5),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Size: ',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(width: 30),
-                                ...List.generate(
-                                  sizes.length,
-                                  (index) => Container(
-                                    margin: const EdgeInsets.all(2),
-                                    child: TextButton(
-                                      style: const ButtonStyle(
-                                        backgroundColor: MaterialStatePropertyAll(Colors.pink),
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(sizes[index].toString()),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            WomenDetailSize(sizes: sizes),
                             const SizedBox(height: 10),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Color:',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(width: 30),
-                                ...List.generate(
-                                  colors.length,
-                                  (index) => Container(
-                                      margin: const EdgeInsets.all(2),
-                                      child: TextButton(
-                                        style: ButtonStyle(
-                                          backgroundColor: MaterialStatePropertyAll(colorsState[index]),
-                                        ),
-                                        onPressed: () {},
-                                        child: Text(colors[index].toString()),
-                                      )),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  'Total: ',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBoxW(30),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.remove,
-                                  ),
-                                  onPressed: () {
-                                    _dt.rxQty.st--;
-                                    logx.i('kurang');
-                                  },
-                                  color: Colors.redAccent,
-                                ),
-                                const SizedBoxH(5),
-                                OnReactive(
-                                  () => Text(
-                                    _dt.rxQty.st.toString(),
-                                    textScaleFactor: 1.5,
-                                  ),
-                                ),
-                                const SizedBoxH(5),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.add,
-                                  ),
-                                  onPressed: () {
-                                    _dt.rxQty.st++;
-                                    logx.i('tambah');
-                                  },
-                                  color: Colors.redAccent,
-                                ),
-                              ],
-                            ),
+                            WomenDetailColor(colors: colors, colorsState: colorsState),
+                            const WomenDetailQty(),
                             const SizedBox(height: 30),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -214,35 +84,7 @@ class WomenDetailView extends StatelessWidget {
                               ],
                             ),
                             const SizedBoxH(60),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    _ct.addToCart();
-                                  },
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 18,
-                                      horizontal: 70,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: const Color(0xFFFD725A),
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                    child: Text(
-                                      'Add to Cart',
-                                      style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1,
-                                        color: Colors.white.withOpacity(0.8),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
+                            const WomenDetailAddtoCart()
                           ],
                         ),
                       ),

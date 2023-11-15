@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class WomenDetailDesc extends StatelessWidget {
-  const WomenDetailDesc({
+class WomenDetailDescPhone extends StatelessWidget {
+  const WomenDetailDescPhone({
     super.key,
   });
 
