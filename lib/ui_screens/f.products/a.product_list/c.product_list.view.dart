@@ -7,7 +7,7 @@ class ProductListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: width > 500 ? ProductListPhone(width: width) : const ProductListWeb(),
+      body: width > 500 ? ProductListWeb(width: width) : const ProductListPhone(),
     );
   }
 }

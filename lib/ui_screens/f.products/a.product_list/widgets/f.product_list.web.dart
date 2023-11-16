@@ -3,7 +3,10 @@ part of '../_index.dart';
 class ProductListWeb extends StatelessWidget {
   const ProductListWeb({
     super.key,
+    required this.width,
   });
+
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -12,24 +15,48 @@ class ProductListWeb extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.amber,
             automaticallyImplyLeading: false,
-            centerTitle: true,
-            title: Image.asset(
-              'assets/images/pegaShoes2000.png',
-              scale: 22,
+            leading: Row(
+              children: [
+                Center(
+                  child: Image.asset(
+                    'assets/images/pegaShoes2000.png',
+                  ),
+                ),
+              ],
             ),
+            leadingWidth: width,
             actions: [
               IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search),
+                onPressed: () {
+                  nav.to(Routes.cart);
+                },
+                icon: const Icon(Icons.shopping_cart),
+              ),
+              IconButton(
+                onPressed: () {
+                  nav.to(Routes.profile);
+                },
+                icon: const Icon(Icons.person),
+              ),
+              IconButton(
+                onPressed: () {
+                  nav.to(Routes.login);
+                },
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.red,
+                ),
               ),
             ],
+            backgroundColor: Colors.amber,
             pinned: true,
             floating: true,
+            toolbarHeight: 99,
             bottom: PreferredSize(
-              preferredSize: const Size(double.infinity, 48),
+              preferredSize: const Size(double.infinity, 50),
               child: TabBar(
+                tabAlignment: TabAlignment.center,
                 labelColor: Colors.deepPurple.shade700,
                 indicatorColor: Colors.deepPurple.shade700,
                 tabs: const <Widget>[
@@ -44,14 +71,14 @@ class ProductListWeb extends StatelessWidget {
             child: SizedBox(
               height: 1000,
               child: TabBarView(
-                children: <Widget>[
+                children: [
                   WomenView(),
                   ManView(),
                   KidsView(),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

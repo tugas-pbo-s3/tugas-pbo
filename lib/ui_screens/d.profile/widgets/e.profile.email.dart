@@ -12,7 +12,7 @@ class ProfileEmail extends StatelessWidget {
       onWaiting: () => const Center(child: CircularProgressIndicator()),
       onError: (error, refreshError) => error,
       onData: (data) => ListTile(
-        title: Text(data?.email ?? 'nullname'),
+        title: Text(data?.email ?? 'nullemail'),
         leading: const Icon(Icons.email),
       ),
     );

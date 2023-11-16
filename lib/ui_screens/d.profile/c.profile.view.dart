@@ -5,23 +5,45 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    final width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProfileAppbar(),
       ),
       // floatingActionButton: ProfileFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ProfilePhoto(),
-            ProfileUsername(),
-            ProfileEmail(),
-            ProfileLogout(),
-          ],
-        ),
-      ),
+      body: width < 600
+          ? const Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ProfilePhoto(),
+                  ProfileUsername(),
+                  ProfileEmail(),
+                  ProfileLogout(),
+                ],
+              ),
+            )
+          : Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBoxW(30),
+                  const ProfilePhoto(),
+                  const SizedBoxW(30),
+                  Expanded(
+                    child: ListView(
+                      shrinkWrap: true,
+                      children: [
+                        const ProfileUsername(),
+                        const ProfileEmail(),
+                        const ProfileLogout(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
     );
   }
 }
