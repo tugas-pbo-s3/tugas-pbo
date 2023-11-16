@@ -11,7 +11,17 @@ class KidsDetailData {
 
   final rxSelectedId = _pv.rxSelectedId;
 
-  final rxAngka = RM.inject(
+  final rxCart = _pvCart.rxCart;
+
+  final rxQty = RM.inject(
     () => 1,
+  );
+
+  final rxSize = RM.inject<int>(
+    () => _dt.rxProductFuture.st?.sizes.first ?? 0,
+  );
+
+  final rxColor = RM.inject<String>(
+    () => _dt.rxProductFuture.st?.colors.first ?? 'empty color option',
   );
 }

@@ -17,9 +17,16 @@ class KidsServ {
     }
   }
 
+// * cart
+
   addToCart(CartedShoes cartedShoes) {
     _svCart.addToCart(cartedShoes);
   }
+
+  updateToCart(CartedShoes cartedShoes, int index) {
+    _svCart.updateToCart(cartedShoes, index);
+  }
+// *--------------------------
 
   setSelectedId(String id) {
     _pv.rxSelectedId.refresh();

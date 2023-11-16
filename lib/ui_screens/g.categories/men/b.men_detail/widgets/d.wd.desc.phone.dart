@@ -62,6 +62,7 @@ class MenDetailDescPhone extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // _ct.selectOption();
+                    _ct.setQty();
                     showModalBottomSheet(
                       backgroundColor: Colors.transparent,
                       context: context,

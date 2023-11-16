@@ -5,8 +5,6 @@ class ManDetailCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
-  // * menambah ke keranjang
-
   addToCart() {
     MenShoes product = MenShoes(
       name: _dt.rxProductFuture.st!.name,
