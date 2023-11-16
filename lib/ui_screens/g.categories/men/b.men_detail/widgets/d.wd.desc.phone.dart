@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class MenDetailDesc extends StatelessWidget {
-  const MenDetailDesc({
+class MenDetailDescPhone extends StatelessWidget {
+  const MenDetailDescPhone({
     super.key,
   });
 
@@ -61,16 +61,17 @@ class MenDetailDesc extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
+                    // _ct.selectOption();
                     showModalBottomSheet(
                       backgroundColor: Colors.transparent,
                       context: context,
                       builder: (context) {
-                        return MenDetailBottomSheet();
+                        return MenDetailBottomsheet();
                       },
                     );
                   },
                   child: const Text(
-                    "Select option",
+                    "Select Option",
                   ),
                 ),
               ],

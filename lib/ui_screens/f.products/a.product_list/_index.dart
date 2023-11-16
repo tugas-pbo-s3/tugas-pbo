@@ -18,6 +18,8 @@ part 'widgets/b.product_list.fab.dart';
 part 'widgets/c.product_list.charlie.dart';
 part 'widgets/d.product_list.delta.dart';
 part 'widgets/e.product_list.echo.dart';
+part 'widgets/f.product_list.phone.dart';
+part 'widgets/g.product_list.web.dart';
 
 ProductListData get _dt => Data.productList.st;
 ProductListCtrl get _ct => Ctrl.productList;

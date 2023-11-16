@@ -5,6 +5,8 @@ class WomenDetailCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
+  // * menambah ke keranjang
+
   addToCart() {
     WomenShoes product = WomenShoes(
       name: _dt.rxProductFuture.st!.name,
@@ -45,45 +47,33 @@ class WomenDetailCtrl {
     logx.i('addtocart');
   }
 
-  void selectOption() {
-    logx.i(_dt.rxSize.st.toString());
-    logx.i(_dt.rxColor.st);
-    setQty();
-    logx.i(_dt.rxQty.st.toString());
-  }
+  // * --------------------------
+
+// *   menandai di state mengenai size &  color yang dipilih
 
   void selectSize(int size) {
     _dt.rxSize.st = size;
-    logx.i(_dt.rxSize.st.toString());
-
-    final index = cekCartindex();
-    if (index > -1) {
-      logx.i('ada euyyy');
-      final item = _dt.rxCart.st.listCartedShoes[index];
-      _dt.rxQty.st = item.qty;
-    } else {
-      _dt.rxQty.refresh();
-    }
-
-    logx.i(_dt.rxQty.st.toString());
+    _ct.setQty();
   }
 
   void selectColor(String color) {
     _dt.rxColor.st = color;
-    logx.i(_dt.rxColor.st);
-    logx.i(_dt.rxQty.st.toString());
+    _ct.setQty();
   }
+
+// * ---------------------------
 
   void setQty() {
     final index = cekCartindex();
     if (index > -1) {
-      logx.i('ada euyyy');
       final item = _dt.rxCart.st.listCartedShoes[index];
       _dt.rxQty.st = item.qty;
     } else {
       _dt.rxQty.refresh();
     }
   }
+
+// * cek index setiap cart mengidentifikasi adanya kesamaan dari cart itu
 
   int cekCartindex() {
     final prodX = CartedShoes(
@@ -91,7 +81,6 @@ class WomenDetailCtrl {
       color: _dt.rxColor.st,
       size: _dt.rxSize.st,
     );
-    logx.i('cek cart index');
     final index = _dt.rxCart.st.listCartedShoes.indexWhere((el) {
       final x = el.shoes.productId == prodX.shoes.productId;
       final y = el.color == prodX.color;

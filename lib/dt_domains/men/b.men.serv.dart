@@ -17,14 +17,20 @@ class MenServ {
     }
   }
 
-  // addToCart(MenShoes shoes, {int qty = 1}) {
-  //   // _svProduct.addToCart(shoes, qty);
-  //   _svCart.addToCart(shoes, qty);
-  // }
+// * cart
 
   addToCart(CartedShoes cartedShoes) {
     _svCart.addToCart(cartedShoes);
   }
+
+  updateToCart(CartedShoes cartedShoes, int index) {
+    _svCart.updateToCart(cartedShoes, index);
+  }
+// *--------------------------
+
+  // addToCart(CartedShoes cartedShoes) {
+  //   _svCart.addToCart(cartedShoes);
+  // }
 
   setSelectedId(String id) {
     _pv.rxSelectedId.refresh();
