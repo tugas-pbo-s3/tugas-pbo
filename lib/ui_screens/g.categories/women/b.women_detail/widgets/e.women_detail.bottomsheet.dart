@@ -64,7 +64,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                   ),
                   OnReactive(
                     () => Text(
-                      'Rp ${Fun.formatRupiah.format(totalPayment)}',
+                      'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                       style: const TextStyle(
                         color: Color(0xFFFD725A),
                         fontSize: 20,

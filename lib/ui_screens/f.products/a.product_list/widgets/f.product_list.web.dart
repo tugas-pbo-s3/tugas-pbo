@@ -33,21 +33,23 @@ class ProductListWeb extends StatelessWidget {
                 },
                 icon: const Icon(Icons.shopping_cart),
               ),
+
               IconButton(
                 onPressed: () {
-                  nav.to(Routes.profile);
+                  width > 500 ? Scaffold.of(context).openEndDrawer() : const Text('');
                 },
-                icon: const Icon(Icons.person),
-              ),
-              IconButton(
-                onPressed: () {
-                  nav.to(Routes.login);
-                },
-                icon: const Icon(
-                  Icons.logout,
-                  color: Colors.red,
-                ),
-              ),
+                icon: const Icon(Icons.more_vert),
+              )
+
+              // IconButton(
+              //   onPressed: () {
+              //     nav.to(Routes.login);
+              //   },
+              //   icon: const Icon(
+              //     Icons.logout,
+              //     color: Colors.red,
+              //   ),
+              // ),
             ],
             backgroundColor: Colors.amber,
             pinned: true,

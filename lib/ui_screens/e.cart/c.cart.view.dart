@@ -12,43 +12,86 @@ class CartView extends StatelessWidget {
       ),
       // floatingActionButton: const CartFab(),
 
-      body: _dt.rxCart.st.listCartedShoes.isEmpty
-          ? const Center(child: Text('cart is empty '))
-          : OnBuilder.all(
-              listenTo: _dt.rxCart,
-              onWaiting: () => const Center(child: CircularProgressIndicator()),
-              onError: (error, refreshError) => Text(error),
-              onData: (data) => ListView(
-                children: [
-                  ...List.generate(
-                    _dt.rxCart.st.listCartedShoes.length,
-                    (index) => OnReactive(
-                      () => Card(
-                        child: ListTile(
-                          leading: SizedBox(
-                            height: 50,
-                            width: 50,
-                            // child: Image.network(_dt.rxCartList.st[index].imageUrl),
-                            child: Center(child: Text(_dt.rxCart.st.listCartedShoes[index].qty.toString())),
+      body: OnBuilder.all(
+        listenTo: _dt.rxCart,
+        onWaiting: () => const Center(child: CircularProgressIndicator()),
+        onError: (error, refreshError) => Text(error),
+        onData: (data) {
+          return data.listCartedShoes.isEmpty
+              ? const Center(child: Text('cart  is empty'))
+              : ListView(
+                  children: [
+                    ...List.generate(
+                      _dt.rxCart.st.listCartedShoes.length,
+                      (index) => OnReactive(
+                        () => Card(
+                          child: ListTile(
+                            leading: SizedBox(
+                              height: 50,
+                              width: 50,
+                              // child: Image.network(_dt.rxCartList.st[index].imageUrl),
+                              child: Center(child: Text(_dt.rxCart.st.listCartedShoes[index].qty.toString())),
+                            ),
+                            title: Text(_dt.rxCart.st.listCartedShoes[index].shoes.name),
+                            subtitle: Row(
+                              children: [
+                                Text(_dt.rxCart.st.listCartedShoes[index].size.toString()),
+                                Text(_dt.rxCart.st.listCartedShoes[index].color),
+                              ],
+                            ),
+                            trailing: Text(
+                                'Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listCartedShoes[index].shoes.price * _dt.rxCart.st.listCartedShoes[index].qty)}'),
+                            onTap: () {},
+                            // selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
                           ),
-                          title: Text(_dt.rxCart.st.listCartedShoes[index].shoes.name),
-                          subtitle: Row(
-                            children: [
-                              Text(_dt.rxCart.st.listCartedShoes[index].size.toString()),
-                              Text(_dt.rxCart.st.listCartedShoes[index].color),
-                            ],
-                          ),
-                          trailing:
-                              Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listCartedShoes[index].shoes.price)}'),
-                          onTap: () {},
-                          // selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
+                  ],
+                );
+        },
+      ),
+
+      // * ---------------------------------------------
+      // body: _dt.rxCart.st.listCartedShoes.isEmpty
+      //     ? const Center(child: Text('cart is empty '))
+      //     : OnBuilder.all(
+      //         listenTo: _dt.rxCart,
+      //         onWaiting: () => const Center(child: CircularProgressIndicator()),
+      //         onError: (error, refreshError) => Text(error),
+      //         onData: (data) => ListView(
+      //           children: [
+      //             ...List.generate(
+      //               _dt.rxCart.st.listCartedShoes.length,
+      //               (index) => OnReactive(
+      //                 () => Card(
+      //                   child: ListTile(
+      //                     leading: SizedBox(
+      //                       height: 50,
+      //                       width: 50,
+      //                       // child: Image.network(_dt.rxCartList.st[index].imageUrl),
+      //                       child: Center(child: Text(_dt.rxCart.st.listCartedShoes[index].qty.toString())),
+      //                     ),
+      //                     title: Text(_dt.rxCart.st.listCartedShoes[index].shoes.name),
+      //                     subtitle: Row(
+      //                       children: [
+      //                         Text(_dt.rxCart.st.listCartedShoes[index].size.toString()),
+      //                         Text(_dt.rxCart.st.listCartedShoes[index].color),
+      //                       ],
+      //                     ),
+      //                     trailing:
+      //                         Text('Rp ${Fun.formatRupiah.format(_dt.rxCart.st.listCartedShoes[index].shoes.price)}'),
+      //                     onTap: () {},
+      //                     // selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
+      //                   ),
+      //                 ),
+      //               ),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+
+      // ***-----------------------------------------
       // body: Center(
       //   child: ListView(
       //     children: [

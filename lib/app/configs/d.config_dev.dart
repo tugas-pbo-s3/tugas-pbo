@@ -3,7 +3,7 @@
 part of '_index.dart';
 
 class ConfigDev implements IConfig {
-  IPersistStore get store => StoreFake();
+  IPersistStore get store => StoreHive();
   String get appName => 'DEV_PegaShoes';
   String get apiHost => 'https://gorest.co.in';
   String get authToken => '3fadf85785ef22fc9fda7a03578770d6da459f72b8b5bf7137da7d073bc1e11f';

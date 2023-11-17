@@ -31,8 +31,6 @@ class MenDetailView extends StatelessWidget {
 
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
-          final totalPayment = _dt.rxQty.st * _dt.rxProductFuture.st!.price;
-
           return width < 600
               ? const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +73,7 @@ class MenDetailView extends StatelessWidget {
                                 ),
                                 OnReactive(
                                   () => Text(
-                                    'Rp ${Fun.formatRupiah.format(totalPayment)}',
+                                    'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                                     style: const TextStyle(
                                       color: Color(0xFFFD725A),
                                       fontSize: 20,

@@ -34,10 +34,10 @@ class ProfileView extends StatelessWidget {
                   Expanded(
                     child: ListView(
                       shrinkWrap: true,
-                      children: [
-                        const ProfileUsername(),
-                        const ProfileEmail(),
-                        const ProfileLogout(),
+                      children: const [
+                        ProfileUsername(),
+                        ProfileEmail(),
+                        ProfileLogout(),
                       ],
                     ),
                   ),

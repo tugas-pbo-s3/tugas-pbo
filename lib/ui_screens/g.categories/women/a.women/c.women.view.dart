@@ -13,6 +13,7 @@ class WomenView extends StatelessWidget {
         onData: (data) => _dt.rxProductList.st.isEmpty
             ? const Center(child: Text('Data is empty'))
             : Wrap(
+                // alignment: WrapAlignment.center,
                 children: [
                   ...List.generate(
                     _dt.rxProductList.st.length,
@@ -27,7 +28,7 @@ class WomenView extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Image.asset('assets/images/pegaShoes500.png', height: 150),
+                                Image.network('${_dt.rxProductList.st[index].imageUrl?.values.firstOrNull}'),
                                 Text(_dt.rxProductList.st[index].name),
                                 Text('Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}'),
                               ],

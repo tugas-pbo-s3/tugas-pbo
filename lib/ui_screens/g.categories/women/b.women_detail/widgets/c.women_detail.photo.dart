@@ -30,7 +30,7 @@ class WomenDetailPhoto extends StatelessWidget {
         height: 200,
         decoration: BoxDecoration(
           color: Colors.white,
-          image: DecorationImage(image: NetworkImage(data?.imageUrl?.values.first ?? '')),
+          image: DecorationImage(image: NetworkImage(data?.imageUrl?.values.first ?? ''), fit: BoxFit.fitHeight),
         ),
       ),
     );

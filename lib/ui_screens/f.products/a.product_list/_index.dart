@@ -2,11 +2,11 @@
 // import 'dart:ffi' as prefix;
 import 'dart:math';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:tugas_pbo/ui_screens/_index.dart';
 import 'package:tugas_pbo/ui_screens/g.categories/women/a.women/_index.dart';
+import 'package:tugas_pbo/ui_widgets/space/_index.dart';
 
 import '../../../app/_index.dart';
 import '../../../xtras/_index.dart';
@@ -21,6 +21,7 @@ part 'widgets/d.product_list.delta.dart';
 part 'widgets/e.product_list.echo.dart';
 part 'widgets/f.product_list.web.dart';
 part 'widgets/g.product_list.phone.dart';
+part 'widgets/h.product_list.profile.dart';
 
 ProductListData get _dt => Data.productList.st;
 ProductListCtrl get _ct => Ctrl.productList;
