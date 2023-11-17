@@ -7,7 +7,7 @@ class HomeData {
 
   final rxUser = Prov.auth.st.rxUser;
 
-  var listPage = <Widget>[
+  var lisxtPage = <Widget>[
     const ProductListView(),
     const CartView(),
     const ProfileView(),

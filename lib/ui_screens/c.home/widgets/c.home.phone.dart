@@ -13,7 +13,8 @@ class HomePhone extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           currentIndex: _dt.rxCurrentIndex.st,
           onTap: (i) {
-            _dt.rxCurrentIndex.setState((s) => i);
+            // _dt.rxCurrentIndex.setState((s) => i);
+            _dt.rxCurrentIndex.st = i;
             logx.e(i.toString());
           },
           items: const [
@@ -32,9 +33,23 @@ class HomePhone extends StatelessWidget {
           ],
         ),
       ),
-      body: OnBuilder(
-        listenTo: _dt.rxCurrentIndex,
-        builder: () => _dt.listPage[_dt.rxCurrentIndex.st],
+      // body: OnBuilder(
+      //   listenTo: _dt.rxCurrentIndex,
+      //   builder: () => _dt.listPage[_dt.rxCurrentIndex.st],
+      // ),
+      // body: OnReactive(
+      //   () => _dt.listPage[_dt.rxCurrentIndex.st],
+      // ),
+      body: OnReactive(
+        () {
+          final x = _dt.rxCurrentIndex.st;
+          if (x == 0) {
+            return const ProductListView();
+          } else if (x == 1) {
+            return const CartView();
+          }
+          return const ProfileView();
+        },
       ),
     );
   }

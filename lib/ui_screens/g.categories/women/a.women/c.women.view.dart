@@ -28,7 +28,21 @@ class WomenView extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Image.network('${_dt.rxProductList.st[index].imageUrl?.values.firstOrNull}'),
+                                _dt.rxProductList.st[index].imageUrl!.isEmpty
+                                    ? Container(
+                                        color: Colors.black45,
+                                        height: 145,
+                                        width: 200,
+                                        child: const Icon(Icons.broken_image_outlined, size: 40),
+                                      )
+                                    : SizedBox(
+                                        height: 145,
+                                        width: 200,
+                                        child: Image.network(
+                                          '${_dt.rxProductList.st[index].imageUrl?.values.first}',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
                                 Text(_dt.rxProductList.st[index].name),
                                 Text('Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}'),
                               ],

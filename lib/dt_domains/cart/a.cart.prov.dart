@@ -7,9 +7,12 @@ class CartProv {
     persist: () => PersistState(
       key: 'rxCart',
       throttleDelay: 500,
-      // shouldRecreateTheState: false,
+      shouldRecreateTheState: false,
       toJson: (s) => s.toJson(),
       fromJson: (json) => Cart.fromJson(json),
     ),
+    sideEffects: SideEffects.onData((data) {
+      print('wkwkwkwk');
+    }),
   );
 }
