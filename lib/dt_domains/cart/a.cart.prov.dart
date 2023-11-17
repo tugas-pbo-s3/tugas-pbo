@@ -11,8 +11,6 @@ class CartProv {
       toJson: (s) => s.toJson(),
       fromJson: (json) => Cart.fromJson(json),
     ),
-    sideEffects: SideEffects.onData((data) {
-      print('wkwkwkwk');
-    }),
+    sideEffects: SideEffects.onData((data) {}),
   );
 }

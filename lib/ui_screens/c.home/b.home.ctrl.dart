@@ -9,7 +9,7 @@ class HomeCtrl {
     if (_dt.rxUser.st?.email == 'admin@admin.com') {
       return const AdminProductListView();
     } else {
-      if (width < 600) {
+      if (width < 500) {
         return const HomePhone();
       } else {
         return const ProductListView();

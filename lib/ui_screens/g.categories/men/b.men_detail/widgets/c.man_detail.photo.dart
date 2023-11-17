@@ -13,9 +13,12 @@ class MenDetailPhoto extends StatelessWidget {
         onData: (data) => Container(
           alignment: Alignment.topCenter,
           height: 200,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.amber,
-            // image: DecorationImage(image: NetworkImage(data!.imageUrl!.values.first)),
+            image: DecorationImage(
+                image: NetworkImage(data?.imageUrl?.values.firstOrNull ??
+                    'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df'),
+                fit: BoxFit.fitHeight),
           ),
         ),
       );

@@ -32,12 +32,12 @@ class KidsDetailView extends StatelessWidget {
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
           return width < 600
-              ? const Column(
+              ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // KidsDetailPhoto(),
-                    SizedBoxH(10),
-                    KidsDetailDescPhone(),
+                    KidsDetailPhoto(),
+                    const SizedBoxH(10),
+                    const KidsDetailDescPhone(),
                   ],
                 )
               : SingleChildScrollView(
@@ -46,7 +46,7 @@ class KidsDetailView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      //  KidsDetailPhoto(),
+                      KidsDetailPhoto(),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                         child: Column(

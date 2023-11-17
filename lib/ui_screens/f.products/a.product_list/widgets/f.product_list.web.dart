@@ -36,7 +36,7 @@ class ProductListWeb extends StatelessWidget {
 
               IconButton(
                 onPressed: () {
-                  width > 500 ? Scaffold.of(context).openEndDrawer() : const Text('');
+                  Scaffold.of(context).openEndDrawer();
                 },
                 icon: const Icon(Icons.more_vert),
               )

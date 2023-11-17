@@ -35,7 +35,7 @@ class MenDetailView extends StatelessWidget {
               ? const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // MenDetailPhoto(),
+                    MenDetailPhoto(),
                     SizedBoxH(10),
                     MenDetailDescPhone(),
                   ],
@@ -46,7 +46,7 @@ class MenDetailView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      //  MenDetailPhoto(),
+                      const MenDetailPhoto(),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                         child: Column(

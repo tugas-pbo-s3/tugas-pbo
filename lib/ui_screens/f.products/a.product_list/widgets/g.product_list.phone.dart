@@ -17,7 +17,7 @@ class ProductListPhone extends StatelessWidget {
             centerTitle: true,
             title: Image.asset(
               'assets/images/pegaShoes2000.png',
-              scale: 22,
+              scale: 30,
             ),
             pinned: true,
             floating: true,
