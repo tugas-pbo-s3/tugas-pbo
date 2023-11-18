@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class ProfileFab extends StatelessWidget {
-  const ProfileFab({Key? key}) : super(key: key);
+  const ProfileFab({super.key});
 
   @override
   Widget build(BuildContext context) {

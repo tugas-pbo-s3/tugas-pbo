@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AllView extends StatelessWidget {
-  const AllView({Key? key}) : super(key: key);
+  const AllView({super.key});
 
   @override
   Widget build(BuildContext context) {

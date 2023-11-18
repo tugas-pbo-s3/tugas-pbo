@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class SearchFab extends StatelessWidget {
-  const SearchFab({Key? key}) : super(key: key);
+  const SearchFab({super.key});
 
   @override
   Widget build(BuildContext context) {

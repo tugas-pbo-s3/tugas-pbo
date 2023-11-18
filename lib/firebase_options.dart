@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -45,39 +51,19 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyASaEd24O-laLmovgrUpbamQY_GDOciO-4',
-    appId: '1:804242459335:web:6008f9a5b36892d2824ce2',
+    appId: '1:804242459335:web:7f4054d541541764824ce2',
     messagingSenderId: '804242459335',
     projectId: 'tugas-pbo-fc0db',
     authDomain: 'tugas-pbo-fc0db.firebaseapp.com',
     storageBucket: 'tugas-pbo-fc0db.appspot.com',
-    measurementId: 'G-6FM03K95XB',
+    measurementId: 'G-DEDE2EXB0W',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDG9oqf46Q6M4Ozq450ZvD8Q4-ig2CtQok',
-    appId: '1:804242459335:android:3cec5bf2ed033bc4824ce2',
+    appId: '1:804242459335:android:8a550ad2f7b074cc824ce2',
     messagingSenderId: '804242459335',
     projectId: 'tugas-pbo-fc0db',
     storageBucket: 'tugas-pbo-fc0db.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDBxFaksbQEJNbChwTQCNVDeFwQG75ULIc',
-    appId: '1:804242459335:ios:79a09b20e2af32dd824ce2',
-    messagingSenderId: '804242459335',
-    projectId: 'tugas-pbo-fc0db',
-    storageBucket: 'tugas-pbo-fc0db.appspot.com',
-    iosClientId: '804242459335-osjjoel5htbl60froqchmg03iks714nt.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tugasPbo',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDBxFaksbQEJNbChwTQCNVDeFwQG75ULIc',
-    appId: '1:804242459335:ios:cc894bec61363fa4824ce2',
-    messagingSenderId: '804242459335',
-    projectId: 'tugas-pbo-fc0db',
-    storageBucket: 'tugas-pbo-fc0db.appspot.com',
-    iosClientId: '804242459335-6oor3ehbmlt3jahe0qg5dh1dpc8soiso.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tugasPbo.RunnerTests',
   );
 }

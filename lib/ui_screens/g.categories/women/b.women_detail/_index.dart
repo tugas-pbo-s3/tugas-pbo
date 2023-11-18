@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
-import 'package:tugas_pbo/dt_domains/_models/_index.dart';
-import 'package:tugas_pbo/dt_domains/cart/_index.dart';
-import 'package:tugas_pbo/dt_domains/women/_index.dart';
 import 'package:tugas_pbo/ui_widgets/space/_index.dart';
 
 import '../../../../app/_index.dart';
+import '../../../../dt_domains/_index.dart';
 import '../../../../xtras/_index.dart';
 
 part 'a.women_detail.data.dart';

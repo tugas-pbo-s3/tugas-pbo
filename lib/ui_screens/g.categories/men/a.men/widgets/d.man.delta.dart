@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class ManDelta extends StatelessWidget {
-  const ManDelta({Key? key}) : super(key: key);
+  const ManDelta({super.key});
 
   @override
   Widget build(BuildContext context) {

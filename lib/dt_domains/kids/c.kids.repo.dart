@@ -4,7 +4,7 @@ class KidsRepo {
   Future<List<KidsShoes>> readAllProducts(String lastCreateTime) async {
     final result = await x1FbFirestore.readCollInDoc(
       colId1: _pv.colId,
-      docId: 'k-shoes',
+      docId1: 'k-shoes',
       colId2: 'kids-shoes',
       limit: _pv.limit,
       lastCreateTime: lastCreateTime,

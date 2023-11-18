@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AllFab extends StatelessWidget {
-  const AllFab({Key? key}) : super(key: key);
+  const AllFab({super.key});
 
   @override
   Widget build(BuildContext context) {

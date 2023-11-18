@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class ManDetailAppbar extends StatelessWidget {
-  const ManDetailAppbar({Key? key}) : super(key: key);
+  const ManDetailAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

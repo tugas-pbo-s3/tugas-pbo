@@ -69,7 +69,7 @@ class FbFirestore {
   //* read single item
   Future<QuerySnapshot<Map<String, dynamic>>> readCollInDoc({
     required String colId1,
-    required String docId,
+    required String docId1,
     required String colId2,
     required String lastCreateTime,
     required int limit,
@@ -78,7 +78,7 @@ class FbFirestore {
       return Future.value(
         instance
             .collection(colId1)
-            .doc(docId)
+            .doc(docId1)
             .collection(colId2)
             .limit(limit)
             .orderBy('created_at', descending: true)
@@ -110,6 +110,8 @@ class FbFirestore {
       return Future.value(instance.collection(colId1).doc(docId1).collection(colId2).doc(docId2).get());
     } catch (e) {
       logxx.e(FbFirestore, 'error on read. ${e.toString()}');
+
+      // logxx.e(FbFirestore, 'error on read. ${e.toString()}');
     }
   }
 

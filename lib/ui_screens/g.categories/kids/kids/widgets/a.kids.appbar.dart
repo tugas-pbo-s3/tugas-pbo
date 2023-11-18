@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class KidsAppbar extends StatelessWidget {
-  const KidsAppbar({Key? key}) : super(key: key);
+  const KidsAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

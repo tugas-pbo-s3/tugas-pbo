@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AdminCategoryListView extends StatelessWidget {
-  const AdminCategoryListView({Key? key}) : super(key: key);
+  const AdminCategoryListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,26 +10,35 @@ class AdminCategoryListView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: AdminCategoryListAppbar(),
       ),
-      floatingActionButton: const AdminCategoryListFab(),
-      body: OnBuilder<List<Category>>.all(
-        listenToMany: [_dt.rxLoadMore, _dt.rxCategoryList],
-        onError: (e, s) => const Center(child: Text('error')),
-        onWaiting: () => const Center(child: CircularProgressIndicator()),
-        onData: (data) => _dt.rxCategoryList.st.isEmpty
-            ? const Center(child: Text('Data is empty'))
-            : ListView(
-                children: [
-                  for (var item in _dt.rxCategoryList.st)
-                    AdminCategoryListCard(
-                      category: item,
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: OnBuilder<List<Category>>.all(
+          listenToMany: [_dt.rxLoadMore, _dt.rxCategoryList],
+          onError: (e, s) => const Center(child: Text('error')),
+          onWaiting: () => const Center(child: CircularProgressIndicator()),
+          onData: (data) => _dt.rxCategoryList.st.isEmpty
+              ? const Center(child: Text('Data is empty'))
+              : Stack(
+                  children: [
+                    ListView(
+                      children: [
+                        for (var item in _dt.rxCategoryList.st)
+                          AdminCategoryListCard(
+                            category: item,
+                          ),
+                      ],
                     ),
-                  const AdminCategoryListLoadMore(),
-                  // dt.rxLoadMore.rebuild.onOrElse(
-                  //   onWaiting: () => const CircularProgressIndicator(),
-                  //   orElse: (data) => const ProductListLoadmore(),
-                  // ),
-                ],
-              ),
+                    const AdminCategoryListDetail(),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: AdminCategoryListFab(),
+                      ),
+                    ),
+                  ],
+                ),
+        ),
       ),
     );
   }

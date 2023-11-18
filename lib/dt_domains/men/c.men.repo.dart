@@ -4,7 +4,7 @@ class MenRepo {
   Future<List<MenShoes>> readAllProducts(String lastCreateTime) async {
     final result = await x1FbFirestore.readCollInDoc(
       colId1: _pv.colId,
-      docId: 'm-shoes',
+      docId1: 'm-shoes',
       colId2: 'man-shoes',
       limit: _pv.limit,
       lastCreateTime: lastCreateTime,
@@ -29,7 +29,7 @@ class MenRepo {
 
     logx.wtf(result.toString());
 
-    final productResult = MenShoes.fromMap(result.data());
+    final productResult = MenShoes.fromMap(result.data() ?? {});
     logx.wtf(productResult.toString());
     return productResult;
   }

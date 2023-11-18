@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AllEcho extends StatelessWidget {
-  const AllEcho({Key? key}) : super(key: key);
+  const AllEcho({super.key});
 
   @override
   Widget build(BuildContext context) {

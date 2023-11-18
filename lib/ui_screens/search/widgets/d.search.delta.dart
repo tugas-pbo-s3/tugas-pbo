@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class SearchDelta extends StatelessWidget {
-  const SearchDelta({Key? key}) : super(key: key);
+  const SearchDelta({super.key});
 
   @override
   Widget build(BuildContext context) {

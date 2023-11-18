@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AllCharlie extends StatelessWidget {
-  const AllCharlie({Key? key}) : super(key: key);
+  const AllCharlie({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class ProductInputFab extends StatelessWidget {
-  const ProductInputFab({Key? key}) : super(key: key);
+  const ProductInputFab({super.key});
 
   @override
   Widget build(BuildContext context) {

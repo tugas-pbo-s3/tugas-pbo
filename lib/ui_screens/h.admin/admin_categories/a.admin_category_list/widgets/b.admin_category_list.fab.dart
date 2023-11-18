@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AdminCategoryListFab extends StatelessWidget {
-  const AdminCategoryListFab({Key? key}) : super(key: key);
+  const AdminCategoryListFab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,29 +18,29 @@ class AdminCategoryListFab extends StatelessWidget {
               child: const Text('Cancel'),
             ),
             OnFormBuilder(
-              listenTo: _dt.rxForm,
+              listenTo: _dt.rxFormInput,
               builder: () => OnFormSubmissionBuilder(
-                listenTo: _dt.rxForm,
+                listenTo: _dt.rxFormInput,
                 onSubmitting: () => const CircularProgressIndicator(),
                 child: TextButton(
-                  onPressed: _dt.rxForm.isDirty && _dt.rxForm.isValid ? () => _ct.submit() : null,
+                  onPressed: _dt.rxFormInput.isDirty && _dt.rxFormInput.isValid ? () => _ct.submitInput() : null,
                   child: const Text('Submit'),
                 ),
               ),
             ),
           ],
           content: OnFormBuilder(
-            listenTo: _dt.rxForm,
+            listenTo: _dt.rxFormInput,
             builder: () => TextField(
-              controller: _dt.rxName.controller,
-              focusNode: _dt.rxName.focusNode,
+              controller: _dt.rxNameInput.controller,
+              focusNode: _dt.rxNameInput.focusNode,
               keyboardType: TextInputType.name,
               textInputAction: TextInputAction.next,
-              onEditingComplete: () => _dt.rxName.focusNode.unfocus(),
+              onEditingComplete: () => _dt.rxNameInput.focusNode.unfocus(),
               decoration: InputDecoration(
                 hintText: 'Name of category',
                 labelText: 'Category\'s name',
-                errorText: _dt.rxName.error,
+                errorText: _dt.rxNameInput.error,
               ),
             ),
           ),

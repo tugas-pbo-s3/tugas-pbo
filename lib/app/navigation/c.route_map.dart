@@ -6,14 +6,13 @@ class RouteMap {
   static final data = {
     // Routes.root: (RouteData data) => const HomeView(),
     //* master -- ----- ----- ----- ----- -----
+    Routes.adminHome: (RouteData data) => const AdminHomeView(),
 
-    Routes.adminProductList: (RouteData data) => const AdminProductListView(),
-    Routes.adminProductDetail: (RouteData data) => const AdminProductDetailView(),
-    Routes.adminProductInput: (RouteData data) => const AdminProductInputView(),
+    Routes.adminProductList: (RouteData data) => const AdminWomenShoesListView(),
+    Routes.adminProductInput: (RouteData data) => const AdminWomenShoesInputView(),
     Routes.adminProductEdit: (RouteData data) => const AdminProductEditView(),
 
     Routes.adminCategoryList: (RouteData data) => const AdminCategoryListView(),
-    Routes.adminCategoryDetail: (RouteData data) => const AdminCategoryDetailView(),
 
     Routes.productList: (RouteData data) => const ProductListView(),
     Routes.productDetail: (RouteData data) => const ProductDetailView(),
@@ -35,7 +34,7 @@ class RouteMap {
     Routes.kids: (RouteData data) => const KidsView(),
     Routes.search: (RouteData data) => const SearchView(),
     Routes.womenDetail: (RouteData data) => const WomenDetailView(),
-    Routes.manDetail: (RouteData data) => const MenDetailView(),
+    Routes.manDetail: (RouteData data) => const ManDetailView(),
     Routes.kidsDetail: (RouteData data) => const KidsDetailView(),
   };
 }

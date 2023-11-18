@@ -2,7 +2,7 @@ part of '../_index.dart';
 
 class AdminCategoryListCard extends StatelessWidget {
   final Category category;
-  const AdminCategoryListCard({Key? key, required this.category}) : super(key: key);
+  const AdminCategoryListCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,6 @@ class AdminCategoryListCard extends StatelessWidget {
             subtitle: Text(category.categoryId),
             onTap: () {
               _ct.select(category.categoryId);
-              logx.wtf('selected id: ${_dt.rxSelectedId.st}');
-              logx.wtf('id: ${category.categoryId}');
             },
           ),
         ),

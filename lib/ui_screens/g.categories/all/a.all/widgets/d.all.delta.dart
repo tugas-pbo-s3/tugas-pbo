@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AllDelta extends StatelessWidget {
-  const AllDelta({Key? key}) : super(key: key);
+  const AllDelta({super.key});
 
   @override
   Widget build(BuildContext context) {

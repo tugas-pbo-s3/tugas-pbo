@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class ManView extends StatelessWidget {
-  const ManView({Key? key}) : super(key: key);
+  const ManView({super.key});
 
   @override
   Widget build(BuildContext context) {

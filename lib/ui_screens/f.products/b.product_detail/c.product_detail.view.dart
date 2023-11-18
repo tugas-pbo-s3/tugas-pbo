@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class ProductDetailView extends StatelessWidget {
-  const ProductDetailView({Key? key}) : super(key: key);
+  const ProductDetailView({super.key});
 
   @override
   Widget build(BuildContext context) {

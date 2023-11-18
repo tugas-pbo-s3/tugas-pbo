@@ -1,12 +1,11 @@
 part of '_index.dart';
 
 class KidsView extends StatelessWidget {
-  const KidsView({Key? key}) : super(key: key);
+  const KidsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    // final height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: OnBuilder.all(
         listenToMany: [_dt.rxProductList, _dt.rxLoadMore],

@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class WomenDetailView extends StatelessWidget {
-  const WomenDetailView({Key? key}) : super(key: key);
+  const WomenDetailView({super.key});
 
   @override
   Widget build(BuildContext context) {

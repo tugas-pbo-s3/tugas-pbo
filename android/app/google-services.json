@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:804242459335:android:3cec5bf2ed033bc4824ce2",
+        "mobilesdk_app_id": "1:804242459335:android:8a550ad2f7b074cc824ce2",
         "android_client_info": {
-          "package_name": "com.example.tugas_pbo"
+          "package_name": "com.nostracode.pegashoes"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "804242459335-oej242oe3r52e0e3c2tnddnc484a0r5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nostracode.pegashoes",
+            "certificate_hash": "fc19a6dd769a4cd602ffc4a8589888a706a257e8"
+          }
+        },
         {
           "client_id": "804242459335-nar18h5sslq6m28alfgjv9074fvqd0l3.apps.googleusercontent.com",
           "client_type": 3

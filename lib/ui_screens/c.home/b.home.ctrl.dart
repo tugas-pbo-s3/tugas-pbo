@@ -7,7 +7,7 @@ class HomeCtrl {
 
   Widget directPage(double width) {
     if (_dt.rxUser.st?.email == 'admin@admin.com') {
-      return const AdminProductListView();
+      return const AdminHomeView();
     } else {
       if (width < 500) {
         return const HomePhone();

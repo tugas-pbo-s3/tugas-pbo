@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class HomeFab extends StatelessWidget {
-  const HomeFab({Key? key}) : super(key: key);
+  const HomeFab({super.key});
 
   @override
   Widget build(BuildContext context) {

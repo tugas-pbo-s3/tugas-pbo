@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class RegisterAppbar extends StatelessWidget {
-  const RegisterAppbar({Key? key}) : super(key: key);
+  const RegisterAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class LoginAppbar extends StatelessWidget {
-  const LoginAppbar({Key? key}) : super(key: key);
+  const LoginAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

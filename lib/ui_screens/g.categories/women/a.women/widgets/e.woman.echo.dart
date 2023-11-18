@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class WomanEcho extends StatelessWidget {
-  const WomanEcho({Key? key}) : super(key: key);
+  const WomanEcho({super.key});
 
   @override
   Widget build(BuildContext context) {

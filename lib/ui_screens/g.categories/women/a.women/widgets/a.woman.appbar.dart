@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class WomanAppbar extends StatelessWidget {
-  const WomanAppbar({Key? key}) : super(key: key);
+  const WomanAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

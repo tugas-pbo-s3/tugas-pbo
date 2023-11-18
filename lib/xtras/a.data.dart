@@ -1,13 +1,13 @@
 part of '_index.dart';
 
 abstract class Data {
-  static Injected<AdminProductListData> get adminProductList => _adminProductListData;
-  static Injected<AdminProductDetailData> get adminProductDetail => _adminProductDetailData;
-  static Injected<AdminProductInputData> get adminProductInput => _adminProductInputData;
+  static Injected<AdminHomeData> get adminHome => _adminHomeData;
+
+  static Injected<AdminWomenShoesListData> get adminProductList => _adminProductListData;
+  static Injected<AdminWomenShoesInputData> get adminProductInput => _adminProductInputData;
   static Injected<AdminProductEditData> get adminProductEdit => _adminProductEditData;
 
   static Injected<AdminCategoryListData> get adminCategoryList => _adminCategoryListData;
-  static Injected<AdminCategoryDetailData> get adminCategoryDetail => _adminCategoryDetailData;
 
   static Injected<ProductListData> get productList => _productListData;
   static Injected<ProductDetailData> get productDetail => _productDetailData;
@@ -33,13 +33,13 @@ abstract class Data {
   static Injected<KidsDetailData> get kidsDetail => _kidsDetailData;
 }
 
-final _adminProductListData = RM1.inj(AdminProductListData(), Ctrl.adminProductList.init);
-final _adminProductDetailData = RM1.inj(AdminProductDetailData(), Ctrl.adminProductDetail.init);
-final _adminProductInputData = RM1.inj(AdminProductInputData(), Ctrl.adminProductInput.init);
+final _adminHomeData = RM1.inj(AdminHomeData(), () => Ctrl.adminHome.init);
+
+final _adminProductListData = RM1.inj(AdminWomenShoesListData(), Ctrl.adminProductList.init);
+final _adminProductInputData = RM1.inj(AdminWomenShoesInputData(), Ctrl.adminProductInput.init);
 final _adminProductEditData = RM1.inj(AdminProductEditData(), Ctrl.adminProductEdit.init);
 
 final _adminCategoryListData = RM1.inj(AdminCategoryListData(), Ctrl.adminCategoryList.init);
-final _adminCategoryDetailData = RM1.inj(AdminCategoryDetailData(), Ctrl.adminCategoryDetail.init);
 
 final _productListData = RM1.inj(ProductListData(), Ctrl.productList.init);
 final _productDetailData = RM1.inj(ProductDetailData(), Ctrl.productDetail.init);

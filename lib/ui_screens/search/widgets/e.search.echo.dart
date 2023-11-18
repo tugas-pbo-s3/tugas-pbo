@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class SearchEcho extends StatelessWidget {
-  const SearchEcho({Key? key}) : super(key: key);
+  const SearchEcho({super.key});
 
   @override
   Widget build(BuildContext context) {

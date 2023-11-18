@@ -9,6 +9,16 @@ class AdminCategoryListCtrl {
     Serv.category.refreshCategories();
   }
 
+  isCategoryDetail() {
+    if (_dt.rxHeightContainer.st == 0) {
+      _dt.rxHeightContainer.st = 500;
+      logx.w(_dt.rxSelectedId.st);
+    } else {
+      logx.w(_dt.rxSelectedId.st);
+      _dt.rxHeightContainer.st = 0;
+    }
+  }
+
   deleteCategories() async {
     await Serv.category.deleteAllCategory();
     Prov.category.st.rxIndex.setState((s) => 0);
@@ -21,14 +31,35 @@ class AdminCategoryListCtrl {
   }
 
   select(String id) {
+    _dt.rxHeightContainer.refresh();
     Serv.category.setSelectedId(id);
-    nav.to(Routes.adminCategoryDetail);
+    _sv.readCategory();
+    isCategoryDetail();
+  }
+
+  Future<void> updateCategory() async {
+    final c = Category(
+      categoryId: _dt.rxCategoryDetail.st!.categoryId,
+      name: _dt.rxNameEdit.st.value,
+      createdAt: _dt.rxCategoryDetail.st!.createdAt,
+      updatedAt: DateTime.now().toString(),
+    );
+
+    try {
+      await Serv.category.updateCategory(c);
+      _dt.rxCategoryDetail.setState((s) => c);
+      Serv.category.updateOneOfCategoryList(c);
+      Future.delayed(400.milliseconds);
+      RM.navigate.back();
+    } catch (e) {
+      Fun.handleException(e);
+    }
   }
 
   createCategory() async {
     final category = Category(
       categoryId: const Uuid().v4(),
-      name: _dt.rxName.value,
+      name: _dt.rxNameInput.value,
       createdAt: DateTime.now().toString(),
     );
     await Serv.category.createCategory(category);
@@ -38,7 +69,11 @@ class AdminCategoryListCtrl {
     RM.navigate.back();
   }
 
-  submit() {
-    _dt.rxForm.submit();
+  submitInput() {
+    _dt.rxFormInput.submit();
+  }
+
+  submitEdit() {
+    _dt.rxFormEdit.st.submit();
   }
 }

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class SearchAppbar extends StatelessWidget {
-  const SearchAppbar({Key? key}) : super(key: key);
+  const SearchAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {
