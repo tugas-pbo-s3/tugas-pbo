@@ -10,7 +10,6 @@ class RouteMap {
 
     Routes.adminProductList: (RouteData data) => const AdminWomenShoesListView(),
     Routes.adminProductInput: (RouteData data) => const AdminWomenShoesInputView(),
-    Routes.adminProductEdit: (RouteData data) => const AdminProductEditView(),
 
     Routes.adminCategoryList: (RouteData data) => const AdminCategoryListView(),
 

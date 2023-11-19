@@ -194,6 +194,19 @@ class FbFirestore {
     }
   }
 
+  Future<void> deleteDocument2({
+    required String colId1,
+    required String docId1,
+    required String colId2,
+    required String docId2,
+  }) async {
+    try {
+      await instance.collection(colId1).doc(docId1).collection(colId2).doc(docId2).delete();
+    } catch (e) {
+      logxx.e(FbFirestore, 'error on delete. ${e.toString()}');
+    }
+  }
+
   Future<void> deleteAllDocument({
     required String colId,
   }) async {

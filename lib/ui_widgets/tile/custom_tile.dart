@@ -100,6 +100,8 @@ class CustomTile extends ReactiveStatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      visualDensity: VisualDensity.comfortable,
+      style: ListTileStyle.drawer,
       leading: Icon(icon),
       title: Text(title),
       subtitle: Text(subtitle),

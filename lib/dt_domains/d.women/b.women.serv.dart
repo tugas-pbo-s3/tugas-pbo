@@ -38,8 +38,8 @@ class WomenServ {
     return Repo.product.st.createProduct(product);
   }
 
-  Future<void> updateProduct(WomenShoes womenShoes) async {
-    return _rp.updateProduct(womenShoes);
+  Future<void> updateProduct(WomenShoes womenShoes, Map<String, String>? images) async {
+    return _rp.updateProduct(womenShoes, images);
   }
 
   Future<void> uploadImages(Map<String, String> images) {
@@ -64,5 +64,14 @@ class WomenServ {
   updateToCart(CartedShoes cartedShoes, int index) {
     _svCart.updateToCart(cartedShoes, index);
   }
+
 // *--------------------------
+  deleteOneOfProduct() {
+    _pv.rxProductList.st = [..._pv.rxProductList.st]
+      ..removeWhere((element) => element.productId == _pv.rxSelectedId.st);
+  }
+
+  Future<void> deleteProduct() {
+    return Repo.product.st.deleteProduct();
+  }
 }

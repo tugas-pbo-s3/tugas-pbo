@@ -12,9 +12,7 @@ class Routes {
   static const adminHome = '/admin_home';
 
   static const adminProductList = '/admin_product_list';
-  static const adminProductDetail = '/admin_product_detail';
   static const adminProductInput = '/admin_product_input';
-  static const adminProductEdit = '/admin_product_edit';
 
   static const adminCategoryList = '/admin_category_list';
   static const adminCategoryDetail = '/admin_category_detail';

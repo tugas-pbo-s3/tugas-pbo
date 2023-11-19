@@ -5,7 +5,6 @@ abstract class Ctrl {
 
   static AdminWomenShoesListCtrl get adminProductList => AdminWomenShoesListCtrl();
   static AdminWomenShoesInputCtrl get adminProductInput => AdminWomenShoesInputCtrl();
-  static AdminProductEditCtrl get adminProductEdit => AdminProductEditCtrl();
 
   static AdminCategoryListCtrl get adminCategoryList => AdminCategoryListCtrl();
 

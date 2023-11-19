@@ -105,6 +105,22 @@ class AdminWomenShoesListCtrl {
     logx.i('ini imageeeeee ${_dt.rxImages.st.length}');
   }
 
+  List<String> isShoesColorEmpty() {
+    if (_dt.rxShoesColors.st.isEmpty) {
+      return _dt.rxProduct.st!.colors;
+    } else {
+      return _dt.rxShoesColors.st;
+    }
+  }
+
+  List<int> isShoesSizeEmpty() {
+    if (_dt.rxShoesSizes.st.isEmpty) {
+      return _dt.rxProduct.st!.sizes;
+    } else {
+      return _dt.rxShoesSizes.st;
+    }
+  }
+
   Future<void> updateProduct() async {
     logx.e(_dt.rxCategory.st.value.toString());
     final indexCategory = _dt.rxCategoryList.st.indexWhere((element) => element.categoryId == _dt.rxCategory.st.value);
@@ -114,7 +130,7 @@ class AdminWomenShoesListCtrl {
     logx.wtf(category.toString());
     final wShoes = WomenShoes(
       category: Category(
-        categoryId: '${_dt.rxCategory.st.value}',
+        categoryId: category.categoryId,
         name: category.name,
         createdAt: category.createdAt,
         updatedAt: category.updatedAt,
@@ -126,16 +142,16 @@ class AdminWomenShoesListCtrl {
       quantity: int.parse(_dt.rxQuantity.st.value),
       createdAt: _dt.rxProduct.st!.createdAt,
       updatedAt: DateTime.now().toString(),
-      colors: _dt.rxShoesColors.st,
-      sizes: _dt.rxShoesSizes.st,
+      colors: isShoesColorEmpty(),
+      sizes: isShoesSizeEmpty(),
       merk: _dt.rxMerk.st.value,
-      imageUrl: _dt.rxImages.st,
+      imageUrl: _dt.rxImages.st.isEmpty ? _dt.rxProduct.st?.imageUrl : _dt.rxImages.st,
     );
 
     logx.e(wShoes.name);
     try {
       logx.wtf(_dt.rxCategory.st.value.toString());
-      await Serv.women.updateProduct(wShoes);
+      await Serv.women.updateProduct(wShoes, _dt.rxImages.st);
       _dt.rxProduct.setState((s) => wShoes);
       Serv.women.updateOneOfProductList(wShoes);
       Future.delayed(400.milliseconds);

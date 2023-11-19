@@ -55,8 +55,6 @@
     "*macos.*": true,
     "*pegashoes": true,
     "*pegashoes.*": true,
-    "*pubspec": true,
-    "*pubspec.*": true,
     "*README": true,
     "*README.*": true,
     "*storage": true,

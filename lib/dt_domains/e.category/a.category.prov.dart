@@ -16,7 +16,7 @@ class CategoryProv {
     ),
   );
 
-  final rxCategoryList = RM.inject<List<Category>>(() => []);
+  final rxCategoryList = RM.inject<List<Category>>(() => [], autoDisposeWhenNotUsed: false);
 
   final rxCategoryFuture = RM.injectFuture<Category?>(
     () => Future.value(null),

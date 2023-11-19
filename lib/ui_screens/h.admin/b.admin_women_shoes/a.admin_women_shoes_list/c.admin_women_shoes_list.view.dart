@@ -17,7 +17,18 @@ class AdminWomenShoesListView extends StatelessWidget {
           onError: (e, s) => const Center(child: Text('error')),
           onWaiting: () => const Center(child: CircularProgressIndicator()),
           onData: (data) => _dt.rxProductList.st.isEmpty
-              ? const Center(child: Text('Data is empty'))
+              ? const Stack(
+                  children: [
+                    Center(child: Text('Data is empty')),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: AdminWomenShoesListFab(),
+                      ),
+                    ),
+                  ],
+                )
               : OnReactive(
                   () => Stack(
                     children: [

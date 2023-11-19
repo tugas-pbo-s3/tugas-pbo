@@ -5,7 +5,6 @@ abstract class Data {
 
   static Injected<AdminWomenShoesListData> get adminProductList => _adminProductListData;
   static Injected<AdminWomenShoesInputData> get adminProductInput => _adminProductInputData;
-  static Injected<AdminProductEditData> get adminProductEdit => _adminProductEditData;
 
   static Injected<AdminCategoryListData> get adminCategoryList => _adminCategoryListData;
 
@@ -37,7 +36,6 @@ final _adminHomeData = RM1.inj(AdminHomeData(), () => Ctrl.adminHome.init);
 
 final _adminProductListData = RM1.inj(AdminWomenShoesListData(), Ctrl.adminProductList.init);
 final _adminProductInputData = RM1.inj(AdminWomenShoesInputData(), Ctrl.adminProductInput.init);
-final _adminProductEditData = RM1.inj(AdminProductEditData(), Ctrl.adminProductEdit.init);
 
 final _adminCategoryListData = RM1.inj(AdminCategoryListData(), Ctrl.adminCategoryList.init);
 
