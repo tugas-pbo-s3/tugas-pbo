@@ -32,6 +32,12 @@ class AdminHomeScreen extends StatelessWidget {
                 return const AdminWomenShoesListView();
 
               case 2:
+                return const AdminMenShoesListView();
+
+              case 3:
+                return const AdminKidsShoesListView();
+
+              case 4:
                 return const AdminCategoryListView();
 
               default:

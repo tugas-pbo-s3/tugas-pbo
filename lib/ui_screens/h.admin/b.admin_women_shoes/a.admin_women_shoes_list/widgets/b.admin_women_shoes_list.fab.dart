@@ -8,7 +8,7 @@ class AdminWomenShoesListFab extends StatelessWidget {
     return FloatingActionButton(
       heroTag: false,
       child: const Icon(Icons.add),
-      onPressed: () => nav.to(Routes.adminProductInput),
+      onPressed: () => nav.to(Routes.adminWomenShoesInput),
     );
   }
 }

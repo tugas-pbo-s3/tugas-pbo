@@ -1,17 +1,17 @@
 part of '_index.dart';
 
-class AdminWomenShoesInputData {
-  final rxTitle = 'Women\'s Shoes Input'.inj();
+class AdminMenShoesInputData {
+  final rxTitle = 'Men\'s Shoes Input'.inj();
 
   final rxInt = 0.inj();
 
-  final colId = Prov.product.st.colId;
+  final colId = _pv.colId;
 
-  final docId = 'w-shoes';
+  final docId = _pv.docId1;
 
-  final colId2 = 'women-shoes';
+  final colId2 = _pv.colId2;
 
-  final rxProductList = Prov.product.st.rxProductList;
+  final rxProductList = _pv.rxProductList;
 
   final rxGeneratedId = RM.inject<String>(() => '');
 
@@ -65,12 +65,12 @@ class AdminWomenShoesInputData {
   final itemColors =
       listOfColors.map((color) => MultiSelectItem(color, color.colorText ?? color.color.toString())).toList();
 
-  final products = RM.inject<List<WomenShoes>>(() => []);
+  final products = RM.inject<List<MenShoes>>(() => []);
 
-  final rxProduct = RM.inject<WomenShoes?>(() => null);
+  final rxProduct = RM.inject<MenShoes?>(() => null);
 
   final rxForm = RM.injectForm(
-    submit: () => Ctrl.adminProductInput.createProduct(),
+    submit: () => Ctrl.adminMenShoesInput.createProduct(),
     autovalidateMode: AutovalidateMode.onUserInteraction,
   );
 

@@ -2,17 +2,10 @@ part of '_index.dart';
 
 class MenProv {
   final colId = 'shoes';
+  final colId2 = 'man-shoes';
+  final docId1 = 'm-shoes';
   final limit = 3;
   final rxIsEnd = false.inj();
-
-  final rxIndex = RM.inject<int>(
-    () => 0,
-    persist: () => PersistState(
-      key: 'rxIndex',
-      throttleDelay: 500,
-      shouldRecreateTheState: false,
-    ),
-  );
 
   final rxProductList = RM.inject<List<MenShoes>>(() => []);
 

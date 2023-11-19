@@ -3,8 +3,14 @@ part of '_index.dart';
 abstract class Ctrl {
   static AdminHomeCtrl get adminHome => AdminHomeCtrl();
 
-  static AdminWomenShoesListCtrl get adminProductList => AdminWomenShoesListCtrl();
-  static AdminWomenShoesInputCtrl get adminProductInput => AdminWomenShoesInputCtrl();
+  static AdminKidsShoesListCtrl get adminKidsShoesList => AdminKidsShoesListCtrl();
+  static AdminKidsShoesInputCtrl get adminKidsShoesInput => AdminKidsShoesInputCtrl();
+
+  static AdminMenShoesListCtrl get adminMenShoesList => AdminMenShoesListCtrl();
+  static AdminMenShoesInputCtrl get adminMenShoesInput => AdminMenShoesInputCtrl();
+
+  static AdminWomenShoesListCtrl get adminWomenShoesList => AdminWomenShoesListCtrl();
+  static AdminWomenShoesInputCtrl get adminWomenShoesInput => AdminWomenShoesInputCtrl();
 
   static AdminCategoryListCtrl get adminCategoryList => AdminCategoryListCtrl();
 

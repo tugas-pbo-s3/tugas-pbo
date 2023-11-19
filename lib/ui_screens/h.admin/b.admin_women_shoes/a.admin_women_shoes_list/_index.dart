@@ -31,7 +31,7 @@ part 'widgets/n.admin_women_shoes_list.detail_tile_edit_category.dart';
 part 'widgets/o.admin_women_shoes_list.detail_tile_edit_sizes.dart';
 part 'widgets/p.admin_women_shoes_list.detail_tile_edit_colors.dart';
 
-AdminWomenShoesListData get _dt => Data.adminProductList.st;
-AdminWomenShoesListCtrl get _ct => Ctrl.adminProductList;
+AdminWomenShoesListData get _dt => Data.adminWomenShoesList.st;
+AdminWomenShoesListCtrl get _ct => Ctrl.adminWomenShoesList;
 
 WomenServ get _sv => Serv.women;

@@ -10,43 +10,49 @@ class LoginView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: LoginAppbar(),
       ),
-      floatingActionButton: const LoginFab(),
       body: Center(
         child: Container(
-          // height: 400,
           constraints: const BoxConstraints(maxWidth: 400),
           child: OnFormBuilder(
             listenTo: _dt.rxForm,
             builder: () => const Padding(
               padding: EdgeInsets.all(10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  LoginEmail(),
-                  SizedBox(height: 10),
-                  LoginPassword(),
-                  SizedBox(height: 20),
-                  SizedBox(
-                    width: 200,
-                    child: LoginSubmit(),
-                  ),
-                  SizedBox(height: 10),
-                  Divider(
-                    thickness: 1.5,
-                  ),
-                  SizedBox(height: 10),
-                  SizedBox(
-                    width: 200,
-                    child: LoginGoogle(),
-                  ),
-                  SizedBox(height: 2),
-                  SizedBox(
-                    width: 200,
-                    child: LoginAnon(),
-                  ),
-                  SizedBox(height: 20),
-                  LoginToRegister()
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Container(
+                    //   height: 150,
+                    //   decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                    //   child: Image.asset('assets/images/pegaShoes2000.png'),
+                    // ),
+                    // SizedBoxH(30),
+                    LoginEmail(),
+                    SizedBox(height: 10),
+                    LoginPassword(),
+                    SizedBox(height: 20),
+                    SizedBox(
+                      width: 200,
+                      child: LoginSubmit(),
+                    ),
+                    SizedBox(height: 10),
+                    Divider(
+                      thickness: 1.5,
+                    ),
+                    SizedBox(height: 10),
+                    SizedBox(
+                      width: 200,
+                      child: LoginGoogle(),
+                    ),
+                    SizedBox(height: 2),
+                    SizedBox(
+                      width: 200,
+                      child: LoginAnon(),
+                    ),
+                    SizedBox(height: 20),
+                    LoginToRegister()
+                  ],
+                ),
               ),
             ),
           ),

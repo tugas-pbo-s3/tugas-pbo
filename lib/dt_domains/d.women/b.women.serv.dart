@@ -4,7 +4,7 @@ class WomenServ {
   init() => logxx.i(WomenServ, '.....');
 
   readAllProducts() {
-    _pv.rxLoadMore.stateAsync = Repo.product.st.readAllProducts(
+    _pv.rxLoadMore.stateAsync = _rp.readAllProducts(
       _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
     );
   }
@@ -35,7 +35,7 @@ class WomenServ {
   }
 
   Future<void> createProduct(WomenShoes product) {
-    return Repo.product.st.createProduct(product);
+    return _rp.createProduct(product);
   }
 
   Future<void> updateProduct(WomenShoes womenShoes, Map<String, String>? images) async {
@@ -43,7 +43,7 @@ class WomenServ {
   }
 
   Future<void> uploadImages(Map<String, String> images) {
-    return Repo.product.st.uploadImages(images);
+    return _rp.uploadImages(images);
   }
 
   updateOneOfProductList(WomenShoes w) {
@@ -72,6 +72,6 @@ class WomenServ {
   }
 
   Future<void> deleteProduct() {
-    return Repo.product.st.deleteProduct();
+    return _rp.deleteProduct();
   }
 }

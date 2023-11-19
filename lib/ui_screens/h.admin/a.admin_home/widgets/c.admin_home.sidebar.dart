@@ -57,10 +57,8 @@ class AdminHomeSidebar extends StatelessWidget {
       footerDivider: Column(
         children: [
           Container(
-            // width: 50,
             margin: const EdgeInsets.all(5),
             height: 50,
-            // color: Colors.amber,
             child: OutlinedButton(
               onPressed: () {
                 _ct.signOut();
@@ -114,22 +112,22 @@ class AdminHomeSidebar extends StatelessWidget {
           },
         ),
         SidebarXItem(
-          icon: Icons.category_rounded,
+          icon: Icons.shopping_bag,
+          label: 'Men\'s Shoes',
+          onTap: () {
+            logx.w(_dt.sideBarCtrl.selectedIndex.toString());
+          },
+        ),
+        SidebarXItem(
+          icon: Icons.shopping_bag,
+          label: 'Kids\'s Shoes',
+          onTap: () {
+            logx.w(_dt.sideBarCtrl.selectedIndex.toString());
+          },
+        ),
+        SidebarXItem(
+          icon: Icons.shopping_bag,
           label: 'Category',
-          onTap: () {
-            logx.w(_dt.sideBarCtrl.selectedIndex.toString());
-          },
-        ),
-        SidebarXItem(
-          icon: Icons.favorite,
-          label: 'Favorites',
-          onTap: () {
-            logx.w(_dt.sideBarCtrl.selectedIndex.toString());
-          },
-        ),
-        SidebarXItem(
-          iconWidget: const FlutterLogo(size: 20),
-          label: 'Flutter',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },

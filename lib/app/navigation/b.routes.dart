@@ -11,8 +11,14 @@ class Routes {
 
   static const adminHome = '/admin_home';
 
-  static const adminProductList = '/admin_product_list';
-  static const adminProductInput = '/admin_product_input';
+  static const adminWomenShoesList = '/admin_women_shoes_list';
+  static const adminWomenShoesInput = '/admin_women_shoes_input';
+
+  static const adminMenShoesList = '/admin_men_shoes_list';
+  static const adminMenShoesInput = '/admin_men_shoes_input';
+
+  static const adminKidsShoesList = '/admin_kids_shoes_list';
+  static const adminKidsShoesInput = '/admin_kids_shoes_input';
 
   static const adminCategoryList = '/admin_category_list';
   static const adminCategoryDetail = '/admin_category_detail';

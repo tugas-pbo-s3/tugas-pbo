@@ -3,8 +3,14 @@ part of '_index.dart';
 abstract class Data {
   static Injected<AdminHomeData> get adminHome => _adminHomeData;
 
-  static Injected<AdminWomenShoesListData> get adminProductList => _adminProductListData;
-  static Injected<AdminWomenShoesInputData> get adminProductInput => _adminProductInputData;
+  static Injected<AdminWomenShoesListData> get adminWomenShoesList => _adminWomenShoesListData;
+  static Injected<AdminWomenShoesInputData> get adminWomenShoesInput => _adminWomenShoesInputData;
+
+  static Injected<AdminMenShoesListData> get adminMenShoesList => _adminMenShoesListData;
+  static Injected<AdminMenShoesInputData> get adminMenShoesInput => _adminMenShoesInputData;
+
+  static Injected<AdminKidsShoesListData> get adminKidsShoesList => _adminKidsShoesListData;
+  static Injected<AdminKidsShoesInputData> get adminKidsShoesInput => _adminKidsShoesInputData;
 
   static Injected<AdminCategoryListData> get adminCategoryList => _adminCategoryListData;
 
@@ -34,8 +40,14 @@ abstract class Data {
 
 final _adminHomeData = RM1.inj(AdminHomeData(), () => Ctrl.adminHome.init);
 
-final _adminProductListData = RM1.inj(AdminWomenShoesListData(), Ctrl.adminProductList.init);
-final _adminProductInputData = RM1.inj(AdminWomenShoesInputData(), Ctrl.adminProductInput.init);
+final _adminWomenShoesListData = RM1.inj(AdminWomenShoesListData(), Ctrl.adminWomenShoesList.init);
+final _adminWomenShoesInputData = RM1.inj(AdminWomenShoesInputData(), Ctrl.adminWomenShoesInput.init);
+
+final _adminMenShoesListData = RM1.inj(AdminMenShoesListData(), Ctrl.adminMenShoesList.init);
+final _adminMenShoesInputData = RM1.inj(AdminMenShoesInputData(), Ctrl.adminMenShoesInput.init);
+
+final _adminKidsShoesListData = RM1.inj(AdminKidsShoesListData(), Ctrl.adminKidsShoesList.init);
+final _adminKidsShoesInputData = RM1.inj(AdminKidsShoesInputData(), Ctrl.adminKidsShoesInput.init);
 
 final _adminCategoryListData = RM1.inj(AdminCategoryListData(), Ctrl.adminCategoryList.init);
 

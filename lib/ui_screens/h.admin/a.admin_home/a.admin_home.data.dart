@@ -8,6 +8,4 @@ class AdminHomeData {
   final sideBarCtrl = SidebarXController(selectedIndex: 0, extended: true);
 
   final scaffoldHome = GlobalKey<ScaffoldState>();
-
-  // final rxIsInputWomenShoes = RM.inject(() => false);
 }

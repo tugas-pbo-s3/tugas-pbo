@@ -60,7 +60,7 @@ class AdminWomenShoesListData {
 
   final rxForm = RM.injectForm(
     submit: () async {
-      await Ctrl.adminProductList.updateProduct();
+      await _ct.updateProduct();
     },
     autovalidateMode: AutovalidateMode.onUserInteraction,
   );

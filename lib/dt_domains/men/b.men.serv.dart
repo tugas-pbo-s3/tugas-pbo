@@ -49,4 +49,35 @@ class MenServ {
   readProduct() {
     _pv.rxProductFuture.stateAsync = _rp.readProduct();
   }
+
+  Future<void> createProduct(MenShoes product) {
+    return _rp.createProduct(product);
+  }
+
+  Future<void> updateProduct(MenShoes menShoes, Map<String, String>? images) async {
+    return _rp.updateProduct(menShoes, images);
+  }
+
+  Future<void> uploadImages(Map<String, String> images) {
+    return _rp.uploadImages(images);
+  }
+
+  updateOneOfProductList(MenShoes m) {
+    _pv.rxProductList.setState(
+      (s) {
+        final index = s.indexWhere((element) => element.productId == _pv.rxSelectedId.st);
+        return s[index] = m;
+      },
+    );
+  }
+
+  // *--------------------------
+  deleteOneOfProduct() {
+    _pv.rxProductList.st = [..._pv.rxProductList.st]
+      ..removeWhere((element) => element.productId == _pv.rxSelectedId.st);
+  }
+
+  Future<void> deleteProduct() {
+    return _rp.deleteProduct();
+  }
 }

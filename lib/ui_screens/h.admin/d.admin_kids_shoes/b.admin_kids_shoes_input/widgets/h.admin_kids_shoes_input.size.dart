@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputColor extends StatelessWidget {
-  const AdminWomenShoesInputColor({super.key});
+class AdminKidsShoesInputSize extends ReactiveStatelessWidget {
+  const AdminKidsShoesInputSize({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,12 +10,10 @@ class AdminWomenShoesInputColor extends StatelessWidget {
         margin: const EdgeInsets.only(top: 10.0),
         decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
         child: OnReactive(
-          () => MultiSelectChipField<ShoesColors?>(
-            scroll: true,
-            items: _dt.itemColors,
-            scrollBar: HorizontalScrollBar(),
+          () => MultiSelectChipField(
+            items: _dt.itemSizes,
             initialValue: const [],
-            title: const Text("Colors"),
+            title: const Text("Size"),
             headerColor: Colors.transparent,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),
@@ -23,17 +21,12 @@ class AdminWomenShoesInputColor extends StatelessWidget {
             ),
             chipColor: Colors.transparent,
             selectedChipColor: Theme.of(context).colorScheme.primary,
-            // selectedChipColor: _dt.rxCustomSelectedColor.st,
             textStyle: const TextStyle(color: Colors.white),
             selectedTextStyle: const TextStyle(color: Colors.white),
             onTap: (values) {
-              // _ct.getSelectedSizes(values);
-              _ct.setColorsValues(values);
-              _ct.addToListColors();
+              _ct.setSizesValues(values);
+              _ct.addToListSizes();
             },
-            // colorator: (v) {
-            //   return _ct.setCustomSelectedColor(v!.color);
-            // },
           ),
         ),
       ),

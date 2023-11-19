@@ -50,19 +50,12 @@ class WomenRepo {
   }
 
   Future<void> updateProduct(WomenShoes womenShoes, Map<String, String>? imagesFromStorage) async {
-    // final x = womenShoes.imageUrl?.values;
-    // if (x!.isNotEmpty) {
-    //   if (x.first.startsWith('https')) {
-    //     return;
-    //   }
-    // }
-
-    int imageLength = Prov.product.st.rxProductFuture.st?.imageUrl?.length ?? 0;
+    int imageLength = _pv.rxProductFuture.st?.imageUrl?.length ?? 0;
     if (imageLength > 0) {
       final mainFolder1 = _pv.colId;
       final subFolder1 = _pv.docId1;
       final mainFolder2 = _pv.colId2;
-      final subFolder2 = Prov.product.st.rxProductFuture.st?.productId;
+      final subFolder2 = _pv.rxProductFuture.st?.productId;
       if (!womenShoes.imageUrl!.values.first.startsWith('https')) {
         await x1FbStorage.st.deleteFolder('/$mainFolder1/$subFolder1/$mainFolder2/$subFolder2');
       }
@@ -77,11 +70,6 @@ class WomenRepo {
         }
       }
     }
-    // if (womenShoes.imageUrl != null) {
-    //   womenShoes.imageUrl!.forEach((key, value) {});
-    //   final imageWithUrl = await x1FbStorage.st.uploadFiles(womenShoes.imageUrl!);
-    //   womenShoesUpdate = womenShoes.copyWith(imageUrl: imageWithUrl);
-    // }
 
     await x1FbFirestore.updateDocument2(
       colId1: _pv.colId,
@@ -93,7 +81,7 @@ class WomenRepo {
   }
 
   Future<void> deleteProduct() async {
-    int imageLength = Prov.product.st.rxProductFuture.st!.imageUrl?.length ?? 0;
+    int imageLength = _pv.rxProductFuture.st!.imageUrl?.length ?? 0;
     if (imageLength > 0) {
       final mainFolder = _pv.colId;
       final subFolder1 = _pv.docId1;
@@ -110,6 +98,6 @@ class WomenRepo {
   }
 
   Future<void> deleteProducts() async {
-    await x1FbFirestore.deleteAllDocument(colId: Prov.product.st.colId);
+    await x1FbFirestore.deleteAllDocument(colId: _pv.colId);
   }
 }

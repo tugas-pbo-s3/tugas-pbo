@@ -7,15 +7,6 @@ class WomenProv {
   final limit = 3;
   final rxIsEnd = false.inj();
 
-  final rxIndex = RM.inject<int>(
-    () => 0,
-    persist: () => PersistState(
-      key: 'rxIndex',
-      throttleDelay: 500,
-      shouldRecreateTheState: false,
-    ),
-  );
-
   final rxProductList = RM.inject<List<WomenShoes>>(() => []);
 
   final rxSelectedId = RM.inject<String>(() => '');
@@ -23,11 +14,11 @@ class WomenProv {
   final rxLoadMore = RM.injectFuture<List<WomenShoes>>(
     () => Future.value([]),
     sideEffects: SideEffects(
-      initState: () => Serv.women.initProducts(),
+      initState: () => _sv.initProducts(),
       onSetState: (snap) {
         if (snap.hasData) {
           final moreProduct = snap.state.whereType<WomenShoes>().toList();
-          Serv.women.addToList(moreProduct);
+          _sv.addToList(moreProduct);
         }
       },
     ),

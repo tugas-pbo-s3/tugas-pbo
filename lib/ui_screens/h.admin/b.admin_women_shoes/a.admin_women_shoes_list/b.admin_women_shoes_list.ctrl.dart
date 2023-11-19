@@ -153,9 +153,9 @@ class AdminWomenShoesListCtrl {
       logx.wtf(_dt.rxCategory.st.value.toString());
       await Serv.women.updateProduct(wShoes, _dt.rxImages.st);
       _dt.rxProduct.setState((s) => wShoes);
-      Serv.women.updateOneOfProductList(wShoes);
-      Future.delayed(400.milliseconds);
-      _sv.readProduct();
+      await _sv.readProduct();
+      _sv.updateOneOfProductList(wShoes);
+      // Future.delayed(400.milliseconds);
       RM.navigate.back();
     } catch (e) {
       Fun.handleException(e);

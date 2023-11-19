@@ -14,13 +14,13 @@ class AdminHomeCtrl {
       case 0:
         return 'Home';
       case 1:
-        return 'Product';
+        return 'Women\'s Shoes';
       case 2:
-        return 'ProductInput';
+        return 'Men\'s Shoes';
       case 3:
-        return 'Category';
+        return 'Kids\'s Shoes';
       case 4:
-        return 'Custom iconWidget';
+        return 'Category';
       // case 5:
       //   return 'Profile';
       // case 6:

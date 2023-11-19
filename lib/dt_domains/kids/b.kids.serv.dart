@@ -45,4 +45,35 @@ class KidsServ {
   readProduct() {
     _pv.rxProductFuture.stateAsync = _rp.readProduct();
   }
+
+  Future<void> createProduct(KidsShoes kidsShoes) {
+    return _rp.createProduct(kidsShoes);
+  }
+
+  Future<void> updateProduct(KidsShoes kidsShoes, Map<String, String>? images) async {
+    return _rp.updateProduct(kidsShoes, images);
+  }
+
+  Future<void> uploadImages(Map<String, String> images) {
+    return _rp.uploadImages(images);
+  }
+
+  updateOneOfProductList(KidsShoes k) {
+    _pv.rxProductList.setState(
+      (s) {
+        final index = s.indexWhere((element) => element.productId == _pv.rxSelectedId.st);
+        return s[index] = k;
+      },
+    );
+  }
+
+  // *--------------------------
+  deleteOneOfProduct() {
+    _pv.rxProductList.st = [..._pv.rxProductList.st]
+      ..removeWhere((element) => element.productId == _pv.rxSelectedId.st);
+  }
+
+  Future<void> deleteProduct() {
+    return _rp.deleteProduct();
+  }
 }
