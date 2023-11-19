@@ -30,10 +30,10 @@ class MenDetailDescPhone extends StatelessWidget {
                   ),
                   Text(
                     'Rp ${Fun.formatRupiah.format(data?.price)}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w700,
-                      color: Colors.red.withOpacity(0.7),
+                      color: Colors.amber,
                     ),
                   ),
                 ],
@@ -72,7 +72,7 @@ class MenDetailDescPhone extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Select Option",
+                    "Show More",
                   ),
                 ),
               ],

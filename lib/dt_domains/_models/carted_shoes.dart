@@ -5,11 +5,13 @@ class CartedShoes {
   final int qty;
   final int size;
   final String color;
+  final String cartedId;
   CartedShoes({
     required this.shoes,
     this.qty = 0,
     this.size = 0,
     this.color = '',
+    this.cartedId = '',
   });
 
   CartedShoes copyWith({
@@ -17,12 +19,14 @@ class CartedShoes {
     int? qty,
     int? size,
     String? color,
+    String? cartedId,
   }) {
     return CartedShoes(
       shoes: shoes ?? this.shoes,
       qty: qty ?? this.qty,
       size: size ?? this.size,
       color: color ?? this.color,
+      cartedId: cartedId ?? this.cartedId,
     );
   }
 
@@ -33,6 +37,7 @@ class CartedShoes {
     result.addAll({'qty': qty});
     result.addAll({'size': size});
     result.addAll({'color': color});
+    result.addAll({'carted_id': cartedId});
 
     return result;
   }
@@ -43,6 +48,7 @@ class CartedShoes {
       qty: map['qty']?.toInt() ?? 0,
       size: map['size']?.toInt() ?? 0,
       color: map['color'] ?? '',
+      cartedId: map['carted_id'] ?? '',
     );
   }
 
@@ -52,7 +58,7 @@ class CartedShoes {
 
   @override
   String toString() {
-    return 'CartedShoes(shoes: $shoes, qty: $qty, size: $size, color: $color)';
+    return 'CartedShoes(shoes: $shoes, qty: $qty, size: $size, color: $color, cartedId: $cartedId)';
   }
 
   @override
@@ -63,11 +69,12 @@ class CartedShoes {
         other.shoes == shoes &&
         other.qty == qty &&
         other.size == size &&
-        other.color == color;
+        other.color == color &&
+        other.cartedId == cartedId;
   }
 
   @override
   int get hashCode {
-    return shoes.hashCode ^ qty.hashCode ^ size.hashCode ^ color.hashCode;
+    return shoes.hashCode ^ qty.hashCode ^ size.hashCode ^ color.hashCode ^ cartedId.hashCode;
   }
 }

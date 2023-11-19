@@ -32,63 +32,67 @@ class KidsDetailView extends StatelessWidget {
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
           return width < 600
-              ? Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    KidsDetailPhoto(),
-                    const SizedBoxH(10),
-                    const KidsDetailDescPhone(),
-                  ],
-                )
-              : SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+              ? SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       KidsDetailPhoto(),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const KidsDetailDesWeb(),
-                            const SizedBox(height: 5),
-                            KidsDetailSize(sizes: sizes),
-                            const SizedBox(height: 10),
-                            KidsDetailColor(colors: colors, colorsState: colorsState),
-                            const KidsDetailQty(),
-                            const SizedBox(height: 30),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  'Total Payment:',
-                                  style: TextStyle(
-                                    color: Color(0xFFFD725A),
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                OnReactive(
-                                  () => Text(
-                                    'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
-                                    style: const TextStyle(
+                      const SizedBoxH(10),
+                      const KidsDetailDescPhone(),
+                    ],
+                  ),
+                )
+              : Center(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        KidsDetailPhoto(),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const KidsDetailDesWeb(),
+                              const SizedBox(height: 5),
+                              KidsDetailSize(sizes: sizes),
+                              const SizedBox(height: 10),
+                              KidsDetailColor(colors: colors, colorsState: colorsState),
+                              const KidsDetailQty(),
+                              const SizedBox(height: 30),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    'Total Payment:',
+                                    style: TextStyle(
                                       color: Color(0xFFFD725A),
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            const SizedBoxH(60),
-                            const KidsDetailAddtoCart()
-                          ],
+                                  OnReactive(
+                                    () => Text(
+                                      'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
+                                      style: const TextStyle(
+                                        color: Color(0xFFFD725A),
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBoxH(60),
+                              const KidsDetailAddtoCart()
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
         },

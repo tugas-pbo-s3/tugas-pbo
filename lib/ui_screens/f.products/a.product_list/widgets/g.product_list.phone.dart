@@ -14,11 +14,12 @@ class ProductListPhone extends StatelessWidget {
           SliverAppBar(
             backgroundColor: Colors.amber,
             automaticallyImplyLeading: false,
+            actions: const [SizedBox.shrink()],
             centerTitle: true,
-            title: Image.asset(
-              'assets/images/pegaShoes2000.png',
-              scale: 30,
-            ),
+            // title: Image.asset(
+            //   'assets/images/pegaShoes2000.png',
+            //   scale: 30,
+            // ),
             pinned: true,
             floating: true,
             bottom: PreferredSize(

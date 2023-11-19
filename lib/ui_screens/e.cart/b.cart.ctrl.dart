@@ -4,4 +4,12 @@ class CartCtrl {
   init() => logxx.i(CartCtrl, '...');
 
   action() => _dt.rxInt.setState((s) => s + 1);
+
+  deleteCart() async {
+    await _sv.removeCart(_dt.rxSelectedId.st);
+    Fun.showOverlayLoading();
+    await Future.delayed(400.milliseconds);
+    RM.navigate.back();
+    RM.navigate.back();
+  }
 }

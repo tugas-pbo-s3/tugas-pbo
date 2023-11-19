@@ -31,23 +31,25 @@ class ManView extends StatelessWidget {
                               },
                               child: SizedBox(
                                 height: width > 500 ? 300 : 200,
-                                width: width > 500 ? 300 : 195,
+                                width: width > 500 ? 300 : 170,
                                 child: Center(
                                   child: Column(
                                     children: [
                                       _dt.rxProductList.st[index].imageUrl!.isEmpty
-                                          ? Container(
-                                              color: Colors.black45,
+                                          ? SizedBox(
                                               height: width > 500 ? 225 : 145,
-                                              width: width > 500 ? 300 : 195,
-                                              child: const Icon(Icons.broken_image_outlined, size: 40),
+                                              width: width > 500 ? 300 : 170,
+                                              child: Image.network(
+                                                'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df',
+                                                fit: BoxFit.contain,
+                                              ),
                                             )
                                           : SizedBox(
                                               height: width > 500 ? 225 : 145,
                                               width: width > 500 ? 300 : 195,
                                               child: Image.network(
                                                 '${_dt.rxProductList.st[index].imageUrl?.values.first}',
-                                                fit: BoxFit.cover,
+                                                fit: BoxFit.contain,
                                               ),
                                             ),
                                       const SizedBoxH(10),

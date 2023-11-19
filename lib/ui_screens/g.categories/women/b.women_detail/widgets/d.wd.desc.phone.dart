@@ -47,7 +47,7 @@ class WomenDetailDescPhone extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            const SizedBoxH(20),
+            const SizedBoxH(15),
             Text(
               'Deskripsi: ${data?.description}',
               style: const TextStyle(
@@ -72,7 +72,7 @@ class WomenDetailDescPhone extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Select Option",
+                    "Show More",
                   ),
                 ),
               ],
