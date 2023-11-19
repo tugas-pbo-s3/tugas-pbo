@@ -12,7 +12,10 @@ class MenDetailView extends StatelessWidget {
     List<Color?> colorsState = [
       Colors.white,
       Colors.black,
+      Colors.brown,
       Colors.grey.shade700,
+      Colors.pink,
+      Colors.purple,
     ];
     return Scaffold(
       appBar: const PreferredSize(
@@ -22,7 +25,7 @@ class MenDetailView extends StatelessWidget {
       // floatingActionButton: const ProductDetailFab(),
       body: OnBuilder.all(
         listenTo: _dt.rxProductFuture,
-        onWaiting: () => const CircularProgressIndicator(),
+        onWaiting: () => const Center(child: CircularProgressIndicator()),
         onError: (error, refreshError) => const Text('error'),
         onData: (data) {
           _ct.setQty();
@@ -50,6 +53,7 @@ class MenDetailView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const MenDetailPhoto(),
+                        const SizedBoxW(70),
                         Padding(
                           padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                           child: Column(
@@ -86,7 +90,7 @@ class MenDetailView extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBoxH(60),
+                              const SizedBoxH(20),
                               const MenDetailAddtoCart()
                             ],
                           ),

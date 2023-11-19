@@ -9,7 +9,10 @@ class KidsDetailBottomsheet extends StatelessWidget {
   List<Color?> colorsState = [
     Colors.white,
     Colors.black,
+    Colors.brown,
     Colors.grey.shade700,
+    Colors.pink,
+    Colors.purple,
   ];
 
   @override
@@ -57,7 +60,7 @@ class KidsDetailBottomsheet extends StatelessWidget {
                   const Text(
                     'Total Payment:',
                     style: TextStyle(
-                      color: Color(0xFFFD725A),
+                      color: Colors.red,
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
@@ -66,7 +69,7 @@ class KidsDetailBottomsheet extends StatelessWidget {
                     () => Text(
                       'Rp ${Fun.formatRupiah.format(totalPayment)}',
                       style: const TextStyle(
-                        color: Color(0xFFFD725A),
+                        color: Colors.red,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),

@@ -41,15 +41,21 @@ class KidsDetailDescPhone extends StatelessWidget {
             ),
             const SizedBoxH(8),
             Text(
-              'merk: ${data?.merk}',
+              'Merk: ${data?.merk}',
               style: const TextStyle(
                 color: Colors.black54,
                 fontSize: 16,
               ),
             ),
-            const SizedBoxH(20),
             Text(
-              'Deskripsi: ${data?.description}',
+              'Category: ${data?.category.name}',
+              style: const TextStyle(
+                fontSize: 15,
+                color: Colors.black54,
+              ),
+            ),
+            Text(
+              'Description: ${data?.description}',
               style: const TextStyle(
                 fontSize: 15,
                 color: Colors.black54,

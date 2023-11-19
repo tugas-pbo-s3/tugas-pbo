@@ -5,10 +5,9 @@ class CartCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
-  deleteCart() async {
-    await _sv.removeCart(id: _dt.rxCart.st.cartId);
-    Fun.showOverlayLoading();
-    await Future.delayed(400.milliseconds);
+  deleteCart() {
+    _sv.removeCart(id: _dt.rxCart.st.cartId);
+
     RM.navigate.back();
     RM.navigate.back();
   }

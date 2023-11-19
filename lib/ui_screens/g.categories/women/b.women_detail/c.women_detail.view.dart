@@ -12,7 +12,10 @@ class WomenDetailView extends StatelessWidget {
     List<Color?> colorsState = [
       Colors.white,
       Colors.black,
+      Colors.brown,
       Colors.grey.shade700,
+      Colors.pink,
+      Colors.purple,
     ];
     return Scaffold(
       appBar: const PreferredSize(
@@ -22,7 +25,7 @@ class WomenDetailView extends StatelessWidget {
       // floatingActionButton: const ProductDetailFab(),
       body: OnBuilder.all(
         listenTo: _dt.rxProductFuture,
-        onWaiting: () => const CircularProgressIndicator(),
+        onWaiting: () => const Center(child: CircularProgressIndicator()),
         onError: (error, refreshError) => const Text('error'),
         onData: (data) {
           _ct.setQty();
@@ -62,7 +65,7 @@ class WomenDetailView extends StatelessWidget {
                               const SizedBox(height: 10),
                               WomenDetailColor(colors: colors, colorsState: colorsState),
                               const WomenDetailQty(),
-                              const SizedBox(height: 30),
+                              const SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
@@ -86,7 +89,7 @@ class WomenDetailView extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBoxH(60),
+                              const SizedBoxH(20),
                               const WomenDetailAddtoCart()
                             ],
                           ),

@@ -9,7 +9,10 @@ class WomenDetailBottomsheet extends StatelessWidget {
   List<Color?> colorsState = [
     Colors.white,
     Colors.black,
+    Colors.brown,
     Colors.grey.shade700,
+    Colors.pink,
+    Colors.purple,
   ];
 
   @override

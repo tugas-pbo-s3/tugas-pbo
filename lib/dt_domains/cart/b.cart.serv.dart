@@ -38,13 +38,4 @@ class CartServ {
       nav.back();
     }
   }
-
-  // removeCart(String id) {
-  //   _pv.rxCart.st.listCartedShoes = [..._pv.rxCart.st.listCartedShoes]
-  //     ..removeWhere((element) => element.shoes.productId == id);
-  // }
-
-  //   removeById(String id) {
-  //   _pv.rxCart.st.listCartedShoes = [..._pv.rxCart.st.listCartedShoes]..removeWhere((element) => element.id == id);
-  // }
 }

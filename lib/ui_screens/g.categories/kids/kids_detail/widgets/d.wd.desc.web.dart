@@ -32,22 +32,24 @@ class KidsDetailDesWeb extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'merk: ${data.merk}',
+            'Merk: ${data.merk}',
             style: const TextStyle(
               color: Colors.black54,
               fontSize: 16,
             ),
           ),
-          const SizedBox(height: 15),
-          SizedBox(
-            width: 500,
-            height: 80,
-            child: Text(
-              'merk: ${data.description}',
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.black54,
-              ),
+          Text(
+            'Category: ${data.category.name}',
+            style: const TextStyle(
+              fontSize: 15,
+              color: Colors.black54,
+            ),
+          ),
+          Text(
+            'Description: ${data.description}',
+            style: const TextStyle(
+              fontSize: 15,
+              color: Colors.black54,
             ),
           ),
         ],

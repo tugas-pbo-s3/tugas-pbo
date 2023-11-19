@@ -3,11 +3,13 @@ part of '../_index.dart';
 // ignore: must_be_immutable
 class MenDetailBottomsheet extends StatelessWidget {
   MenDetailBottomsheet({super.key});
-
   List<Color?> colorsState = [
     Colors.white,
     Colors.black,
+    Colors.brown,
     Colors.grey.shade700,
+    Colors.pink,
+    Colors.purple,
   ];
 
   @override
