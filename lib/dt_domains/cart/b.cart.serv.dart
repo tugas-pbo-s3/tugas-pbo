@@ -25,9 +25,18 @@ class CartServ {
     );
   }
 
-  removeCart(String id) {
+  removeCart({required String id}) {
     _pv.rxCart.st = _pv.rxCart.st.copyWith(
-        listCartedShoes: [..._pv.rxCart.st.listCartedShoes]..removeWhere((element) => element.shoes.productId == id));
+        listCartedShoes: [..._pv.rxCart.st.listCartedShoes]..removeWhere((element) => element.cartedId == id));
+  }
+
+  deleteAllProducts() {
+    for (var product in _pv.rxCart.st.listCartedShoes) {
+      removeCart(id: product.cartedId);
+      logx.e(product.toString());
+      nav.back();
+      nav.back();
+    }
   }
 
   // removeCart(String id) {
