@@ -10,7 +10,7 @@ part 'b.women.serv.dart';
 part 'c.women.repo.dart';
 part 'd.women.repo.mock.dart';
 
-WomenProv get _pv => Prov.product.st;
+WomenProv get _pv => Prov.women.st;
 WomenServ get _sv => Serv.women;
-WomenRepo get _rp => Repo.product.st;
+WomenRepo get _rp => Repo.women.st;
 CartServ get _svCart => Serv.cart;

@@ -16,6 +16,22 @@ class WomenRepo {
     return products;
   }
 
+  // Future<List<WomenShoes>> readAllProducts(String lastCreateTime) async {
+  //   final result = await x1FbFirestore.readCollInDoc(
+  //     colId1: _pv.colId,
+  //     docId1: 'w-shoes',
+  //     colId2: 'women-shoes',
+  //     limit: _pv.limit,
+  //     lastCreateTime: lastCreateTime,
+  //   );
+
+  //   List<WomenShoes> products = [];
+  //   for (var i in result.docs) {
+  //     products.add(WomenShoes.fromMap(i.data()));
+  //   }
+  //   return products;
+  // }
+
   Future<WomenShoes?> readProduct() async {
     final docSnapshot = await x1FbFirestore.readDocument2(
       colId1: _pv.colId,

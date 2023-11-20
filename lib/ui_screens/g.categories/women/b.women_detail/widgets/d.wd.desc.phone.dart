@@ -23,18 +23,16 @@ class WomenDetailDescPhone extends StatelessWidget {
                 children: [
                   Text(
                     '${data?.name}',
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: GoogleFonts.montserrat(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+
+                    // style: const TextStyle(
+                    //   fontSize: 28,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
                   ),
                   Text(
                     'Rp ${Fun.formatRupiah.format(data?.price)}',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.red.withOpacity(0.7),
-                    ),
+                    style: GoogleFonts.montserrat(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -42,23 +40,20 @@ class WomenDetailDescPhone extends StatelessWidget {
             const SizedBoxH(8),
             Text(
               'Merk: ${data?.merk}',
-              style: const TextStyle(
-                color: Colors.black54,
-                fontSize: 16,
-              ),
+              style: GoogleFonts.montserrat(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             Text(
               'Category: ${data?.category.name}',
               style: const TextStyle(
                 fontSize: 15,
-                color: Colors.black54,
+                color: Colors.white,
               ),
             ),
             Text(
               'Description: ${data?.description}',
               style: const TextStyle(
                 fontSize: 15,
-                color: Colors.black54,
+                color: Colors.white,
               ),
             ),
             const SizedBoxH(15),

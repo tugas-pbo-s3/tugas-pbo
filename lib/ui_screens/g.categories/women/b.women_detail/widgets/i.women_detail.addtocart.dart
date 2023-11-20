@@ -17,7 +17,7 @@ class WomenDetailAddtoCart extends StatelessWidget {
           horizontal: 100,
         ),
         decoration: BoxDecoration(
-          color: const Color(0xFFFD725A),
+          color: Colors.purple,
           borderRadius: BorderRadius.circular(30),
         ),
         child: Text(

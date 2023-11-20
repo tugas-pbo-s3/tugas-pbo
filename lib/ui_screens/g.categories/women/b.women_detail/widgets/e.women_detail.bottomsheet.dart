@@ -29,7 +29,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
         return Container(
           padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
           decoration: BoxDecoration(
-            color: Colors.grey.shade400,
+            color: Colors.grey.shade500,
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
@@ -60,7 +60,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                   const Text(
                     'Total Payment:',
                     style: TextStyle(
-                      color: Color(0xFFFD725A),
+                      color: Colors.purple,
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
@@ -69,7 +69,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
                     () => Text(
                       'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                       style: const TextStyle(
-                        color: Color(0xFFFD725A),
+                        color: Colors.purple,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),

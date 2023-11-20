@@ -83,7 +83,6 @@ class AdminMenShoesInputData {
   final rxDescription = RM.injectTextEditing(validators: [
     Validate.isNotEmpty,
     Validate.minChars,
-    Validate.alphaNumericSpace,
   ]);
 
   final rxMerk = RM.injectTextEditing(validators: [

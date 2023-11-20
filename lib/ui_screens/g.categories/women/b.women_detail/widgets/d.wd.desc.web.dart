@@ -34,7 +34,7 @@ class WomenDetailDesWeb extends StatelessWidget {
           Text(
             'Merk: ${data.merk}',
             style: const TextStyle(
-              color: Colors.black54,
+              color: Colors.white,
               fontSize: 16,
             ),
           ),
@@ -42,14 +42,14 @@ class WomenDetailDesWeb extends StatelessWidget {
             'Category: ${data.category.name}',
             style: const TextStyle(
               fontSize: 15,
-              color: Colors.black54,
+              color: Colors.white,
             ),
           ),
           Text(
             'Description: ${data.description}',
             style: const TextStyle(
               fontSize: 15,
-              color: Colors.black54,
+              color: Colors.white,
             ),
           ),
         ],

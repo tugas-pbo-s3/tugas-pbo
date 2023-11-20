@@ -19,7 +19,12 @@ class ProfilePhoto extends StatelessWidget {
           children: [
             CircleAvatar(
               backgroundColor: const Color(0xFFF5F6F9),
-              backgroundImage: data?.photoURL == null ? NetworkImage('${data?.photoURL}') : null,
+              backgroundImage: data?.photoURL == null
+                  ? const NetworkImage(
+                      'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/profile-icon-null.png?alt=media&token=56113b7f-0b3c-45a3-bc97-60807d7f261f')
+                  : NetworkImage(
+                      '${data?.photoURL}',
+                    ),
             ),
             // Positioned(
             //   right: 0,

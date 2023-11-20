@@ -28,12 +28,18 @@ class WomenDetailSize extends StatelessWidget {
                 margin: const EdgeInsets.all(2),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: _dt.rxSize.st == sizes[index] ? const Color(0xFFFD725A) : null,
+                    // side: const BorderSide(color: Colors.grey),
+                    backgroundColor: _dt.rxSize.st == sizes[index] ? Colors.purple : null,
                   ),
                   onPressed: () {
                     _ct.selectSize(sizes[index]);
                   },
-                  child: Text(sizes[index].toString()),
+                  child: Text(
+                    sizes[index].toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
