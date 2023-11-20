@@ -78,7 +78,7 @@ class KidsDetailDescPhone extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Select Option",
+                    "Show More",
                   ),
                 ),
               ],

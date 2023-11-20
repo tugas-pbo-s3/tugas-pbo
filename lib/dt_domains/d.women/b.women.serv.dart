@@ -7,6 +7,7 @@ class WomenServ {
     _pv.rxLoadMore.stateAsync = _rp.readAllProducts(
       _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
     );
+    logx.e('ini womenn');
   }
 
   addToList(List<WomenShoes> moreProduct) {

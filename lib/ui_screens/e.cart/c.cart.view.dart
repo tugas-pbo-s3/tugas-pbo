@@ -14,25 +14,25 @@ class CartView extends StatelessWidget {
 
       body: OnReactive(
         () => _dt.rxCart.st.listCartedShoes.isEmpty
-            ? Center(
+            ? const Center(
                 child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     'Whoaa your cart is empty',
                     textScaleFactor: 1.8,
                   ),
-                  const SizedBoxH(5),
-                  const Text('''Let's love your feet by using cool shoes'''),
-                  const SizedBoxH(5),
-                  ElevatedButton(
-                    onPressed: () {
-                      nav.to(Routes.home);
-                    },
-                    child: const Text(
-                      "Go to Shopping",
-                    ),
-                  ),
+                  SizedBoxH(5),
+                  Text('''Let's style your feet by using cool shoes'''),
+                  SizedBoxH(5),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     nav.to(Routes.home);
+                  //   },
+                  //   child: const Text(
+                  //     "Go to Shopping",
+                  //   ),
+                  // ),
                 ],
               ))
             : Column(
@@ -46,19 +46,19 @@ class CartView extends StatelessWidget {
                             width: 1000,
                             child: ListTile(
                               isThreeLine: true,
-                              leading: _dt.rxCart.st.listCartedShoes[index].shoes.imageUrl!.isEmpty
-                                  ? SizedBox(
-                                      child: Image.network(
-                                        'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    )
-                                  : SizedBox(
-                                      child: Image.network(
-                                        '${_dt.rxProductList.st[index].imageUrl?.values.first}',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
+                              // leading: _dt.rxCart.st.listCartedShoes[index].shoes.imageUrl!.isEmpty
+                              //     ? SizedBox(
+                              //         child: Image.network(
+                              //           'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df',
+                              //           fit: BoxFit.contain,
+                              //         ),
+                              //       )
+                              //     : SizedBox(
+                              //         child: Image.network(
+                              //           '${_dt.rxProductList.st[index].imageUrl?.values.first}',
+                              //           fit: BoxFit.contain,
+                              //         ),
+                              //       ),
 
                               title: Text(_dt.rxCart.st.listCartedShoes[index].shoes.name),
                               subtitle: Column(

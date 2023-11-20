@@ -36,12 +36,6 @@ class WomenView extends StatelessWidget {
                                   child: Column(
                                     children: [
                                       _dt.rxProductList.st[index].imageUrl!.isEmpty
-                                          // ? Container(
-                                          //     color: Colors.black45,
-                                          //     height: width > 500 ? 225 : 145,
-                                          //     width: width > 500 ? 300 : 170,
-                                          //     child: const Icon(Icons.broken_image_outlined, size: 40),
-                                          //   )
                                           ? SizedBox(
                                               height: width > 500 ? 225 : 145,
                                               width: width > 500 ? 300 : 170,
