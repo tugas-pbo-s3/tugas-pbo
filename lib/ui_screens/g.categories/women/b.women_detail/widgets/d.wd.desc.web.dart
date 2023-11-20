@@ -13,7 +13,7 @@ class WomenDetailDesWeb extends StatelessWidget {
       onError: (error, refreshError) => error,
       onData: (data) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             data!.name,
@@ -24,10 +24,10 @@ class WomenDetailDesWeb extends StatelessWidget {
           ),
           Text(
             'Rp ${Fun.formatRupiah.format(data.price)}',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.w700,
-              color: Colors.red.withOpacity(0.7),
+              color: Colors.purple,
             ),
           ),
           const SizedBox(height: 8),
@@ -45,11 +45,13 @@ class WomenDetailDesWeb extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Text(
-            'Description: ${data.description}',
-            style: const TextStyle(
-              fontSize: 15,
-              color: Colors.white,
+          RichText(
+            text: TextSpan(
+              text: 'Description: ${data.description}',
+              style: const TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+              ),
             ),
           ),
         ],

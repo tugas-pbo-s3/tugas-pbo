@@ -23,7 +23,7 @@ class WomenDetailDescPhone extends StatelessWidget {
                 children: [
                   Text(
                     '${data?.name}',
-                    style: GoogleFonts.montserrat(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+                    style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
 
                     // style: const TextStyle(
                     //   fontSize: 28,
@@ -32,7 +32,7 @@ class WomenDetailDescPhone extends StatelessWidget {
                   ),
                   Text(
                     'Rp ${Fun.formatRupiah.format(data?.price)}',
-                    style: GoogleFonts.montserrat(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -40,21 +40,17 @@ class WomenDetailDescPhone extends StatelessWidget {
             const SizedBoxH(8),
             Text(
               'Merk: ${data?.merk}',
-              style: GoogleFonts.montserrat(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
+            const SizedBoxH(10),
             Text(
               'Category: ${data?.category.name}',
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
+            const SizedBoxH(10),
             Text(
               'Description: ${data?.description}',
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBoxH(15),
             Row(

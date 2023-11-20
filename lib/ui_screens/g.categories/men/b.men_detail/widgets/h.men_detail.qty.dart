@@ -25,7 +25,7 @@ class MenDetailQty extends StatelessWidget {
             _dt.rxQty.st--;
             logx.i('kurang');
           },
-          color: Colors.redAccent,
+          color: Colors.purple,
         ),
         const SizedBoxH(5),
         OnReactive(
@@ -43,7 +43,7 @@ class MenDetailQty extends StatelessWidget {
             _dt.rxQty.st++;
             logx.i('tambah');
           },
-          color: Colors.redAccent,
+          color: Colors.purple,
         ),
       ],
     );

@@ -23,18 +23,16 @@ class MenDetailDescPhone extends StatelessWidget {
                 children: [
                   Text(
                     '${data?.name}',
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+
+                    // style: const TextStyle(
+                    //   fontSize: 28,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
                   ),
                   Text(
                     'Rp ${Fun.formatRupiah.format(data?.price)}',
-                    style: const TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.amber,
-                    ),
+                    style: const TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -42,24 +40,17 @@ class MenDetailDescPhone extends StatelessWidget {
             const SizedBoxH(8),
             Text(
               'Merk: ${data?.merk}',
-              style: const TextStyle(
-                color: Colors.black54,
-                fontSize: 16,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
+            const SizedBoxH(10),
             Text(
               'Category: ${data?.category.name}',
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.black54,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
+            const SizedBoxH(10),
             Text(
               'Description: ${data?.description}',
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.black54,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBoxH(15),
             Row(

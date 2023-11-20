@@ -12,6 +12,8 @@ class WomenDetailSize extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnReactive(
       () => SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        dragStartBehavior: DragStartBehavior.start,
         child: Row(
           children: [
             const Text(

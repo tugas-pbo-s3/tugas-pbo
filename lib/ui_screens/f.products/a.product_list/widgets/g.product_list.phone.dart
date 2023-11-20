@@ -12,7 +12,7 @@ class ProductListPhone extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.amber,
+            backgroundColor: Colors.grey.shade400,
             automaticallyImplyLeading: false,
             actions: const [SizedBox.shrink()],
             centerTitle: true,
@@ -25,6 +25,7 @@ class ProductListPhone extends StatelessWidget {
             bottom: PreferredSize(
               preferredSize: const Size(double.infinity, 48),
               child: TabBar(
+                labelStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 labelColor: Colors.deepPurple.shade700,
                 indicatorColor: Colors.deepPurple.shade700,
                 tabs: const <Widget>[

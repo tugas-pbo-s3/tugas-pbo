@@ -9,7 +9,7 @@ class HomePhone extends StatelessWidget {
       bottomNavigationBar: OnBuilder(
         listenTo: _dt.rxCurrentIndex,
         builder: () => BottomNavigationBar(
-          fixedColor: Colors.amber,
+          fixedColor: Colors.purple,
           type: BottomNavigationBarType.fixed,
           currentIndex: _dt.rxCurrentIndex.st,
           onTap: (i) {

@@ -51,14 +51,15 @@ class ProductListWeb extends StatelessWidget {
               //   ),
               // ),
             ],
-            backgroundColor: Colors.amber,
+            backgroundColor: Colors.grey.shade400,
             pinned: true,
             floating: true,
-            toolbarHeight: 99,
+            toolbarHeight: 77,
             bottom: PreferredSize(
               preferredSize: const Size(double.infinity, 50),
               child: TabBar(
                 tabAlignment: TabAlignment.center,
+                labelStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 labelColor: Colors.deepPurple.shade700,
                 indicatorColor: Colors.deepPurple.shade700,
                 tabs: const <Widget>[

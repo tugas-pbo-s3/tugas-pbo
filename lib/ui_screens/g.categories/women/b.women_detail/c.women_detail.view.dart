@@ -72,7 +72,7 @@ class WomenDetailView extends StatelessWidget {
                                   const Text(
                                     'Total Payment:',
                                     style: TextStyle(
-                                      color: Colors.amber,
+                                      color: Colors.purple,
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -81,7 +81,7 @@ class WomenDetailView extends StatelessWidget {
                                     () => Text(
                                       'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                                       style: const TextStyle(
-                                        color: Colors.amber,
+                                        color: Colors.purple,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
