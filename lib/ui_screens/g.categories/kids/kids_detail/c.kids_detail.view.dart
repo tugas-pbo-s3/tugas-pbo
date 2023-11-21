@@ -29,12 +29,11 @@ class KidsDetailView extends StatelessWidget {
         onError: (error, refreshError) => const Text('error'),
         onData: (data) {
           _ct.setQty();
-
           final sizes = _dt.rxProductFuture.st?.sizes ?? [];
 
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
-          return width < 600
+          return width <= 600
               ? SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +52,7 @@ class KidsDetailView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         KidsDetailPhoto(),
-                        const SizedBoxW(70),
+                        const SizedBoxW(30),
                         Padding(
                           padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
                           child: Column(
@@ -66,14 +65,14 @@ class KidsDetailView extends StatelessWidget {
                               const SizedBox(height: 10),
                               KidsDetailColor(colors: colors, colorsState: colorsState),
                               const KidsDetailQty(),
-                              const SizedBox(height: 30),
+                              const SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
                                     'Total Payment:',
                                     style: TextStyle(
-                                      color: Color(0xFFFD725A),
+                                      color: Colors.purple,
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -82,7 +81,7 @@ class KidsDetailView extends StatelessWidget {
                                     () => Text(
                                       'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                                       style: const TextStyle(
-                                        color: Color(0xFFFD725A),
+                                        color: Colors.purple,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
