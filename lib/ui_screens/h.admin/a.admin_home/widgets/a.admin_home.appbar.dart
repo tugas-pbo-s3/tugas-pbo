@@ -8,6 +8,14 @@ class AdminHomeAppbar extends ReactiveStatelessWidget {
     return OnReactive(
       () => AppBar(
         title: OnReactive(() => const Text('Admin Home')),
+        leading: MediaQuery.of(context).size.width < 600
+            ? IconButton(
+                onPressed: () {
+                  _dt.scaffoldHome.currentState!.openDrawer();
+                },
+                icon: const Icon(Icons.menu),
+              )
+            : const SizedBox.shrink(),
       ),
     );
   }

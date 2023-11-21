@@ -24,6 +24,19 @@ class KidsProv {
     ),
   );
 
+  final rxLoadMoreWithoutLimit = RM.injectFuture<List<KidsShoes>>(
+    () => Future.value([]),
+    sideEffects: SideEffects(
+      initState: () => _sv.initProductsWithoutLimit(),
+      onSetState: (snap) {
+        if (snap.hasData) {
+          final moreProduct = snap.state.whereType<KidsShoes>().toList();
+          _sv.addToListWithoutLimit(moreProduct);
+        }
+      },
+    ),
+  );
+
   // * prov detail
 
   final rxProductFuture = RM.injectFuture<KidsShoes?>(

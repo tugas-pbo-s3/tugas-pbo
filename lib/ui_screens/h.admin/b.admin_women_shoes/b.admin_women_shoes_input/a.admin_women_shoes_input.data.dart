@@ -5,13 +5,13 @@ class AdminWomenShoesInputData {
 
   final rxInt = 0.inj();
 
-  final colId = Prov.product.st.colId;
+  final colId = Prov.women.st.colId;
 
   final docId = 'w-shoes';
 
   final colId2 = 'women-shoes';
 
-  final rxProductList = Prov.product.st.rxProductList;
+  final rxProductList = Prov.women.st.rxProductList;
 
   final rxGeneratedId = RM.inject<String>(() => '');
 

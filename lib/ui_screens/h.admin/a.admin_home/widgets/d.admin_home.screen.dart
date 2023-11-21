@@ -13,21 +13,8 @@ class AdminHomeScreen extends StatelessWidget {
             final pageTitle = _ct.getTitleByIndex(_dt.sideBarCtrl.selectedIndex);
             switch (_dt.sideBarCtrl.selectedIndex) {
               case 0:
-                return Column(
-                  children: [
-                    MediaQuery.of(context).size.width < 600
-                        ? Align(
-                            alignment: Alignment.topLeft,
-                            child: IconButton(
-                              onPressed: () {
-                                _dt.scaffoldHome.currentState!.openDrawer();
-                              },
-                              icon: const Icon(Icons.menu),
-                            ),
-                          )
-                        : const SizedBox.shrink()
-                  ],
-                );
+                return const AdminHomeInfos();
+
               case 1:
                 return const AdminWomenShoesListView();
 

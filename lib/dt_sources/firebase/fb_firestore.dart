@@ -72,9 +72,20 @@ class FbFirestore {
     required String docId1,
     required String colId2,
     required String lastCreateTime,
-    required int limit,
+    int? limit,
   }) async {
     try {
+      if (limit == null) {
+        return Future.value(
+          instance
+              .collection(colId1)
+              .doc(docId1)
+              .collection(colId2)
+              // .limit(limit)
+              .orderBy('created_at', descending: true)
+              .startAfter([lastCreateTime]).get(),
+        );
+      }
       return Future.value(
         instance
             .collection(colId1)

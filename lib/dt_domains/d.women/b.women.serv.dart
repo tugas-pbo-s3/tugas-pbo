@@ -17,6 +17,16 @@ class WomenServ {
     }
   }
 
+  readAllProductsWithoutLimit() {
+    _pv.rxLoadMoreWithoutLimit.stateAsync = _rp.readAllProductsWithoutLimit(
+      _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
+    );
+  }
+
+  addToListWithoutLimit(List<WomenShoes> moreProduct) {
+    _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];
+  }
+
   setSelectedId(String id) {
     _pv.rxSelectedId.refresh();
     _pv.rxSelectedId.setState((s) => id);
@@ -28,6 +38,14 @@ class WomenServ {
     _pv.rxSelectedId.refresh();
 
     readAllProducts();
+  }
+
+  initProductsWithoutLimit() {
+    _pv.rxIsEnd.refresh();
+    _pv.rxProductList.refresh();
+    _pv.rxSelectedId.refresh();
+
+    readAllProductsWithoutLimit();
   }
 
   // * serv read detail

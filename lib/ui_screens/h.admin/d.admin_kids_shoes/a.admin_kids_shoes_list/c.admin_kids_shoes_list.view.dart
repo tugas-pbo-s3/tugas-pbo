@@ -34,7 +34,7 @@ class AdminKidsShoesListView extends StatelessWidget {
                     children: [
                       ListView(
                         children: [
-                          Text(MediaQuery.of(context).size.width.toString()),
+                          // Text(MediaQuery.of(context).size.width.toString()),
                           for (var item in _dt.rxProductList.st)
                             AdminKidsShoesListCard(
                               product: item,

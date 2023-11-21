@@ -102,6 +102,8 @@ class AdminHomeSidebar extends StatelessWidget {
           label: 'Home',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
+            _dt.rxIsLimit.setState((s) => false);
+            logx.wtf(_dt.rxIsLimit.st.toString());
           },
         ),
         SidebarXItem(
@@ -126,7 +128,7 @@ class AdminHomeSidebar extends StatelessWidget {
           },
         ),
         SidebarXItem(
-          icon: Icons.shopping_bag,
+          icon: Icons.category,
           label: 'Category',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());

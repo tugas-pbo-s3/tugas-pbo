@@ -35,3 +35,4 @@ AdminWomenShoesListData get _dt => Data.adminWomenShoesList.st;
 AdminWomenShoesListCtrl get _ct => Ctrl.adminWomenShoesList;
 
 WomenServ get _sv => Serv.women;
+WomenProv get _pv => Prov.women.st;

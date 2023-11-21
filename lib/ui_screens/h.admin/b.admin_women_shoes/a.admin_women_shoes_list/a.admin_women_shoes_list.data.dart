@@ -5,9 +5,9 @@ class AdminWomenShoesListData {
 
   final rxInt = 0.inj();
 
-  final limit = Prov.product.st.limit;
+  final limit = _pv.limit;
 
-  final colId = Prov.product.st.colId;
+  final colId = _pv.colId;
 
   final docId = 'w-shoes';
 
@@ -15,15 +15,15 @@ class AdminWomenShoesListData {
 
   final rxImages = RM.inject<Map<String, String>>(() => {});
 
-  final rxIsEnd = Prov.product.st.rxIsEnd;
+  final rxIsEnd = _pv.rxIsEnd;
 
-  final rxSelectedId = Prov.product.st.rxSelectedId;
+  final rxSelectedId = _pv.rxSelectedId;
 
-  final rxProductList = Prov.product.st.rxProductList;
+  final rxProductList = _pv.rxProductList;
 
-  final rxLoadMore = Prov.product.st.rxLoadMore;
+  final rxLoadMore = _pv.rxLoadMore;
 
-  final rxProduct = Prov.product.st.rxProductFuture;
+  final rxProduct = _pv.rxProductFuture;
 
   final rxHeightContainer = RM.inject<double>(() => 0.0);
 

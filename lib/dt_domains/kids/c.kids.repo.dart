@@ -17,6 +17,22 @@ class KidsRepo {
     return products;
   }
 
+  Future<List<KidsShoes>> readAllProductsWithoutLimit(String lastCreateTime) async {
+    final result = await x1FbFirestore.readCollInDoc(
+      colId1: _pv.colId,
+      docId1: _pv.docId1,
+      colId2: _pv.colId2,
+      // limit: _pv.limit,
+      lastCreateTime: lastCreateTime,
+    );
+
+    List<KidsShoes> products = [];
+    for (var i in result.docs) {
+      products.add(KidsShoes.fromMap(i.data()));
+    }
+    return products;
+  }
+
   // * repo read detail
   Future<KidsShoes> readProduct() async {
     final result = await x1FbFirestore.readDocument2(

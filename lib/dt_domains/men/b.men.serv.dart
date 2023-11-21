@@ -17,6 +17,24 @@ class MenServ {
     }
   }
 
+  initProductsWithoutLimit() {
+    _pv.rxIsEnd.refresh();
+    _pv.rxProductList.refresh();
+    _pv.rxSelectedId.refresh();
+
+    readAllProductsWithoutLimit();
+  }
+
+  readAllProductsWithoutLimit() {
+    _pv.rxLoadMoreWithoutLimit.stateAsync = _rp.readAllProductsWithoutLimit(
+      _pv.rxProductList.st.isNotEmpty ? _pv.rxProductList.st.last.createdAt : '9999-99-99 99:99:99.999',
+    );
+  }
+
+  addToListWithoutLimit(List<MenShoes> moreProduct) {
+    _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];
+  }
+
 // * cart
 
   addToCart(CartedShoes cartedShoes) {

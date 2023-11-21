@@ -1,7 +1,14 @@
 part of '_index.dart';
 
 class AdminHomeCtrl {
-  init() => logxx.i(AdminHomeCtrl, '...');
+  init() {
+    logxx.i(AdminHomeCtrl, '...');
+    // Serv.women.readAllProducts();
+    // Serv.women.initProducts();
+    // Serv.women.addToList(_dt.rxWomenShoesLoader.st);
+    // Serv.man.initProducts();
+    // logx.w(_dt.rxWomenShoes.st.length.toString());
+  }
 
   action() => _dt.rxInt.setState((s) => s + 1);
 

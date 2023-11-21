@@ -7,7 +7,14 @@ class WomenProv {
   final limit = 3;
   final rxIsEnd = false.inj();
 
-  final rxProductList = RM.inject<List<WomenShoes>>(() => []);
+  final rxIsLimit = RM.inject(
+    () => true,
+  );
+
+  final rxProductList = RM.inject<List<WomenShoes>>(
+    () => [],
+    // autoDisposeWhenNotUsed: false,
+  );
 
   final rxSelectedId = RM.inject<String>(() => '');
 
@@ -19,6 +26,18 @@ class WomenProv {
         if (snap.hasData) {
           final moreProduct = snap.state.whereType<WomenShoes>().toList();
           _sv.addToList(moreProduct);
+        }
+      },
+    ),
+  );
+  final rxLoadMoreWithoutLimit = RM.injectFuture<List<WomenShoes>>(
+    () => Future.value([]),
+    sideEffects: SideEffects(
+      initState: () => _sv.initProductsWithoutLimit(),
+      onSetState: (snap) {
+        if (snap.hasData) {
+          final moreProduct = snap.state.whereType<WomenShoes>().toList();
+          _sv.addToListWithoutLimit(moreProduct);
         }
       },
     ),

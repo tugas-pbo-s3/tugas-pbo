@@ -1,7 +1,10 @@
 part of '_index.dart';
 
 class AdminWomenShoesInputCtrl {
-  init() => logxx.i(AdminWomenShoesInputCtrl, '...');
+  init() {
+    logxx.i(AdminWomenShoesInputCtrl, '...');
+    Serv.category.readCategories();
+  }
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
@@ -73,7 +76,7 @@ class AdminWomenShoesInputCtrl {
     final category = _dt.rxCategoryList.st[indexCategory];
     final product = WomenShoes(
       category: Category(
-        categoryId: _dt.rxCategory.value ?? '',
+        categoryId: category.categoryId,
         name: category.name,
         createdAt: category.createdAt,
         updatedAt: category.updatedAt,
