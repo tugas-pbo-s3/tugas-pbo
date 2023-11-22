@@ -83,13 +83,16 @@ class AdminWomenShoesListDetailTileEditImages extends StatelessWidget {
                                       child: OnReactive(
                                         () => Card(
                                           child: Container(
-                                              width: 60,
-                                              height: 60,
-                                              padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                                              child: Image.file(
-                                                File(path),
-                                                fit: BoxFit.cover,
-                                              )),
+                                            width: 60,
+                                            height: 60,
+                                            padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
+                                            child: !kIsWeb
+                                                ? Image.file(
+                                                    File(path),
+                                                    fit: BoxFit.cover,
+                                                  )
+                                                : Image.network(path),
+                                          ),
                                         ),
                                       ),
                                     ),
