@@ -22,10 +22,12 @@ class AdminWomenShoesInputImagePreview extends StatelessWidget {
                             width: 60,
                             height: 60,
                             padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                            child: Image.file(
-                              File(path),
-                              fit: BoxFit.cover,
-                            ),
+                            child: !kIsWeb
+                                ? Image.file(
+                                    File(path),
+                                    fit: BoxFit.cover,
+                                  )
+                                : Image.network(path),
                           ),
                         ),
                       ),

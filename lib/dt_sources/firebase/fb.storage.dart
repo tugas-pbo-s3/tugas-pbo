@@ -19,7 +19,10 @@ class FbStorage {
     String ref,
     String path,
   ) async {
-    final task = instance.ref(ref).putFile(File(path));
+    final response = await http.Client().get(Uri.parse(path));
+    final bytes = response.bodyBytes;
+    final task = instance.ref(ref).putData(bytes, SettableMetadata(contentType: 'image/jpeg'));
+    // final task = instance.ref(ref).putFile(File(path));
     final snapshot = await task;
     final bytesTransferred = snapshot.bytesTransferred;
     final url = await snapshot.ref.getDownloadURL();

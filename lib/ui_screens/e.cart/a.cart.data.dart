@@ -10,4 +10,6 @@ class CartData {
   final rxProductList = _pv.rxProductList;
   final rxProductFuture = _pv.rxProductFuture;
   final rxSelectedId = _pv.rxSelectedId;
+
+  final rxUser = Prov.auth.st.rxUser;
 }

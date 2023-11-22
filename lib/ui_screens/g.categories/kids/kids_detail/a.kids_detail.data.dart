@@ -11,6 +11,8 @@ class KidsDetailData {
 
   final rxSelectedId = _pv.rxSelectedId;
 
+  final rxUser = Prov.auth.st.rxUser;
+
   final rxCart = _pvCart.rxCart;
 
   final rxQty = RM.inject(

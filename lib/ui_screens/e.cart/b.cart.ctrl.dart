@@ -15,4 +15,6 @@ class CartCtrl {
   deleteAllCart() {
     _sv.deleteAllProducts();
   }
+
+  signOut() => Serv.auth.signOut();
 }

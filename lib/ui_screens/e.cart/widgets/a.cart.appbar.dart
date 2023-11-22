@@ -11,24 +11,26 @@ class CartAppbar extends StatelessWidget {
         OnBuilder.data(
           listenTo: _dt.rxCart,
           builder: (data) => IconButton(
-            onPressed: () => nav.toCupertinoDialog(
-              CupertinoAlertDialog(
-                title: const Text('Confirmation'),
-                content: const Text('Are u sure to delete this product?'),
-                actions: [
-                  CupertinoDialogAction(
-                    child: const Text('cancel'),
-                    onPressed: () => nav.back(),
-                  ),
-                  CupertinoDialogAction(
-                    onPressed: () => _ct.deleteAllCart(),
-                    isDefaultAction: true,
-                    isDestructiveAction: true,
-                    child: const Text('delete'),
-                  ),
-                ],
-              ),
-            ),
+            onPressed: _dt.rxUser.st!.isAnonymous
+                ? null
+                : () => nav.toCupertinoDialog(
+                      CupertinoAlertDialog(
+                        title: const Text('Confirmation'),
+                        content: const Text('Are u sure to delete this product?'),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: const Text('cancel'),
+                            onPressed: () => nav.back(),
+                          ),
+                          CupertinoDialogAction(
+                            onPressed: () => _ct.deleteAllCart(),
+                            isDefaultAction: true,
+                            isDestructiveAction: true,
+                            child: const Text('delete'),
+                          ),
+                        ],
+                      ),
+                    ),
             icon: _dt.rxCart.st.listCartedShoes.isEmpty
                 ? const Icon(
                     Icons.delete,

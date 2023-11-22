@@ -42,7 +42,7 @@ class WomenServ {
 
   initProductsWithoutLimit() {
     _pv.rxIsEnd.refresh();
-    _pv.rxProductList.refresh();
+    // _pv.rxProductList.refresh();
     _pv.rxSelectedId.refresh();
 
     readAllProductsWithoutLimit();

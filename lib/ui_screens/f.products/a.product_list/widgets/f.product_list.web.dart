@@ -29,27 +29,40 @@ class ProductListWeb extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: () {
-                  nav.to(Routes.cart);
+                  _dt.rxUser.st!.isAnonymous
+                      ? nav.toDialog(
+                          AlertDialog(
+                            title: const Text('Warning!'),
+                            content: const Text(
+                              'You are logged in as anonymous. Please log in to view your cart',
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  nav.back();
+                                },
+                                child: const Text('Cancel'),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  nav.back();
+                                  _ct.signOut();
+                                },
+                                child: const Text('Login'),
+                              ),
+                            ],
+                          ),
+                        )
+                      : nav.to(Routes.cart);
                 },
                 icon: const Icon(Icons.shopping_cart),
               ),
-
               IconButton(
                 onPressed: () {
                   Scaffold.of(context).openEndDrawer();
                 },
                 icon: const Icon(Icons.more_vert),
               )
-
-              // IconButton(
-              //   onPressed: () {
-              //     nav.to(Routes.login);
-              //   },
-              //   icon: const Icon(
-              //     Icons.logout,
-              //     color: Colors.red,
-              //   ),
-              // ),
             ],
             backgroundColor: Colors.grey.shade400,
             pinned: true,

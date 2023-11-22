@@ -13,7 +13,6 @@ class HomePhone extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           currentIndex: _dt.rxCurrentIndex.st,
           onTap: (i) {
-            // _dt.rxCurrentIndex.setState((s) => i);
             _dt.rxCurrentIndex.st = i;
             logx.e(i.toString());
           },
@@ -46,6 +45,32 @@ class HomePhone extends StatelessWidget {
           if (x == 0) {
             return const ProductListView();
           } else if (x == 1) {
+            // _dt.rxUser.st!.isAnonymous
+            //     ? nav.toDialog(
+            //         AlertDialog(
+            //           title: const Text('Warning!'),
+            //           content: const Text(
+            //             'You cannot add this product to your cart because you are logged in as anonymous. try to log in again',
+            //           ),
+            //           actions: [
+            //             TextButton(
+            //               onPressed: () {
+            //                 nav.back();
+            //               },
+            //               child: const Text('Cancel'),
+            //             ),
+            //             TextButton(
+            //               onPressed: () {
+            //                 nav.back();
+            //                 _ct.signOut();
+            //               },
+            //               child: const Text('Login'),
+            //             ),
+            //           ],
+            //         ),
+            //       )
+            //     :
+
             return const CartView();
           }
           return const ProfileView();

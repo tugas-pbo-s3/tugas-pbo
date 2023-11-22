@@ -27,13 +27,15 @@ class ProfileWeb extends StatelessWidget {
           ),
           const SizedBoxH(30),
           ListTile(
-            title: Text(data?.displayName ?? 'nullname'),
+            title: Text(data?.displayName ?? 'anonymous'),
             leading: const Icon(Icons.person),
           ),
-          ListTile(
-            title: Text(data?.email ?? 'nullemail'),
-            leading: const Icon(Icons.email),
-          ),
+          data!.email == null
+              ? const SizedBox.shrink()
+              : ListTile(
+                  title: Text('${data.email}'),
+                  leading: const Icon(Icons.email),
+                ),
           ListTile(
             leading: TextButton.icon(
               onPressed: () {

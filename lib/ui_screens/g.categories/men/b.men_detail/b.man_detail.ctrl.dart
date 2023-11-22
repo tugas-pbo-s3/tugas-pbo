@@ -5,6 +5,8 @@ class ManDetailCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
+  signOut() => Serv.auth.signOut();
+
   addToCart() {
     MenShoes product = MenShoes(
       name: _dt.rxProductFuture.st!.name,

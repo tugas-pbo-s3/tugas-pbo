@@ -9,6 +9,8 @@ class ManDetailData {
 
   final rxProductList = _pv.rxProductList;
 
+  final rxUser = Prov.auth.st.rxUser;
+
   final rxSelectedId = _pv.rxSelectedId;
 
   final rxCart = _pvCart.rxCart;

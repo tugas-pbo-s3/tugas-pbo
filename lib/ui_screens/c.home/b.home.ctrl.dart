@@ -5,6 +5,8 @@ class HomeCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
+  signOut() => Serv.auth.signOut();
+
   Widget directPage(double width) {
     if (_dt.rxUser.st?.email == 'admin@admin.com') {
       return const AdminHomeView();
