@@ -34,14 +34,17 @@ class ManDetailView extends StatelessWidget {
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
           return width <= 600
-              ? const SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      MenDetailPhoto(),
-                      SizedBoxH(10),
-                      MenDetailDescPhone(),
-                    ],
+              ? Container(
+                  constraints: const BoxConstraints(maxWidth: 1500),
+                  child: const SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        MenDetailPhoto(),
+                        SizedBoxH(10),
+                        MenDetailDescPhone(),
+                      ],
+                    ),
                   ),
                 )
               : Center(

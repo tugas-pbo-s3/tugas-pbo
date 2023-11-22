@@ -45,56 +45,59 @@ class WomenDetailView extends StatelessWidget {
                   ),
                 )
               : Center(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const WomenDetailPhoto(),
-                        const SizedBoxW(30),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const WomenDetailDesWeb(),
-                              const SizedBox(height: 5),
-                              WomenDetailSize(sizes: sizes),
-                              const SizedBox(height: 10),
-                              WomenDetailColor(colors: colors, colorsState: colorsState),
-                              const WomenDetailQty(),
-                              const SizedBox(height: 10),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  const Text(
-                                    'Total Payment:',
-                                    style: TextStyle(
-                                      color: Colors.purple,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  OnReactive(
-                                    () => Text(
-                                      'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
-                                      style: const TextStyle(
+                  child: Container(
+                    constraints: const BoxConstraints(maxWidth: 1500),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const WomenDetailPhoto(),
+                          const SizedBoxW(30),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const WomenDetailDesWeb(),
+                                const SizedBox(height: 5),
+                                WomenDetailSize(sizes: sizes),
+                                const SizedBox(height: 10),
+                                WomenDetailColor(colors: colors, colorsState: colorsState),
+                                const WomenDetailQty(),
+                                const SizedBox(height: 10),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      'Total Payment:',
+                                      style: TextStyle(
                                         color: Colors.purple,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBoxH(20),
-                              const WomenDetailAddtoCart()
-                            ],
+                                    OnReactive(
+                                      () => Text(
+                                        'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
+                                        style: const TextStyle(
+                                          color: Colors.purple,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBoxH(20),
+                                const WomenDetailAddtoCart()
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 );
