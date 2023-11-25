@@ -34,17 +34,26 @@ class AdminKidsShoesInputData {
   final rxImages = RM.inject<Map<String, String>>(() => {});
 
   static final List<ShoesSizes> listOfSizes = [
-    ShoesSizes(id: 1, size: 35),
-    ShoesSizes(id: 2, size: 36),
-    ShoesSizes(id: 3, size: 37),
-    ShoesSizes(id: 4, size: 38),
-    ShoesSizes(id: 5, size: 39),
-    ShoesSizes(id: 6, size: 40),
-    ShoesSizes(id: 7, size: 41),
-    ShoesSizes(id: 8, size: 42),
-    ShoesSizes(id: 9, size: 43),
-    ShoesSizes(id: 10, size: 44),
-    ShoesSizes(id: 11, size: 45),
+    ShoesSizes(id: 1, size: 25),
+    ShoesSizes(id: 2, size: 26),
+    ShoesSizes(id: 3, size: 27),
+    ShoesSizes(id: 4, size: 28),
+    ShoesSizes(id: 5, size: 29),
+    ShoesSizes(id: 6, size: 30),
+    ShoesSizes(id: 7, size: 31),
+    ShoesSizes(id: 8, size: 32),
+    ShoesSizes(id: 9, size: 33),
+    ShoesSizes(id: 10, size: 34),
+    ShoesSizes(id: 11, size: 35),
+    ShoesSizes(id: 12, size: 36),
+    ShoesSizes(id: 13, size: 37),
+    ShoesSizes(id: 14, size: 38),
+    ShoesSizes(id: 15, size: 39),
+    ShoesSizes(id: 16, size: 40),
+    ShoesSizes(id: 17, size: 41),
+    ShoesSizes(id: 18, size: 42),
+    ShoesSizes(id: 19, size: 43),
+    ShoesSizes(id: 20, size: 44),
   ];
 
   static final List<ShoesColors> listOfColors = [
