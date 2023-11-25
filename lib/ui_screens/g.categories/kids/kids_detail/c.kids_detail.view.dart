@@ -9,14 +9,14 @@ class KidsDetailView extends StatelessWidget {
 
     // final height = MediaQuery.of(context).size.height;
 
-    List<Color?> colorsState = [
-      Colors.white,
-      Colors.black,
-      Colors.brown,
-      Colors.grey.shade700,
-      Colors.pink,
-      Colors.purple,
-    ];
+    // List<Color?> colorsState = [
+    //   Colors.white,
+    //   Colors.black,
+    //   Colors.brown,
+    //   Colors.grey.shade700,
+    //   Colors.pink,
+    //   Colors.purple,
+    // ];
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
@@ -34,70 +34,70 @@ class KidsDetailView extends StatelessWidget {
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
           return width <= 600
-              ? Container(
-                  constraints: const BoxConstraints(maxWidth: 1500),
-                  child: const SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        KidsDetailPhoto(),
-                        SizedBoxH(10),
-                        KidsDetailDescPhone(),
-                      ],
-                    ),
+              ? const SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      KidsDetailPhoto(),
+                      SizedBoxH(10),
+                      KidsDetailDescPhone(),
+                    ],
                   ),
                 )
               : Center(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const KidsDetailPhoto(),
-                        const SizedBoxW(30),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const KidsDetailDesWeb(),
-                              const SizedBox(height: 5),
-                              KidsDetailSize(sizes: sizes),
-                              const SizedBox(height: 10),
-                              KidsDetailColor(colors: colors, colorsState: colorsState),
-                              const KidsDetailQty(),
-                              const SizedBox(height: 10),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  const Text(
-                                    'Total Payment:',
-                                    style: TextStyle(
-                                      color: Colors.purple,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  OnReactive(
-                                    () => Text(
-                                      'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
-                                      style: const TextStyle(
+                  child: Container(
+                    constraints: const BoxConstraints(maxWidth: 1500),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const KidsDetailPhoto(),
+                          const SizedBoxW(30),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, left: 25, right: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const KidsDetailDesWeb(),
+                                const SizedBox(height: 5),
+                                KidsDetailSize(sizes: sizes),
+                                const SizedBox(height: 5),
+                                KidsDetailColor(colors: colors, colorsState: Colors.purple.shade200),
+                                const KidsDetailQty(),
+                                const SizedBox(height: 10),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      'Total Payment:',
+                                      style: TextStyle(
                                         color: Colors.purple,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBoxH(20),
-                              const KidsDetailAddtoCart()
-                            ],
+                                    OnReactive(
+                                      () => Text(
+                                        'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
+                                        style: const TextStyle(
+                                          color: Colors.purple,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBoxH(20),
+                                const KidsDetailAddtoCart()
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 );

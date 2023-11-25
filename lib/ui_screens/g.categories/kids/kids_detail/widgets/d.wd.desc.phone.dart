@@ -21,18 +21,17 @@ class KidsDetailDescPhone extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    '${data?.name}',
-                    style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
-
-                    // style: const TextStyle(
-                    //   fontSize: 28,
-                    //   fontWeight: FontWeight.bold,
-                    // ),
+                  Container(
+                    constraints: const BoxConstraints(maxWidth: 200),
+                    child: Text(
+                      '${data?.name}',
+                      textAlign: TextAlign.start,
+                      style: TextStyle(color: Colors.grey.shade800, fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Text(
                     'Rp ${Fun.formatRupiah.format(data?.price)}',
-                    style: const TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(color: Colors.purple, fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),

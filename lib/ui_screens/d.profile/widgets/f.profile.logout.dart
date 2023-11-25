@@ -8,7 +8,8 @@ class ProfileLogout extends StatelessWidget {
     return ListTile(
       leading: TextButton.icon(
         onPressed: () {
-          nav.to(Routes.login);
+          // nav.to(Routes.login);
+          _ct.signOut();
         },
         icon: const Icon(Icons.logout),
         label: const Text('Logout'),

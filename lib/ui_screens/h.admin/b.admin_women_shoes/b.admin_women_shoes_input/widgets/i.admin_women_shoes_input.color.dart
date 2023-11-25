@@ -23,7 +23,7 @@ class AdminWomenShoesInputColor extends StatelessWidget {
             ),
             chipColor: Colors.transparent,
             selectedChipColor: Theme.of(context).colorScheme.primary,
-            textStyle: const TextStyle(color: Colors.white),
+            textStyle: const TextStyle(color: Colors.black),
             selectedTextStyle: const TextStyle(color: Colors.white),
             onTap: (values) {
               _ct.setColorsValues(values);

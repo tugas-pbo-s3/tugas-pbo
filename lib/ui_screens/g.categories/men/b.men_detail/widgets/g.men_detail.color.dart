@@ -8,7 +8,7 @@ class MenDetailColor extends StatelessWidget {
   });
 
   final List<String> colors;
-  final List<Color?> colorsState;
+  final Color colorsState;
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +32,14 @@ class MenDetailColor extends StatelessWidget {
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     // side: const BorderSide(color: Colors.grey),
-                    backgroundColor: _dt.rxColor.st == colors[index] ? colorsState[index] : null,
+                    backgroundColor: _dt.rxColor.st == colors[index] ? colorsState : null,
                   ),
                   onPressed: () {
                     _ct.selectColor(colors[index]);
                   },
                   child: Text(
                     colors[index],
-                    style: const TextStyle(color: Colors.deepPurple),
+                    style: TextStyle(color: Colors.grey.shade800),
                   ),
                 ),
               ),

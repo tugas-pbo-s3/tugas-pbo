@@ -31,13 +31,14 @@ class AdminWomenShoesListDetailContent extends StatelessWidget {
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),
-                  color: Colors.grey.shade900,
+                  color: Colors.purple.shade200,
+                  // color: Colors.grey.shade900,
                 ),
                 child: Row(
                   children: [
                     const SizedBoxW(20),
                     const Text(
-                      'Women\'s Shoes Detail',
+                      'Women Shoes Detail',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),

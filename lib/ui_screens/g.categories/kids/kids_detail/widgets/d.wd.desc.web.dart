@@ -19,10 +19,7 @@ class KidsDetailDesWeb extends StatelessWidget {
           children: [
             Text(
               data!.name,
-              style: const TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.grey.shade800),
             ),
             Text(
               'Rp ${Fun.formatRupiah.format(data.price)}',
@@ -36,7 +33,7 @@ class KidsDetailDesWeb extends StatelessWidget {
             Text(
               'Merk: ${data.merk}',
               style: const TextStyle(
-                color: Colors.white,
+                color: Colors.grey,
                 fontSize: 16,
               ),
             ),
@@ -44,15 +41,16 @@ class KidsDetailDesWeb extends StatelessWidget {
               'Category: ${data.category.name}',
               style: const TextStyle(
                 fontSize: 15,
-                color: Colors.white,
+                color: Colors.grey,
               ),
             ),
             RichText(
+              overflow: TextOverflow.clip,
               text: TextSpan(
                 text: 'Description: ${data.description}',
                 style: const TextStyle(
                   fontSize: 15,
-                  color: Colors.white,
+                  color: Colors.grey,
                 ),
               ),
             ),

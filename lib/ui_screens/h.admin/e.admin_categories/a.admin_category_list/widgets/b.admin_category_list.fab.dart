@@ -6,10 +6,10 @@ class AdminCategoryListFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      child: const Icon(Icons.add),
+      backgroundColor: Colors.purple,
       onPressed: () => nav.toDialog(
         AlertDialog(
-          title: const Text('Input New Shoes\'s Category'),
+          title: const Text('Input New Shoes Category'),
           actions: [
             TextButton(
               onPressed: () {
@@ -39,13 +39,14 @@ class AdminCategoryListFab extends StatelessWidget {
               onEditingComplete: () => _dt.rxNameInput.focusNode.unfocus(),
               decoration: InputDecoration(
                 hintText: 'Name of category',
-                labelText: 'Category\'s name',
+                labelText: 'Categories name',
                 errorText: _dt.rxNameInput.error,
               ),
             ),
           ),
         ),
       ),
+      child: const Icon(Icons.add),
     );
   }
 }

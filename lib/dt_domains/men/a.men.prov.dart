@@ -4,7 +4,7 @@ class MenProv {
   final colId = 'shoes';
   final colId2 = 'man-shoes';
   final docId1 = 'm-shoes';
-  final limit = 3;
+  final limit = 4;
   final rxIsEnd = false.inj();
 
   final rxProductList = RM.inject<List<MenShoes>>(() => []);

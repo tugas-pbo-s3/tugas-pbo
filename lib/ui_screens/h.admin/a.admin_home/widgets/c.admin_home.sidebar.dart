@@ -15,8 +15,11 @@ class AdminHomeSidebar extends StatelessWidget {
           color: Colors.grey.withOpacity(0.2),
           borderRadius: BorderRadius.circular(20),
         ),
-        hoverColor: Theme.of(context).colorScheme.primary,
-        textStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+        // hoverColor: Theme.of(context).colorScheme.primary,
+        hoverTextStyle: const TextStyle(color: Colors.purple),
+        hoverColor: Colors.purple.shade300,
+        textStyle: const TextStyle(color: Colors.purple),
+        // textStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
         selectedTextStyle: const TextStyle(color: Colors.white),
         itemTextPadding: const EdgeInsets.only(left: 30),
         selectedItemTextPadding: const EdgeInsets.only(left: 30),
@@ -27,10 +30,12 @@ class AdminHomeSidebar extends StatelessWidget {
         selectedItemDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: Theme.of(context).colorScheme.primary,
+            color: Colors.purple,
+            // color: Theme.of(context).colorScheme.primary,
           ),
           gradient: LinearGradient(
-            colors: [Colors.blueAccent, Theme.of(context).colorScheme.primary],
+            // colors: [Colors.purple.shade200, Theme.of(context).colorScheme.primary],
+            colors: [Colors.purple.shade200, Colors.purple],
           ),
           boxShadow: [
             BoxShadow(
@@ -39,8 +44,8 @@ class AdminHomeSidebar extends StatelessWidget {
             )
           ],
         ),
-        iconTheme: IconThemeData(
-          color: Colors.white.withOpacity(0.7),
+        iconTheme: const IconThemeData(
+          color: Colors.purple,
           size: 20,
         ),
         selectedIconTheme: const IconThemeData(
@@ -108,21 +113,21 @@ class AdminHomeSidebar extends StatelessWidget {
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Women\'s Shoes',
+          label: 'Women Shoes',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Men\'s Shoes',
+          label: 'Men Shoes',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Kids\'s Shoes',
+          label: 'Kids Shoes',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },

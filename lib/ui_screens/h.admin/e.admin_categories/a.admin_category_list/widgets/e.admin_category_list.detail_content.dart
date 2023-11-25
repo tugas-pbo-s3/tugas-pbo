@@ -21,12 +21,12 @@ class AdminCategoryListDetailContent extends StatelessWidget {
               Container(
                 height: 50,
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                  color: Colors.grey.shade900,
-                ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                    // color: Colors.grey.shade900,
+                    color: Colors.purple.shade200),
                 child: Align(
                   alignment: Alignment.topRight,
                   child: IconButton(

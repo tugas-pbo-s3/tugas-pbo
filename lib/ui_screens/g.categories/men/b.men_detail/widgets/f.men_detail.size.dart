@@ -31,15 +31,15 @@ class MenDetailSize extends StatelessWidget {
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     // side: const BorderSide(color: Colors.grey),
-                    backgroundColor: _dt.rxSize.st == sizes[index] ? Colors.purple : null,
+                    backgroundColor: _dt.rxSize.st == sizes[index] ? Colors.purple.shade200 : null,
                   ),
                   onPressed: () {
                     _ct.selectSize(sizes[index]);
                   },
                   child: Text(
                     sizes[index].toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: Colors.grey.shade800,
                     ),
                   ),
                 ),

@@ -7,7 +7,8 @@ class App extends TopStatelessWidget {
   Widget build(BuildContext context) {
     return OverlaySupport.global(
       toastTheme: ToastThemeData(
-        background: Colors.grey.shade200,
+        // background: Colors.grey.shade200,
+        background: Colors.white24,
         textColor: Colors.grey.shade900,
         alignment: Alignment.bottomCenter,
       ),
@@ -16,7 +17,7 @@ class App extends TopStatelessWidget {
         debugShowCheckedModeBanner: false,
         // ----- ----- ----- ----- -----
         theme: themeRM.lightTheme,
-        darkTheme: themeRM.darkTheme,
+        // darkTheme: themeRM.darkTheme,
         themeMode: themeRM.themeMode,
         // ----- ----- ----- ----- -----
         locale: i18nRM.locale,

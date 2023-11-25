@@ -9,14 +9,14 @@ class WomenDetailView extends StatelessWidget {
 
     // final height = MediaQuery.of(context).size.height;
 
-    List<Color?> colorsState = [
-      Colors.white,
-      Colors.black,
-      Colors.brown,
-      Colors.grey.shade700,
-      Colors.pink,
-      Colors.purple,
-    ];
+    // List<Color?> colorsState = [
+    //   Colors.white,
+    //   Colors.black,
+    //   Colors.brown,
+    //   Colors.grey.shade700,
+    //   Colors.pink,
+    //   Colors.purple,
+    // ];
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
@@ -64,8 +64,8 @@ class WomenDetailView extends StatelessWidget {
                                 const WomenDetailDesWeb(),
                                 const SizedBox(height: 5),
                                 WomenDetailSize(sizes: sizes),
-                                const SizedBox(height: 10),
-                                WomenDetailColor(colors: colors, colorsState: colorsState),
+                                const SizedBox(height: 5),
+                                WomenDetailColor(colors: colors, colorsState: Colors.purple.shade200),
                                 const WomenDetailQty(),
                                 const SizedBox(height: 10),
                                 Row(

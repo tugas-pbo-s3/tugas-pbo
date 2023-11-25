@@ -27,17 +27,17 @@ class AdminKidsShoesListDetailContent extends StatelessWidget {
               Container(
                 height: 50,
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                  color: Colors.grey.shade900,
-                ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                    // color: Colors.grey.shade900,
+                    color: Colors.purple.shade200),
                 child: Row(
                   children: [
                     const SizedBoxW(20),
                     const Text(
-                      'Kids\'s Shoes Detail',
+                      'Kids Shoes Detail',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),

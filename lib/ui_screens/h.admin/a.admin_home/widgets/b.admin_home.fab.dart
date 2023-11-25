@@ -6,8 +6,9 @@ class AdminHomeFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      child: const Icon(Icons.add),
+      backgroundColor: Colors.purple,
       onPressed: () => _ct.action(),
+      child: const Icon(Icons.add),
     );
   }
 }

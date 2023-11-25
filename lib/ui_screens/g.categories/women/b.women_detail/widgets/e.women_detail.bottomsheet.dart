@@ -29,7 +29,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
         return Container(
           padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
           decoration: BoxDecoration(
-            color: Colors.grey.shade500,
+            color: Colors.grey.shade100,
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
@@ -50,7 +50,7 @@ class WomenDetailBottomsheet extends StatelessWidget {
               const SizedBoxH(10),
               WomenDetailSize(sizes: sizes),
               const SizedBoxH(10),
-              WomenDetailColor(colors: colors, colorsState: colorsState),
+              WomenDetailColor(colors: colors, colorsState: Colors.purple.shade200),
               const SizedBoxH(10),
               const WomenDetailQty(),
               const SizedBoxH(4),

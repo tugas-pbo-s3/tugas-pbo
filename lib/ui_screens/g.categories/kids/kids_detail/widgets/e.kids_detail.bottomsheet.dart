@@ -29,7 +29,7 @@ class KidsDetailBottomsheet extends StatelessWidget {
         return Container(
           padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
           decoration: BoxDecoration(
-            color: Colors.grey.shade500,
+            color: Colors.grey.shade100,
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
@@ -50,7 +50,7 @@ class KidsDetailBottomsheet extends StatelessWidget {
               const SizedBoxH(10),
               KidsDetailSize(sizes: sizes),
               const SizedBoxH(10),
-              KidsDetailColor(colors: colors, colorsState: colorsState),
+              KidsDetailColor(colors: colors, colorsState: Colors.purple.shade200),
               const SizedBoxH(10),
               const KidsDetailQty(),
               const SizedBoxH(4),
