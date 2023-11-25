@@ -45,7 +45,7 @@ class ProductListWeb extends StatelessWidget {
                               ),
                               TextButton(
                                 onPressed: () {
-                                  nav.back();
+                                  // nav.back();
                                   _ct.signOut();
                                 },
                                 child: const Text('Login'),

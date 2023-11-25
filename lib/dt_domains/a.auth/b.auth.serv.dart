@@ -16,6 +16,7 @@ class AuthServ {
     } else {
       if (user == null) {
         nav.toAndRemoveUntil(Routes.login);
+        // nav.toReplacement(Routes.login);
       }
     }
   }
@@ -45,6 +46,7 @@ class AuthServ {
 
   signOut() {
     x1FbAuth.st.signOut();
+    logx.e(_pv.rxUser.st.toString());
   }
 
   deleteAccount() async {

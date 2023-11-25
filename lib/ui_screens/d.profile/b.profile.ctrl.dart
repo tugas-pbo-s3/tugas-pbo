@@ -7,7 +7,5 @@ class ProfileCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
-  signOut() {
-    _sv.signOut();
-  }
+  signOut() => Serv.auth.signOut();
 }

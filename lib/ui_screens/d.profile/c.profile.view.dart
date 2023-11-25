@@ -12,38 +12,42 @@ class ProfileView extends StatelessWidget {
         child: ProfileAppbar(),
       ),
       // floatingActionButton: ProfileFab(),
-      body: width < 600
-          ? const Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ProfilePhoto(),
-                  ProfileUsername(),
-                  ProfileEmail(),
-                  ProfileLogout(),
-                ],
-              ),
-            )
-          : Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const SizedBoxW(30),
-                  const ProfilePhoto(),
-                  const SizedBoxW(30),
-                  Expanded(
-                    child: ListView(
-                      shrinkWrap: true,
-                      children: const [
+      body: OnReactive(
+        () => _dt.rxUser.st == null
+            ? const SizedBox.shrink()
+            : width < 600
+                ? const Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ProfilePhoto(),
                         ProfileUsername(),
                         ProfileEmail(),
                         ProfileLogout(),
                       ],
                     ),
+                  )
+                : Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const SizedBoxW(30),
+                        const ProfilePhoto(),
+                        const SizedBoxW(30),
+                        Expanded(
+                          child: ListView(
+                            shrinkWrap: true,
+                            children: const [
+                              ProfileUsername(),
+                              ProfileEmail(),
+                              ProfileLogout(),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-            ),
+      ),
     );
   }
 }

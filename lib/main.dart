@@ -7,7 +7,7 @@ import 'app/_index.dart';
 void main() async {
   RM.env = Flavor.dev;
   await inits();
-  Mocks.instance.init();
+  // Mocks.instance.init();
   runApp(
     DevicePreview(
       enabled: PlatformType.isLinux,
