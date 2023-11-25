@@ -24,7 +24,7 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
             onEditFunction: () {
               nav.toDialog(
                 AlertDialog(
-                  title: const Text('Edit Shoes\'s Category'),
+                  title: const Text('Edit Shoes Category'),
                   actions: [
                     TextButton(
                       onPressed: () {

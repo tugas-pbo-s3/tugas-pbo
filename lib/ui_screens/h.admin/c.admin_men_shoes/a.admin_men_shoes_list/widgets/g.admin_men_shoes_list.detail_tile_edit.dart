@@ -33,7 +33,7 @@ class AdminMenShoesListTileEdit extends StatelessWidget {
         _ct.refreshTextField();
         nav.toDialog(
           AlertDialog(
-            title: Text('Edit Men\'s Shoes $title'),
+            title: Text('Edit Men Shoes $title'),
             actions: [
               TextButton(
                 onPressed: () {
