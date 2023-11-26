@@ -74,11 +74,14 @@ class AdminWomenShoesInputData {
     autovalidateMode: AutovalidateMode.onUserInteraction,
   );
 
-  final rxName = RM.injectTextEditing(validators: [
-    Validate.isNotEmpty,
-    Validate.minChars,
-    Validate.alphaNumericSpace,
-  ]);
+  final rxName = RM.injectTextEditing(
+    validators: [
+      Validate.isNotEmpty,
+      Validate.minChars,
+      Validate.alphaNumericSpace,
+      Validate.maxChars,
+    ],
+  );
 
   final rxDescription = RM.injectTextEditing(validators: [
     Validate.isNotEmpty,

@@ -53,7 +53,7 @@ class Validate {
   }
 
   static String? maxChars(String? str) {
-    const max = 6;
+    const max = 20;
     if (str != null && str.length > max) {
       return 'max $max characters';
     }

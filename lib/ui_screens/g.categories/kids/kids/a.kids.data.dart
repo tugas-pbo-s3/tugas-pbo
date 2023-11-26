@@ -10,4 +10,6 @@ class KidsData {
   final rxLoadMore = _pv.rxLoadMore;
 
   final rxIsEnd = _pv.rxIsEnd;
+
+  final rxSelectedId = _pv.rxSelectedId;
 }

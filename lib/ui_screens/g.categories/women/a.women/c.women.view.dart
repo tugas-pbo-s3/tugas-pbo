@@ -31,40 +31,86 @@ class WomenView extends StatelessWidget {
                                 onTap: () {
                                   _ct.selectProduct(_dt.rxProductList.st[index].productId);
                                 },
-                                child: SizedBox(
+                                child: Container(
+                                  color: Colors.white12,
                                   height: width > 500 ? 300 : 200,
                                   width: width > 500 ? 300 : 170,
                                   child: Center(
                                     child: Column(
                                       children: [
                                         _dt.rxProductList.st[index].imageUrl!.isEmpty
-                                            ? SizedBox(
-                                                height: width > 500 ? 225 : 145,
-                                                width: width > 500 ? 300 : 170,
-                                                child: Image.network(
-                                                  'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df',
-                                                  fit: BoxFit.contain,
+                                            ? AspectRatio(
+                                                aspectRatio: 1 / 0.85,
+                                                child: SizedBox(
+                                                  height: width > 500 ? 225 : 145,
+                                                  width: width > 500 ? 300 : 170,
+                                                  child: Image.network(
+                                                    'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/Image_not_available.png?alt=media&token=8e87ed45-9177-4945-845c-8cce5ad3d9df',
+                                                    fit: BoxFit.cover,
+                                                  ),
                                                 ),
                                               )
-                                            : SizedBox(
-                                                height: width > 500 ? 225 : 145,
-                                                width: width > 500 ? 300 : 170,
-                                                child: Image.network(
-                                                  '${_dt.rxProductList.st[index].imageUrl?.values.first}',
-                                                  fit: BoxFit.fill,
+                                            : AspectRatio(
+                                                aspectRatio: 1 / 0.85,
+                                                child: SizedBox(
+                                                  height: width > 500 ? 225 : 145,
+                                                  width: width > 500 ? 300 : 170,
+                                                  child: Image.network(
+                                                    '${_dt.rxProductList.st[index].imageUrl?.values.first}',
+                                                    fit: BoxFit.cover,
+                                                  ),
                                                 ),
                                               ),
-                                        const SizedBoxH(10),
-                                        Text(_dt.rxProductList.st[index].name,
-                                            style: width < 500
-                                                ? const TextStyle(
-                                                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)
-                                                : const TextStyle(
-                                                    color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold)),
-                                        Text('Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}',
-                                            style: width < 500
-                                                ? const TextStyle(color: Colors.white70)
-                                                : const TextStyle(color: Colors.white70, fontSize: 16)),
+                                        // const SizedBoxH(20),
+                                        Container(
+                                          color: Colors.transparent,
+                                          width: double.infinity,
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            children: [
+                                              OnReactive(
+                                                () => Text(
+                                                  _dt.rxProductList.st[index].name,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: width < 500
+                                                      ? TextStyle(
+                                                          color: _dt.rxProductList.st[index].productId ==
+                                                                  _dt.rxSelectedId.st
+                                                              ? Colors.purple
+                                                              : Colors.white,
+                                                          fontSize: 15,
+                                                          fontWeight: FontWeight.bold,
+                                                        )
+                                                      : TextStyle(
+                                                          color: _dt.rxProductList.st[index].productId ==
+                                                                  _dt.rxSelectedId.st
+                                                              ? Colors.purple
+                                                              : Colors.white,
+                                                          fontSize: 17,
+                                                          fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+                                              OnReactive(
+                                                () => Text(
+                                                  'Rp ${Fun.formatRupiah.format(_dt.rxProductList.st[index].price)}',
+                                                  style: width < 500
+                                                      ? TextStyle(
+                                                          color: _dt.rxProductList.st[index].productId ==
+                                                                  _dt.rxSelectedId.st
+                                                              ? Colors.purple
+                                                              : Colors.white70)
+                                                      : TextStyle(
+                                                          color: _dt.rxProductList.st[index].productId ==
+                                                                  _dt.rxSelectedId.st
+                                                              ? Colors.purple
+                                                              : Colors.white70,
+                                                          fontSize: 16,
+                                                        ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),

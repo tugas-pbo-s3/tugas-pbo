@@ -15,6 +15,7 @@ class KidsCtrl {
 
   selectProduct(String id) {
     _sv.setSelectedId(id);
+    logx.e('selected id: ${_dt.rxSelectedId.st}');
     nav.to(Routes.kidsDetail);
   }
 }

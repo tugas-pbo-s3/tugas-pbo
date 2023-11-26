@@ -95,6 +95,7 @@ class AdminKidsShoesListData {
         Validate.isNotEmpty,
         Validate.minChars,
         Validate.alphaNumericSpace,
+        Validate.maxChars,
       ],
     ),
   );

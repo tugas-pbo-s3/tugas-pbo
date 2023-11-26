@@ -9,7 +9,7 @@ class KidsProv {
 
   final rxProductList = RM.inject<List<KidsShoes>>(() => []);
 
-  final rxSelectedId = RM.inject<String>(() => '');
+  final rxSelectedId = RM.inject<String>(() => '', autoDisposeWhenNotUsed: false);
 
   final rxLoadMore = RM.injectFuture<List<KidsShoes>>(
     () => Future.value([]),
