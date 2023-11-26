@@ -36,9 +36,8 @@ class ProductListPhone extends StatelessWidget {
               ),
             ),
           ),
-          const SliverToBoxAdapter(
+          const SliverFillRemaining(
             child: SizedBox(
-              height: 1000,
               child: TabBarView(
                 children: <Widget>[
                   WomenView(),

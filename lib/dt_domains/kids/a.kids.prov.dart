@@ -7,12 +7,16 @@ class KidsProv {
   final limit = 4;
   final rxIsEnd = false.inj();
 
-  final rxProductList = RM.inject<List<KidsShoes>>(() => []);
+  final rxProductList = RM.inject<List<KidsShoes>>(
+    () => [],
+    autoDisposeWhenNotUsed: false,
+  );
 
   final rxSelectedId = RM.inject<String>(() => '', autoDisposeWhenNotUsed: false);
 
   final rxLoadMore = RM.injectFuture<List<KidsShoes>>(
     () => Future.value([]),
+    autoDisposeWhenNotUsed: false,
     sideEffects: SideEffects(
       initState: () => _sv.initProducts(),
       onSetState: (snap) {

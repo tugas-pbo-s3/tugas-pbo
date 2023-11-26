@@ -4,7 +4,7 @@ class WomenProv {
   final colId = 'shoes';
   final colId2 = 'women-shoes';
   final docId1 = 'w-shoes';
-  final limit = 4;
+  final limit = 10;
   final rxIsEnd = false.inj();
 
   final rxIsLimit = RM.inject(
@@ -13,13 +13,14 @@ class WomenProv {
 
   final rxProductList = RM.inject<List<WomenShoes>>(
     () => [],
-    // autoDisposeWhenNotUsed: false,
+    autoDisposeWhenNotUsed: false,
   );
 
   final rxSelectedId = RM.inject<String>(() => '');
 
   final rxLoadMore = RM.injectFuture<List<WomenShoes>>(
     () => Future.value([]),
+    autoDisposeWhenNotUsed: false,
     sideEffects: SideEffects(
       initState: () => _sv.initProducts(),
       onSetState: (snap) {
