@@ -10,7 +10,7 @@ class ProductListView extends StatelessWidget {
       endDrawer: const Drawer(
         child: ProfileWeb(),
       ),
-      body: width > 500 ? ProductListWeb(width: width) : const ProductListPhone(),
+      body: width > 600 ? ProductListWeb(width: width) : const ProductListPhone(),
     );
   }
 }

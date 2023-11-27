@@ -15,6 +15,6 @@ class WomenCtrl {
 
   selectProduct(String id) {
     _sv.setSelectedId(id);
-    nav.to(Routes.womenDetail);
+    nav.to(Routes.womenDetail.replaceAll(':id', id));
   }
 }

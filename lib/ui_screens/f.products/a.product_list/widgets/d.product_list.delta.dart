@@ -5,6 +5,13 @@ class ProductListDelta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(7.0),
+        child: Image.asset(
+          'assets/images/pegaShoes500.png',
+        ),
+      ),
+    );
   }
 }

@@ -38,7 +38,13 @@ class RouteMap {
     Routes.man: (RouteData data) => const ManView(),
     Routes.kids: (RouteData data) => const KidsView(),
     Routes.search: (RouteData data) => const SearchView(),
-    Routes.womenDetail: (RouteData data) => const WomenDetailView(),
+    Routes.womenDetail: (RouteData data) {
+      // final id = data.pathParams['id'];
+      // logx.i(id.toString());
+      // Prov.women.st.rxSelectedId.refresh();
+      // Prov.women.st.rxSelectedId.setState((s) => id);
+      return const WomenDetailView();
+    },
     Routes.manDetail: (RouteData data) => const MenDetailView(),
     Routes.kidsDetail: (RouteData data) => const KidsDetailView(),
   };

@@ -5,10 +5,15 @@ class ProductListCharlie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(Random().nextInt(100).toString()),
-        OnReactive(() => Text('${_dt.rxInt.st}')),
+    return TabBar(
+      splashBorderRadius: BorderRadius.circular(8),
+      labelStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+      labelColor: Colors.deepPurple.shade700,
+      indicatorColor: Colors.deepPurple.shade700,
+      tabs: const <Widget>[
+        Tab(text: 'Women'),
+        Tab(text: 'Men'),
+        Tab(text: 'Kids'),
       ],
     );
   }

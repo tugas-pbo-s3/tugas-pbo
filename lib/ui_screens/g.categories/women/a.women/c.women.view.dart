@@ -6,7 +6,6 @@ class WomenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: Center(child: CircularProgressIndicator()),
       body: OnBuilder.all(
         listenToMany: [_dt.rxLoadMore],
         onWaiting: () => _dt.rxProductList.st.isEmpty

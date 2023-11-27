@@ -10,80 +10,38 @@ class ProductListWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 3,
       child: CustomScrollView(
         slivers: [
           SliverAppBar(
             automaticallyImplyLeading: false,
-            leading: Row(
+            leading: ProductListDelta(),
+            actions: [ProductListEcho()],
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(
-                  child: Image.asset(
-                    'assets/images/pegaShoes2000.png',
+                Flexible(
+                  child: SizedBox(
+                    width: 400,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(55, 0, 20, 0),
+                      child: ProductListCharlie(),
+                    ),
                   ),
                 ),
               ],
             ),
-            leadingWidth: width,
-            actions: [
-              IconButton(
-                onPressed: () {
-                  _dt.rxUser.st!.isAnonymous
-                      ? nav.toDialog(
-                          AlertDialog(
-                            title: const Text('Warning!'),
-                            content: const Text(
-                              'You are logged in as anonymous. Please log in to view your cart',
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  nav.back();
-                                },
-                                child: const Text('Cancel'),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  // nav.back();
-                                  _ct.signOut();
-                                },
-                                child: const Text('Login'),
-                              ),
-                            ],
-                          ),
-                        )
-                      : nav.to(Routes.cart);
-                },
-                icon: const Icon(Icons.shopping_cart),
-              ),
-              IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openEndDrawer();
-                },
-                icon: const Icon(Icons.more_vert),
-              )
-            ],
-            backgroundColor: Colors.grey.shade400,
-            pinned: true,
+            pinned: false,
             floating: true,
-            toolbarHeight: 77,
             bottom: PreferredSize(
-              preferredSize: const Size(double.infinity, 50),
-              child: TabBar(
-                tabAlignment: TabAlignment.center,
-                labelStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                labelColor: Colors.deepPurple.shade700,
-                indicatorColor: Colors.deepPurple.shade700,
-                tabs: const <Widget>[
-                  Tab(text: 'Women'),
-                  Tab(text: 'Men'),
-                  Tab(text: 'Kids'),
-                ],
+              preferredSize: Size(double.infinity, 1),
+              child: Divider(
+                height: 1,
               ),
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 1000,
               child: TabBarView(
