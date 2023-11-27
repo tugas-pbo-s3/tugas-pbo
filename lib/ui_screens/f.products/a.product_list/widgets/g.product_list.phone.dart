@@ -7,36 +7,31 @@ class ProductListPhone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 3,
-      child: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            automaticallyImplyLeading: false,
-            actions: [SizedBox.shrink()],
-            centerTitle: true,
-            title: ProductListCharlie(),
-            pinned: true,
-            floating: true,
-            bottom: PreferredSize(
-              preferredSize: Size(double.infinity, 1),
-              child: Divider(
-                height: 1,
+      child: NestedScrollView(
+        floatHeaderSlivers: true,
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            const SliverAppBar(
+              actions: [SizedBox.shrink()],
+              title: ProductListCharlie(),
+              bottom: PreferredSize(
+                preferredSize: Size(double.infinity, 1),
+                child: Divider(
+                  height: 1,
+                ),
               ),
             ),
-          ),
-          SliverFillRemaining(
-            child: SizedBox(
-              child: TabBarView(
-                children: <Widget>[
-                  WomenView(),
-                  ManView(),
-                  KidsView(),
-                ],
-              ),
-            ),
-          )
-        ],
+          ];
+        },
+        body: const TabBarView(
+          children: <Widget>[
+            WomenView(),
+            ManView(),
+            KidsView(),
+          ],
+        ),
       ),
     );
   }
