@@ -10,7 +10,7 @@ class HomeData {
   var lisxtPage = <Widget>[
     const ProductListView(),
     const CartView(),
-    const ProfileView(),
+    const ProfileViewPhone(),
   ];
 
   final rxCurrentIndex = 0.inj();

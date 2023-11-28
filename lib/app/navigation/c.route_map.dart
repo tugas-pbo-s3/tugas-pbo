@@ -29,7 +29,7 @@ class RouteMap {
 
     Routes.home: (RouteData data) => const HomeView(),
 
-    Routes.profile: (RouteData data) => const ProfileView(),
+    Routes.profile: (RouteData data) => const ProfileViewPhone(),
 
     Routes.cart: (RouteData data) => const CartView(),
 

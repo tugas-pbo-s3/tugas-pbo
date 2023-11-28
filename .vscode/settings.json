@@ -59,8 +59,6 @@
     "*test.*": true,
     "*tugas_pbo": true,
     "*tugas_pbo.*": true,
-    "*web": true,
-    "*web.*": true,
     "*windows": true,
     "*windows.*": true
   }

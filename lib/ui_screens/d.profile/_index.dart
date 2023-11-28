@@ -7,7 +7,7 @@ import '../../xtras/_index.dart';
 
 part 'a.profile.data.dart';
 part 'b.profile.ctrl.dart';
-part 'c.profile.view.dart';
+part 'c.profile.view.phone.dart';
 part 'widgets/a.profile.appbar.dart';
 part 'widgets/b.profile.fab.dart';
 part 'widgets/c.profile.photo.dart';

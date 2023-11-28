@@ -18,7 +18,7 @@ class ProfilePhoto extends StatelessWidget {
           fit: StackFit.passthrough,
           children: [
             CircleAvatar(
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.white,
               foregroundColor: Colors.grey.shade400,
               backgroundImage: data!.photoURL == null
                   ? const NetworkImage(

@@ -20,7 +20,7 @@ part 'widgets/d.product_list.delta.dart';
 part 'widgets/e.product_list.echo.dart';
 part 'widgets/f.product_list.web.dart';
 part 'widgets/g.product_list.phone.dart';
-part 'widgets/h.product_list.profile.dart';
+part 'widgets/h.profile.web.dart';
 
 ProductListData get _dt => Data.productList.st;
 ProductListCtrl get _ct => Ctrl.productList;

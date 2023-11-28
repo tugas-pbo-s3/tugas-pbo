@@ -10,7 +10,7 @@ class ProductListCharlie extends StatelessWidget {
       labelStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
       labelColor: Colors.deepPurple.shade700,
       indicatorColor: Colors.deepPurple.shade700,
-      indicatorPadding: EdgeInsets.fromLTRB(2, 0, 2, 0),
+      indicatorPadding: const EdgeInsets.fromLTRB(2, 0, 2, 0),
       tabs: const <Widget>[
         Tab(text: 'Women'),
         Tab(text: 'Men'),

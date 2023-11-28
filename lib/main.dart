@@ -5,7 +5,7 @@ import 'package:states_rebuilder/states_rebuilder.dart';
 import 'app/_index.dart';
 
 void main() async {
-  RM.env = Flavor.dev;
+  RM.env = Flavor.prod;
   await inits();
   // Mocks.instance.init();
   runApp(

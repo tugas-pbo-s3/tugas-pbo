@@ -17,6 +17,7 @@ class CartView extends StatelessWidget {
                 children: [
                   const Text(
                     'You logged in as anonymous. Please log in to view your cart',
+                    textAlign: TextAlign.center,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   const SizedBoxH(20),

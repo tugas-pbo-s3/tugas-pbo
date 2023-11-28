@@ -73,7 +73,7 @@ class HomePhone extends StatelessWidget {
 
             return const CartView();
           }
-          return const ProfileView();
+          return const ProfileViewPhone();
         },
       ),
     );
