@@ -13,6 +13,7 @@ class App extends TopStatelessWidget {
         alignment: Alignment.bottomCenter,
       ),
       child: MaterialApp.router(
+        scrollBehavior: AppScrollBehavior(),
         title: config.st.appName,
         debugShowCheckedModeBanner: false,
         // ----- ----- ----- ----- -----
