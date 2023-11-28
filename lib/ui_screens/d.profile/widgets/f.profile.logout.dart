@@ -5,14 +5,12 @@ class ProfileLogout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: TextButton.icon(
-        onPressed: () {
-          _ct.signOut();
-        },
-        icon: const Icon(Icons.logout),
-        label: const Text('Logout'),
-      ),
+    return OutlinedButton.icon(
+      onPressed: () {
+        _ct.signOut();
+      },
+      icon: const Icon(Icons.logout),
+      label: const Text('Logout'),
     );
   }
 }

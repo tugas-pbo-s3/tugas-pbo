@@ -7,14 +7,22 @@ class ProfileEmail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBuilder.all(
-      listenTo: _dt.rxUser,
-      onWaiting: () => const Center(child: CircularProgressIndicator()),
-      onError: (error, refreshError) => error,
-      onData: (data) => ListTile(
-        title: Text(data?.email ?? 'nullemail'),
-        leading: const Icon(Icons.email),
-      ),
-    );
+    return _dt.rxUser.st!.isAnonymous
+        ? const SizedBox.shrink()
+        : OnBuilder.all(
+            listenTo: _dt.rxUser,
+            onWaiting: () => const Center(child: CircularProgressIndicator()),
+            onError: (error, refreshError) => error,
+            onData: (data) => ListTile(
+              title: const Text(
+                'Email',
+                textAlign: TextAlign.center,
+              ),
+              subtitle: Text(
+                '${data?.email}',
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
   }
 }

@@ -31,7 +31,6 @@ abstract class Data {
 
   static Injected<CartData> get cart => _cartData;
   static Injected<ProfileData> get profile => _profileData;
-  static Injected<SearchData> get search => _searchData;
   static Injected<WomenDetailData> get womenDetail => _womenDetailData;
   static Injected<ManDetailData> get manDetail => _manDetailData;
 
@@ -68,7 +67,6 @@ final _allData = RM1.inj(AllData(), Ctrl.all.init);
 
 final _cartData = RM1.inj(CartData(), Ctrl.cart.init);
 final _profileData = RM1.inj(ProfileData(), Ctrl.profile.init);
-final _searchData = RM1.inj(SearchData(), Ctrl.search.init);
 final _womenDetailData = RM1.inj(WomenDetailData(), Ctrl.womenDetail.init);
 final _manDetailData = RM1.inj(ManDetailData(), Ctrl.manDetail.init);
 final _kidsDetailData = RM1.inj(KidsDetailData(), Ctrl.kidsDetail.init);

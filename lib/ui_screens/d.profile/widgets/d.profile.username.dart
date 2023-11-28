@@ -12,8 +12,15 @@ class ProfileUsername extends StatelessWidget {
       onWaiting: () => const Center(child: CircularProgressIndicator()),
       onError: (error, refreshError) => error,
       onData: (data) => ListTile(
-        title: Text(data?.displayName ?? 'nullname'),
-        leading: const Icon(Icons.person),
+        subtitleTextStyle: const TextStyle(fontSize: 16),
+        title: const Text(
+          'Username',
+          textAlign: TextAlign.center,
+        ),
+        subtitle: Text(
+          data?.displayName ?? 'anonymous',
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }

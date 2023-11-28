@@ -16,14 +16,20 @@ class ProfileViewPhone extends StatelessWidget {
         () => _dt.rxUser.st == null
             ? const SizedBox.shrink()
             : const Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ProfilePhoto(),
-                    ProfileUsername(),
-                    ProfileEmail(),
-                    ProfileLogout(),
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ProfilePhoto(),
+                      SizedBoxH(10),
+                      ProfileUsername(),
+                      ProfileEmail(),
+                      SizedBoxH(20),
+                      ProfileLogout(),
+                      SizedBoxH(20),
+                      ProfileDeleteAccount(),
+                    ],
+                  ),
                 ),
               ),
       ),

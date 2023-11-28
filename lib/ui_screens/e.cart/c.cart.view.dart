@@ -11,23 +11,26 @@ class CartView extends StatelessWidget {
         child: CartAppbar(),
       ),
       body: _dt.rxUser.st!.isAnonymous
-          ? Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'You logged in as anonymous. Please log in to view your cart',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBoxH(20),
-                  OutlinedButton(
-                    onPressed: () {
-                      _ct.signOut();
-                    },
-                    child: const Text('Back to login page'),
-                  )
-                ],
+          ? Padding(
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'You logged in as anonymous. Please log in to view your cart',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBoxH(20),
+                    OutlinedButton(
+                      onPressed: () {
+                        _ct.signOut();
+                      },
+                      child: const Text('Back to login page'),
+                    )
+                  ],
+                ),
               ),
             )
           : OnReactive(

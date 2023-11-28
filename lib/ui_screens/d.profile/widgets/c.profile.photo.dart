@@ -11,41 +11,17 @@ class ProfilePhoto extends StatelessWidget {
       listenTo: _dt.rxUser,
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,
-      onData: (data) => SizedBox(
-        height: 115,
-        width: 115,
-        child: Stack(
-          fit: StackFit.passthrough,
-          children: [
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.grey.shade400,
-              backgroundImage: data!.photoURL == null
-                  ? const NetworkImage(
-                      'https://firebasestorage.googleapis.com/v0/b/tugas-pbo-fc0db.appspot.com/o/profile-icon-null.png?alt=media&token=56113b7f-0b3c-45a3-bc97-60807d7f261f')
-                  : NetworkImage(
-                      '${data.photoURL}',
-                    ),
-            ),
-            // Positioned(
-            //   right: 0,
-            //   bottom: 0,
-            //   child: SizedBox(
-            //     height: 46,
-            //     width: 46,
-            //     child: CircleAvatar(
-            //       radius: 30,
-            //       backgroundColor: Colors.black54,
-            //       child: IconButton(
-            //         color: const Color(0xFFF5F6F9),
-            //         onPressed: () {},
-            //         icon: const Icon(Icons.camera_enhance),
-            //       ),
-            //     ),
-            //   ),
-            // ),
-          ],
-        ),
+      onData: (data) => CircleAvatar(
+        radius: 80,
+        backgroundColor: Colors.grey.withOpacity(0.2),
+        backgroundImage: data?.photoURL != null ? NetworkImage('${data?.photoURL}') : null,
+        child: data?.photoURL == null
+            ? const Icon(
+                Icons.person,
+                size: 85,
+                color: Colors.grey,
+              )
+            : null,
       ),
     );
   }

@@ -68,28 +68,15 @@ class WomenDetailView extends StatelessWidget {
                                 WomenDetailColor(colors: colors, colorsState: Colors.purple.shade200),
                                 const WomenDetailQty(),
                                 const SizedBox(height: 10),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const Text(
-                                      'Total Payment:',
-                                      style: TextStyle(
-                                        color: Colors.purple,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                OnReactive(
+                                  () => Text(
+                                    'Total Payment : Rp${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
+                                    style: const TextStyle(
+                                      color: Colors.purple,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
                                     ),
-                                    OnReactive(
-                                      () => Text(
-                                        'Rp ${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
-                                        style: const TextStyle(
-                                          color: Colors.purple,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
                                 const SizedBoxH(20),
                                 const WomenDetailAddtoCart()

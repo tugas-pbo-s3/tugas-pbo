@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class ManDetailData {
-  final rxTitle = 'ManDetail'.inj();
+  final rxTitle = 'Men\'s Shoes Detail'.inj();
 
   final rxInt = 0.inj();
 

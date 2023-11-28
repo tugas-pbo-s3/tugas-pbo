@@ -7,5 +7,5 @@ class ProductListCtrl {
 
   signOut() => Serv.auth.signOut();
 
-  delete() => Serv.auth.deleteAccount();
+  deleteAccount() => Serv.auth.deleteAccount();
 }

@@ -14,6 +14,7 @@ part 'widgets/c.profile.photo.dart';
 part 'widgets/d.profile.username.dart';
 part 'widgets/e.profile.email.dart';
 part 'widgets/f.profile.logout.dart';
+part 'widgets/g.profile.delete_account.dart';
 
 ProfileData get _dt => Data.profile.st;
 ProfileCtrl get _ct => Ctrl.profile;
