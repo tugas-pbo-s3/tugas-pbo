@@ -11,21 +11,23 @@ class ProfileUsername extends StatelessWidget {
       listenTo: _dt.rxUser,
       onWaiting: () => const Center(child: CircularProgressIndicator()),
       onError: (error, refreshError) => error,
-      onData: (data) => data?.displayName == null
-          ? const SizedBox.shrink()
-          : Center(
-              child: ListTile(
-                title: const Text(
-                  'Username',
-                  textAlign: TextAlign.center,
+      onData: (data) => data!.isAnonymous
+          ? const Text('Anonymous')
+          : data.displayName == null
+              ? const SizedBox.shrink()
+              : Center(
+                  child: ListTile(
+                    title: const Text(
+                      'Username',
+                      textAlign: TextAlign.center,
+                    ),
+                    subtitle: Text(
+                      '${data.displayName}',
+                      textAlign: TextAlign.center,
+                    ),
+                    // leading: const Icon(Icons.person),
+                  ),
                 ),
-                subtitle: Text(
-                  data?.displayName ?? 'anonymous',
-                  textAlign: TextAlign.center,
-                ),
-                // leading: const Icon(Icons.person),
-              ),
-            ),
     );
   }
 }

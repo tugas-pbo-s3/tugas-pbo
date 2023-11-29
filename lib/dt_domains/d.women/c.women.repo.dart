@@ -96,13 +96,15 @@ class WomenRepo {
   }
 
   Future<void> deleteProduct() async {
-    int imageLength = _pv.rxProductFuture.st!.imageUrl?.length ?? 0;
+    int imageLength = _pv.rxProductFuture.st?.imageUrl?.length ?? 0;
     if (imageLength > 0) {
-      final mainFolder = _pv.colId;
+      final mainFolder1 = _pv.colId;
       final subFolder1 = _pv.docId1;
       final mainFolder2 = _pv.colId2;
       final subFolder2 = _pv.rxProductFuture.st?.productId;
-      await x1FbStorage.st.deleteFolder('/$mainFolder/$subFolder1/$mainFolder2/$subFolder2');
+      if (!_pv.rxProductFuture.st!.imageUrl!.values.first.startsWith('https')) {
+        await x1FbStorage.st.deleteFolder('/$mainFolder1/$subFolder1/$mainFolder2/$subFolder2');
+      }
     }
     await x1FbFirestore.deleteDocument2(
       colId1: _pv.colId,

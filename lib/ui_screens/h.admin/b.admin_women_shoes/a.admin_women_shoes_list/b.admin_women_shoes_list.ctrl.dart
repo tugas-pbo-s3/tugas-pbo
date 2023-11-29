@@ -8,10 +8,6 @@ class AdminWomenShoesListCtrl {
 
   action() => _dt.rxInt.setState((s) => s + 1);
 
-  // List<int> setInitialSizes() {
-  //   final index = _dt.rxProduct.st!.sizes.indexWhere((element) => element == _dt.listOfSizes.);
-  // }
-
   setSizesValues(sizeList) {
     _dt.rxSizesValues.st = sizeList;
   }
@@ -159,5 +155,50 @@ class AdminWomenShoesListCtrl {
     } catch (e) {
       Fun.handleException(e);
     }
+  }
+
+  delete() async {
+    RM.navigate.toDialog(
+      const Center(child: CircularProgressIndicator()),
+      barrierDismissible: false,
+      barrierColor: Colors.black54,
+    );
+    await _sv.deleteProduct();
+    await _sv.deleteOneOfProduct();
+    // Prov.cart.st.rxCart.st.listCartedShoes = [...Prov.cart.st.rxCart.st.listCartedShoes]
+    //   ..removeWhere((element) => element.shoes.productId == _dt.rxSelectedId.st);
+    // for (var c in Prov.cart.st.rxCart.st.listCartedShoes) {
+    //   if (c.cartedId == _dt.rxSelectedId.st) {
+    //     Serv.cart.removeCart(id: _dt.rxSelectedId.st);
+    //   }
+    // }
+
+    RM.navigate.back();
+    RM.navigate.back();
+  }
+
+  showDeleteDialog() {
+    nav.toCupertinoDialog(CupertinoAlertDialog(
+      title: const Text('Confirmation'),
+      content: const Text('Are you sure to delete these items?'),
+      actions: [
+        TextButton(
+          onPressed: () {
+            nav.back();
+          },
+          child: const Text('Cancel'),
+        ),
+        TextButton(
+          onPressed: () {
+            nav.back();
+            delete();
+          },
+          child: const Text(
+            'Delete',
+            style: TextStyle(color: Colors.red),
+          ),
+        )
+      ],
+    ));
   }
 }
