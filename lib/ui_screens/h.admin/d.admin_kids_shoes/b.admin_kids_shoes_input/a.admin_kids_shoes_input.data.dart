@@ -84,7 +84,12 @@ class AdminKidsShoesInputData {
   );
 
   final rxName = RM.injectTextEditing(
-      validators: [Validate.isNotEmpty, Validate.minChars, Validate.alphaNumericSpace, Validate.maxChars]);
+    validators: [
+      Validate.isNotEmpty,
+      Validate.minChars,
+      Validate.maxChars,
+    ],
+  );
 
   final rxDescription = RM.injectTextEditing(validators: [
     Validate.isNotEmpty,

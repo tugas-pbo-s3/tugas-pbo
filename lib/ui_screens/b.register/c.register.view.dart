@@ -15,21 +15,26 @@ class RegisterView extends StatelessWidget {
         builder: () => Center(
           child: Container(
             constraints: const BoxConstraints(maxWidth: 400),
-            child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RegisterEmail(),
-                SizedBox(height: 10),
-                RegisterPassword(),
-                SizedBox(height: 10),
-                RegisterRetype(),
-                SizedBox(height: 20),
-                SizedBox(
-                  width: 200,
-                  child: RegisterSubmit(),
+            child: const Padding(
+              padding: EdgeInsets.all(10),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RegisterEmail(),
+                    SizedBox(height: 10),
+                    RegisterPassword(),
+                    SizedBox(height: 10),
+                    RegisterRetype(),
+                    SizedBox(height: 20),
+                    SizedBox(
+                      width: 200,
+                      child: RegisterSubmit(),
+                    ),
+                    RegisterToLogin()
+                  ],
                 ),
-                RegisterToLogin()
-              ],
+              ),
             ),
           ),
         ),

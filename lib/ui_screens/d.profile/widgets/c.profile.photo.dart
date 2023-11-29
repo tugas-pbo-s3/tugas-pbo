@@ -11,17 +11,20 @@ class ProfilePhoto extends StatelessWidget {
       listenTo: _dt.rxUser,
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,
-      onData: (data) => CircleAvatar(
-        radius: 80,
-        backgroundColor: Colors.grey.withOpacity(0.2),
-        backgroundImage: data?.photoURL != null ? NetworkImage('${data?.photoURL}') : null,
-        child: data?.photoURL == null
-            ? const Icon(
-                Icons.person,
-                size: 85,
-                color: Colors.grey,
-              )
-            : null,
+      onData: (data) => Card(
+        shape: const CircleBorder(),
+        child: CircleAvatar(
+          radius: 80,
+          backgroundColor: Colors.grey.withOpacity(0.2),
+          backgroundImage: data?.photoURL != null ? NetworkImage('${data?.photoURL}') : null,
+          child: data?.photoURL == null
+              ? const Icon(
+                  Icons.person,
+                  size: 85,
+                  color: Colors.grey,
+                )
+              : null,
+        ),
       ),
     );
   }

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class ProductListDelta extends StatelessWidget {
-  const ProductListDelta({super.key});
+class ProductListLeading extends StatelessWidget {
+  const ProductListLeading({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -78,7 +78,6 @@ class AdminMenShoesInputData {
     validators: [
       Validate.isNotEmpty,
       Validate.minChars,
-      Validate.alphaNumericSpace,
       Validate.maxChars,
     ],
   );

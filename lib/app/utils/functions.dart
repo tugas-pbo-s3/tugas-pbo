@@ -35,7 +35,11 @@ class Fun {
       logx.e(e.code);
       if (e.code == 'invalid-login-credentials') {
         str = 'email address not registered. Try to register';
-      } else {
+      }
+      // if (e.code == 'email-already-in-use') {
+      //   str = 'email address not registered. Try to register';
+      // }
+      else {
         str = e.message ?? e.code;
       }
     } on Exception {

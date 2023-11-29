@@ -15,7 +15,7 @@ class WomenDetailData {
 
   final rxCart = _pvCart.rxCart;
 
-  final rxQty = RM.inject(
+  final rxQty = RM.inject<int>(
     () => 1,
   );
 

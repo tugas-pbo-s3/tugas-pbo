@@ -23,7 +23,7 @@ class FbAuth {
         password: password,
       );
     } catch (e) {
-      rethrow;
+      Fun.handleException(e);
     }
   }
 

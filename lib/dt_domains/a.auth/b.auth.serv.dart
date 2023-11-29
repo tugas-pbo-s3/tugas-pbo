@@ -16,19 +16,15 @@ class AuthServ {
     } else {
       if (user == null) {
         nav.toAndRemoveUntil(Routes.login);
-        // nav.toReplacement(Routes.login);
       }
     }
   }
 
   close() => _pv.rxUser.subscription?.cancel();
 
-  createUserWithEmailAndPassword(String email, String password) async {
-    try {
-      await x1FbAuth.st.createUserWithEmailAndPassword(email, password);
-    } catch (e) {
-      rethrow;
-    }
+  createUserWithEmailAndPassword(String email, String password) {
+    x1FbAuth.st.createUserWithEmailAndPassword(email, password);
+
     // x1FbAuth.st.createUserWithEmailAndPassword(email, password);
   }
 

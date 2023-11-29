@@ -17,8 +17,8 @@ class ProductListWeb extends StatelessWidget {
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return [
             const SliverAppBar(
-              leading: ProductListDelta(),
-              actions: [ProductListEcho()],
+              leading: ProductListLeading(),
+              actions: [ProductListAction()],
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -27,7 +27,7 @@ class ProductListWeb extends StatelessWidget {
                       width: 400,
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(55, 0, 20, 0),
-                        child: ProductListCharlie(),
+                        child: ProductListTabBar(),
                       ),
                     ),
                   ),

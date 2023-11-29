@@ -47,19 +47,19 @@ class InputTextField extends StatelessWidget {
         // focusedErrorBorder: ,
         errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Color.fromARGB(255, 249, 119, 110)),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         focusedErrorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.red),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.grey.shade400),
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
       ),
     );

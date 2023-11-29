@@ -21,4 +21,5 @@ Future<void> inits() async {
   setPathUrlStrategy();
 
   logx.wtf('inits success');
+  FlutterNativeSplash.remove();
 }

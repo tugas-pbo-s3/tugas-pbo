@@ -88,7 +88,7 @@ class CartView extends StatelessWidget {
                                               nav.toCupertinoDialog(
                                                 CupertinoAlertDialog(
                                                   title: const Text('Confirmation'),
-                                                  content: const Text('Are u sure to delete this product?'),
+                                                  content: const Text('Are u sure to delete this cart?'),
                                                   actions: [
                                                     CupertinoDialogAction(
                                                       child: const Text('cancel'),

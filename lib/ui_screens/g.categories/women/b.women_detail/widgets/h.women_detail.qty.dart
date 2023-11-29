@@ -10,22 +10,27 @@ class WomenDetailQty extends StatelessWidget {
     return Row(
       children: [
         const Text(
-          'Total: ',
+          'Quantity: ',
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w500,
           ),
         ),
         const SizedBoxW(30),
-        IconButton(
-          icon: const Icon(
-            Icons.remove,
+        OnReactive(
+          () => OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              shape: const CircleBorder(),
+              fixedSize: const Size(20, 20),
+            ),
+            onPressed: _dt.rxQty.st <= 1
+                ? null
+                : () {
+                    _dt.rxQty.st--;
+                    logx.i('kurang');
+                  },
+            child: const Center(child: Icon(Icons.remove)),
           ),
-          onPressed: () {
-            _dt.rxQty.st--;
-            logx.i('kurang');
-          },
-          color: Colors.purple,
         ),
         const SizedBoxH(5),
         OnReactive(
@@ -35,15 +40,22 @@ class WomenDetailQty extends StatelessWidget {
           ),
         ),
         const SizedBoxH(5),
-        IconButton(
-          icon: const Icon(
-            Icons.add,
+        OnReactive(
+          () => OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              shape: const CircleBorder(),
+              fixedSize: const Size(20, 20),
+            ),
+            onPressed: _dt.rxQty.st >= 100
+                ? null
+                : () {
+                    _dt.rxQty.st++;
+                    logx.i('tambah');
+                  },
+            child: const Center(
+              child: Icon(Icons.add),
+            ),
           ),
-          onPressed: () {
-            _dt.rxQty.st++;
-            logx.i('tambah');
-          },
-          color: Colors.purple,
         ),
       ],
     );

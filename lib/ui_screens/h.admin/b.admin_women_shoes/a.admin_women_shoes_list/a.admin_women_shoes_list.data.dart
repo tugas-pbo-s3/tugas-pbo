@@ -72,7 +72,6 @@ class AdminWomenShoesListData {
       validators: [
         Validate.isNotEmpty,
         Validate.minChars,
-        Validate.alphaNumericSpace,
         Validate.maxChars,
       ],
     ),

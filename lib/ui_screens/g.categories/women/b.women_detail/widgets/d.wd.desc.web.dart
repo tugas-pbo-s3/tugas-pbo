@@ -37,6 +37,7 @@ class WomenDetailDesWeb extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
+            const SizedBoxH(5),
             Text(
               'Category: ${data.category.name}',
               style: const TextStyle(
@@ -44,6 +45,7 @@ class WomenDetailDesWeb extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
+            const SizedBoxH(5),
             RichText(
               overflow: TextOverflow.clip,
               text: TextSpan(

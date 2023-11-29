@@ -15,7 +15,7 @@ class ProductListPhone extends StatelessWidget {
           return [
             const SliverAppBar(
               actions: [SizedBox.shrink()],
-              title: ProductListCharlie(),
+              title: ProductListTabBar(),
               bottom: PreferredSize(
                 preferredSize: Size(double.infinity, 1),
                 child: Divider(

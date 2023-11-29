@@ -1,13 +1,13 @@
 flutter_native_splash:
   color: "#ffffff"
-  image: assets/icons/splash.png
+  image: assets/icons/pegashoes.png
   color_dark: "#ffffff"
-  image_dark: assets/icons/splash.png
+  image_dark: assets/icons/pegashoes.png
 
   android_12:
-    image: assets/icons/splash.png
+    image: assets/icons/pegashoes.png
     icon_background_color: "#ffffff"
-    image_dark: assets/icons/splash.png
+    image_dark: assets/icons/pegashoes.png
     icon_background_color_dark: "#ffffff"
 
   web: true
