@@ -155,7 +155,6 @@ class AdminWomenShoesListCtrl {
       _dt.rxProduct.setState((s) => wShoes);
       await _sv.readProduct();
       _sv.updateOneOfProductList(wShoes);
-      // Future.delayed(400.milliseconds);
       RM.navigate.back();
     } catch (e) {
       Fun.handleException(e);

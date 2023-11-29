@@ -63,6 +63,8 @@ class AdminMenShoesListDetailTileEditImages extends StatelessWidget {
         ),
         OutlinedButton(
           onPressed: () {
+            _ct.refreshTextField();
+
             nav.toDialog(
               AlertDialog(
                 title: const Text('Edit Images'),

@@ -38,6 +38,7 @@ class InputTextField extends StatelessWidget {
       textInputAction: textInputAction,
       onEditingComplete: onEditingComplete,
       decoration: InputDecoration(
+        isDense: true,
         errorText: errorText,
         suffixIcon: suffixIcon,
         labelText: labelText,

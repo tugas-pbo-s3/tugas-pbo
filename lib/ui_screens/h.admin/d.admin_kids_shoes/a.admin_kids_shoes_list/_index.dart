@@ -31,6 +31,8 @@ part 'widgets/m.admin_kids_shoes_list.detail_tile_edit_quantity.dart';
 part 'widgets/n.admin_kids_shoes_list.detail_tile_edit_category.dart';
 part 'widgets/o.admin_kids_shoes_list.detail_tile_edit_sizes.dart';
 part 'widgets/p.admin_kids_shoes_list.detail_tile_edit_colors.dart';
+part 'widgets/q.admin_kids_shoes_list.cards.dart';
+part 'widgets/r.admin_kids_shoes_list.loadmore.dart';
 
 AdminKidsShoesListData get _dt => Data.adminKidsShoesList.st;
 AdminKidsShoesListCtrl get _ct => Ctrl.adminKidsShoesList;

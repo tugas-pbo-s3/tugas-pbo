@@ -15,7 +15,11 @@ class AdminWomenShoesListView extends StatelessWidget {
         child: OnBuilder<List<WomenShoes>>.all(
           listenToMany: [_dt.rxLoadMore, _dt.rxProductList],
           onError: (e, s) => const Center(child: Text('error')),
-          onWaiting: () => const Center(child: CircularProgressIndicator()),
+          onWaiting: () => _dt.rxProductList.st.isEmpty
+              ? const Center(
+                  child: CircularProgressIndicator(),
+                )
+              : const AdminWomenShoesListCards(),
           onData: (data) => _dt.rxProductList.st.isEmpty
               ? const Stack(
                   children: [
@@ -29,37 +33,7 @@ class AdminWomenShoesListView extends StatelessWidget {
                     ),
                   ],
                 )
-              : OnReactive(
-                  () => Stack(
-                    children: [
-                      ListView(
-                        children: [
-                          // Text(MediaQuery.of(context).size.width.toString()),
-                          for (var item in _dt.rxProductList.st)
-                            AdminWomenShoesListCard(
-                              product: item,
-                            ),
-                          _dt.rxIsEnd.st
-                              ? const Center(child: Text('-- end of list --'))
-                              : Center(
-                                  child: OutlinedButton(
-                                    child: const Text('load more'),
-                                    onPressed: () => _ct.loadMore(),
-                                  ),
-                                ),
-                        ],
-                      ),
-                      const AdminWomenShoesListDetail(),
-                      const Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Align(
-                          alignment: Alignment.bottomRight,
-                          child: AdminWomenShoesListFab(),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              : const AdminWomenShoesListCards(),
         ),
       ),
     );

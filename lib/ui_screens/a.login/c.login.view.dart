@@ -6,10 +6,10 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(56),
-        child: LoginAppbar(),
-      ),
+      // appBar: const PreferredSize(
+      //   preferredSize: Size.fromHeight(56),
+      //   child: LoginAppbar(),
+      // ),
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 400),
@@ -21,12 +21,6 @@ class LoginView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Container(
-                    //   height: 150,
-                    //   decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-                    //   child: Image.asset('assets/images/pegaShoes2000.png'),
-                    // ),
-                    // SizedBoxH(30),
                     LoginEmail(),
                     SizedBox(height: 10),
                     LoginPassword(),
