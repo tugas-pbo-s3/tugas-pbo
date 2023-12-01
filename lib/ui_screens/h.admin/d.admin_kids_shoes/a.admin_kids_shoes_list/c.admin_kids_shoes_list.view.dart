@@ -12,7 +12,7 @@ class AdminKidsShoesListView extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
-        child: OnBuilder<List<KidsShoes>>.all(
+        child: OnBuilder<List<Rok>>.all(
           listenToMany: [_dt.rxLoadMore, _dt.rxProductList],
           onError: (e, s) => const Center(child: Text('error')),
           onWaiting: () => _dt.rxProductList.st.isEmpty

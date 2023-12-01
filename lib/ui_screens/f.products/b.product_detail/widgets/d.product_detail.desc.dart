@@ -7,7 +7,7 @@ class DetailDesc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBuilder<WomenShoes?>.all(
+    return OnBuilder<Kelom?>.all(
       listenTo: _dt.rxProductFuture,
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,

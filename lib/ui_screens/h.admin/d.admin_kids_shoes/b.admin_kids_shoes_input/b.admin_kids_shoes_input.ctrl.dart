@@ -62,7 +62,7 @@ class AdminKidsShoesInputCtrl {
   createProduct() async {
     final indexCategory = _dt.rxCategoryList.st.indexWhere((element) => element.categoryId == _dt.rxCategory.value);
     final category = _dt.rxCategoryList.st[indexCategory];
-    final kShoes = KidsShoes(
+    final kShoes = Rok(
       category: Category(
         categoryId: _dt.rxCategory.value ?? '',
         name: category.name,

@@ -11,13 +11,13 @@ class CartServ {
   //     ..insert(index, cartedShoes);
   // }
 
-  addToCart(CartedShoes cartedShoes) {
+  addToCart(CartedProduct cartedShoes) {
     _pv.rxCart.st = _pv.rxCart.st.copyWith(
       listCartedShoes: [..._pv.rxCart.st.listCartedShoes]..insert(0, cartedShoes),
     );
   }
 
-  updateToCart(CartedShoes cartedShoes, int index) {
+  updateToCart(CartedProduct cartedShoes, int index) {
     _pv.rxCart.st = _pv.rxCart.st.copyWith(
       listCartedShoes: [..._pv.rxCart.st.listCartedShoes]
         ..removeAt(index)

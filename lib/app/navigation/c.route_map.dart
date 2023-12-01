@@ -33,18 +33,17 @@ class RouteMap {
 
     Routes.cart: (RouteData data) => const CartView(),
 
-    Routes.all: (RouteData data) => const AllView(),
-    Routes.women: (RouteData data) => const WomenView(),
-    Routes.man: (RouteData data) => const ManView(),
-    Routes.kids: (RouteData data) => const KidsView(),
-    Routes.womenDetail: (RouteData data) {
+    Routes.kelom: (RouteData data) => const KelomView(),
+    Routes.rok: (RouteData data) => const RokView(),
+    Routes.kelomDetail: (RouteData data) {
       // final id = data.pathParams['id'];
       // logx.i(id.toString());
       // Prov.women.st.rxSelectedId.refresh();
       // Prov.women.st.rxSelectedId.setState((s) => id);
-      return const WomenDetailView();
+      return const KelomDetailView();
     },
-    Routes.manDetail: (RouteData data) => const MenDetailView(),
-    Routes.kidsDetail: (RouteData data) => const KidsDetailView(),
+    Routes.rokDetail: (RouteData data) => const RokDetailView(),
+    Routes.kebayaDetail: (RouteData data) => const KebayaDetailView(),
+    Routes.kebaya: (RouteData data) => const KebayaView(),
   };
 }

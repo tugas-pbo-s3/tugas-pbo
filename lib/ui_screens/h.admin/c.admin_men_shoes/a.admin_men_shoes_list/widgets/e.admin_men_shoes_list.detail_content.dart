@@ -7,7 +7,7 @@ class AdminMenShoesListDetailContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBuilder<MenShoes?>.all(
+    return OnBuilder<Kebaya?>.all(
       listenTo: _dt.rxProduct,
       onWaiting: () => _dt.rxHeightContainer.st < 500
           ? const SizedBox.shrink()

@@ -37,5 +37,5 @@ part 'widgets/r.admin_men_shoes_list.loadmore.dart';
 AdminMenShoesListData get _dt => Data.adminMenShoesList.st;
 AdminMenShoesListCtrl get _ct => Ctrl.adminMenShoesList;
 
-MenServ get _sv => Serv.man;
-MenProv get _pv => Prov.man.st;
+KebayaServ get _sv => Serv.kebaya;
+KebayaProv get _pv => Prov.kebaya.st;

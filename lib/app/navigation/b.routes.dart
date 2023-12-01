@@ -40,11 +40,11 @@ class Routes {
   static const cart = '/cart';
 
   static const all = '/all';
-  static const women = '/women';
-  static const man = '/man';
-  static const kids = '/kids';
+  static const kelom = '/kelom';
+  static const kebaya = '/kebaya';
+  static const rok = '/rok';
   // static const womenDetail = '/women_detail/:id';
-  static const womenDetail = '/women_detail';
-  static const manDetail = '/man_detail';
-  static const kidsDetail = '/kids_detail';
+  static const kelomDetail = '/kelom_detail';
+  static const kebayaDetail = '/kebaya_detail';
+  static const rokDetail = '/rok_detail';
 }

@@ -6,7 +6,7 @@ class AdminKidsShoesListTileEditPrice extends StatelessWidget {
     required this.kidsShoes,
   });
 
-  final KidsShoes? kidsShoes;
+  final Rok? kidsShoes;
 
   @override
   Widget build(BuildContext context) {

@@ -24,17 +24,15 @@ abstract class Data {
 
   static Injected<HomeData> get home => _homeData;
 
-  static Injected<ManData> get man => _manData;
-  static Injected<WomenData> get woman => _womanData;
-  static Injected<KidsData> get kids => _kidsData;
-  static Injected<AllData> get all => _allData;
-
   static Injected<CartData> get cart => _cartData;
   static Injected<ProfileData> get profile => _profileData;
-  static Injected<WomenDetailData> get womenDetail => _womenDetailData;
-  static Injected<ManDetailData> get manDetail => _manDetailData;
 
-  static Injected<KidsDetailData> get kidsDetail => _kidsDetailData;
+  static Injected<RokData> get rok => _rokData;
+  static Injected<RokDetailData> get rokDetail => _rokDetailData;
+  static Injected<KelomData> get kelom => _kelomData;
+  static Injected<KelomDetailData> get kelomDetail => _kelomDetailData;
+  static Injected<KebayaData> get kebaya => _kebayaData;
+  static Injected<KebayaDetailData> get kebayaDetail => _kebayaDetailData;
 }
 
 final _adminHomeData = RM1.inj(AdminHomeData(), () => Ctrl.adminHome.init);
@@ -59,14 +57,12 @@ final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
 final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);
 
 final _homeData = RM1.inj(HomeData(), Ctrl.home.init);
-
-final _manData = RM1.inj(ManData(), Ctrl.man.init);
-final _womanData = RM1.inj(WomenData(), Ctrl.woman.init);
-final _kidsData = RM1.inj(KidsData(), Ctrl.kids.init);
-final _allData = RM1.inj(AllData(), Ctrl.all.init);
-
 final _cartData = RM1.inj(CartData(), Ctrl.cart.init);
 final _profileData = RM1.inj(ProfileData(), Ctrl.profile.init);
-final _womenDetailData = RM1.inj(WomenDetailData(), Ctrl.womenDetail.init);
-final _manDetailData = RM1.inj(ManDetailData(), Ctrl.manDetail.init);
-final _kidsDetailData = RM1.inj(KidsDetailData(), Ctrl.kidsDetail.init);
+
+final _rokData = RM1.inj(RokData(), Ctrl.rok.init);
+final _rokDetailData = RM1.inj(RokDetailData(), Ctrl.rokDetail.init);
+final _kelomData = RM1.inj(KelomData(), Ctrl.woman.init);
+final _kelomDetailData = RM1.inj(KelomDetailData(), Ctrl.womenDetail.init);
+final _kebayaData = RM1.inj(KebayaData(), Ctrl.kebaya.init);
+final _kebayaDetailData = RM1.inj(KebayaDetailData(), Ctrl.kebayaDetail.init);

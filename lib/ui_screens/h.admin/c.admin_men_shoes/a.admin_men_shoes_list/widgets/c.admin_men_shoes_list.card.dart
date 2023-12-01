@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AdminMenShoesListCard extends StatelessWidget {
-  final MenShoes product;
+  final Kebaya product;
   const AdminMenShoesListCard({
     super.key,
     required this.product,

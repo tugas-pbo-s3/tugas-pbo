@@ -38,5 +38,5 @@ part 'widgets/r.admin_women_shoes_list.loadmore.dart';
 AdminWomenShoesListData get _dt => Data.adminWomenShoesList.st;
 AdminWomenShoesListCtrl get _ct => Ctrl.adminWomenShoesList;
 
-WomenServ get _sv => Serv.women;
-WomenProv get _pv => Prov.women.st;
+KelomServ get _sv => Serv.kelom;
+KelomProv get _pv => Prov.kelom.st;

@@ -124,7 +124,7 @@ class AdminMenShoesListCtrl {
     logx.wtf(_dt.rxCategory.st.value.toString());
     final category = _dt.rxCategoryList.st[indexCategory];
     logx.wtf(category.toString());
-    final mShoes = MenShoes(
+    final mShoes = Kebaya(
       category: Category(
         categoryId: category.categoryId,
         name: category.name,

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AdminKidsShoesListDetailTile extends StatelessWidget {
-  final KidsShoes? kidsShoes;
+  final Rok? kidsShoes;
   const AdminKidsShoesListDetailTile({
     super.key,
     required this.kidsShoes,

@@ -9,14 +9,14 @@ class AdminHomeData {
 
   final scaffoldHome = GlobalKey<ScaffoldState>();
 
-  final rxIsLimit = Prov.women.st.rxIsLimit;
+  final rxIsLimit = Prov.kelom.st.rxIsLimit;
 
-  final rxWomenShoes = Prov.women.st.rxProductList;
-  final rxWomenShoesLoaderWithoutLimit = Prov.women.st.rxLoadMoreWithoutLimit;
+  final rxWomenShoes = Prov.kelom.st.rxProductList;
+  final rxWomenShoesLoaderWithoutLimit = Prov.kelom.st.rxLoadMoreWithoutLimit;
 
-  final rxMenShoes = Prov.man.st.rxProductList;
-  final rxMenShoesLoaderWithoutLimit = Prov.man.st.rxLoadMoreWithoutLimit;
+  final rxMenShoes = Prov.kebaya.st.rxProductList;
+  final rxMenShoesLoaderWithoutLimit = Prov.kebaya.st.rxLoadMoreWithoutLimit;
 
-  final rxKidsShoes = Prov.kids.st.rxProductList;
-  final rxKidsShoesLoaderWithoutLimit = Prov.kids.st.rxLoadMoreWithoutLimit;
+  final rxKidsShoes = Prov.rok.st.rxProductList;
+  final rxKidsShoesLoaderWithoutLimit = Prov.rok.st.rxLoadMoreWithoutLimit;
 }

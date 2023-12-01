@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AdminMenShoesListDetailTileEditSizes extends StatelessWidget {
-  final MenShoes? menShoes;
+  final Kebaya? menShoes;
 
   const AdminMenShoesListDetailTileEditSizes({super.key, required this.menShoes});
 

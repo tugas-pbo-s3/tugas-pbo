@@ -10,7 +10,7 @@ class AdminKidsShoesInputColor extends StatelessWidget {
         margin: const EdgeInsets.only(top: 10.0),
         decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
         child: OnReactive(
-          () => MultiSelectChipField<ShoesColors?>(
+          () => MultiSelectChipField<ProductColors?>(
             scroll: true,
             items: _dt.itemColors,
             scrollBar: HorizontalScrollBar(),

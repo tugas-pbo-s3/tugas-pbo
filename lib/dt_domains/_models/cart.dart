@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class Cart {
-  List<CartedShoes> listCartedShoes;
+  List<CartedProduct> listCartedShoes;
   String userId;
   String cartId;
   Cart({
@@ -11,7 +11,7 @@ class Cart {
   });
 
   Cart copyWith({
-    List<CartedShoes>? listCartedShoes,
+    List<CartedProduct>? listCartedShoes,
     String? userId,
     String? cartId,
   }) {
@@ -34,7 +34,8 @@ class Cart {
 
   factory Cart.fromMap(Map<String, dynamic> map) {
     return Cart(
-      listCartedShoes: List<CartedShoes>.from(map['list_carted_shoes']?.map((x) => CartedShoes.fromMap(x)) ?? const []),
+      listCartedShoes:
+          List<CartedProduct>.from(map['list_carted_shoes']?.map((x) => CartedProduct.fromMap(x)) ?? const []),
       userId: map['user_id'] ?? '',
       cartId: map['cart_id'] ?? '',
     );

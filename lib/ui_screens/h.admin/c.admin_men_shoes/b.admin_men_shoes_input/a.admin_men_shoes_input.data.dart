@@ -21,8 +21,8 @@ class AdminMenShoesInputData {
 
   final rxCategoryLoader = Prov.category.st.rxLoadMore;
 
-  final rxSelectedSizes = RM.inject<List<ShoesSizes>>(() => []);
-  final rxSelectedColors = RM.inject<List<ShoesColors>>(() => []);
+  final rxSelectedSizes = RM.inject<List<ProductSizes>>(() => []);
+  final rxSelectedColors = RM.inject<List<ProductColors>>(() => []);
 
   final rxShoesSizes = RM.inject<List<int>>(() => []);
   final rxShoesColors = RM.inject<List<String>>(() => []);
@@ -33,41 +33,41 @@ class AdminMenShoesInputData {
 
   final rxImages = RM.inject<Map<String, String>>(() => {});
 
-  static final List<ShoesSizes> listOfSizes = [
-    ShoesSizes(id: 1, size: 35),
-    ShoesSizes(id: 2, size: 36),
-    ShoesSizes(id: 3, size: 37),
-    ShoesSizes(id: 4, size: 38),
-    ShoesSizes(id: 5, size: 39),
-    ShoesSizes(id: 6, size: 40),
-    ShoesSizes(id: 7, size: 41),
-    ShoesSizes(id: 8, size: 42),
-    ShoesSizes(id: 9, size: 43),
-    ShoesSizes(id: 10, size: 44),
-    ShoesSizes(id: 11, size: 45),
+  static final List<ProductSizes> listOfSizes = [
+    ProductSizes(id: 1, size: 35),
+    ProductSizes(id: 2, size: 36),
+    ProductSizes(id: 3, size: 37),
+    ProductSizes(id: 4, size: 38),
+    ProductSizes(id: 5, size: 39),
+    ProductSizes(id: 6, size: 40),
+    ProductSizes(id: 7, size: 41),
+    ProductSizes(id: 8, size: 42),
+    ProductSizes(id: 9, size: 43),
+    ProductSizes(id: 10, size: 44),
+    ProductSizes(id: 11, size: 45),
   ];
 
-  static final List<ShoesColors> listOfColors = [
-    ShoesColors(id: 1, colorText: 'blue', color: Colors.blue),
-    ShoesColors(id: 2, colorText: 'black', color: Colors.black),
-    ShoesColors(id: 3, colorText: 'white', color: Colors.white),
-    ShoesColors(id: 4, colorText: 'grey', color: Colors.grey),
-    ShoesColors(id: 5, colorText: 'green', color: Colors.green),
-    ShoesColors(id: 6, colorText: 'yellow', color: Colors.yellow),
-    ShoesColors(id: 7, colorText: 'red', color: Colors.red),
-    ShoesColors(id: 8, colorText: 'orange', color: Colors.orange),
-    ShoesColors(id: 9, colorText: 'pink', color: Colors.pink),
-    ShoesColors(id: 10, colorText: 'purple', color: Colors.purple),
+  static final List<ProductColors> listOfColors = [
+    ProductColors(id: 1, colorText: 'blue', color: Colors.blue),
+    ProductColors(id: 2, colorText: 'black', color: Colors.black),
+    ProductColors(id: 3, colorText: 'white', color: Colors.white),
+    ProductColors(id: 4, colorText: 'grey', color: Colors.grey),
+    ProductColors(id: 5, colorText: 'green', color: Colors.green),
+    ProductColors(id: 6, colorText: 'yellow', color: Colors.yellow),
+    ProductColors(id: 7, colorText: 'red', color: Colors.red),
+    ProductColors(id: 8, colorText: 'orange', color: Colors.orange),
+    ProductColors(id: 9, colorText: 'pink', color: Colors.pink),
+    ProductColors(id: 10, colorText: 'purple', color: Colors.purple),
   ];
 
-  final itemSizes = listOfSizes.map((size) => MultiSelectItem<ShoesSizes>(size, size.size.toString())).toList();
+  final itemSizes = listOfSizes.map((size) => MultiSelectItem<ProductSizes>(size, size.size.toString())).toList();
 
   final itemColors =
       listOfColors.map((color) => MultiSelectItem(color, color.colorText ?? color.color.toString())).toList();
 
-  final products = RM.inject<List<MenShoes>>(() => []);
+  final products = RM.inject<List<Kebaya>>(() => []);
 
-  final rxProduct = RM.inject<MenShoes?>(() => null);
+  final rxProduct = RM.inject<Kebaya?>(() => null);
 
   final rxForm = RM.injectForm(
     submit: () => Ctrl.adminMenShoesInput.createProduct(),

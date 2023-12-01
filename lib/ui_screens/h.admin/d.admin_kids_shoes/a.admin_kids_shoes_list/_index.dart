@@ -37,5 +37,5 @@ part 'widgets/r.admin_kids_shoes_list.loadmore.dart';
 AdminKidsShoesListData get _dt => Data.adminKidsShoesList.st;
 AdminKidsShoesListCtrl get _ct => Ctrl.adminKidsShoesList;
 
-KidsServ get _sv => Serv.kids;
-KidsProv get _pv => Prov.kids.st;
+RokServ get _sv => Serv.rok;
+RokProv get _pv => Prov.rok.st;

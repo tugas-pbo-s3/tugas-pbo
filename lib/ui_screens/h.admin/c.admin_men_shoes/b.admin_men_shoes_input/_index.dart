@@ -31,8 +31,8 @@ part 'widgets/l.admin_men_shoes_input.submit.dart';
 AdminMenShoesInputData get _dt => Data.adminMenShoesInput.st;
 AdminMenShoesInputCtrl get _ct => Ctrl.adminMenShoesInput;
 
-MenServ get _sv => Serv.man;
-MenProv get _pv => Prov.man.st;// static AdminProductInputCtrl get adminProductInput => AdminProductInputCtrl();
+KebayaServ get _sv => Serv.kebaya;
+KebayaProv get _pv => Prov.kebaya.st;// static AdminProductInputCtrl get adminProductInput => AdminProductInputCtrl();
 // final _adminProductInputData = RM1.inj(AdminProductInputData(), Ctrl.adminProductInput.init);
 // static Injected<AdminProductInputData> get adminProductInput => _adminProductInputData;
 // export 'admin_product_input/_index.dart';

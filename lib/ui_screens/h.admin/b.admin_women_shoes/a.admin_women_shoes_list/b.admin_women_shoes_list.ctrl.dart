@@ -64,12 +64,12 @@ class AdminWomenShoesListCtrl {
   }
 
   Future<void> loadMore() async {
-    Serv.women.readAllProducts();
+    Serv.kelom.readAllProducts();
   }
 
   select(String id) {
     _dt.rxHeightContainer.refresh();
-    Serv.women.setSelectedId(id);
+    Serv.kelom.setSelectedId(id);
 
     _sv.readProduct();
 
@@ -124,7 +124,7 @@ class AdminWomenShoesListCtrl {
     logx.wtf(_dt.rxCategory.st.value.toString());
     final category = _dt.rxCategoryList.st[indexCategory];
     logx.wtf(category.toString());
-    final wShoes = WomenShoes(
+    final wShoes = Kelom(
       category: Category(
         categoryId: category.categoryId,
         name: category.name,
@@ -147,7 +147,7 @@ class AdminWomenShoesListCtrl {
     logx.e(wShoes.name);
     try {
       logx.wtf(_dt.rxCategory.st.value.toString());
-      await Serv.women.updateProduct(wShoes, _dt.rxImages.st);
+      await Serv.kelom.updateProduct(wShoes, _dt.rxImages.st);
       _dt.rxProduct.setState((s) => wShoes);
       await _sv.readProduct();
       _sv.updateOneOfProductList(wShoes);

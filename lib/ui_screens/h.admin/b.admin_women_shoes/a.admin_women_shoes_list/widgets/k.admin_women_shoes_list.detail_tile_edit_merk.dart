@@ -6,7 +6,7 @@ class AdminWomenShoesListTileEditMerk extends StatelessWidget {
     required this.womenShoes,
   });
 
-  final WomenShoes? womenShoes;
+  final Kelom? womenShoes;
 
   @override
   Widget build(BuildContext context) {

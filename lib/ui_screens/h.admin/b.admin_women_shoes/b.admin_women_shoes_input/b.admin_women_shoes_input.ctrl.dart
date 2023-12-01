@@ -45,7 +45,7 @@ class AdminWomenShoesInputCtrl {
   }
 
   uploadImages() async {
-    await Serv.women.uploadImages(_dt.rxImages.st);
+    await Serv.kelom.uploadImages(_dt.rxImages.st);
   }
 
   Future<void> pickImages() async {
@@ -74,7 +74,7 @@ class AdminWomenShoesInputCtrl {
   createProduct() async {
     final indexCategory = _dt.rxCategoryList.st.indexWhere((element) => element.categoryId == _dt.rxCategory.value);
     final category = _dt.rxCategoryList.st[indexCategory];
-    final product = WomenShoes(
+    final product = Kelom(
       category: Category(
         categoryId: category.categoryId,
         name: category.name,
@@ -93,7 +93,7 @@ class AdminWomenShoesInputCtrl {
       imageUrl: _dt.rxImages.st,
     );
 
-    await Serv.women.createProduct(product);
+    await Serv.kelom.createProduct(product);
 
     _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
 

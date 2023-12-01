@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
 class AdminWomenShoesListDetailTileEditColors extends StatelessWidget {
-  final WomenShoes? womenShoes;
+  final Kelom? womenShoes;
 
   const AdminWomenShoesListDetailTileEditColors({super.key, required this.womenShoes});
 

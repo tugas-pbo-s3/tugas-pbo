@@ -21,7 +21,7 @@ class AdminKidsShoesListTileEdit extends StatelessWidget {
     required this.editField,
   });
 
-  final KidsShoes? kidsShoes;
+  final Rok? kidsShoes;
 
   @override
   Widget build(BuildContext context) {

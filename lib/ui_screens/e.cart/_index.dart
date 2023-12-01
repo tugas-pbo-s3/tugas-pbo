@@ -21,7 +21,7 @@ part 'widgets/e.cart.echo.dart';
 CartData get _dt => Data.cart.st;
 CartCtrl get _ct => Ctrl.cart;
 
-WomenProv get _pv => Prov.women.st;
+KelomProv get _pv => Prov.kelom.st;
 // ProductProv get _pvProduct => Prov.product.st;
 CartProv get _pvCart => Prov.cart.st;
 CartServ get _sv => Serv.cart;

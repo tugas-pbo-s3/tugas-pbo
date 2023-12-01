@@ -6,8 +6,8 @@ abstract class Serv {
   static RoleServ get role => RoleServ();
   static CategoryServ get category => CategoryServ();
   static TypeServ get type => TypeServ();
-  static WomenServ get women => WomenServ();
-  static MenServ get man => MenServ();
+  static KelomServ get kelom => KelomServ();
+  static KebayaServ get kebaya => KebayaServ();
   static CartServ get cart => CartServ();
-  static KidsServ get kids => KidsServ();
+  static RokServ get rok => RokServ();
 }

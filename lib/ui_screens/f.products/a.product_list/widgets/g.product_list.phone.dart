@@ -27,9 +27,9 @@ class ProductListPhone extends StatelessWidget {
         },
         body: const TabBarView(
           children: <Widget>[
-            WomenView(),
-            ManView(),
-            KidsView(),
+            KelomView(),
+            KebayaView(),
+            RokView(),
           ],
         ),
       ),

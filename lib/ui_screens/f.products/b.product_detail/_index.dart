@@ -17,5 +17,5 @@ part 'widgets/d.product_detail.desc.dart';
 part 'widgets/e.product_detail.bottomsheet.dart';
 
 ProductDetailData get _dt => Data.productDetail.st;
-WomenProv get _pv => Prov.women.st;
+KelomProv get _pv => Prov.kelom.st;
 // ProductDetailCtrl get _ct => Ctrl.productDetail;

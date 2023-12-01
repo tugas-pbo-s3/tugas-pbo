@@ -71,7 +71,7 @@ class AdminMenShoesInputCtrl {
   createProduct() async {
     final indexCategory = _dt.rxCategoryList.st.indexWhere((element) => element.categoryId == _dt.rxCategory.value);
     final category = _dt.rxCategoryList.st[indexCategory];
-    final product = MenShoes(
+    final product = Kebaya(
       category: Category(
         categoryId: _dt.rxCategory.value ?? '',
         name: category.name,

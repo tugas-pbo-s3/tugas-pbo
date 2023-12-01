@@ -1,4 +1,3 @@
-export 'all/_index.dart';
-export 'women/_index.dart';
-export 'men/_index.dart';
-export 'kids/_index.dart';
+export 'kelom/_index.dart';
+export 'kebaya/_index.dart';
+export 'rok/_index.dart';
