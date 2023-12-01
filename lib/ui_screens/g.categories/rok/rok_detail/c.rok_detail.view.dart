@@ -63,8 +63,8 @@ class RokDetailView extends StatelessWidget {
                               children: [
                                 const RokDetailDescWeb(),
                                 const SizedBox(height: 5),
-                                RokDetailSize(sizes: sizes),
-                                const SizedBox(height: 5),
+                                // RokDetailSize(sizes: sizes),
+                                // const SizedBox(height: 5),
                                 RokDetailColor(colors: colors, colorsState: Colors.purple.shade200),
                                 const RokDetailQty(),
                                 const SizedBox(height: 10),

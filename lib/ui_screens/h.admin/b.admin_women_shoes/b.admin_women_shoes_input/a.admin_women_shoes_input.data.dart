@@ -1,15 +1,15 @@
 part of '_index.dart';
 
 class AdminWomenShoesInputData {
-  final rxTitle = 'Women\'s Shoes Input'.inj();
+  final rxTitle = 'Kelom Input'.inj();
 
   final rxInt = 0.inj();
 
   final colId = Prov.kelom.st.colId;
 
-  final docId = 'w-shoes';
+  final docId = 'kelom';
 
-  final colId2 = 'women-shoes';
+  final colId2 = 'kelom-geulis';
 
   final rxProductList = Prov.kelom.st.rxProductList;
 

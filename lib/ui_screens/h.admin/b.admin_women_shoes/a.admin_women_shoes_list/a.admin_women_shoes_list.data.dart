@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AdminWomenShoesListData {
-  final rxTitle = 'Women\'s Shoes List'.inj();
+  final rxTitle = 'Kelom List'.inj();
 
   final rxInt = 0.inj();
 
@@ -9,9 +9,9 @@ class AdminWomenShoesListData {
 
   final colId = _pv.colId;
 
-  final docId = 'w-shoes';
+  final docId = 'kelom';
 
-  final colId2 = 'women-shoes';
+  final colId2 = 'kelom-gelis';
 
   final rxImages = RM.inject<Map<String, String>>(() => {});
 

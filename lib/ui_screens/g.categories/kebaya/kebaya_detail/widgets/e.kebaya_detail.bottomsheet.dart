@@ -22,7 +22,7 @@ class KebayaDetailBottomSheet extends StatelessWidget {
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,
       onData: (data) {
-        final sizes = _dt.rxProductFuture.st!.sizes;
+        // final sizes = _dt.rxProductFuture.st!.sizes;
 
         final colors = _dt.rxProductFuture.st!.colors;
 
@@ -48,8 +48,8 @@ class KebayaDetailBottomSheet extends StatelessWidget {
                 ),
               ),
               const SizedBoxH(10),
-              KebayaDetailSize(sizes: sizes),
-              const SizedBoxH(10),
+              // KebayaDetailSize(sizes: sizes),
+              // const SizedBoxH(10),
               KebayaDetailColor(colors: colors, colorsState: Colors.purple.shade200),
               const SizedBoxH(10),
               const KebayaDetailQty(),

@@ -19,15 +19,15 @@ class HomePhone extends StatelessWidget {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home_sharp),
-              label: 'Home',
+              label: 'Beranda',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
-              label: 'cart',
+              label: 'Keranjang',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: 'profile',
+              label: 'profil',
             ),
           ],
         ),

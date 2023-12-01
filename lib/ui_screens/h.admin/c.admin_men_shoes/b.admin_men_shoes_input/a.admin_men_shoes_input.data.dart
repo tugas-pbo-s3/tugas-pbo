@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AdminMenShoesInputData {
-  final rxTitle = 'Men\'s Shoes Input'.inj();
+  final rxTitle = 'Kebaya Input'.inj();
 
   final rxInt = 0.inj();
 
@@ -34,18 +34,21 @@ class AdminMenShoesInputData {
   final rxImages = RM.inject<Map<String, String>>(() => {});
 
   static final List<ProductSizes> listOfSizes = [
-    ProductSizes(id: 1, size: 35),
-    ProductSizes(id: 2, size: 36),
-    ProductSizes(id: 3, size: 37),
-    ProductSizes(id: 4, size: 38),
-    ProductSizes(id: 5, size: 39),
-    ProductSizes(id: 6, size: 40),
-    ProductSizes(id: 7, size: 41),
-    ProductSizes(id: 8, size: 42),
-    ProductSizes(id: 9, size: 43),
-    ProductSizes(id: 10, size: 44),
-    ProductSizes(id: 11, size: 45),
+    ProductSizes(id: 1, size: 0),
   ];
+  // static final List<ProductSizes> listOfSizes = [
+  //   ProductSizes(id: 1, size: 35),
+  //   ProductSizes(id: 2, size: 36),
+  //   ProductSizes(id: 3, size: 37),
+  //   ProductSizes(id: 4, size: 38),
+  //   ProductSizes(id: 5, size: 39),
+  //   ProductSizes(id: 6, size: 40),
+  //   ProductSizes(id: 7, size: 41),
+  //   ProductSizes(id: 8, size: 42),
+  //   ProductSizes(id: 9, size: 43),
+  //   ProductSizes(id: 10, size: 44),
+  //   ProductSizes(id: 11, size: 45),
+  // ];
 
   static final List<ProductColors> listOfColors = [
     ProductColors(id: 1, colorText: 'blue', color: Colors.blue),

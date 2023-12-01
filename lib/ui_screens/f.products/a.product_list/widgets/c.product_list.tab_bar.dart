@@ -12,9 +12,9 @@ class ProductListTabBar extends StatelessWidget {
       indicatorColor: Colors.deepPurple.shade700,
       indicatorPadding: const EdgeInsets.fromLTRB(2, 0, 2, 0),
       tabs: const <Widget>[
-        Tab(text: 'Women'),
-        Tab(text: 'Men'),
-        Tab(text: 'Kids'),
+        Tab(text: 'Kelom'),
+        Tab(text: 'Kebaya'),
+        Tab(text: 'Rok'),
       ],
     );
   }

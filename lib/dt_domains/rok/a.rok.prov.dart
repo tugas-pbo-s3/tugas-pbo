@@ -1,9 +1,9 @@
 part of '_index.dart';
 
 class RokProv {
-  final colId = 'shoes';
-  final colId2 = 'kids-shoes';
-  final docId1 = 'k-shoes';
+  final colId = 'products';
+  final colId2 = 'rok-geulis';
+  final docId1 = 'rok';
   final limit = 10;
   final rxIsEnd = false.inj();
 

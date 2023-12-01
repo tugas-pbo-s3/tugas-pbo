@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class CategoryProv {
-  final colId = 'category';
+  final colId = 'kategori';
 
   final limit = 3;
 

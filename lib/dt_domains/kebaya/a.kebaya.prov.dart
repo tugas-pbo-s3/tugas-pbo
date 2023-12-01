@@ -1,9 +1,9 @@
 part of '_index.dart';
 
 class KebayaProv {
-  final colId = 'shoes';
-  final colId2 = 'man-shoes';
-  final docId1 = 'm-shoes';
+  final colId = 'products';
+  final colId2 = 'kebaya-geulis';
+  final docId1 = 'kebaya';
   final limit = 10;
   final rxIsEnd = false.inj();
 

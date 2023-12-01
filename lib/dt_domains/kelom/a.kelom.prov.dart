@@ -1,9 +1,9 @@
 part of '_index.dart';
 
 class KelomProv {
-  final colId = 'shoes';
-  final colId2 = 'women-shoes';
-  final docId1 = 'w-shoes';
+  final colId = 'products';
+  final colId2 = 'kelom-geulis';
+  final docId1 = 'kelom';
   final limit = 10;
   final rxIsEnd = false.inj();
 

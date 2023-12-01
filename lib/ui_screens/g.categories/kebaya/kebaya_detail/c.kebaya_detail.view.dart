@@ -29,7 +29,7 @@ class KebayaDetailView extends StatelessWidget {
         onError: (error, refreshError) => const Text('error'),
         onData: (data) {
           _ct.setQty();
-          final sizes = _dt.rxProductFuture.st?.sizes ?? [];
+          // final sizes = _dt.rxProductFuture.st?.sizes ?? [];
 
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
@@ -63,8 +63,8 @@ class KebayaDetailView extends StatelessWidget {
                               children: [
                                 const KebayaDetailDescWeb(),
                                 const SizedBox(height: 5),
-                                KebayaDetailSize(sizes: sizes),
-                                const SizedBox(height: 5),
+                                // KebayaDetailSize(sizes: sizes),
+                                // const SizedBox(height: 5),
                                 KebayaDetailColor(colors: colors, colorsState: Colors.purple.shade200),
                                 const KebayaDetailQty(),
                                 const SizedBox(height: 10),
