@@ -25,7 +25,7 @@ class AdminHomeInfoTotal extends StatelessWidget {
               _dt.rxKidsShoes,
               _dt.rxKidsShoesLoaderWithoutLimit
             ],
-            onWaiting: () => const Text('Loading ...'),
+            onWaiting: () => const Text('Memuat ...'),
             onError: (error, refreshError) => Text('Error: $error'),
             onData: (data) => Text(
               '${_dt.rxWomenShoes.st.length + _dt.rxMenShoes.st.length + _dt.rxKidsShoes.st.length}',

@@ -69,7 +69,7 @@ class AdminHomeSidebar extends StatelessWidget {
                 _ct.signOut();
               },
               child: const Text(
-                'Sign Out',
+                'Keluar',
                 textAlign: TextAlign.center,
               ),
             ),
@@ -104,7 +104,7 @@ class AdminHomeSidebar extends StatelessWidget {
       items: [
         SidebarXItem(
           icon: Icons.home,
-          label: 'Home',
+          label: 'Beranda',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
             _dt.rxIsLimit.setState((s) => false);
@@ -113,28 +113,28 @@ class AdminHomeSidebar extends StatelessWidget {
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Women Shoes',
+          label: 'Kelom',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Men Shoes',
+          label: 'Kebaya',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },
         ),
         SidebarXItem(
           icon: Icons.shopping_bag,
-          label: 'Kids Shoes',
+          label: 'Rok',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },
         ),
         SidebarXItem(
           icon: Icons.category,
-          label: 'Category',
+          label: 'Kategori',
           onTap: () {
             logx.w(_dt.sideBarCtrl.selectedIndex.toString());
           },

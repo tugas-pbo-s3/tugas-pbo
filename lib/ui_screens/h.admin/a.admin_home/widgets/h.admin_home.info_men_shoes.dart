@@ -28,7 +28,7 @@ class AdminHomeInfoTotalMenShoes extends StatelessWidget {
                 OnBuilder.all(
                   listenToMany: [_dt.rxMenShoes, _dt.rxMenShoesLoaderWithoutLimit],
                   onError: (e, s) => Text('Error: $e'),
-                  onWaiting: () => const Text('loading ...'),
+                  onWaiting: () => const Text('Memuat ...'),
                   onData: (data) => Text('${_dt.rxMenShoes.st.length}', textScaleFactor: 2.5),
                 ),
                 const SizedBoxH(5),

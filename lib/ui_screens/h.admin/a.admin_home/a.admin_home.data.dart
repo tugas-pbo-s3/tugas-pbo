@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AdminHomeData {
-  final rxTitle = 'AdminHome'.inj();
+  final rxTitle = 'Beranda Admin'.inj();
 
   final rxInt = 0.inj();
 

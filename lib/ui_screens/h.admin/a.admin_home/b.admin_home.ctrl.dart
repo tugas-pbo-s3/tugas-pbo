@@ -19,21 +19,21 @@ class AdminHomeCtrl {
   String getTitleByIndex(int index) {
     switch (index) {
       case 0:
-        return 'Home';
+        return 'Beranda';
       case 1:
-        return 'Women\'s Shoes';
+        return 'Kelom';
       case 2:
-        return 'Men\'s Shoes';
+        return 'Kebaya';
       case 3:
-        return 'Kids\'s Shoes';
+        return 'Rok';
       case 4:
-        return 'Category';
+        return 'Kategori';
       // case 5:
       //   return 'Profile';
       // case 6:
       //   return 'Settings';
       default:
-        return 'Not found page';
+        return 'Halaman tidak ditemukan';
     }
   }
 }
