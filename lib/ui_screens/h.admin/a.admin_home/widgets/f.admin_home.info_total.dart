@@ -13,7 +13,7 @@ class AdminHomeInfoTotal extends StatelessWidget {
         children: [
           const SizedBoxH(20),
           const Text(
-            'Total Products',
+            'Total Produk',
             textScaleFactor: 2,
           ),
           OnBuilder.all(
@@ -32,10 +32,10 @@ class AdminHomeInfoTotal extends StatelessWidget {
               textScaleFactor: 3,
             ),
           ),
-          const Text(
-            'Shoes',
-            textScaleFactor: 1.5,
-          ),
+          // const Text(
+          //   'Shoes',
+          //   textScaleFactor: 1.5,
+          // ),
         ],
       ),
     );

@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class KelomDetailData {
-  final rxTitle = 'Women\'s Shoes Detail'.inj();
+  final rxTitle = 'Detail Kelom'.inj();
 
   final rxInt = 0.inj();
 

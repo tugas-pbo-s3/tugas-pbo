@@ -48,16 +48,16 @@ class AdminWomenShoesInputData {
   ];
 
   static final List<ProductColors> listOfColors = [
-    ProductColors(id: 1, colorText: 'blue', color: Colors.blue),
-    ProductColors(id: 2, colorText: 'black', color: Colors.black),
-    ProductColors(id: 3, colorText: 'white', color: Colors.white),
-    ProductColors(id: 4, colorText: 'grey', color: Colors.grey),
-    ProductColors(id: 5, colorText: 'green', color: Colors.green),
-    ProductColors(id: 6, colorText: 'yellow', color: Colors.yellow),
-    ProductColors(id: 7, colorText: 'red', color: Colors.red),
-    ProductColors(id: 8, colorText: 'orange', color: Colors.orange),
-    ProductColors(id: 9, colorText: 'pink', color: Colors.pink),
-    ProductColors(id: 10, colorText: 'purple', color: Colors.purple),
+    ProductColors(id: 1, colorText: 'biru', color: Colors.blue),
+    ProductColors(id: 2, colorText: 'hitam', color: Colors.black),
+    ProductColors(id: 3, colorText: 'putih', color: Colors.white),
+    ProductColors(id: 4, colorText: 'abu', color: Colors.grey),
+    ProductColors(id: 5, colorText: 'hijau', color: Colors.green),
+    ProductColors(id: 6, colorText: 'kuning', color: Colors.yellow),
+    ProductColors(id: 7, colorText: 'merah', color: Colors.red),
+    ProductColors(id: 8, colorText: 'oren', color: Colors.orange),
+    ProductColors(id: 9, colorText: 'merah muda', color: Colors.pink),
+    ProductColors(id: 10, colorText: 'ungu', color: Colors.purple),
   ];
 
   final itemSizes = listOfSizes.map((size) => MultiSelectItem<ProductSizes>(size, size.size.toString())).toList();

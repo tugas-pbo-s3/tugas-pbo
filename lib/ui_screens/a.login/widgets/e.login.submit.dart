@@ -22,7 +22,7 @@ class LoginSubmit extends StatelessWidget {
             ),
             onPressed: _dt.rxForm.isDirty && _dt.rxForm.isValid ? () => _ct.submit() : null,
             child: const Text(
-              'Submit',
+              'Kirim',
             ),
           ),
         ),

@@ -16,7 +16,7 @@ class LoginEmail extends StatelessWidget {
         onEditingComplete: () => _dt.rxPassword.focusNode.requestFocus(),
         errorText: _dt.rxEmail.error,
         labelText: 'Email',
-        hintText: 'email@example.com',
+        hintText: 'email@contoh.com',
         prefixIcon: const Icon(Icons.email),
       ),
     );

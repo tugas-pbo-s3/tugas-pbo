@@ -26,7 +26,7 @@ class RegisterPassword extends StatelessWidget {
           ),
         ),
         labelText: 'Password',
-        hintText: 'Input your password',
+        hintText: 'Masukkan Password Anda',
         prefixIcon: const Icon(Icons.lock),
       ),
     );

@@ -68,7 +68,7 @@ class KelomDetailDescPhone extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Show More",
+                    "Lihat Selengkapnya",
                   ),
                 ),
               ],

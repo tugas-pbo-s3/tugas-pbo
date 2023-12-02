@@ -22,7 +22,7 @@ class RokDetailBottomSheet extends StatelessWidget {
       onWaiting: () => const CircularProgressIndicator(),
       onError: (error, refreshError) => error,
       onData: (data) {
-        final sizes = _dt.rxProductFuture.st!.sizes;
+        // final sizes = _dt.rxProductFuture.st!.sizes;
 
         final colors = _dt.rxProductFuture.st!.colors;
 

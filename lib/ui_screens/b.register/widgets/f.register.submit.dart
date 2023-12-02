@@ -19,7 +19,7 @@ class RegisterSubmit extends StatelessWidget {
               fixedSize: const Size.fromWidth(200),
             ),
             onPressed: _dt.rxForm.isDirty && _dt.rxForm.isValid ? () => _ct.submit() : null,
-            child: const Text('Submit'),
+            child: const Text('Kirim'),
           ),
         ),
       ),

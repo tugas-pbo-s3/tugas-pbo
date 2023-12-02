@@ -16,7 +16,7 @@ class RegisterEmail extends StatelessWidget {
         onEditingComplete: () => _dt.rxPassword.focusNode.requestFocus(),
         errorText: _dt.rxEmail.error,
         labelText: 'Email',
-        hintText: 'Type your email',
+        hintText: 'Masukkan Email Anda',
         prefixIcon: const Icon(Icons.email),
       ),
     );

@@ -18,7 +18,7 @@ class CartView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'You logged in as anonymous. Please log in to view your cart',
+                      'Anda login sebagai anonymous. Silakan login dengan akun untuk melihat keranjang anda',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -27,7 +27,7 @@ class CartView extends StatelessWidget {
                       onPressed: () {
                         _ct.signOut();
                       },
-                      child: const Text('Back to login page'),
+                      child: const Text('Kembali ke halaman login'),
                     )
                   ],
                 ),

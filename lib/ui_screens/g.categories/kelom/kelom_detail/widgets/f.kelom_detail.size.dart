@@ -17,7 +17,7 @@ class KelomDetailSize extends StatelessWidget {
         child: Row(
           children: [
             const Text(
-              'Size: ',
+              'Ukuran: ',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,

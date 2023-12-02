@@ -10,7 +10,7 @@ class KelomDetailQty extends StatelessWidget {
     return Row(
       children: [
         const Text(
-          'Quantity: ',
+          'Jumlah: ',
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w500,

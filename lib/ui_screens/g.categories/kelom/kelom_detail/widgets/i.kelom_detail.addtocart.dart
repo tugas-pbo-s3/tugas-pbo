@@ -12,16 +12,16 @@ class KelomDetailAddtoCart extends StatelessWidget {
         _dt.rxUser.st!.isAnonymous
             ? nav.toDialog(
                 AlertDialog(
-                  title: const Text('Warning!'),
+                  title: const Text('Peringatan!'),
                   content: const Text(
-                    'You cannot add this product to your cart because you are logged in as anonymous. Try to log in again',
+                    'Anda tidak dapat menambahkan produk ke dalam keranjang karena anda login sebagai anonymous. Segera login dengan akun',
                   ),
                   actions: [
                     TextButton(
                       onPressed: () {
                         nav.back();
                       },
-                      child: const Text('Cancel'),
+                      child: const Text('Batal'),
                     ),
                     TextButton(
                       onPressed: () {
@@ -45,7 +45,7 @@ class KelomDetailAddtoCart extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         child: Text(
-          'Add to cart',
+          'Tambah ke Keranjang',
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w600,

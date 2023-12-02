@@ -23,7 +23,7 @@ class AdminHomeInfoTotalMenShoes extends StatelessWidget {
               children: [
                 SizedBox(
                   height: 80,
-                  child: Image.asset('assets/images/men.png'),
+                  child: Image.asset('assets/images/kebaya.png'),
                 ),
                 OnBuilder.all(
                   listenToMany: [_dt.rxMenShoes, _dt.rxMenShoesLoaderWithoutLimit],
@@ -32,7 +32,7 @@ class AdminHomeInfoTotalMenShoes extends StatelessWidget {
                   onData: (data) => Text('${_dt.rxMenShoes.st.length}', textScaleFactor: 2.5),
                 ),
                 const SizedBoxH(5),
-                const Text('Men\'s Shoes'),
+                const Text('Kebaya'),
               ],
             ),
           ),

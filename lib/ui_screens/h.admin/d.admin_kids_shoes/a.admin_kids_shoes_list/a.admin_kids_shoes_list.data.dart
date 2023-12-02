@@ -57,20 +57,17 @@ class AdminKidsShoesListData {
   //   45
   // ];
   static final List<String> listOfColors = [
-    'blue',
-    'black',
-    'green',
-    'red',
-    'white',
-    'grey',
-    'brown',
-    'yellow',
-    'orange',
-    'pink',
-    'purple',
-    'light green',
-    'gold',
-    'silver'
+    'biru',
+    'hitam',
+    'hijau',
+    'merah',
+    'putih',
+    'abu',
+    'coklat',
+    'kuning',
+    'oren',
+    'merah muda',
+    'ungu',
   ];
 
   final itemSizes = listOfSizes.map((size) => MultiSelectItem<int>(size, size.toString())).toList();

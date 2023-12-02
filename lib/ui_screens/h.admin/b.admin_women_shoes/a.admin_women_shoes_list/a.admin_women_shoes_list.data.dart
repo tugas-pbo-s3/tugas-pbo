@@ -33,20 +33,17 @@ class AdminWomenShoesListData {
 
   static final List<int> listOfSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45];
   static final List<String> listOfColors = [
-    'blue',
-    'black',
-    'green',
-    'red',
-    'white',
-    'grey',
-    'brown',
-    'yellow',
-    'orange',
-    'pink',
-    'purple',
-    'light green',
-    'gold',
-    'silver'
+    'biru',
+    'hitam',
+    'hijau',
+    'merah',
+    'putih',
+    'abu',
+    'coklat',
+    'kuning',
+    'oren',
+    'merah muda',
+    'ungu',
   ];
 
   final itemSizes = listOfSizes.map((size) => MultiSelectItem<int>(size, size.toString())).toList();

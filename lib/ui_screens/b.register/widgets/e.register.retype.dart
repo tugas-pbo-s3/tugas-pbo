@@ -27,8 +27,8 @@ class RegisterRetype extends StatelessWidget {
                 : const Icon(Icons.visibility_off),
           ),
         ),
-        labelText: 'Retype Password',
-        hintText: 'Retype your password',
+        labelText: 'Ketik Ulang Password',
+        hintText: 'Ketik Ulang Password Anda',
         prefixIcon: const Icon(Icons.lock),
       ),
     );
