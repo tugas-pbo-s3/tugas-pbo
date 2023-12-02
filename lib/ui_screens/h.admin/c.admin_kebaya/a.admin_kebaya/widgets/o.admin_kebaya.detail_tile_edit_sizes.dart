@@ -1,16 +1,16 @@
 part of '../_index.dart';
 
-class AdminMenShoesListDetailTileEditSizes extends StatelessWidget {
+class AdminKebayaDetailTileEditSizes extends StatelessWidget {
   final Kebaya? menShoes;
 
-  const AdminMenShoesListDetailTileEditSizes({super.key, required this.menShoes});
+  const AdminKebayaDetailTileEditSizes({super.key, required this.menShoes});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       visualDensity: VisualDensity.comfortable,
       style: ListTileStyle.drawer,
-      title: const Text('Sizes'),
+      title: const Text('Ukuran'),
       leading: const Icon(Icons.confirmation_number),
       subtitle: Wrap(
         children: [
@@ -26,13 +26,13 @@ class AdminMenShoesListDetailTileEditSizes extends StatelessWidget {
         onPressed: () {
           nav.toDialog(
             AlertDialog(
-              title: const Text('Edit Men Shoes Sizes'),
+              title: const Text('Edit Ukuran Kebaya'),
               actions: [
                 TextButton(
                   onPressed: () {
                     nav.back();
                   },
-                  child: const Text('Cancel'),
+                  child: const Text('batal'),
                 ),
                 OnFormBuilder(
                   listenTo: _dt.rxForm,
@@ -41,7 +41,7 @@ class AdminMenShoesListDetailTileEditSizes extends StatelessWidget {
                     onSubmitting: () => const CircularProgressIndicator(),
                     child: TextButton(
                       onPressed: () => _ct.submit(),
-                      child: const Text('Submit'),
+                      child: const Text('kirim'),
                     ),
                   ),
                 ),
@@ -53,7 +53,7 @@ class AdminMenShoesListDetailTileEditSizes extends StatelessWidget {
                     () => MultiSelectChipField(
                       items: _dt.itemSizes,
                       initialValue: const [],
-                      title: const Text("Size"),
+                      title: const Text("Ukuran"),
                       headerColor: Colors.transparent,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),

@@ -8,6 +8,6 @@ abstract class Serv {
   static TypeServ get type => TypeServ();
   static KelomServ get kelom => KelomServ();
   static KebayaServ get kebaya => KebayaServ();
-  static CartServ get cart => CartServ();
+  static CartServ get keranjang => CartServ();
   static RokServ get rok => RokServ();
 }

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesInputName extends StatelessWidget {
-  const AdminKidsShoesInputName({super.key});
+class AdminRokInputName extends StatelessWidget {
+  const AdminRokInputName({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class AdminKidsShoesInputName extends StatelessWidget {
         textInputAction: TextInputAction.next,
         onEditingComplete: () => _dt.rxPrice.focusNode.requestFocus(),
         decoration: InputDecoration(
-          hintText: 'Name of Product',
-          labelText: 'Name',
+          hintText: 'Masukkan Nama Produk',
+          labelText: 'Nama Produk',
           errorText: _dt.rxName.error,
         ),
       ),

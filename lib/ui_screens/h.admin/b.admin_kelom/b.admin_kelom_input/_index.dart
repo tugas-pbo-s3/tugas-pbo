@@ -28,5 +28,5 @@ part 'widgets/j.admin_kelom_input.images.dart';
 part 'widgets/k.admin_kelom_input.images_preview.dart';
 part 'widgets/l.admin_kelom_input.submit.dart';
 
-AdminWomenShoesInputData get _dt => Data.adminWomenShoesInput.st;
-AdminWomenShoesInputCtrl get _ct => Ctrl.adminWomenShoesInput;
+AdminKelomInputData get _dt => Data.adminKelomInput.st;
+AdminKelomInpurCtrl get _ct => Ctrl.adminWomenShoesInput;

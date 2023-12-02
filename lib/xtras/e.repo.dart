@@ -8,7 +8,7 @@ abstract class Repo {
   static Injected<TypeRepo> get type => _typeRepo;
   static Injected<KelomRepo> get kelom => _kelomRepo;
   static Injected<KebayaRepo> get kebaya => _kebayaRepo;
-  static Injected<CartRepo> get cart => _cartRepo;
+  static Injected<CartRepo> get keranjang => _cartRepo;
   static Injected<RokRepo> get rok => _rokRepo;
 }
 

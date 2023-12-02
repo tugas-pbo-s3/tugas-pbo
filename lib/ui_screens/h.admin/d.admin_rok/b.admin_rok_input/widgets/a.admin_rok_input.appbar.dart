@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesInputAppbar extends StatelessWidget {
-  const AdminKidsShoesInputAppbar({super.key});
+class AdminRokInputAppbar extends StatelessWidget {
+  const AdminRokInputAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

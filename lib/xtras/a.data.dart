@@ -3,14 +3,14 @@ part of '_index.dart';
 abstract class Data {
   static Injected<AdminHomeData> get adminHome => _adminHomeData;
 
-  static Injected<AdminWomenShoesListData> get adminWomenShoesList => _adminWomenShoesListData;
-  static Injected<AdminWomenShoesInputData> get adminWomenShoesInput => _adminWomenShoesInputData;
+  static Injected<AdminKelomData> get adminKelom => _adminKelomData;
+  static Injected<AdminKelomInputData> get adminKelomInput => _adminKelomInputData;
 
-  static Injected<AdminMenShoesListData> get adminMenShoesList => _adminMenShoesListData;
-  static Injected<AdminMenShoesInputData> get adminMenShoesInput => _adminMenShoesInputData;
+  static Injected<AdminKebayaData> get adminKebaya => _adminKebayaData;
+  static Injected<AdminKebayaInputData> get adminKebayaInput => _adminKebayaInputData;
 
-  static Injected<AdminKidsShoesListData> get adminKidsShoesList => _adminKidsShoesListData;
-  static Injected<AdminKidsShoesInputData> get adminKidsShoesInput => _adminKidsShoesInputData;
+  static Injected<AdminRokData> get adminRok => _adminRokData;
+  static Injected<AdminRokInputData> get adminRokInput => _adminRokInputData;
 
   static Injected<AdminCategoryListData> get adminCategoryList => _adminCategoryListData;
 
@@ -21,10 +21,8 @@ abstract class Data {
 
   static Injected<LoginData> get login => _loginData;
   static Injected<RegisterData> get register => _registerData;
-
   static Injected<HomeData> get home => _homeData;
-
-  static Injected<CartData> get cart => _cartData;
+  static Injected<CartData> get keranjang => _keranjangData;
   static Injected<ProfileData> get profile => _profileData;
 
   static Injected<RokData> get rok => _rokData;
@@ -37,14 +35,14 @@ abstract class Data {
 
 final _adminHomeData = RM1.inj(AdminHomeData(), () => Ctrl.adminHome.init);
 
-final _adminWomenShoesListData = RM1.inj(AdminWomenShoesListData(), Ctrl.adminWomenShoesList.init);
-final _adminWomenShoesInputData = RM1.inj(AdminWomenShoesInputData(), Ctrl.adminWomenShoesInput.init);
+final _adminKelomData = RM1.inj(AdminKelomData(), Ctrl.adminWomenShoesList.init);
+final _adminKelomInputData = RM1.inj(AdminKelomInputData(), Ctrl.adminWomenShoesInput.init);
 
-final _adminMenShoesListData = RM1.inj(AdminMenShoesListData(), Ctrl.adminMenShoesList.init);
-final _adminMenShoesInputData = RM1.inj(AdminMenShoesInputData(), Ctrl.adminMenShoesInput.init);
+final _adminKebayaData = RM1.inj(AdminKebayaData(), Ctrl.adminMenShoesList.init);
+final _adminKebayaInputData = RM1.inj(AdminKebayaInputData(), Ctrl.adminMenShoesInput.init);
 
-final _adminKidsShoesListData = RM1.inj(AdminKidsShoesListData(), Ctrl.adminKidsShoesList.init);
-final _adminKidsShoesInputData = RM1.inj(AdminKidsShoesInputData(), Ctrl.adminKidsShoesInput.init);
+final _adminRokData = RM1.inj(AdminRokData(), Ctrl.adminKidsShoesList.init);
+final _adminRokInputData = RM1.inj(AdminRokInputData(), Ctrl.adminKidsShoesInput.init);
 
 final _adminCategoryListData = RM1.inj(AdminCategoryListData(), Ctrl.adminCategoryList.init);
 
@@ -55,9 +53,8 @@ final _productEditData = RM1.inj(ProductEditData(), Ctrl.productEdit.init);
 
 final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
 final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);
-
 final _homeData = RM1.inj(HomeData(), Ctrl.home.init);
-final _cartData = RM1.inj(CartData(), Ctrl.cart.init);
+final _keranjangData = RM1.inj(CartData(), Ctrl.keranjang.init);
 final _profileData = RM1.inj(ProfileData(), Ctrl.profile.init);
 
 final _rokData = RM1.inj(RokData(), Ctrl.rok.init);

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListAppbar extends StatelessWidget {
-  const AdminMenShoesListAppbar({super.key});
+class AdminKebayaAppbar extends StatelessWidget {
+  const AdminKebayaAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

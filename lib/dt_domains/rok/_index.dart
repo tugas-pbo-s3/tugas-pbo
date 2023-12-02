@@ -14,4 +14,4 @@ RokServ get _sv => Serv.rok;
 RokRepo get _rp => Repo.rok.st;
 
 // ProductServ get _svProduct => Serv.product;
-CartServ get _svCart => Serv.cart;
+CartServ get _svCart => Serv.keranjang;

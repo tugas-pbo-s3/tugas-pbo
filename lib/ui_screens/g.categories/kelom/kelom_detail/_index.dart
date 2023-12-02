@@ -25,5 +25,5 @@ part 'widgets/i.kelom_detail.addtocart.dart';
 KelomDetailData get _dt => Data.kelomDetail.st;
 KelomDetailCtrl get _ct => Ctrl.womenDetail;
 KelomProv get _pv => Prov.kelom.st;
-CartProv get _pvCart => Prov.cart.st;
+CartProv get _pvCart => Prov.keranjang.st;
 KelomServ get _sv => Serv.kelom;

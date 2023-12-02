@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputImages extends StatelessWidget {
-  const AdminWomenShoesInputImages({super.key});
+class AdminKelomInputImages extends StatelessWidget {
+  const AdminKelomInputImages({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class AdminWomenShoesInputImages extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.add),
-                  Text('Add Images'),
+                  Text('Tambahkan Foto'),
                 ],
               ),
             ),

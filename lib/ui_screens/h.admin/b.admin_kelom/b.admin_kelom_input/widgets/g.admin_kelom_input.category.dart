@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputCategory extends StatelessWidget {
-  const AdminWomenShoesInputCategory({super.key});
+class AdminKelomInputCategory extends StatelessWidget {
+  const AdminKelomInputCategory({super.key});
 
   @override
   Widget build(BuildContext context) {

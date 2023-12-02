@@ -34,8 +34,8 @@ part 'widgets/p.admin_kebaya.detail_tile_edit_colors.dart';
 part 'widgets/q.admin_kebaya.cards.dart';
 part 'widgets/r.admin_kebaya.loadmore.dart';
 
-AdminMenShoesListData get _dt => Data.adminMenShoesList.st;
-AdminMenShoesListCtrl get _ct => Ctrl.adminMenShoesList;
+AdminKebayaData get _dt => Data.adminKebaya.st;
+AdminKebayaCtrl get _ct => Ctrl.adminMenShoesList;
 
 KebayaServ get _sv => Serv.kebaya;
 KebayaProv get _pv => Prov.kebaya.st;

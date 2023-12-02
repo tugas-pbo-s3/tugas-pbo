@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesInputColor extends StatelessWidget {
-  const AdminKidsShoesInputColor({super.key});
+class AdminRokInputColor extends StatelessWidget {
+  const AdminRokInputColor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class AdminKidsShoesInputColor extends StatelessWidget {
             items: _dt.itemColors,
             scrollBar: HorizontalScrollBar(),
             initialValue: const [],
-            title: const Text("Colors"),
+            title: const Text("Warna"),
             headerColor: Colors.transparent,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),

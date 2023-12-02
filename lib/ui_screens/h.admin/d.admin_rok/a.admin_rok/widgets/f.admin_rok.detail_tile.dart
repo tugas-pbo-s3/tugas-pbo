@@ -1,8 +1,8 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListDetailTile extends StatelessWidget {
+class AdminRokDetailTile extends StatelessWidget {
   final Rok? kidsShoes;
-  const AdminKidsShoesListDetailTile({
+  const AdminRokDetailTile({
     super.key,
     required this.kidsShoes,
     required this.image,
@@ -16,7 +16,7 @@ class AdminKidsShoesListDetailTile extends StatelessWidget {
       child: Column(
         children: [
           const SizedBoxH(55),
-          AdminKidsShoesListDetailTileEditImages(image: image),
+          AdminRokDetailTileEditImages(image: image),
           const SizedBoxH(10),
           CustomTile(
             title: 'Id',
@@ -24,16 +24,16 @@ class AdminKidsShoesListDetailTile extends StatelessWidget {
             icon: Icons.key,
             isEdit: false,
           ),
-          AdminKidsShoesListTileEditName(kidsShoes: kidsShoes),
-          AdminKidsShoesListTileEditDesc(kidsShoes: kidsShoes),
-          AdminKidsShoesListTileEditMerk(kidsShoes: kidsShoes),
-          AdminKidsShoesListTileEditPrice(kidsShoes: kidsShoes),
-          AdminKidsShoesListTileEditQuantity(kidsShoes: kidsShoes),
-          AdminKidsShoesListTileEditCategory(kidsShoes: kidsShoes),
-          AdminKidsShoesListDetailTileEditSizes(kidsShoes: kidsShoes),
-          AdminKidsShoesListDetailTileEditColors(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditName(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditDesc(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditMerk(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditPrice(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditQuantity(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditCategory(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditSizes(kidsShoes: kidsShoes),
+          AdminRokDetailTileEditColors(kidsShoes: kidsShoes),
           CustomTile(
-            title: 'Created At',
+            title: 'Tanggal dibuat',
             subtitle: ('${kidsShoes?.createdAt}'),
             icon: Icons.date_range,
             isEdit: false,
@@ -41,7 +41,7 @@ class AdminKidsShoesListDetailTile extends StatelessWidget {
           kidsShoes?.updatedAt == null
               ? const SizedBox.shrink()
               : CustomTile(
-                  title: 'Updated At',
+                  title: 'Tanggal diperbarui',
                   subtitle: ('${kidsShoes?.updatedAt}'),
                   icon: Icons.date_range,
                   isEdit: false,

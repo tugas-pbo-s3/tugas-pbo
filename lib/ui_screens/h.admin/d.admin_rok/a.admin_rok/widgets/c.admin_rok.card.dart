@@ -1,8 +1,8 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListCard extends StatelessWidget {
+class AdminRokCard extends StatelessWidget {
   final Rok product;
-  const AdminKidsShoesListCard({
+  const AdminRokCard({
     super.key,
     required this.product,
   });

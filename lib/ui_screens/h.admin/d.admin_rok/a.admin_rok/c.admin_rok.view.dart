@@ -1,14 +1,14 @@
 part of '_index.dart';
 
-class AdminKidsShoesListView extends StatelessWidget {
-  const AdminKidsShoesListView({super.key});
+class AdminRokView extends StatelessWidget {
+  const AdminRokView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
-        child: AdminKidsShoesListAppbar(),
+        child: AdminRokAppbar(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -19,7 +19,7 @@ class AdminKidsShoesListView extends StatelessWidget {
               ? const Center(
                   child: CircularProgressIndicator(),
                 )
-              : const AdminKidsShoesListCards(),
+              : const AdminRokCards(),
           onData: (data) => _dt.rxProductList.st.isEmpty
               ? const Stack(
                   children: [
@@ -28,12 +28,12 @@ class AdminKidsShoesListView extends StatelessWidget {
                       padding: EdgeInsets.all(10),
                       child: Align(
                         alignment: Alignment.bottomRight,
-                        child: AdminKidsShoesListFab(),
+                        child: AdminRokFab(),
                       ),
                     ),
                   ],
                 )
-              : const AdminKidsShoesListCards(),
+              : const AdminRokCards(),
         ),
       ),
     );

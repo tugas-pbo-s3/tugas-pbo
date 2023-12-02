@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListCards extends StatelessWidget {
-  const AdminMenShoesListCards({
+class AdminKebayaCards extends StatelessWidget {
+  const AdminKebayaCards({
     super.key,
   });
 
@@ -13,18 +13,18 @@ class AdminMenShoesListCards extends StatelessWidget {
           ListView(
             children: [
               for (var item in _dt.rxProductList.st)
-                AdminMenShoesListCard(
+                AdminKebayaCard(
                   product: item,
                 ),
-              const AdminMenShoesListLoadMore()
+              const AdminKebayaLoadMore()
             ],
           ),
-          const AdminMenShoesListDetail(),
+          const AdminKebayaDetail(),
           const Padding(
             padding: EdgeInsets.all(10),
             child: Align(
               alignment: Alignment.bottomRight,
-              child: AdminMenShoesListFab(),
+              child: AdminKebayaFab(),
             ),
           ),
         ],

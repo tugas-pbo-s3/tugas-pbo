@@ -9,13 +9,13 @@ class AdminCategoryListFab extends StatelessWidget {
       backgroundColor: Colors.purple,
       onPressed: () => nav.toDialog(
         AlertDialog(
-          title: const Text('Input New Shoes Category'),
+          title: const Text('Masukkan kategori baru'),
           actions: [
             TextButton(
               onPressed: () {
                 nav.back();
               },
-              child: const Text('Cancel'),
+              child: const Text('batal'),
             ),
             OnFormBuilder(
               listenTo: _dt.rxFormInput,
@@ -24,7 +24,7 @@ class AdminCategoryListFab extends StatelessWidget {
                 onSubmitting: () => const CircularProgressIndicator(),
                 child: TextButton(
                   onPressed: _dt.rxFormInput.isDirty && _dt.rxFormInput.isValid ? () => _ct.submitInput() : null,
-                  child: const Text('Submit'),
+                  child: const Text('kirim'),
                 ),
               ),
             ),
@@ -38,8 +38,8 @@ class AdminCategoryListFab extends StatelessWidget {
               textInputAction: TextInputAction.next,
               onEditingComplete: () => _dt.rxNameInput.focusNode.unfocus(),
               decoration: InputDecoration(
-                hintText: 'Name of category',
-                labelText: 'Categories name',
+                hintText: 'Masukkan Nama Kategori',
+                labelText: 'Nama Kategori',
                 errorText: _dt.rxNameInput.error,
               ),
             ),

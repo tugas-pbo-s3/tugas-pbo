@@ -1,16 +1,16 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListDetailTileEditColors extends StatelessWidget {
+class AdminRokDetailTileEditColors extends StatelessWidget {
   final Rok? kidsShoes;
 
-  const AdminKidsShoesListDetailTileEditColors({super.key, required this.kidsShoes});
+  const AdminRokDetailTileEditColors({super.key, required this.kidsShoes});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       visualDensity: VisualDensity.comfortable,
       style: ListTileStyle.drawer,
-      title: const Text('Colors'),
+      title: const Text('Warna'),
       leading: const Icon(Icons.color_lens),
       subtitle: Wrap(
         children: [
@@ -26,13 +26,13 @@ class AdminKidsShoesListDetailTileEditColors extends StatelessWidget {
         onPressed: () {
           nav.toDialog(
             AlertDialog(
-              title: const Text('Edit Kids Shoes Sizes'),
+              title: const Text('Edit Warna Rok'),
               actions: [
                 TextButton(
                   onPressed: () {
                     nav.back();
                   },
-                  child: const Text('Cancel'),
+                  child: const Text('batal'),
                 ),
                 OnFormBuilder(
                   listenTo: _dt.rxForm,
@@ -41,7 +41,7 @@ class AdminKidsShoesListDetailTileEditColors extends StatelessWidget {
                     onSubmitting: () => const CircularProgressIndicator(),
                     child: TextButton(
                       onPressed: () => _ct.submit(),
-                      child: const Text('Submit'),
+                      child: const Text('kirim'),
                     ),
                   ),
                 ),
@@ -53,7 +53,7 @@ class AdminKidsShoesListDetailTileEditColors extends StatelessWidget {
                     () => MultiSelectChipField(
                       items: _dt.itemColors,
                       initialValue: const [],
-                      title: const Text("Size"),
+                      title: const Text("Warna"),
                       headerColor: Colors.transparent,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),

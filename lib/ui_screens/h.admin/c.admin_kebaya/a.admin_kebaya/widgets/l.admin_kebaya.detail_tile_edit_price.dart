@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListTileEditPrice extends StatelessWidget {
-  const AdminMenShoesListTileEditPrice({
+class AdminKebayaTileEditPrice extends StatelessWidget {
+  const AdminKebayaTileEditPrice({
     super.key,
     required this.menShoes,
   });
@@ -10,9 +10,9 @@ class AdminMenShoesListTileEditPrice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdminMenShoesListTileEdit(
+    return AdminKebayaDetailTileEdit(
       menShoes: menShoes,
-      title: 'Price',
+      title: 'Harga',
       subtitle: '${menShoes?.price}',
       icon: Icons.price_change,
       editField: OnFormBuilder(
@@ -25,7 +25,7 @@ class AdminMenShoesListTileEditPrice extends StatelessWidget {
           onEditingComplete: () => _dt.rxQuantity.st.focusNode.requestFocus(),
           decoration: InputDecoration(
             hintText: 'e.g. 100000',
-            labelText: 'Product\'s Price',
+            labelText: 'Harga Produk',
             errorText: _dt.rxPrice.st.error,
           ),
         ),

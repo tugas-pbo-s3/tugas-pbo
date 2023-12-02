@@ -13,4 +13,4 @@ part 'd.kelom.repo.mock.dart';
 KelomProv get _pv => Prov.kelom.st;
 KelomServ get _sv => Serv.kelom;
 KelomRepo get _rp => Repo.kelom.st;
-CartServ get _svCart => Serv.cart;
+CartServ get _svCart => Serv.keranjang;

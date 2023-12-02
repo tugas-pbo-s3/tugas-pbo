@@ -1,14 +1,14 @@
 part of '_index.dart';
 
-class AdminWomenShoesInputView extends ReactiveStatelessWidget {
-  const AdminWomenShoesInputView({super.key});
+class AdminKelomInputView extends ReactiveStatelessWidget {
+  const AdminKelomInputView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
-        child: AdminWomenShoesInputAppbar(),
+        child: AdminKelomInputAppbar(),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -27,27 +27,27 @@ class AdminWomenShoesInputView extends ReactiveStatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AdminWomenShoesInputName(),
+                          AdminKelomInputName(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputPrice(),
+                          AdminKelomInputPrice(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputDescription(),
+                          AdminKelomInputDescription(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputQuantity(),
+                          AdminKelomInputQuantity(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputMerk(),
+                          AdminKelomInputMerk(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputCategory(),
+                          AdminKelomInputCategory(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputSize(),
+                          AdminKelomInputSize(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputColor(),
+                          AdminKelomInputColor(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputImages(),
+                          AdminKelomInputImages(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputImagePreview(),
+                          AdminKelomInputImagePreview(),
                           SizedBoxH(10),
-                          AdminWomenShoesInputSubmit(),
+                          AdminKelomInputSubmit(),
                         ],
                       );
                     },

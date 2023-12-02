@@ -1,7 +1,7 @@
 part of '_index.dart';
 
-class AdminWomenShoesInputData {
-  final rxTitle = 'Kelom Input'.inj();
+class AdminKelomInputData {
+  final rxTitle = 'Input Kelom'.inj();
 
   final rxInt = 0.inj();
 

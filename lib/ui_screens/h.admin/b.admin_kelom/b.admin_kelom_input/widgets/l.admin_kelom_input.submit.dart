@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputSubmit extends StatelessWidget {
-  const AdminWomenShoesInputSubmit({super.key});
+class AdminKelomInputSubmit extends StatelessWidget {
+  const AdminKelomInputSubmit({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AdminWomenShoesInputSubmit extends StatelessWidget {
         onSubmitting: () => const CircularProgressIndicator(),
         child: ElevatedButton(
           onPressed: _dt.rxForm.isDirty && _dt.rxForm.isValid ? () => _ct.submit() : null,
-          child: const Text('Submit'),
+          child: const Text('kirim'),
         ),
       ),
     );

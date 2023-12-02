@@ -24,7 +24,7 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
             onEditFunction: () {
               nav.toDialog(
                 AlertDialog(
-                  title: const Text('Edit Shoes Category'),
+                  title: const Text('Edit Kategori Produk'),
                   actions: [
                     TextButton(
                       onPressed: () {
@@ -40,7 +40,7 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
                         child: TextButton(
                           onPressed:
                               _dt.rxFormEdit.st.isDirty && _dt.rxFormEdit.st.isValid ? () => _ct.submitEdit() : null,
-                          child: const Text('Submit'),
+                          child: const Text('kirim'),
                         ),
                       ),
                     ),
@@ -54,8 +54,8 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
                       textInputAction: TextInputAction.next,
                       onEditingComplete: () => _dt.rxNameEdit.st.focusNode.unfocus(),
                       decoration: InputDecoration(
-                        hintText: 'Name of category',
-                        labelText: 'Category\'s name',
+                        hintText: 'Masukkan Nama  Kategori',
+                        labelText: 'Nama  Kategori',
                         errorText: _dt.rxNameEdit.st.error,
                       ),
                     ),
@@ -63,12 +63,12 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
                 ),
               );
             },
-            title: 'Name',
+            title: 'Nama',
             subtitle: '${category?.name}',
             icon: Icons.category,
           ),
           CustomTile(
-            title: 'Created At',
+            title: 'Tanggal dibuat',
             subtitle: ('${category?.createdAt}'),
             icon: Icons.date_range,
             isEdit: false,
@@ -76,7 +76,7 @@ class AdminCategoryListDetailContentTile extends StatelessWidget {
           category?.updatedAt == null
               ? const SizedBox.shrink()
               : CustomTile(
-                  title: 'Updated At',
+                  title: 'Tanggal diperbarui',
                   subtitle: ('${category?.updatedAt}'),
                   icon: Icons.date_range,
                   isEdit: false,

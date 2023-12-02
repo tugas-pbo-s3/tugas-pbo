@@ -2,8 +2,8 @@
 
 part of '../_index.dart';
 
-class AdminKidsShoesListFab extends StatelessWidget {
-  const AdminKidsShoesListFab({super.key});
+class AdminRokFab extends StatelessWidget {
+  const AdminRokFab({super.key});
 
   @override
   Widget build(BuildContext context) {

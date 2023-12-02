@@ -8,7 +8,7 @@ abstract class Prov {
   static Injected<TypeProv> get type => _typeProv;
   static Injected<KelomProv> get kelom => _kelomProv;
   static Injected<KebayaProv> get kebaya => _kebayaProv;
-  static Injected<CartProv> get cart => _cartProv;
+  static Injected<CartProv> get keranjang => _cartProv;
   static Injected<RokProv> get rok => _rokProv;
 }
 

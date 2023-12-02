@@ -1,6 +1,6 @@
 part of '_index.dart';
 
-class AdminKidsShoesListData {
+class AdminRokData {
   final rxTitle = 'Rok List'.inj();
 
   final rxInt = 0.inj();

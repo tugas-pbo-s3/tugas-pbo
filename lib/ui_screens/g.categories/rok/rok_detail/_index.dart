@@ -26,4 +26,4 @@ RokDetailCtrl get _ct => Ctrl.rokDetail;
 
 RokProv get _pv => Prov.rok.st;
 RokServ get _sv => Serv.rok;
-CartProv get _pvCart => Prov.cart.st;
+CartProv get _pvCart => Prov.keranjang.st;

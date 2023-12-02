@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListDetailContent extends StatelessWidget {
-  const AdminMenShoesListDetailContent({
+class AdminKebayaDetailContent extends StatelessWidget {
+  const AdminKebayaDetailContent({
     super.key,
   });
 
@@ -20,7 +20,7 @@ class AdminMenShoesListDetailContent extends StatelessWidget {
         return OnReactive(
           () => Stack(
             children: [
-              AdminMenShoesListDetailTile(
+              AdminKebayaDetailTile(
                 menShoes: data,
                 image: image,
               ),
@@ -38,7 +38,7 @@ class AdminMenShoesListDetailContent extends StatelessWidget {
                   children: [
                     const SizedBoxW(20),
                     const Text(
-                      'Men Shoes Detail',
+                      'Detail Kebaya',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),

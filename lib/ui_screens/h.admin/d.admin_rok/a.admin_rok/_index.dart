@@ -34,8 +34,8 @@ part 'widgets/p.admin_rok.detail_tile_edit_colors.dart';
 part 'widgets/q.admin_rok.cards.dart';
 part 'widgets/r.admin_rok.loadmore.dart';
 
-AdminKidsShoesListData get _dt => Data.adminKidsShoesList.st;
-AdminKidsShoesListCtrl get _ct => Ctrl.adminKidsShoesList;
+AdminRokData get _dt => Data.adminRok.st;
+AdminRokCtrl get _ct => Ctrl.adminKidsShoesList;
 
 RokServ get _sv => Serv.rok;
 RokProv get _pv => Prov.rok.st;

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesInputCategory extends StatelessWidget {
-  const AdminKidsShoesInputCategory({super.key});
+class AdminRokInputCategory extends StatelessWidget {
+  const AdminRokInputCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class AdminKidsShoesInputCategory extends StatelessWidget {
         return OnBuilder.data(
           listenToMany: [_dt.rxCategoryList, _dt.rxCategoryLoader],
           builder: (data) => DropdownButtonFormField<String>(
-            hint: const Text('Category'),
+            hint: const Text('Kategori'),
             onChanged: onChanged,
             decoration: const InputDecoration(isDense: true),
             value: value,

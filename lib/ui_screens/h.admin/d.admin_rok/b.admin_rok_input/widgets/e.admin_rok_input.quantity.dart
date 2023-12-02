@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesInputQuantity extends StatelessWidget {
-  const AdminKidsShoesInputQuantity({super.key});
+class AdminRokInputQuantity extends StatelessWidget {
+  const AdminRokInputQuantity({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class AdminKidsShoesInputQuantity extends StatelessWidget {
         textInputAction: TextInputAction.done,
         onEditingComplete: () => _dt.rxMerk.focusNode.requestFocus(),
         decoration: InputDecoration(
-          hintText: 'Quantity of product e.g. 100',
-          labelText: 'Quantity',
+          hintText: 'e.g. 100',
+          labelText: 'Kuantitas produk',
           errorText: _dt.rxQuantity.error,
         ),
       ),

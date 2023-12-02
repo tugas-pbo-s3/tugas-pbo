@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputSize extends ReactiveStatelessWidget {
-  const AdminWomenShoesInputSize({super.key});
+class AdminKelomInputSize extends ReactiveStatelessWidget {
+  const AdminKelomInputSize({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class AdminWomenShoesInputSize extends ReactiveStatelessWidget {
           () => MultiSelectChipField(
             items: _dt.itemSizes,
             initialValue: const [],
-            title: const Text("Size"),
+            title: const Text("Ukuran"),
             headerColor: Colors.transparent,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey.withOpacity(0.2), width: 1),

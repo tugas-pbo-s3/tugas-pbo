@@ -1,6 +1,6 @@
 part of '../_index.dart';
 
-class AdminMenShoesListTileEdit extends StatelessWidget {
+class AdminKebayaDetailTileEdit extends StatelessWidget {
   final String title;
   final String subtitle;
   final IconData? icon;
@@ -9,7 +9,7 @@ class AdminMenShoesListTileEdit extends StatelessWidget {
   final Widget editField;
   final bool isTextField;
 
-  const AdminMenShoesListTileEdit({
+  const AdminKebayaDetailTileEdit({
     super.key,
     required this.menShoes,
     required this.title,
@@ -33,13 +33,13 @@ class AdminMenShoesListTileEdit extends StatelessWidget {
         _ct.refreshTextField();
         nav.toDialog(
           AlertDialog(
-            title: Text('Edit Men Shoes $title'),
+            title: Text('Edit Kebaya $title'),
             actions: [
               TextButton(
                 onPressed: () {
                   nav.back();
                 },
-                child: const Text('Cancel'),
+                child: const Text('batal'),
               ),
               OnFormBuilder(
                 listenTo: _dt.rxForm,
@@ -52,7 +52,7 @@ class AdminMenShoesListTileEdit extends StatelessWidget {
                             ? () => _ct.submit()
                             : null
                         : () => _ct.submit(),
-                    child: const Text('Submit'),
+                    child: const Text('kirim'),
                   ),
                 ),
               ),

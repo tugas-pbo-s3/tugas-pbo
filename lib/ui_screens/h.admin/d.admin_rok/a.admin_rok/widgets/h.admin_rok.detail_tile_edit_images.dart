@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListDetailTileEditImages extends StatelessWidget {
-  const AdminKidsShoesListDetailTileEditImages({
+class AdminRokDetailTileEditImages extends StatelessWidget {
+  const AdminRokDetailTileEditImages({
     super.key,
     required this.image,
   });
@@ -67,7 +67,7 @@ class AdminKidsShoesListDetailTileEditImages extends StatelessWidget {
 
             nav.toDialog(
               AlertDialog(
-                title: const Text('Edit Images'),
+                title: const Text('Edit Foto'),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -106,7 +106,7 @@ class AdminKidsShoesListDetailTileEditImages extends StatelessWidget {
                       onPressed: () {
                         _ct.pickImages();
                       },
-                      child: const Text('Add from Gallery'),
+                      child: const Text('Tambahkan dari galeri'),
                     ),
                     OnReactive(
                       () => _dt.rxImages.st.isEmpty
@@ -125,7 +125,7 @@ class AdminKidsShoesListDetailTileEditImages extends StatelessWidget {
                                 nav.back();
                                 nav.back();
                               },
-                              child: const Text('Upload Image'),
+                              child: const Text('UJnggah foto'),
                             ),
                     ),
                   ],
@@ -137,7 +137,7 @@ class AdminKidsShoesListDetailTileEditImages extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(Icons.add),
-              Text('Add Image'),
+              Text('Tambahkan foto'),
             ],
           ),
         ),

@@ -28,8 +28,8 @@ part 'widgets/j.admin_rok_input.images.dart';
 part 'widgets/k.admin_rok_input.images_preview.dart';
 part 'widgets/l.admin_rok_input.submit.dart';
 
-AdminKidsShoesInputData get _dt => Data.adminKidsShoesInput.st;
-AdminKidsShoesInputCtrl get _ct => Ctrl.adminKidsShoesInput;
+AdminRokInputData get _dt => Data.adminRokInput.st;
+AdminRokInputCtrl get _ct => Ctrl.adminKidsShoesInput;
 
 RokServ get _sv => Serv.rok;
 RokProv get _pv => Prov.rok.st;// static AdminProductInputCtrl get adminProductInput => AdminProductInputCtrl();

@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListLoadMore extends StatelessWidget {
-  const AdminKidsShoesListLoadMore({
+class AdminRokLoadMore extends StatelessWidget {
+  const AdminRokLoadMore({
     super.key,
   });
 
@@ -21,9 +21,9 @@ class AdminKidsShoesListLoadMore extends StatelessWidget {
           ),
           onError: (error, refreshError) => error,
           onData: (data) => _dt.rxIsEnd.st == true
-              ? const Center(child: Text('~~ end of list ~~'))
+              ? const Center(child: Text('~~ Anda telah mencapai akhir daftar produk ~~'))
               : OutlinedButton(
-                  child: const Text('more items'),
+                  child: const Text('Muat lebih banyak produk'),
                   onPressed: () => _ct.loadMore(),
                 ),
         ),

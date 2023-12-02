@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesListTileEditQuantity extends StatelessWidget {
-  const AdminKidsShoesListTileEditQuantity({
+class AdminRokDetailTileEditQuantity extends StatelessWidget {
+  const AdminRokDetailTileEditQuantity({
     super.key,
     required this.kidsShoes,
   });
@@ -10,9 +10,9 @@ class AdminKidsShoesListTileEditQuantity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdminKidsShoesListTileEdit(
+    return AdminRokDetailTileEdit(
       kidsShoes: kidsShoes,
-      title: 'Quantity',
+      title: 'Kuantitas',
       subtitle: '${kidsShoes?.quantity}',
       icon: Icons.production_quantity_limits,
       editField: OnFormBuilder(
@@ -25,7 +25,7 @@ class AdminKidsShoesListTileEditQuantity extends StatelessWidget {
           onEditingComplete: () => _dt.rxQuantity.st.focusNode.unfocus(),
           decoration: InputDecoration(
             hintText: 'e.g. 100',
-            labelText: 'Product\'s Quantity',
+            labelText: 'Kuantitas Produk',
             errorText: _dt.rxQuantity.st.error,
           ),
         ),

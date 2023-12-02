@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminWomenShoesInputPrice extends StatelessWidget {
-  const AdminWomenShoesInputPrice({super.key});
+class AdminKelomInputPrice extends StatelessWidget {
+  const AdminKelomInputPrice({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class AdminWomenShoesInputPrice extends StatelessWidget {
         onEditingComplete: () => _dt.rxDescription.focusNode.requestFocus(),
         decoration: InputDecoration(
           hintText: 'e.g. 10000',
-          labelText: 'Price',
+          labelText: 'Harga',
           errorText: _dt.rxPrice.error,
         ),
       ),

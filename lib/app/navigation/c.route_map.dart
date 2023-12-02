@@ -8,14 +8,14 @@ class RouteMap {
     //* master -- ----- ----- ----- ----- -----
     Routes.adminHome: (RouteData data) => const AdminHomeView(),
 
-    Routes.adminWomenShoesList: (RouteData data) => const AdminWomenShoesListView(),
-    Routes.adminWomenShoesInput: (RouteData data) => const AdminWomenShoesInputView(),
+    Routes.adminWomenShoesList: (RouteData data) => const AdminKelomView(),
+    Routes.adminWomenShoesInput: (RouteData data) => const AdminKelomInputView(),
 
-    Routes.adminMenShoesList: (RouteData data) => const AdminMenShoesListView(),
-    Routes.adminMenShoesInput: (RouteData data) => const AdminMenShoesInputView(),
+    Routes.adminMenShoesList: (RouteData data) => const AdminKebayaView(),
+    Routes.adminMenShoesInput: (RouteData data) => const AdminKebayaInputView(),
 
-    Routes.adminKidsShoesList: (RouteData data) => const AdminKidsShoesListView(),
-    Routes.adminKidsShoesInput: (RouteData data) => const AdminKidsShoesInputView(),
+    Routes.adminKidsShoesList: (RouteData data) => const AdminRokView(),
+    Routes.adminKidsShoesInput: (RouteData data) => const AdminRokInputView(),
 
     Routes.adminCategoryList: (RouteData data) => const AdminCategoryListView(),
 

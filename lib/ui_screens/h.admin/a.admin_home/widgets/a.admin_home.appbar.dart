@@ -7,7 +7,7 @@ class AdminHomeAppbar extends ReactiveStatelessWidget {
   Widget build(BuildContext context) {
     return OnReactive(
       () => AppBar(
-        title: OnReactive(() => const Text('Admin Home')),
+        title: OnReactive(() => const Text('Beranda Admin')),
         leading: MediaQuery.of(context).size.width < 600
             ? IconButton(
                 onPressed: () {

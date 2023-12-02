@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class AdminCategoryListData {
-  final rxTitle = 'Shoes Category List'.inj();
+  final rxTitle = 'List Kategori Produk'.inj();
 
   final rxInt = 0.inj();
 

@@ -28,4 +28,4 @@ KebayaDetailCtrl get _ct => Ctrl.kebayaDetail;
 
 KebayaProv get _pv => Prov.kebaya.st;
 KebayaServ get _sv => Serv.kebaya;
-CartProv get _pvCart => Prov.cart.st;
+CartProv get _pvCart => Prov.keranjang.st;

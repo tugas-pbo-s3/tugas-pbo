@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminKidsShoesImagesPreview extends StatelessWidget {
-  const AdminKidsShoesImagesPreview({super.key});
+class AdminRokImagesPreview extends StatelessWidget {
+  const AdminRokImagesPreview({super.key});
 
   @override
   Widget build(BuildContext context) {

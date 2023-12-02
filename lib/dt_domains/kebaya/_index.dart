@@ -14,4 +14,4 @@ KebayaServ get _sv => Serv.kebaya;
 KebayaRepo get _rp => Repo.kebaya.st;
 
 // ProductServ get _svProduct => Serv.product;
-CartServ get _svCart => Serv.cart;
+CartServ get _svCart => Serv.keranjang;

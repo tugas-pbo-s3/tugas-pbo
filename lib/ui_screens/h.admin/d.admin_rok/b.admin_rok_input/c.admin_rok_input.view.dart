@@ -1,14 +1,14 @@
 part of '_index.dart';
 
-class AdminKidsShoesInputView extends ReactiveStatelessWidget {
-  const AdminKidsShoesInputView({super.key});
+class AdminRokInputView extends ReactiveStatelessWidget {
+  const AdminRokInputView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
-        child: AdminKidsShoesInputAppbar(),
+        child: AdminRokInputAppbar(),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -27,27 +27,27 @@ class AdminKidsShoesInputView extends ReactiveStatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AdminKidsShoesInputName(),
+                          AdminRokInputName(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputPrice(),
+                          AdminRokInputPrice(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputDescription(),
+                          AdminRokInputDescription(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputQuantity(),
+                          AdminRokInputQuantity(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputMerk(),
+                          AdminRokInputMerk(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputCategory(),
+                          AdminRokInputCategory(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputSize(),
+                          AdminRokInputSize(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputColor(),
+                          AdminRokInputColor(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputImages(),
+                          AdminRokInputImages(),
                           SizedBoxH(10),
-                          AdminKidsShoesImagesPreview(),
+                          AdminRokImagesPreview(),
                           SizedBoxH(10),
-                          AdminKidsShoesInputSubmit(),
+                          AdminRokInputSubmit(),
                         ],
                       );
                     },

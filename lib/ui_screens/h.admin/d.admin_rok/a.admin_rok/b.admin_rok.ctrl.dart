@@ -1,8 +1,8 @@
 part of '_index.dart';
 
-class AdminKidsShoesListCtrl {
+class AdminRokCtrl {
   init() {
-    logxx.i(AdminKidsShoesListCtrl, '...');
+    logxx.i(AdminRokCtrl, '...');
     Serv.category.readCategories();
   }
 

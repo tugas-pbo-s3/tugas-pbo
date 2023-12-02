@@ -1,8 +1,8 @@
 part of '../_index.dart';
 
-class AdminMenShoesListDetailTile extends StatelessWidget {
+class AdminKebayaDetailTile extends StatelessWidget {
   final Kebaya? menShoes;
-  const AdminMenShoesListDetailTile({
+  const AdminKebayaDetailTile({
     super.key,
     required this.menShoes,
     required this.image,
@@ -16,7 +16,7 @@ class AdminMenShoesListDetailTile extends StatelessWidget {
       child: Column(
         children: [
           const SizedBoxH(55),
-          AdminMenShoesListDetailTileEditImages(image: image),
+          AdminKebayaDetailTileEditImages(image: image),
           const SizedBoxH(10),
           CustomTile(
             title: 'Id',
@@ -24,16 +24,16 @@ class AdminMenShoesListDetailTile extends StatelessWidget {
             icon: Icons.key,
             isEdit: false,
           ),
-          AdminMenShoesListTileEditName(menShoes: menShoes),
-          AdminMenShoesListTileEditDesc(menShoes: menShoes),
-          AdminMenShoesListTileEditMerk(menShoes: menShoes),
-          AdminMenShoesListTileEditPrice(menShoes: menShoes),
-          AdminMenShoesListTileEditQuantity(menShoes: menShoes),
-          AdminMenShoesListTileEditCategory(menShoes: menShoes),
-          AdminMenShoesListDetailTileEditSizes(menShoes: menShoes),
-          AdminMenShoesListDetailTileEditColors(menShoes: menShoes),
+          AdminKebayaDetailTileEditName(menShoes: menShoes),
+          AdminKebayaDetailTileEditDesc(menShoes: menShoes),
+          AdminKebayaDetailTileEditMerk(menShoes: menShoes),
+          AdminKebayaTileEditPrice(menShoes: menShoes),
+          AdminKebayaDetailTileEditQuantity(menShoes: menShoes),
+          AdminMKebayaDetailTileEditCategory(menShoes: menShoes),
+          AdminKebayaDetailTileEditSizes(menShoes: menShoes),
+          AdminKebayaDetailTileEditColors(menShoes: menShoes),
           CustomTile(
-            title: 'Created At',
+            title: 'Tanggal dibuat',
             subtitle: ('${menShoes?.createdAt}'),
             icon: Icons.date_range,
             isEdit: false,
@@ -41,7 +41,7 @@ class AdminMenShoesListDetailTile extends StatelessWidget {
           menShoes?.updatedAt == null
               ? const SizedBox.shrink()
               : CustomTile(
-                  title: 'Updated At',
+                  title: 'Tanggal diperbarui',
                   subtitle: ('${menShoes?.updatedAt}'),
                   icon: Icons.date_range,
                   isEdit: false,

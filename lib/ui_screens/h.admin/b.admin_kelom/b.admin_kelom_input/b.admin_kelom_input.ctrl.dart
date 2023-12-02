@@ -1,8 +1,8 @@
 part of '_index.dart';
 
-class AdminWomenShoesInputCtrl {
+class AdminKelomInpurCtrl {
   init() {
-    logxx.i(AdminWomenShoesInputCtrl, '...');
+    logxx.i(AdminKelomInpurCtrl, '...');
     Serv.category.readCategories();
   }
 

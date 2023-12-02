@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListTileEditCategory extends StatelessWidget {
-  const AdminMenShoesListTileEditCategory({
+class AdminMKebayaDetailTileEditCategory extends StatelessWidget {
+  const AdminMKebayaDetailTileEditCategory({
     super.key,
     required this.menShoes,
   });
@@ -10,9 +10,9 @@ class AdminMenShoesListTileEditCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdminMenShoesListTileEdit(
+    return AdminKebayaDetailTileEdit(
       menShoes: menShoes,
-      title: 'Category',
+      title: 'Kategori',
       subtitle: '${menShoes?.category.name}',
       icon: Icons.category,
       isTextField: false,
@@ -28,7 +28,7 @@ class AdminMenShoesListTileEditCategory extends StatelessWidget {
           return OnBuilder.data(
             listenToMany: [_dt.rxCategoryList, _dt.rxCategoryLoader],
             builder: (data) => DropdownButtonFormField<String>(
-              hint: const Text('Category'),
+              hint: const Text('Kategori'),
               onChanged: (value) => _dt.rxCategory.st.value = value,
               decoration: const InputDecoration(isDense: true),
               value: value,

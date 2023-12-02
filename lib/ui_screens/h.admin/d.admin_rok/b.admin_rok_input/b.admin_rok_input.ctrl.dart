@@ -1,7 +1,7 @@
 part of '_index.dart';
 
-class AdminKidsShoesInputCtrl {
-  init() => logxx.i(AdminKidsShoesInputCtrl, '...');
+class AdminRokInputCtrl {
+  init() => logxx.i(AdminRokInputCtrl, '...');
 
   action() => _dt.rxInt.setState((s) => s + 1);
 

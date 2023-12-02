@@ -1,7 +1,7 @@
 part of '../_index.dart';
 
-class AdminMenShoesListDetail extends StatelessWidget {
-  const AdminMenShoesListDetail({
+class AdminKebayaDetail extends StatelessWidget {
+  const AdminKebayaDetail({
     super.key,
   });
 
@@ -27,7 +27,7 @@ class AdminMenShoesListDetail extends StatelessWidget {
                 // color: Color.fromARGB(255, 42, 42, 42),
 
                 color: Colors.white),
-            child: _dt.rxHeightContainer.st < 500 ? const SizedBox.shrink() : const AdminMenShoesListDetailContent(),
+            child: _dt.rxHeightContainer.st < 500 ? const SizedBox.shrink() : const AdminKebayaDetailContent(),
           ),
         ),
       ),
