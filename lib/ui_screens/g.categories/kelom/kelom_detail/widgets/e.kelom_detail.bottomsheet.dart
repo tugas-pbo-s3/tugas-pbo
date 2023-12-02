@@ -58,7 +58,7 @@ class KelomDetailBottomsheet extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Total Payment:',
+                    'Total :',
                     style: TextStyle(
                       color: Colors.purple,
                       fontSize: 20,

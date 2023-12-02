@@ -70,7 +70,7 @@ class KelomDetailView extends StatelessWidget {
                                 const SizedBox(height: 10),
                                 OnReactive(
                                   () => Text(
-                                    'Total Payment : Rp${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
+                                    'Total  : Rp${Fun.formatRupiah.format(_dt.rxQty.st * _dt.rxProductFuture.st!.price)}',
                                     style: const TextStyle(
                                       color: Colors.purple,
                                       fontSize: 20,

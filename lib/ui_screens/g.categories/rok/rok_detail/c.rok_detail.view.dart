@@ -29,7 +29,7 @@ class RokDetailView extends StatelessWidget {
         onError: (error, refreshError) => const Text('error'),
         onData: (data) {
           _ct.setQty();
-          final sizes = _dt.rxProductFuture.st?.sizes ?? [];
+          // final sizes = _dt.rxProductFuture.st?.sizes ?? [];
 
           final colors = _dt.rxProductFuture.st?.colors ?? [];
 
