@@ -31,7 +31,7 @@ class KebayaDetailDescWeb extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Merk: ${data.merk}',
+              'Merek: ${data.merk}',
               style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 16,
@@ -39,7 +39,7 @@ class KebayaDetailDescWeb extends StatelessWidget {
             ),
             const SizedBoxH(5),
             Text(
-              'Category: ${data.category.name}',
+              'Kategori: ${data.category.name}',
               style: const TextStyle(
                 fontSize: 15,
                 color: Colors.grey,
@@ -49,7 +49,7 @@ class KebayaDetailDescWeb extends StatelessWidget {
             RichText(
               overflow: TextOverflow.clip,
               text: TextSpan(
-                text: 'Description: ${data.description}',
+                text: 'Deskripsi: ${data.description}',
                 style: const TextStyle(
                   fontSize: 15,
                   color: Colors.grey,

@@ -50,11 +50,11 @@ class ProfileWeb extends StatelessWidget {
                                 : Center(
                                     child: ListTile(
                                       title: const Text(
-                                        'Username',
+                                        'Nama Pengguna',
                                         textAlign: TextAlign.center,
                                       ),
                                       subtitle: Text(
-                                        data?.displayName ?? 'anonymous',
+                                        data?.displayName ?? 'anonimus',
                                         textAlign: TextAlign.center,
                                       ),
                                       // leading: const Icon(Icons.person),
@@ -79,14 +79,14 @@ class ProfileWeb extends StatelessWidget {
                               _ct.signOut();
                             },
                             icon: const Icon(Icons.logout),
-                            label: const Text('Logout'),
+                            label: const Text('Keluar'),
                           ),
                           const SizedBoxH(20),
                           TextButton(
                             onPressed: () {
                               _ct.deleteAccount();
                             },
-                            child: const Text('Delete Account'),
+                            child: const Text('Hapus Akun'),
                           ),
                         ],
                       ),

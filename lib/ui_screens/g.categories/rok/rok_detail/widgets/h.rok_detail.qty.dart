@@ -10,7 +10,7 @@ class RokDetailQty extends StatelessWidget {
     return Row(
       children: [
         const Text(
-          'Quantity: ',
+          'Kuantitas: ',
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w500,

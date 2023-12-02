@@ -27,8 +27,8 @@ class RegisterRetype extends StatelessWidget {
                 : const Icon(Icons.visibility_off),
           ),
         ),
-        labelText: 'Ketik Ulang Password',
-        hintText: 'Ketik Ulang Password Anda',
+        labelText: 'Ketik Ulang kata sandi',
+        hintText: 'Ketik Ulang kata sandi Anda',
         prefixIcon: const Icon(Icons.lock),
       ),
     );

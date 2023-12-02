@@ -18,7 +18,7 @@ class ProfileUsername extends StatelessWidget {
               : Center(
                   child: ListTile(
                     title: const Text(
-                      'Username',
+                      'Nama pengguna',
                       textAlign: TextAlign.center,
                     ),
                     subtitle: Text(

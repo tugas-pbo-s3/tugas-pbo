@@ -25,8 +25,8 @@ class LoginPassword extends StatelessWidget {
             icon: _dt.rxIsObscurePassword.st == true ? const Icon(Icons.visibility) : const Icon(Icons.visibility_off),
           ),
         ),
-        labelText: 'Password',
-        hintText: 'Masukkan Password Anda',
+        labelText: 'Kata sandi',
+        hintText: 'Masukkan kata sandi Anda',
         prefixIcon: const Icon(Icons.lock),
       ),
     );

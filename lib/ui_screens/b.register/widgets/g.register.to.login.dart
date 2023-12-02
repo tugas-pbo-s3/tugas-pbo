@@ -14,7 +14,7 @@ class RegisterToLogin extends StatelessWidget {
           onPressed: () {
             nav.toReplacement(Routes.login);
           },
-          child: const Text('Sudah mempunyai akun? Login'),
+          child: const Text('Sudah mempunyai akun? Masuk'),
         ),
       ],
     );

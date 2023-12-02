@@ -14,21 +14,21 @@ class KelomDetailAddtoCart extends StatelessWidget {
                 AlertDialog(
                   title: const Text('Peringatan!'),
                   content: const Text(
-                    'Anda tidak dapat menambahkan produk ke dalam keranjang karena anda login sebagai anonymous. Segera login dengan akun',
+                    'Anda tidak dapat menambahkan produk ke dalam keranjang karena masuk sebagai anonimus. Silakan masuk menggunakan akun',
                   ),
                   actions: [
                     TextButton(
                       onPressed: () {
                         nav.back();
                       },
-                      child: const Text('Batal'),
+                      child: const Text('batal'),
                     ),
                     TextButton(
                       onPressed: () {
                         nav.back();
                         _ct.signOut();
                       },
-                      child: const Text('Login'),
+                      child: const Text('masuk'),
                     ),
                   ],
                 ),

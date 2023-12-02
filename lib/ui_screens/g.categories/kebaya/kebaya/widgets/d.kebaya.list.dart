@@ -11,7 +11,7 @@ class KebayaList extends StatelessWidget {
 
     return OnReactive(
       () => _dt.rxProductList.st.isEmpty
-          ? const Center(child: Text('Data is empty'))
+          ? const Center(child: Text('Tidak ada data produk'))
           : SingleChildScrollView(
               padding: const EdgeInsets.only(top: 3),
               child: Center(

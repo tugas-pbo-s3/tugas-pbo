@@ -9,7 +9,7 @@ class ProfileDeleteAccount extends StatelessWidget {
       onPressed: () {
         _ct.deleteAccount();
       },
-      child: const Text('Delete Account'),
+      child: const Text('Hapus Akun'),
     );
   }
 }

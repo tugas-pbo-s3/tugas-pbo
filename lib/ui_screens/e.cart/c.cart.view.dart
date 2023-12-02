@@ -18,7 +18,7 @@ class CartView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'Anda login sebagai anonymous. Silakan login dengan akun untuk melihat keranjang anda',
+                      'Anda masuk sebagai anonymous. Silakan masuk dengan akun untuk melihat keranjang',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -27,7 +27,7 @@ class CartView extends StatelessWidget {
                       onPressed: () {
                         _ct.signOut();
                       },
-                      child: const Text('Kembali ke halaman login'),
+                      child: const Text('Kembali ke halaman Login'),
                     )
                   ],
                 ),
@@ -40,11 +40,11 @@ class CartView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Whoaa your cart is empty',
+                          'Yaah keranjang Anda masih belum terisi',
                           textScaleFactor: 1.8,
                         ),
                         SizedBoxH(5),
-                        Text('''Let's style your feet by using cool shoes'''),
+                        Text('''Ayo jadi mojang geulis dengan produk dari SiGeulis'''),
                         SizedBoxH(5),
                       ],
                     ))
@@ -63,9 +63,9 @@ class CartView extends StatelessWidget {
                                     subtitle: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text('Size: ${_dt.rxCart.st.listCartedShoes[index].size}'),
+                                        Text('Ukuran: ${_dt.rxCart.st.listCartedShoes[index].size}'),
                                         const SizedBoxW(5),
-                                        Text('Color: ${_dt.rxCart.st.listCartedShoes[index].color}'),
+                                        Text('Warna: ${_dt.rxCart.st.listCartedShoes[index].color}'),
                                       ],
                                     ),
                                     trailing: Row(
@@ -87,11 +87,12 @@ class CartView extends StatelessWidget {
                                             onPressed: () {
                                               nav.toCupertinoDialog(
                                                 CupertinoAlertDialog(
-                                                  title: const Text('Confirmation'),
-                                                  content: const Text('Are u sure to delete this cart?'),
+                                                  title: const Text('Konfirmasi'),
+                                                  content:
+                                                      const Text('Apakah anda yakin untuk menghapus keranjang ini?'),
                                                   actions: [
                                                     CupertinoDialogAction(
-                                                      child: const Text('cancel'),
+                                                      child: const Text('batal'),
                                                       onPressed: () => nav.back(),
                                                     ),
                                                     CupertinoDialogAction(
@@ -104,7 +105,7 @@ class CartView extends StatelessWidget {
                                                       },
                                                       isDefaultAction: true,
                                                       isDestructiveAction: true,
-                                                      child: const Text('delete'),
+                                                      child: const Text('hapus'),
                                                     ),
                                                   ],
                                                 ),

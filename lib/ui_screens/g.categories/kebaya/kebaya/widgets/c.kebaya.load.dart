@@ -18,9 +18,9 @@ class KebayaLoad extends StatelessWidget {
         ),
         onError: (error, refreshError) => error,
         onData: (data) => _dt.rxIsEnd.st == true
-            ? const Center(child: Text('~~ end of list ~~'))
+            ? const Center(child: Text('~~ Anda sudah mencapai akhir daftar produk ~~'))
             : OutlinedButton(
-                child: const Text('more items'),
+                child: const Text('Muat lebih banyak produk'),
                 onPressed: () => _ct.readAllProducts(),
               ),
       ),

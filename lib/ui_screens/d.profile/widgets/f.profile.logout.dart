@@ -10,7 +10,7 @@ class ProfileLogout extends StatelessWidget {
         _ct.signOut();
       },
       icon: const Icon(Icons.logout),
-      label: const Text('Logout'),
+      label: const Text('Keluar'),
     );
   }
 }

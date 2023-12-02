@@ -18,7 +18,7 @@ class RokDetailColor extends StatelessWidget {
         child: Row(
           children: [
             const Text(
-              'Color:',
+              'Warna:',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,

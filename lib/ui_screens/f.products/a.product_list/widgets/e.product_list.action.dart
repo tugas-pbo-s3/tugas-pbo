@@ -14,16 +14,16 @@ class ProductListAction extends StatelessWidget {
               _dt.rxUser.st!.isAnonymous
                   ? nav.toDialog(
                       AlertDialog(
-                        title: const Text('Warning!'),
+                        title: const Text('Peringatan!'),
                         content: const Text(
-                          'You are logged in as anonymous. Please log in to view your cart',
+                          'Anda login sebagai Anonim. Silakan login menggunakan akun untuk melihat keranjang',
                         ),
                         actions: [
                           TextButton(
                             onPressed: () {
                               nav.back();
                             },
-                            child: const Text('Cancel'),
+                            child: const Text('Batal'),
                           ),
                           TextButton(
                             onPressed: () {

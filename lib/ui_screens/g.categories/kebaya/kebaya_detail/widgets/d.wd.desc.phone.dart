@@ -38,17 +38,17 @@ class KebayaDetailDescPhone extends StatelessWidget {
             ),
             const SizedBoxH(8),
             Text(
-              'Merk: ${data?.merk}',
+              'Merek: ${data?.merk}',
               style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBoxH(10),
             Text(
-              'Category: ${data?.category.name}',
+              'Kategori: ${data?.category.name}',
               style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBoxH(10),
             Text(
-              'Description: ${data?.description}',
+              'Deskripsi: ${data?.description}',
               style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBoxH(15),
@@ -68,7 +68,7 @@ class KebayaDetailDescPhone extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Show More",
+                    "Lihat Selengkapnya",
                   ),
                 ),
               ],

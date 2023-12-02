@@ -1,7 +1,7 @@
 part of '_index.dart';
 
 class RokData {
-  final rxTitle = 'Kids'.inj();
+  final rxTitle = 'Rok'.inj();
 
   final rxInt = 0.inj();
 

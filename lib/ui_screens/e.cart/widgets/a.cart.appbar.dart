@@ -15,18 +15,18 @@ class CartAppbar extends StatelessWidget {
                 ? null
                 : () => nav.toCupertinoDialog(
                       CupertinoAlertDialog(
-                        title: const Text('Confirmation'),
-                        content: const Text('Are u sure to delete this product?'),
+                        title: const Text('Konfirmasi'),
+                        content: const Text('Apakah anda yakin untuk menghapus seluruh keranjang?'),
                         actions: [
                           CupertinoDialogAction(
-                            child: const Text('cancel'),
+                            child: const Text('batal'),
                             onPressed: () => nav.back(),
                           ),
                           CupertinoDialogAction(
                             onPressed: () => _ct.deleteAllCart(),
                             isDefaultAction: true,
                             isDestructiveAction: true,
-                            child: const Text('delete'),
+                            child: const Text('hapus'),
                           ),
                         ],
                       ),

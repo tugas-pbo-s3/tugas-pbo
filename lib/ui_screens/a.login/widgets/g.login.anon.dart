@@ -16,7 +16,7 @@ class LoginAnon extends StatelessWidget {
       onPressed: () {
         _ct.signInAnonymously();
       },
-      child: const Text('Login sebagai Anonimus'),
+      child: const Text('Masuk sebagai Anonimus'),
     );
   }
 }
