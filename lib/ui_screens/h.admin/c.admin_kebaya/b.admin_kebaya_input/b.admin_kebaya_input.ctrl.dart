@@ -46,21 +46,22 @@ class AdminKebayaInputCtrl {
   }
 
   Future<void> pickImages() async {
-    List<String> pathImages = [];
+    // List<String> pathImages = [];
     Map<String, String> mapImages = {};
     _dt.rxGeneratedId.st = const Uuid().v4();
     final id = _dt.rxGeneratedId.st;
     final pickedFiles = await ImagePicker().pickMultiImage();
-    for (var i in pickedFiles) {
-      logx.e(i.path);
-      pathImages.add(i.path);
-    }
-    for (var i in pathImages) {
-      logx.w(i);
-    }
+    // for (var i in pickedFiles) {
+    //   logx.e(i.path);
+    //   pathImages.add(i.path);
+    // }
+    // for (var i in pathImages) {
+    //   logx.w(i);
+    // }
     logx.e(pickedFiles.length.toString());
-    pathImages.asMap().forEach((key, value) {
-      mapImages['${_dt.colId}/${_dt.docId}/${_dt.colId2}/$id/$id-${key.toString()}'] = value;
+    pickedFiles.asMap().forEach((key, value) {
+      final uniqueKey = const Uuid().v4();
+      mapImages['${_dt.colId}/${_dt.docId}/${_dt.colId2}/$id/$id-$uniqueKey'] = value.path;
     });
     _dt.rxImages.st = mapImages;
 

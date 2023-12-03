@@ -22,12 +22,21 @@ class AdminKebayaImagesPreview extends StatelessWidget {
                             width: 60,
                             height: 60,
                             padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                            child: !kIsWeb
-                                ? Image.file(
+                            // child: !kIsWeb
+                            //     ? Image.file(
+                            //         File(path),
+                            //         fit: BoxFit.cover,
+                            //       )
+                            //     : Image.network(path),
+                            child: path.contains('http')
+                                ? FadeInImage.memoryNetwork(
+                                    placeholder: kTransparentImage,
+                                    image: path,
+                                  )
+                                : Image.file(
                                     File(path),
                                     fit: BoxFit.cover,
-                                  )
-                                : Image.network(path),
+                                  ),
                           ),
                         ),
                       ),

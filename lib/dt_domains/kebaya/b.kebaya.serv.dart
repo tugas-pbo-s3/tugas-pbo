@@ -72,8 +72,13 @@ class KebayaServ {
     return _rp.createProduct(product);
   }
 
-  Future<void> updateProduct(Kebaya menShoes, Map<String, String>? images) async {
-    return _rp.updateProduct(menShoes, images);
+  // Future<void> updateProduct(Kebaya menShoes, Map<String, String>? images) async {
+  //   return _rp.updateProduct(menShoes, images);
+  // }
+
+  Future<void> updateProduct(Kebaya product) async {
+    final productFinal = await _rp.updateProduct(product);
+    _pv.rxProductFuture.st = productFinal;
   }
 
   Future<void> uploadImages(Map<String, String> images) {

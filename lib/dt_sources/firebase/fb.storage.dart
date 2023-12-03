@@ -15,14 +15,22 @@ class FbStorage {
   }
 
   //* upload single file
+  //* upload single file
   Future<String> uploadFile(
     String ref,
     String path,
   ) async {
-    final response = await http.Client().get(Uri.parse(path));
-    final bytes = response.bodyBytes;
-    final task = instance.ref(ref).putData(bytes, SettableMetadata(contentType: 'image/jpeg'));
-    // final task = instance.ref(ref).putFile(File(path));
+    UploadTask task;
+    final meta = SettableMetadata(contentType: "image/jpeg");
+    if (path.contains('http')) {
+      //! http work within web platform
+      final response = await http.Client().get(Uri.parse(path));
+      final bytes = response.bodyBytes;
+      task = instance.ref(ref).putData(bytes, meta);
+    } else {
+      //! File work within non-web platform
+      task = instance.ref(ref).putFile(File(path), meta);
+    }
     final snapshot = await task;
     final bytesTransferred = snapshot.bytesTransferred;
     final url = await snapshot.ref.getDownloadURL();
@@ -41,6 +49,15 @@ class FbStorage {
     for (var ref in result.items) {
       instance.ref(ref.fullPath).delete().then((_) {
         logxx.i(FbStorage, '${ref.fullPath} deleted.');
+      });
+    }
+  }
+
+  //* delete files
+  Future<void> deleteFiles(List<String> refs) async {
+    for (var ref in refs) {
+      instance.ref(ref).delete().then((_) {
+        logxx.i(FbStorage, '$ref deleted.');
       });
     }
   }

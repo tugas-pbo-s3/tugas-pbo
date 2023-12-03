@@ -77,7 +77,7 @@ class AdminKebayaDetailTileEditImages extends StatelessWidget {
                           : Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                for (var path in _dt.rxImages.st.values)
+                                for (var path in _dt.rxImages.st.entries)
                                   OnReactive(
                                     () => SizedBox(
                                       width: 65,
@@ -88,12 +88,36 @@ class AdminKebayaDetailTileEditImages extends StatelessWidget {
                                             width: 60,
                                             height: 60,
                                             padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                                            child: !kIsWeb
-                                                ? Image.file(
-                                                    File(path),
-                                                    fit: BoxFit.cover,
-                                                  )
-                                                : Image.network(path),
+                                            // child: !kIsWeb
+                                            //     ? Image.file(
+                                            //         File(path),
+                                            //         fit: BoxFit.cover,
+                                            //       )
+                                            //     : Image.network(path),
+                                            child: Stack(
+                                              children: [
+                                                Shimmer.fromColors(
+                                                  baseColor: Colors.black12,
+                                                  highlightColor: Colors.black26,
+                                                  loop: 5,
+                                                  child: Container(
+                                                    height: 80,
+                                                    width: 80,
+                                                    // color: Get.theme.scaffoldBackgroundColor,
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                                path.value.contains('http')
+                                                    ? FadeInImage.memoryNetwork(
+                                                        placeholder: kTransparentImage,
+                                                        image: path.value,
+                                                      )
+                                                    : Image.file(
+                                                        File(path.value),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
