@@ -1,10 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter_fadein/flutter_fadein.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
+import 'package:transparent_image/transparent_image.dart';
+import 'package:uuid/uuid.dart';
 import '../../../../dt_domains/_index.dart';
 import '../../../../ui_widgets/space/_index.dart';
 import '../../../../xtras/_index.dart';

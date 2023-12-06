@@ -135,7 +135,7 @@ class KebayaRepo {
       docId1: _pv.docId1,
       colId2: _pv.colId2,
       docId2: kebaya.productId,
-      data: kebaya.toMap(),
+      data: productFinal.toMap(),
     );
     return productFinal;
   }

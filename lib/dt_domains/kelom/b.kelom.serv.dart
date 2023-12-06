@@ -42,9 +42,7 @@ class KelomServ {
 
   initProductsWithoutLimit() {
     _pv.rxIsEnd.refresh();
-    // _pv.rxProductList.refresh();
     _pv.rxSelectedId.refresh();
-
     readAllProductsWithoutLimit();
   }
 
@@ -57,8 +55,9 @@ class KelomServ {
     return _rp.createProduct(product);
   }
 
-  Future<void> updateProduct(Kelom womenShoes, Map<String, String>? images) async {
-    return _rp.updateProduct(womenShoes, images);
+  Future<void> updateProduct(Kelom kelom) async {
+    final productFinal = await _rp.updateProduct(kelom);
+    _pv.rxProductFuture.st = productFinal;
   }
 
   Future<void> uploadImages(Map<String, String> images) {

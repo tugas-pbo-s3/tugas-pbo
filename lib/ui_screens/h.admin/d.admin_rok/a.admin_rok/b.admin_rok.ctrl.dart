@@ -79,20 +79,15 @@ class AdminRokCtrl {
   submit() => _dt.rxForm.submit();
 
   Future<void> pickImages() async {
-    List<String> pathImages = [];
+    // List<String> pathImages = [];
     Map<String, String> mapImages = {};
     final id = _dt.rxSelectedId.st;
     final pickedFiles = await ImagePicker().pickMultiImage();
-    for (var i in pickedFiles) {
-      logx.e(i.path);
-      pathImages.add(i.path);
-    }
-    for (var i in pathImages) {
-      logx.w(i);
-    }
+
     logx.e(pickedFiles.length.toString());
-    pathImages.asMap().forEach((key, value) {
-      mapImages['${_dt.colId}/${_dt.docId}/${_dt.colId2}/$id/$id-${key.toString()}'] = value;
+    pickedFiles.asMap().forEach((key, value) {
+      final uniqueId = const Uuid().v4();
+      mapImages['${_dt.colId}/${_dt.docId}/${_dt.colId2}/$id/$id-$uniqueId'] = value.path;
     });
     _dt.rxImages.st = mapImages;
   }
@@ -143,7 +138,7 @@ class AdminRokCtrl {
     logx.e(kShoes.name);
     try {
       logx.wtf(_dt.rxCategory.st.value.toString());
-      await _sv.updateProduct(kShoes, _dt.rxImages.st);
+      await _sv.updateProduct(kShoes);
       _dt.rxProduct.setState((s) => kShoes);
       await _sv.readProduct();
       _sv.updateOneOfProductList(kShoes);

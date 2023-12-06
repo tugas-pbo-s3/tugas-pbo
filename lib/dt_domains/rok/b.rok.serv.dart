@@ -68,8 +68,9 @@ class RokServ {
     return _rp.createProduct(kidsShoes);
   }
 
-  Future<void> updateProduct(Rok kidsShoes, Map<String, String>? images) async {
-    return _rp.updateProduct(kidsShoes, images);
+  Future<void> updateProduct(Rok rok) async {
+    final productFinal = await _rp.updateProduct(rok);
+    _pv.rxProductFuture.st = productFinal;
   }
 
   Future<void> uploadImages(Map<String, String> images) {

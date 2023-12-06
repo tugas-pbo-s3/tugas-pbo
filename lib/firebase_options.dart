@@ -61,7 +61,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDG9oqf46Q6M4Ozq450ZvD8Q4-ig2CtQok',
-    appId: '1:804242459335:android:8a550ad2f7b074cc824ce2',
+    appId: '1:804242459335:android:ead62d6ddf8f4ce1824ce2',
     messagingSenderId: '804242459335',
     projectId: 'tugas-pbo-fc0db',
     storageBucket: 'tugas-pbo-fc0db.appspot.com',

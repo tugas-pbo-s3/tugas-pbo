@@ -36,10 +36,11 @@ class KelomDetailAddtoCart extends StatelessWidget {
             : _ct.addToCart();
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(
+        padding: EdgeInsets.symmetric(
           vertical: 20,
-          horizontal: 100,
+          horizontal: MediaQuery.of(context).size.width <= 600 ? 20 : 100,
         ),
+        // constraints: BoxConstraints(maxWidth: 500),
         decoration: BoxDecoration(
           color: Colors.purple,
           borderRadius: BorderRadius.circular(30),

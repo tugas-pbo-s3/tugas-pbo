@@ -33,28 +33,81 @@ class AdminKebayaDetailTileEditImages extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-                            child: Image.network(
-                              '${image!.values.firstOrNull}',
-                              fit: BoxFit.cover,
+                            // child: Image.network(
+                            //   '${image!.values.firstOrNull}',
+                            //   fit: BoxFit.cover,
+                            // ),
+                            child: Stack(
+                              children: [
+                                Shimmer.fromColors(
+                                  baseColor: Colors.black12,
+                                  highlightColor: Colors.black26,
+                                  loop: 5,
+                                  child: Container(
+                                    height: 100,
+                                    width: 100,
+                                    // color: Get.theme.scaffoldBackgroundColor,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                FadeIn(
+                                  duration: const Duration(milliseconds: 500),
+                                  child: SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child: FadeInImage.memoryNetwork(
+                                      placeholder: kTransparentImage,
+                                      image: '${image!.values.firstOrNull}',
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         )
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            for (var i in image!.values)
+                            // for (var i in image!.values)
+                            for (var i in image!.entries)
                               Container(
                                 height: 100,
                                 width: 100,
-                                padding: const EdgeInsets.all(2),
+                                // padding: const EdgeInsets.all(2),
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Colors.white,
                                   ),
                                 ),
-                                child: Image.network(
-                                  i,
-                                  fit: BoxFit.cover,
+                                // child: Image.network(
+                                //   i,
+                                //   fit: BoxFit.cover,
+                                // ),
+                                child: Stack(
+                                  children: [
+                                    Shimmer.fromColors(
+                                      baseColor: Colors.black12,
+                                      highlightColor: Colors.black26,
+                                      loop: 5,
+                                      child: Container(
+                                        height: 100,
+                                        width: 100,
+                                        // color: Get.theme.scaffoldBackgroundColor,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                    FadeIn(
+                                      duration: const Duration(milliseconds: 500),
+                                      child: SizedBox(
+                                        width: 100,
+                                        height: 100,
+                                        child: FadeInImage.memoryNetwork(
+                                          placeholder: kTransparentImage,
+                                          image: i.value,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                           ],

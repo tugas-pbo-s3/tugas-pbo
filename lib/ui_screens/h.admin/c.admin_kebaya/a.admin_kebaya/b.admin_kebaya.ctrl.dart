@@ -105,13 +105,7 @@ class AdminKebayaCtrl {
     Map<String, String> mapImages = {};
     final id = _dt.rxSelectedId.st;
     final pickedFiles = await ImagePicker().pickMultiImage();
-    // for (var i in pickedFiles) {
-    //   logx.e(i.path);
-    //   pathImages.add(i.path);
-    // }
-    // for (var i in pathImages) {
-    //   logx.w(i);
-    // }
+
     logx.e(pickedFiles.length.toString());
     pickedFiles.asMap().forEach((key, value) {
       final uniqueId = const Uuid().v4();

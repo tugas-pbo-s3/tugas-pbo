@@ -64,35 +64,72 @@ class KelomRepo {
     );
   }
 
-  Future<void> updateProduct(Kelom womenShoes, Map<String, String>? imagesFromStorage) async {
-    int imageLength = _pv.rxProductFuture.st?.imageUrl?.length ?? 0;
-    if (imageLength > 0) {
-      final mainFolder1 = _pv.colId;
-      final subFolder1 = _pv.docId1;
-      final mainFolder2 = _pv.colId2;
-      final subFolder2 = _pv.rxProductFuture.st?.productId;
-      if (!womenShoes.imageUrl!.values.first.startsWith('https')) {
-        await x1FbStorage.st.deleteFolder('/$mainFolder1/$subFolder1/$mainFolder2/$subFolder2');
+  // Future<void> updateProduct(Kelom womenShoes, Map<String, String>? imagesFromStorage) async {
+  //   int imageLength = _pv.rxProductFuture.st?.imageUrl?.length ?? 0;
+  //   if (imageLength > 0) {
+  //     final mainFolder1 = _pv.colId;
+  //     final subFolder1 = _pv.docId1;
+  //     final mainFolder2 = _pv.colId2;
+  //     final subFolder2 = _pv.rxProductFuture.st?.productId;
+  //     if (!womenShoes.imageUrl!.values.first.startsWith('https')) {
+  //       await x1FbStorage.st.deleteFolder('/$mainFolder1/$subFolder1/$mainFolder2/$subFolder2');
+  //     }
+  //   }
+  //   Kelom womenShoesUpdate = womenShoes;
+  //   if (womenShoes.imageUrl != null) {
+  //     if (womenShoes.imageUrl!.isNotEmpty) {
+  //       if (!womenShoes.imageUrl!.values.first.startsWith('https')) {
+  //         womenShoes.imageUrl!.forEach((key, value) {});
+  //         final imageWithUrl = await x1FbStorage.st.uploadFiles(womenShoes.imageUrl!);
+  //         womenShoesUpdate = womenShoes.copyWith(imageUrl: imageWithUrl);
+  //       }
+  //     }
+  //   }
+
+  //   await x1FbFirestore.updateDocument2(
+  //     colId1: _pv.colId,
+  //     docId1: _pv.docId1,
+  //     colId2: _pv.colId2,
+  //     docId2: womenShoes.productId,
+  //     data: womenShoesUpdate.toMap(),
+  //   );
+  // }
+
+  Future<Kelom> updateProduct(Kelom kelom) async {
+    final imagesOld = Prov.kelom.st.rxProductFuture.st!.imageUrl;
+    final imagesNew = kelom.imageUrl;
+    Map<String, String> imagesToDelete = {};
+    Map<String, String> imagesToUpload = {};
+    Map<String, String> imagesFinal = {...?kelom.imageUrl};
+    imagesNew?.forEach((key, value) {
+      if (!imagesOld!.containsKey(key)) {
+        imagesToUpload[key] = value;
       }
-    }
-    Kelom womenShoesUpdate = womenShoes;
-    if (womenShoes.imageUrl != null) {
-      if (womenShoes.imageUrl!.isNotEmpty) {
-        if (!womenShoes.imageUrl!.values.first.startsWith('https')) {
-          womenShoes.imageUrl!.forEach((key, value) {});
-          final imageWithUrl = await x1FbStorage.st.uploadFiles(womenShoes.imageUrl!);
-          womenShoesUpdate = womenShoes.copyWith(imageUrl: imageWithUrl);
-        }
+    });
+    imagesOld?.forEach((key, value) {
+      if (!imagesNew!.containsKey(key)) {
+        imagesToDelete[key] = value;
       }
+    });
+    if (imagesToDelete.isNotEmpty) {
+      await x1FbStorage.st.deleteFiles(imagesToDelete.keys.toList());
     }
+    if (imagesToUpload.isNotEmpty) {
+      final imagesWithUrls = await x1FbStorage.st.uploadFiles(imagesToUpload);
+      imagesWithUrls.forEach((key, value) async {
+        imagesFinal[key] = value;
+      });
+    }
+    final productFinal = kelom.copyWith(imageUrl: imagesFinal);
 
     await x1FbFirestore.updateDocument2(
       colId1: _pv.colId,
       docId1: _pv.docId1,
       colId2: _pv.colId2,
-      docId2: womenShoes.productId,
-      data: womenShoesUpdate.toMap(),
+      docId2: kelom.productId,
+      data: productFinal.toMap(),
     );
+    return productFinal;
   }
 
   Future<void> deleteProduct() async {

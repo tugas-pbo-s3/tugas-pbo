@@ -33,16 +33,38 @@ class AdminKelomDetailTileEditImages extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-                            child: Image.network(
-                              '${image!.values.firstOrNull}',
-                              fit: BoxFit.cover,
+                            child: Stack(
+                              children: [
+                                Shimmer.fromColors(
+                                  baseColor: Colors.black12,
+                                  highlightColor: Colors.black26,
+                                  loop: 5,
+                                  child: Container(
+                                    height: 100,
+                                    width: 100,
+                                    // color: Get.theme.scaffoldBackgroundColor,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                FadeIn(
+                                  duration: const Duration(milliseconds: 500),
+                                  child: SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child: FadeInImage.memoryNetwork(
+                                      placeholder: kTransparentImage,
+                                      image: '${image!.values.firstOrNull}',
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         )
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            for (var i in image!.values)
+                            for (var i in image!.entries)
                               Container(
                                 height: 100,
                                 width: 100,
@@ -52,9 +74,31 @@ class AdminKelomDetailTileEditImages extends StatelessWidget {
                                     color: Colors.white,
                                   ),
                                 ),
-                                child: Image.network(
-                                  i,
-                                  fit: BoxFit.cover,
+                                child: Stack(
+                                  children: [
+                                    Shimmer.fromColors(
+                                      baseColor: Colors.black12,
+                                      highlightColor: Colors.black26,
+                                      loop: 5,
+                                      child: Container(
+                                        height: 100,
+                                        width: 100,
+                                        // color: Get.theme.scaffoldBackgroundColor,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                    FadeIn(
+                                      duration: const Duration(milliseconds: 500),
+                                      child: SizedBox(
+                                        width: 100,
+                                        height: 100,
+                                        child: FadeInImage.memoryNetwork(
+                                          placeholder: kTransparentImage,
+                                          image: i.value,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                           ],
@@ -77,7 +121,7 @@ class AdminKelomDetailTileEditImages extends StatelessWidget {
                           : Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                for (var path in _dt.rxImages.st.values)
+                                for (var path in _dt.rxImages.st.entries)
                                   OnReactive(
                                     () => SizedBox(
                                       width: 65,
@@ -88,12 +132,30 @@ class AdminKelomDetailTileEditImages extends StatelessWidget {
                                             width: 60,
                                             height: 60,
                                             padding: const EdgeInsets.fromLTRB(2, 2, 2, 2),
-                                            child: !kIsWeb
-                                                ? Image.file(
-                                                    File(path),
-                                                    fit: BoxFit.cover,
-                                                  )
-                                                : Image.network(path),
+                                            child: Stack(
+                                              children: [
+                                                Shimmer.fromColors(
+                                                  baseColor: Colors.black12,
+                                                  highlightColor: Colors.black26,
+                                                  loop: 5,
+                                                  child: Container(
+                                                    height: 80,
+                                                    width: 80,
+                                                    // color: Get.theme.scaffoldBackgroundColor,
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                                path.value.contains('http')
+                                                    ? FadeInImage.memoryNetwork(
+                                                        placeholder: kTransparentImage,
+                                                        image: path.value,
+                                                      )
+                                                    : Image.file(
+                                                        File(path.value),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),

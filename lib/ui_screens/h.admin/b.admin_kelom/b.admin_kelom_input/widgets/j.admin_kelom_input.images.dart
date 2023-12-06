@@ -26,7 +26,7 @@ class AdminKelomInputImages extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.add),
-                  Text('Tambahkan Foto'),
+                  Text('Tambah Foto'),
                 ],
               ),
             ),
