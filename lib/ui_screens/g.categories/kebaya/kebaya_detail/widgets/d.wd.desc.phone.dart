@@ -22,7 +22,7 @@ class KebayaDetailDescPhone extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    constraints: const BoxConstraints(maxWidth: 200),
+                    constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width < 400 ? 150 : 200),
                     child: Text(
                       '${data?.name}',
                       textAlign: TextAlign.start,
