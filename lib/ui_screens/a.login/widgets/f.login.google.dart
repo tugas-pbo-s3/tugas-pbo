@@ -24,6 +24,7 @@ class LoginGoogle extends StatelessWidget {
             width: 20,
             child: Image.asset('assets/images/g-logo.png'),
           ),
+          const SizedBox(width: 3),
           const Text('Masuk dengan Google'),
         ],
       ),
